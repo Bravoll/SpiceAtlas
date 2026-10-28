@@ -1,0 +1,29 @@
+# Python and local tools
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+node_modules/
+.DS_Store
+Thumbs.db
+# Local settings and credentials
+config.local.json
+.env
+.env.*
+!.env.example
+# Editable workspaces and all runtime activity
+data/versions/
+data/version_trash/
+data/versions.json
+data/version_manager.jsonl
+data/media/
+data/snapshots/
+data/cache.sqlite3
+*-wal
+*-shm
+*.sqlite3-journal
+# Reproducible release archives
+Spice_Atlas_Local_*.zip
+
+# Restored from the versioned compressed seed on first launch
+/data/catalogue.sqlite3

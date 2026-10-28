@@ -1,0 +1,274 @@
+[
+  {
+    "service": "zhwiki",
+    "ok": true,
+    "revision": 94967453,
+    "preserved_links": true,
+    "variant": "zh-hans"
+  },
+  {
+    "service": "enwiki",
+    "ok": true,
+    "revision": 1380990209,
+    "preserved_links": true,
+    "variant": "en"
+  },
+  {
+    "service": "commons",
+    "form": "flakes",
+    "ok": true,
+    "images": 1,
+    "titles": [
+      "Parsley Dried.JPG"
+    ],
+    "attribution": true
+  },
+  {
+    "service": "commons",
+    "form": "fresh",
+    "ok": true,
+    "images": 8,
+    "titles": [
+      "Fresh Parsley leaves.jpg",
+      "Liat Portal for Foodie Disorder - Parsley.jpg",
+      "Petroselinum crispum leaves.png",
+      "Petroselinum crispum 002.JPG",
+      "Starr 070308-5408 Petroselinum crispum.jpg",
+      "Starr-080731-9591-Petroselinum crispum-leaves-makawao-Maui (24924719975).jpg",
+      "Starr-080731-9590-Petroselinum crispum-leaves-makawao-Maui (24831382061).jpg",
+      "Starr 070906-8879 Petroselinum crispum.jpg"
+    ],
+    "attribution": true
+  },
+  {
+    "service": "zhwiki_hant",
+    "ok": true,
+    "variant": "zh-hant",
+    "revision": 94967453,
+    "has_traditional_name": true
+  },
+  {
+    "service": "health",
+    "report": {
+      "phase": "ready",
+      "checked_at": "2026-10-28T05:33:33+00:00",
+      "revision": 1,
+      "services": {
+        "zhwiki": {
+          "id": "zhwiki",
+          "kind": "api",
+          "host": "zh.wikipedia.org",
+          "url": "https://zh.wikipedia.org/w/api.php",
+          "checked_at": "2026-10-28T05:33:06+00:00",
+          "tested_entry": "parsley",
+          "http_status": 200,
+          "ok": true,
+          "backend_ok": true
+        },
+        "enwiki": {
+          "id": "enwiki",
+          "kind": "api",
+          "host": "en.wikipedia.org",
+          "url": "https://en.wikipedia.org/w/api.php",
+          "checked_at": "2026-10-28T05:33:06+00:00",
+          "tested_entry": "parsley",
+          "http_status": 200,
+          "ok": true,
+          "backend_ok": true
+        },
+        "commons": {
+          "id": "commons",
+          "kind": "api",
+          "host": "commons.wikimedia.org",
+          "url": "https://commons.wikimedia.org/w/api.php",
+          "checked_at": "2026-10-28T05:33:06+00:00",
+          "tested_entry": "parsley",
+          "http_status": 503,
+          "ok": false,
+          "message": "HTTP 503",
+          "backend_ok": false
+        },
+        "wikidata": {
+          "id": "wikidata",
+          "kind": "api",
+          "host": "www.wikidata.org",
+          "url": "https://www.wikidata.org/w/api.php",
+          "checked_at": "2026-10-28T05:33:06+00:00",
+          "tested_entry": "parsley",
+          "http_status": 200,
+          "ok": true,
+          "backend_ok": true
+        },
+        "gbif": {
+          "id": "gbif",
+          "kind": "api",
+          "host": "api.gbif.org",
+          "url": "https://api.gbif.org/v1/species/match",
+          "checked_at": "2026-10-28T05:33:06+00:00",
+          "tested_entry": "parsley",
+          "http_status": 200,
+          "ok": true,
+          "backend_ok": true
+        },
+        "commons_web": {
+          "id": "commons_web",
+          "kind": "web",
+          "host": "commons.wikimedia.org",
+          "url": "https://commons.wikimedia.org/wiki/Category:Petroselinum_crispum",
+          "checked_at": "2026-10-28T05:33:06+00:00",
+          "tested_entry": "parsley",
+          "http_status": 200,
+          "frame_restricted": false,
+          "ok": true,
+          "backend_ok": true
+        },
+        "wikidata_web": {
+          "id": "wikidata_web",
+          "kind": "web",
+          "host": "www.wikidata.org",
+          "url": "https://www.wikidata.org/wiki/Q25284",
+          "checked_at": "2026-10-28T05:33:06+00:00",
+          "tested_entry": "parsley",
+          "http_status": 200,
+          "frame_restricted": false,
+          "ok": true,
+          "backend_ok": true
+        },
+        "gbif_web": {
+          "id": "gbif_web",
+          "kind": "web",
+          "host": "www.gbif.org",
+          "url": "https://www.gbif.org/species/7828157",
+          "checked_at": "2026-10-28T05:33:06+00:00",
+          "tested_entry": "parsley",
+          "http_status": 403,
+          "ok": false,
+          "message": "HTTP 403",
+          "backend_ok": false
+        },
+        "zhwiki_web": {
+          "id": "zhwiki_web",
+          "kind": "web",
+          "host": "zh.wikipedia.org",
+          "url": "https://zh.wikipedia.org/wiki/歐芹",
+          "checked_at": "2026-10-28T05:33:06+00:00",
+          "tested_entry": "parsley",
+          "http_status": 200,
+          "frame_restricted": false,
+          "ok": true,
+          "backend_ok": true
+        },
+        "enwiki_web": {
+          "id": "enwiki_web",
+          "kind": "web",
+          "host": "en.wikipedia.org",
+          "url": "https://en.wikipedia.org/wiki/Parsley",
+          "checked_at": "2026-10-28T05:33:06+00:00",
+          "tested_entry": "parsley",
+          "http_status": 200,
+          "frame_restricted": false,
+          "ok": true,
+          "backend_ok": true
+        },
+        "bing": {
+          "id": "bing",
+          "kind": "web",
+          "host": "www.bing.com",
+          "url": "https://www.bing.com/search?q=parsley&mkt=en-AU",
+          "checked_at": "2026-10-28T05:33:06+00:00",
+          "tested_entry": "parsley",
+          "http_status": 200,
+          "frame_restricted": false,
+          "ok": true,
+          "backend_ok": true
+        },
+        "bing_cn": {
+          "id": "bing_cn",
+          "kind": "web",
+          "host": "cn.bing.com",
+          "url": "https://cn.bing.com/search?q=%E6%AC%A7%E8%8A%B9&mkt=zh-CN",
+          "checked_at": "2026-10-28T05:33:06+00:00",
+          "tested_entry": "parsley",
+          "http_status": 200,
+          "frame_restricted": true,
+          "ok": true,
+          "backend_ok": true
+        },
+        "google": {
+          "id": "google",
+          "kind": "web",
+          "host": "www.google.com",
+          "url": "https://www.google.com/search?q=parsley&hl=en",
+          "checked_at": "2026-10-28T05:33:06+00:00",
+          "tested_entry": "parsley",
+          "http_status": 429,
+          "ok": false,
+          "message": "HTTP 429",
+          "backend_ok": false
+        },
+        "baidu": {
+          "id": "baidu",
+          "kind": "web",
+          "host": "baike.baidu.com",
+          "url": "https://baike.baidu.com/item/%E6%AC%A7%E8%8A%B9",
+          "checked_at": "2026-10-28T05:33:06+00:00",
+          "tested_entry": "parsley",
+          "http_status": 200,
+          "frame_restricted": false,
+          "ok": true,
+          "backend_ok": true
+        },
+        "baidu_images": {
+          "id": "baidu_images",
+          "kind": "web",
+          "host": "image.baidu.com",
+          "url": "https://image.baidu.com/search/index?tn=baiduimage&word=parsley",
+          "checked_at": "2026-10-28T05:33:06+00:00",
+          "tested_entry": "parsley",
+          "http_status": 200,
+          "ok": false,
+          "message": "Verification or consent page",
+          "backend_ok": false
+        },
+        "mccormick": {
+          "id": "mccormick",
+          "kind": "web",
+          "host": "www.mccormick.com",
+          "url": "https://www.mccormick.com/products/mccormick-parsley-flakes-0-25-oz",
+          "checked_at": "2026-10-28T05:33:06+00:00",
+          "tested_entry": "parsley",
+          "http_status": 200,
+          "frame_restricted": true,
+          "ok": true,
+          "backend_ok": true
+        },
+        "nparks": {
+          "id": "nparks",
+          "kind": "web",
+          "host": "www.nparks.gov.sg",
+          "url": "https://www.nparks.gov.sg/florafaunaweb/flora/5/9/5944",
+          "checked_at": "2026-10-28T05:33:06+00:00",
+          "tested_entry": "coriander",
+          "http_status": 200,
+          "frame_restricted": false,
+          "ok": true,
+          "backend_ok": true
+        },
+        "icar": {
+          "id": "icar",
+          "kind": "web",
+          "host": "spices.res.in",
+          "url": "https://spices.res.in/products/spices/coriander.html",
+          "checked_at": "2026-10-28T05:33:06+00:00",
+          "tested_entry": "coriander",
+          "http_status": 200,
+          "frame_restricted": false,
+          "ok": true,
+          "backend_ok": true
+        }
+      },
+      "interval_seconds": 600,
+      "sample": "欧芹 / Parsley"
+    }
+  }
+]

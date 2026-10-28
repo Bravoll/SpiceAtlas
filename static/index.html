@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="light dark" name="color-scheme"/><title>Spice Atlas</title>
+<link href="/static/style.css" rel="stylesheet"/>
+<script defer="" src="/static/i18n.js"></script><script defer="" src="/static/ui_strings.js"></script><script defer="" src="/static/app.js"></script>
+</head>
+<body data-theme="leaf">
+<header class="site-header">
+<a class="brand" href="/"><span data-i18n="brand">香料图鉴</span><small>SPICE ATLAS · A LIVING BOTANICAL CATALOGUE</small></a>
+<nav aria-label="Navigation">
+<a data-i18n="encyclopedia" href="#encyclopedia">百科</a><a data-i18n="images" href="#pictures">图片</a>
+<label class="ui-language-label"><span data-i18n="interfaceLanguage">界面语言</span><select id="uiLanguage"><option data-i18n="automatic" value="auto">自动</option><option value="zh-Hans">简体中文</option><option value="zh-Hant">繁體中文</option><option value="en">English</option></select></label>
+<button class="quiet-button" id="appearance" type="button">Dark</button>
+<button class="quiet-button" data-i18n="versions" id="openVersions" type="button">版本</button><button class="quiet-button" data-i18n="settings" id="openSettings" type="button">设置</button>
+</nav>
+</header>
+<div class="workspace">
+<aside class="catalog">
+<details id="catalogDetails" open=""><summary><span data-i18n="catalogue">馆藏目录</span><span id="catalogCount"></span></summary>
+<label class="search-label" data-i18n="collectionMode" for="collectionMode">查看列表</label><select class="catalog-select" id="collectionMode"><option data-i18n="catalogue" value="catalogue">馆藏目录</option><option data-i18n="favorites" value="favorites">收藏</option><option data-i18n="history" value="history">浏览历史</option></select>
+<label class="search-label" data-i18n="catalogueScope" for="catalogScope">目录范围</label>
+<select class="catalog-select" id="catalogScope"><option data-i18n="culinaryCatalogue" value="culinary">香草与香料候选目录</option><option data-i18n="botanicalCatalogue" value="botanical">植物分类参考库</option><option data-i18n="allRecords" value="all">全部记录</option></select>
+<p class="subtle-note" data-i18n="notEdible" hidden="" id="scopeWarning">植物参考记录不等于已确认可食用香料。</p>
+<label class="search-label" data-i18n="searchLabel" for="search">中文、英文、学名或别名</label>
+<div class="search-shell"><span aria-hidden="true">⌕</span><input autocomplete="off" data-i18n-placeholder="searchPlaceholder" id="search" maxlength="120" type="search"/></div>
+<div class="catalog-breadcrumb" id="catalogBreadcrumb"></div>
+<div class="catalog-tree" id="catalogTree"></div>
+<div class="group-filters" id="groupFilters">
+<button aria-pressed="true" data-group="all" data-i18n="all" type="button">全部</button><button aria-pressed="false" data-group="leaf" data-i18n="leaves" type="button">叶</button><button aria-pressed="false" data-group="seed" data-i18n="seeds" type="button">籽实</button><button aria-pressed="false" data-group="fruit" data-i18n="fruits" type="button">果实</button><button aria-pressed="false" data-group="bark" data-i18n="bark" type="button">树皮</button><button aria-pressed="false" data-group="flower" data-i18n="flowers" type="button">花蕾</button>
+</div>
+<div class="catalog-list" id="catalogList"></div>
+<div class="catalog-pagination"><button class="quiet-button" id="catalogPrevious" type="button">‹</button><span id="catalogPage"></span><button class="quiet-button" id="catalogNext" type="button">›</button></div>
+</details>
+<p class="catalog-note" id="catalogStats"></p>
+<button class="quiet-button" data-i18n="manageCatalogue" id="manageCatalogue" type="button">目录导入与管理</button>
+</aside>
+<main id="main">
+<div class="notice" hidden="" id="globalMessage" role="status"></div>
+<section aria-labelledby="entryName" class="hero">
+<div class="hero-copy"><p class="eyebrow">THE COLLECTION / HERBS &amp; SPICES</p><h1 id="entryName">Spice Atlas</h1><p class="english-title" id="entryEnglish"></p><p class="scientific" id="scientific"></p><p class="entry-intro" id="entryIntro"></p><div class="form-picker" id="forms"></div><div class="hero-meta"><span id="partLabel"></span><span id="familyLabel"></span></div><p class="subtle-note" id="entryReview"></p><button aria-pressed="false" class="quiet-button" data-i18n="favoriteAdd" id="favoriteEntry" type="button">☆ 收藏</button></div>
+<figure class="hero-figure"><div class="hero-image-wrap" id="heroImageWrap"><span class="image-empty">BOTANICAL COLLECTION</span></div><figcaption id="heroCaption"></figcaption></figure>
+</section>
+<div class="fact-grid" id="facts"></div>
+<section class="reading-section" id="encyclopedia">
+<div class="section-heading"><div><p class="eyebrow">READ &amp; EXPLORE</p><h2 data-i18n="knowledge">百科与重点知识</h2></div><span class="section-aside" data-i18n="liveSources">实时来源、可追溯链接</span></div>
+<div class="source-tabs" id="sourceTabs"></div>
+<div class="reader-shell"><div class="reader-main">
+<div class="source-heading"><div><span class="source-title" id="sourceTitle"></span><div class="source-meta" id="sourceMeta"></div></div><a data-i18n="openSource" href="https://en.wikipedia.org" id="sourceJump" rel="noopener noreferrer" target="_blank">打开来源 ↗</a></div>
+<div class="notice" hidden="" id="scopeNote"></div><div class="notice" hidden="" id="articleWarning"></div>
+<div class="reader-controls" id="readerControls">
+<div class="segmented"><button aria-pressed="true" data-i18n="focus" id="focusMode" type="button">重点阅读</button><button aria-pressed="false" data-i18n="fullText" id="fullMode" type="button">完整正文</button></div>
+<div class="reader-actions"><select id="languageMode"><option data-i18n="original" value="original">原文</option><option data-i18n="translated" value="translated">本地译文</option><option data-i18n="bilingual" value="bilingual">双语对照</option></select><button class="quiet-button" data-i18n="translateAgain" id="retranslate" type="button">重新翻译</button><button class="quiet-button" data-i18n="refreshSource" id="refreshArticle" type="button">更新来源 ↻</button></div>
+</div>
+<div class="notice" hidden="" id="translationNote"></div><div aria-live="polite" class="article-body" id="articleBody"></div><div class="article-credit" id="articleCredit"></div>
+</div><aside class="reading-side"><div class="outline-box"><p class="minor-heading" data-i18n="contents">本页章节</p><nav id="outline"></nav></div><div class="type-specimen"><div class="type-top"><span data-i18n="nameLabel">名称展签</span><select id="typeStyle"><option data-i18n="botanicalStyle" value="botanical">植物图谱</option><option data-i18n="chineseStyle" value="scroll">中文书写意象</option><option data-i18n="bookStyle" value="book">西文书页意象</option><option data-i18n="inscriptionStyle" value="inscription">拉丁铭文意象</option></select></div><div class="specimen-title" id="specimenTitle"></div><small data-i18n="styleNote">排印试样，不作历史起源认定</small></div></aside></div>
+</section>
+<section class="pictures-section" id="pictures">
+<div class="section-heading"><div><p class="eyebrow">THE LIVE IMAGE VIEW</p><h2 data-i18n="imageHeading">原料、形态与图像</h2></div><button class="quiet-button" data-i18n="refreshImages" id="refreshImages" type="button">更新图库 ↻</button></div>
+<label class="image-profile-control"><span data-i18n="imageProfile">图片形态筛选</span> <select id="imageProfile"><option value="auto" data-i18n="followForm">跟随原料形态</option></select><small data-i18n="imagesOnly">仅影响图片检索</small></label>
+<div class="source-tabs" id="imageTabs"><button aria-pressed="true" data-provider="commons" type="button">Wiki / Commons</button><button aria-pressed="false" data-i18n="baiduImages" data-provider="baidu" type="button">百度图片</button><button aria-pressed="false" data-provider="bing" type="button">Bing</button><button aria-pressed="false" data-provider="google" type="button">Google</button></div>
+<p class="image-status" id="imageStatus" role="status"></p><div class="gateway-links" id="imageGateways"></div>
+<div class="source-frame-container" hidden="" id="frameContainer"><div class="frame-toolbar"><span id="frameStatus"></span><button class="quiet-button" data-i18n="closeWindow" id="closeSourceFrame" type="button">关闭视窗</button></div><iframe id="sourceFrame" referrerpolicy="no-referrer" sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-popups-to-escape-sandbox" title="Source search window"></iframe><p class="subtle-note" data-i18n="frameNote">原站策略可能变化。若视窗空白，请用上方链接打开原站。</p></div>
+<div class="image-grid" id="imageGrid"></div>
+</section>
+<section class="related-section" id="relatedSection"><div class="section-heading"><div><p class="eyebrow">CONNECTED RECORDS</p><h2 data-i18n="related">植物亲缘与相关记录</h2></div></div><div class="related-grid" id="related"></div><p class="subtle-note" data-i18n="relatedNote">植物亲缘不代表风味相同或可以替代。</p></section>
+<section class="sources-section" id="sources"><div class="section-heading"><div><p class="eyebrow">FOLLOW THE SOURCES</p><h2 data-i18n="sources">来源与拓展阅读</h2></div><a class="text-link" data-i18n="export" href="#" id="exportEntry">导出条目 JSON ↓</a></div><div class="source-cards" id="sourceCards"></div></section>
+<footer class="site-footer"><span>SPICE ATLAS · v0.4</span><span data-i18n="creditNote">API 引用与直链图片仍需保留作者、来源和许可。</span><button class="quiet-button" data-i18n="print" id="printPage" type="button">打印 / 保存 PDF</button></footer>
+</main>
+</div>
+<dialog class="image-dialog" id="imageDialog"><button aria-label="Close" class="dialog-close" id="closeImage" type="button">×</button><div id="imageDialogContent"></div></dialog>
+<dialog class="settings-dialog" id="settingsDialog">
+<div class="settings-heading"><h2 data-i18n="settings">设置</h2><button class="quiet-button" data-i18n="close" id="closeSettings" type="button">关闭</button></div>
+<nav class="settings-tabs"><button data-i18n="readingSettings" data-settings-tab="reading" type="button">阅读与语言</button><button data-i18n="modelSettings" data-settings-tab="model" type="button">本地翻译模型</button><button data-i18n="networkSettings" data-settings-tab="network" type="button">网络与诊断</button><button data-i18n="catalogueSettings" data-settings-tab="catalogue" type="button">目录与导入</button><button data-i18n="versions" data-settings-tab="versions" type="button">版本</button><button data-i18n="collections" data-settings-tab="collections" type="button">收藏与历史</button><button data-i18n="logs" data-settings-tab="logs" type="button">操作日志</button><button data-i18n="about" data-settings-tab="about" type="button">关于与说明</button></nav>
+<section data-settings-panel="reading">
+<div class="settings-grid">
+<label><span data-i18n="interfaceLanguage">界面语言</span><select id="settingsUILanguage"><option data-i18n="systemLanguage" value="auto">跟随浏览器／系统</option><option value="zh-Hans">简体中文</option><option value="zh-Hant">繁體中文</option><option value="en">English</option></select></label>
+<label><span data-i18n="contentLanguage">优先正文语言</span><select id="contentLanguage"><option data-i18n="followInterface" value="auto">跟随界面</option><option value="zh-Hans">简体中文</option><option value="zh-Hant">繁體中文</option><option value="en">English</option></select></label>
+<label><span data-i18n="translationTarget">翻译目标语言</span><select id="translationTarget"><option data-i18n="followInterface" value="auto">跟随界面</option><option value="zh-Hans">简体中文</option><option value="zh-Hant">繁體中文</option><option value="en">English</option></select></label>
+<label><span data-i18n="imageDelivery">图片加载方式</span><select id="imageDelivery"><option data-i18n="directImages" value="direct">实时远程图片直链</option><option data-i18n="proxyImages" value="proxy">后台中转与按需缓存</option></select></label>
+</div>
+<label class="checkbox-row"><input id="autoTranslate" type="checkbox"/><span data-i18n="autoTranslate">模型连接通过后，自动翻译不同语言的重点段落</span></label>
+<label class="checkbox-row"><input id="liveFirst" type="checkbox"/><span data-i18n="liveFirst">优先实时获取；失败时才回退已有缓存</span></label>
+<p class="subtle-note" data-i18n="fallbackNote">没有中文对应条目时，自动来源会尝试英文；连接失败与条目不存在会分别提示。</p>
+</section>
+<section data-settings-panel="model" hidden="">
+<div class="settings-grid"><label><span data-i18n="translationService">翻译服务</span><select id="translationProvider"><option data-i18n="localModel" value="local">本地模型</option><option value="google">Google Cloud Translation</option><option value="azure">Azure AI Translator</option><option data-i18n="disabled" value="off">关闭</option></select></label><label><span data-i18n="excludeLanguages">不自动翻译的来源语言（可多选）</span><select id="excludedLanguages" multiple="" size="5"></select></label></div>
+<label class="checkbox-row"><input id="lmEnabled" type="checkbox"/><span data-i18n="enableLocal">启用本地模型连接与启动检测</span></label>
+<p data-i18n="modelHelp">适用于 LM Studio 或兼容 OpenAI 的本地服务。请先启动模型服务器。</p>
+<div class="settings-grid"><label><span>API Base URL</span><input id="modelBase" placeholder="http://127.0.0.1:1234/v1" type="url"/></label><label><span data-i18n="modelId">模型 ID</span><input autocomplete="off" id="modelId" list="modelSuggestions"/><datalist id="modelSuggestions"></datalist></label><label><span data-i18n="modelKey">API 密钥（如需要）</span><input autocomplete="new-password" id="modelKey" type="password"/></label></div>
+<label class="checkbox-row"><input id="clearModelKey" type="checkbox"/><span data-i18n="clearSavedKey">删除已保存的此密钥</span></label>
+<button class="primary-button" data-i18n="saveAndTest" id="testModel" type="button">保存并测试连接 / 读取模型</button>
+<div class="notice" hidden="" id="modelTestResult" role="status"></div>
+<details class="advanced-google"><summary data-i18n="cloudTranslation">云端翻译密钥</summary><div class="settings-grid"><label><span>Google Cloud Translation API key</span><input autocomplete="new-password" id="googleTranslateKey" type="password"/></label><label><span>Azure Translator key</span><input autocomplete="new-password" id="azureTranslateKey" type="password"/></label><label><span>Azure region</span><input id="azureRegion" type="text"/></label></div><label class="checkbox-row"><input id="clearGoogleTranslateKey" type="checkbox"/><span data-i18n="clearGoogleTranslation">删除 Google 翻译密钥</span></label><label class="checkbox-row"><input id="clearAzureTranslateKey" type="checkbox"/><span data-i18n="clearAzureTranslation">删除 Azure 翻译密钥</span></label><p class="subtle-note" data-i18n="cloudHelp">使用官方 Google Cloud / Azure API，需要自己的密钥和配额；与图片搜索 API 分开。启动检测会发送一小段欧芹测试文字，可能计入用量。</p></details>
+<p class="subtle-note" data-i18n="modelScope">翻译前 8 个适合的重点段落，保留链接与数字检查；模型译文仍需核实。</p>
+</section>
+<section data-settings-panel="network" hidden="">
+<div class="settings-grid"><label><span>User-Agent</span><input id="userAgent" type="text"/></label><label><span data-i18n="proxy">可选 HTTP / SOCKS 代理</span><input id="proxyUrl" placeholder="http://127.0.0.1:7890" type="text"/></label><label><span data-i18n="timeout">来源超时（秒）</span><input id="networkTimeout" max="120" min="5" type="number"/></label></div>
+<label class="checkbox-row"><input id="trustEnvironment" type="checkbox"/><span data-i18n="trustEnvironment">采用运行环境中的代理设置</span></label>
+<p class="subtle-note" data-i18n="proxyHelp">运行环境代理与浏览器的系统代理可能不同；需要时请填写代理地址。</p><p class="subtle-note" data-i18n="userAgentHelp">维基要求可识别的请求标识；批量访问建议填写真实的项目网址或联系信息。不要填写虚假身份。</p>
+<button class="primary-button" data-i18n="saveAndDiagnose" id="runDiagnostics" type="button">保存并诊断来源连接</button><div id="networkResults"></div>
+<details class="advanced-google"><summary data-i18n="googleSettings">Google 图片 API（仅已有客户）</summary><div class="settings-grid"><label><span>Google API key</span><input autocomplete="new-password" id="googleKey" type="password"/></label><label><span>Search engine ID (cx)</span><input id="googleCx" type="text"/></label></div><label class="checkbox-row"><input id="clearGoogleKey" type="checkbox"/><span data-i18n="clearSavedKey">删除已保存的此密钥</span></label><p class="subtle-note" data-i18n="googleNote">此 API 不接受新客户，官方计划于 2027-01-01 停用。</p></details>
+</section>
+<section data-settings-panel="catalogue" hidden="">
+<p id="managementStats"></p><p class="subtle-note" id="databaseCutoff"></p><p class="subtle-note" data-i18n="catalogueHelp">这里只同步分类、名称、别名与来源。正文和图片按需读取，不批量下载所有页面。</p>
+<div class="import-group"><h3 data-i18n="wikiImport">维基分类目录导入</h3><div class="checkbox-grid" id="wikiRootOptions"></div><div class="settings-grid"><label><span><span data-i18n="depth">向下分类层数</span> <button aria-label="Information" class="info-button" data-help="depth" type="button">i</button></span><input id="importDepth" max="6" min="0" type="number" value="2"/></label><label><span><span data-i18n="categoryBudget">单次分类数量上限</span> <button aria-label="Information" class="info-button" data-help="budget" type="button">i</button></span><input id="categoryBudget" max="2000" min="4" type="number" value="200"/></label></div><button class="primary-button" data-i18n="startWiki" id="importWiki" type="button">导入所选维基分类</button></div>
+<div class="import-group"><h3 data-i18n="gbifImport">GBIF 植物分类参考库</h3><p class="subtle-note" data-i18n="notEdible">植物参考记录不等于已确认可食用香料。</p><div class="checkbox-grid" id="gbifFamilyOptions"></div><button class="primary-button" data-i18n="startGbif" id="importGbif" type="button">同步所选植物科</button></div>
+<details class="import-group"><summary data-i18n="searchOnline">在线查找并导入</summary><input class="wide-input" data-i18n-placeholder="searchPlaceholder" id="remoteQuery" maxlength="120" type="search"/><button class="quiet-button" data-i18n="searchOnline" id="remoteSearch" type="button">在线查找并导入</button><div id="remoteResults"></div></details>
+<details class="import-group"><summary data-i18n="auditArchive">清洗审核档案</summary><button class="quiet-button" data-i18n="viewAudit" id="loadAudit" type="button">查看排除与待审核记录</button><div id="auditResults"></div><button class="quiet-button" data-i18n="next" hidden="" id="auditNext" type="button">下一页</button></details>
+<h3 data-i18n="importJobs">导入进度与续传</h3><div id="importJobs"></div>
+</section>
+<section data-settings-panel="versions" hidden="">
+<p class="subtle-note" data-i18n="versionHelp">每个版本独立保存目录、设置、缓存、图片词库、收藏、历史和日志。版本管理与列表排序保存在版本外。删除的版本可以恢复。</p>
+<div class="settings-grid"><label><span data-i18n="versionName">新版本名称</span><input id="newVersionName" maxlength="100"/></label><label><span data-i18n="createFrom">创建方式</span><select id="newVersionMode"><option data-i18n="copyVersion" value="copy">复制所选版本</option><option data-i18n="defaultVersion" value="default">内置目录与默认设置</option></select></label><label><span data-i18n="sourceVersion">复制来源</span><select id="sourceVersion"></select></label><label><span data-i18n="sortBy">排序</span><select id="versionSort"><option data-i18n="customOrder" value="custom">自定义</option><option data-i18n="sortName" value="name">名称</option><option data-i18n="sortCreated" value="created">创建时间</option><option data-i18n="sortModified" value="modified">修改时间</option></select></label><label><span data-i18n="sortDirection">方向</span><select id="versionDirection"><option data-i18n="ascending" value="asc">升序</option><option data-i18n="descending" value="desc">降序</option></select></label></div>
+<button class="primary-button" data-i18n="createVersion" id="createVersion" type="button">新建版本</button><p class="subtle-note" data-i18n="dragHint">拖动把手调整顺序，也可以使用上下箭头。修改名称后点击重命名。</p><div class="sortable-list" id="versionList"></div><details><summary data-i18n="deletedVersions">已删除的版本</summary><div id="versionTrash"></div></details>
+</section>
+<section data-settings-panel="collections" hidden="">
+<div class="settings-grid"><label><span data-i18n="savedList">长期列表</span><select id="savedCollection"><option data-i18n="favorites" value="favorites">收藏</option><option data-i18n="history" value="history">浏览历史</option></select></label><label><span data-i18n="historyOrder">历史排序</span><select id="historyOrder"><option data-i18n="recentFirst" value="recent">最近浏览优先</option><option data-i18n="customOrder" value="custom">自定义</option></select></label></div><p class="subtle-note" data-i18n="dragHint">拖动把手或使用上下箭头排序。</p><div class="sortable-list" id="savedList"></div>
+</section>
+<section data-settings-panel="logs" hidden=""><label><span data-i18n="logScope">日志范围</span> <select id="logScope"><option data-i18n="currentVersion" value="version">当前版本</option><option data-i18n="versionManager" value="manager">版本管理</option></select></label><button class="quiet-button" data-i18n="refresh" id="reloadLogs" type="button">刷新</button><div class="log-list" id="logList"></div><button class="quiet-button" data-i18n="more" id="moreLogs" type="button">加载更多</button></section>
+<section data-settings-panel="about" hidden=""><div class="about-mark">SPICE ATLAS <span>0.4</span></div><p data-i18n="aboutIntro">用于逐步探索植物、调味原料、文化与来源的本地资料阅读器。</p><div id="aboutStats"></div><div class="help-grid"><button class="quiet-button" data-help="policy" data-i18n="sourcePolicy" type="button">语言与来源排序</button><button class="quiet-button" data-help="health" data-i18n="serviceHelp" type="button">连接检测与临时禁用</button><button class="quiet-button" data-help="depth" data-i18n="depth" type="button">向下分类层数</button><button class="quiet-button" data-help="budget" data-i18n="categoryBudget" type="button">单次分类数量上限</button><button class="quiet-button" data-help="images" data-i18n="imageVocabulary" type="button">图片关键词库</button><button class="quiet-button" data-help="versions" data-i18n="versions" type="button">版本管理</button></div><p class="subtle-note" data-i18n="licenseHelp">百科正文与图片保留各自来源、作者与许可。API 引用不会免除许可要求。批量导入的植物参考记录不代表可食用。作者署名、项目开源许可与 GitHub 更新功能后续再加入。</p></section>
+<div class="settings-footer"><span id="settingsMessage" role="status"></span><button class="primary-button" data-i18n="saveSettings" id="saveSettings" type="button">保存设置</button></div>
+</dialog>
+<aside aria-live="polite" class="notification-centre" hidden="" id="notificationCentre"><button class="notice-toggle" id="notificationToggle" type="button"></button><div hidden="" id="notificationDetails"></div></aside>
+<dialog class="help-dialog" id="helpDialog"><div class="settings-heading"><h2 id="helpTitle"></h2><button class="quiet-button" data-i18n="close" id="closeHelp" type="button">关闭</button></div><p id="helpBody"></p></dialog>
+</body></html>

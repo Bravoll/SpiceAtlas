@@ -1,0 +1,632 @@
+{
+  "version": "0.2.0",
+  "entries": [
+    {
+      "id": "parsley",
+      "name": "欧芹",
+      "english": "Parsley",
+      "scientific": "Petroselinum crispum",
+      "family": "Apiaceae",
+      "aliases": [
+        "歐芹",
+        "洋香菜",
+        "Parsley flakes"
+      ],
+      "group": "leaf",
+      "baidu": "欧芹",
+      "intro": "从鲜叶到干叶碎，认识西式料理中常见的欧芹。",
+      "wiki": {
+        "zhwiki": "歐芹",
+        "enwiki": "Parsley"
+      },
+      "commons_query": "Petroselinum crispum",
+      "forms": [
+        {
+          "id": "flakes",
+          "name": "干叶碎",
+          "part": "叶",
+          "theme": "leaf",
+          "image_query": "parsley dried flakes",
+          "commons_query": "parsley dried",
+          "preferred_images": [
+            "Parsley Dried.JPG"
+          ]
+        },
+        {
+          "id": "fresh",
+          "name": "鲜叶",
+          "part": "叶",
+          "theme": "leaf",
+          "image_query": "Petroselinum crispum fresh parsley",
+          "commons_query": "Petroselinum crispum leaves"
+        }
+      ],
+      "facts": [
+        {
+          "label": "名称",
+          "text": "Parsley flakes 指欧芹叶碎这一商品形态。",
+          "url": "https://www.mccormick.com/products/mccormick-parsley-flakes-0-25-oz"
+        },
+        {
+          "label": "先认识部位",
+          "text": "植物身份、鲜叶和干叶碎分别记录。",
+          "url": "https://zh.wikipedia.org/wiki/歐芹"
+        },
+        {
+          "label": "菜品线索",
+          "text": "Tabbouleh 的一种参考做法使用平叶欧芹。",
+          "url": "https://www.bbcgoodfood.com/recipes/tabbouleh"
+        }
+      ],
+      "references": {
+        "mccormick": {
+          "name": "McCormick",
+          "url": "https://www.mccormick.com/products/mccormick-parsley-flakes-0-25-oz",
+          "summary": "这份商品资料可核对干叶碎、配料与包装。它描述一个具体产品，不代表所有欧芹商品。",
+          "checked_at": "2026-10-27",
+          "links": [
+            {
+              "label": "Tabbouleh 参考食谱",
+              "url": "https://www.bbcgoodfood.com/recipes/tabbouleh"
+            }
+          ]
+        }
+      },
+      "groups": [
+        "leaf"
+      ],
+      "family_zh": "伞形科",
+      "intro_en": "Explore parsley as a plant, fresh herb and dried flakes."
+    },
+    {
+      "id": "coriander",
+      "name": "香菜 / 芫荽",
+      "english": "Coriander",
+      "scientific": "Coriandrum sativum",
+      "family": "Apiaceae",
+      "aliases": [
+        "香菜",
+        "芫荽籽",
+        "Cilantro",
+        "Coriander seed"
+      ],
+      "group": "seed",
+      "baidu": "芫荽",
+      "intro": "同一株植物的叶与干果，在名称、形态与风味上分别认识。",
+      "wiki": {
+        "zhwiki": "芫荽",
+        "enwiki": "Coriander"
+      },
+      "commons_query": "Coriandrum sativum",
+      "forms": [
+        {
+          "id": "leaf",
+          "name": "鲜叶",
+          "part": "叶",
+          "theme": "leaf",
+          "image_query": "Coriandrum sativum cilantro leaves",
+          "commons_query": "Coriandrum sativum leaves",
+          "preferred_images": [
+            "Starr-080731-9544-Coriandrum sativum-leaves-makawao-Maui (24924687415).jpg"
+          ]
+        },
+        {
+          "id": "seed",
+          "name": "干燥整粒",
+          "part": "果实（商品常称籽）",
+          "theme": "seed",
+          "image_query": "coriander seeds",
+          "commons_query": "coriander seeds"
+        },
+        {
+          "id": "ground",
+          "name": "籽粉",
+          "part": "果实",
+          "theme": "seed",
+          "image_query": "ground coriander spice",
+          "commons_query": "ground coriander"
+        }
+      ],
+      "facts": [
+        {
+          "label": "同株不同部位",
+          "text": "鲜叶和市售芫荽籽来自同一种植物。",
+          "url": "https://spices.res.in/products/spices/coriander.html"
+        },
+        {
+          "label": "名称核对",
+          "text": "Coriander、Cilantro 与香菜、芫荽等名称需结合地区和部位理解。",
+          "url": "https://www.nparks.gov.sg/florafaunaweb/flora/5/9/5944"
+        },
+        {
+          "label": "风味线索",
+          "text": "叶与果实的精油组成不同，不能直接套用同一套成分说明。",
+          "url": "https://journals.sagepub.com/doi/full/10.1177/1934578X20933067"
+        }
+      ],
+      "references": {
+        "nparks": {
+          "name": "NParks 植物资料",
+          "url": "https://www.nparks.gov.sg/florafaunaweb/flora/5/9/5944",
+          "summary": "新加坡国家公园局的植物资料列出学名、伞形科分类及中英文别名，可辅助核对身份。",
+          "checked_at": "2026-10-27",
+          "links": [
+            {
+              "label": "ICAR 香料资料",
+              "url": "https://spices.res.in/products/spices/coriander.html"
+            }
+          ]
+        },
+        "icar": {
+          "name": "ICAR 香料研究",
+          "url": "https://spices.res.in/products/spices/coriander.html",
+          "summary": "印度香料研究机构资料把芫荽作为兼供叶与干果使用的植物介绍，并讨论其在调味料中的使用。",
+          "checked_at": "2026-10-27",
+          "links": [
+            {
+              "label": "Gernot Katzer：名称、风味与成分",
+              "url": "https://gernot-katzers-spice-pages.com/engl/Cori_sat.html"
+            }
+          ]
+        }
+      },
+      "groups": [
+        "leaf",
+        "seed"
+      ],
+      "family_zh": "伞形科",
+      "intro_en": "One plant, different ingredients: fresh leaves and dried fruits."
+    },
+    {
+      "id": "celery",
+      "name": "芹菜",
+      "english": "Celery",
+      "scientific": "Apium graveolens",
+      "family": "Apiaceae",
+      "aliases": [
+        "Celery seed",
+        "芹菜籽"
+      ],
+      "group": "leaf",
+      "baidu": "芹菜",
+      "intro": "从常见蔬菜出发，区分叶、叶柄与籽类调味材料。",
+      "wiki": {
+        "zhwiki": "芹菜",
+        "enwiki": "Celery"
+      },
+      "commons_query": "Apium graveolens",
+      "forms": [
+        {
+          "id": "fresh",
+          "name": "鲜叶与叶柄",
+          "part": "叶 / 叶柄",
+          "theme": "leaf",
+          "image_query": "Apium graveolens celery",
+          "commons_query": "Apium graveolens",
+          "preferred_images": [
+            "Bleekselderij groen (Apium graveolens var. dulce green).jpg"
+          ]
+        },
+        {
+          "id": "seed",
+          "name": "籽类调味料",
+          "part": "果实",
+          "theme": "seed",
+          "image_query": "celery seeds spice",
+          "commons_query": "celery seeds"
+        }
+      ],
+      "references": {},
+      "groups": [
+        "leaf",
+        "seed"
+      ],
+      "family_zh": "伞形科",
+      "intro_en": "Distinguish celery leaves, stalks and seed-like spice fruits."
+    },
+    {
+      "id": "dill",
+      "name": "莳萝",
+      "english": "Dill",
+      "scientific": "Anethum graveolens",
+      "family": "Apiaceae",
+      "aliases": [
+        "蒔蘿",
+        "Dill weed"
+      ],
+      "group": "leaf",
+      "baidu": "莳萝",
+      "intro": "叶与籽分别进入烹饪的香草。",
+      "wiki": {
+        "zhwiki": "莳萝",
+        "enwiki": "Dill"
+      },
+      "commons_query": "Anethum graveolens",
+      "forms": [
+        {
+          "id": "leaf",
+          "name": "叶",
+          "part": "叶",
+          "theme": "leaf",
+          "image_query": "Anethum graveolens dill",
+          "commons_query": "Anethum graveolens",
+          "preferred_images": [
+            "Anethum graveolens Bouquet 1zz.jpg"
+          ]
+        },
+        {
+          "id": "seed",
+          "name": "籽",
+          "part": "果实",
+          "theme": "seed",
+          "image_query": "dill seeds",
+          "commons_query": "dill seeds"
+        }
+      ],
+      "references": {},
+      "groups": [
+        "leaf",
+        "seed"
+      ],
+      "family_zh": "伞形科",
+      "intro_en": "Discover the leaves and fruits of dill."
+    },
+    {
+      "id": "basil",
+      "name": "罗勒",
+      "english": "Basil",
+      "scientific": "Ocimum basilicum",
+      "family": "Lamiaceae",
+      "aliases": [
+        "羅勒",
+        "Sweet basil"
+      ],
+      "group": "leaf",
+      "baidu": "罗勒",
+      "intro": "以叶为主要认识入口，进一步了解不同类型与饮食用法。",
+      "wiki": {
+        "zhwiki": "罗勒",
+        "enwiki": "Basil"
+      },
+      "commons_query": "Ocimum basilicum",
+      "forms": [
+        {
+          "id": "leaf",
+          "name": "鲜叶",
+          "part": "叶",
+          "theme": "leaf",
+          "image_query": "Ocimum basilicum basil leaves",
+          "commons_query": "Ocimum basilicum leaves"
+        }
+      ],
+      "references": {},
+      "groups": [
+        "leaf"
+      ],
+      "family_zh": "唇形科",
+      "intro_en": "Explore basil leaves, botanical identity and culinary sources."
+    },
+    {
+      "id": "oregano",
+      "name": "牛至",
+      "english": "Oregano",
+      "scientific": "Origanum vulgare",
+      "family": "Lamiaceae",
+      "aliases": [
+        "奧勒岡",
+        "奥勒冈"
+      ],
+      "group": "leaf",
+      "baidu": "牛至",
+      "intro": "从植物和干燥香草的形态认识 oregano。",
+      "wiki": {
+        "zhwiki": "牛至",
+        "enwiki": "Oregano"
+      },
+      "commons_query": "Origanum vulgare",
+      "forms": [
+        {
+          "id": "leaf",
+          "name": "叶与枝梢",
+          "part": "叶",
+          "theme": "leaf",
+          "image_query": "Origanum vulgare oregano",
+          "commons_query": "Origanum vulgare"
+        }
+      ],
+      "references": {},
+      "groups": [
+        "leaf"
+      ],
+      "family_zh": "唇形科",
+      "intro_en": "Explore oregano as a plant and a culinary herb."
+    },
+    {
+      "id": "thyme",
+      "name": "百里香",
+      "english": "Thyme",
+      "scientific": "Thymus（属）",
+      "family": "Lamiaceae",
+      "aliases": [
+        "麝香草"
+      ],
+      "group": "leaf",
+      "baidu": "百里香",
+      "intro": "烹饪通称与具体植物种需要分别核对。",
+      "scope_note": "中文“百里香”条目与英文 Thyme 的植物范围可能不同，请核对各来源中的具体学名；此处按烹饪通称关联。",
+      "wiki": {
+        "zhwiki": "百里香",
+        "enwiki": "Thyme"
+      },
+      "commons_query": "Thymus vulgaris",
+      "forms": [
+        {
+          "id": "leaf",
+          "name": "枝叶",
+          "part": "叶 / 嫩枝",
+          "theme": "leaf",
+          "image_query": "Thymus vulgaris thyme",
+          "commons_query": "Thymus vulgaris",
+          "preferred_images": [
+            "Thymus vulgaris 2601.JPG"
+          ]
+        }
+      ],
+      "references": {},
+      "groups": [
+        "leaf"
+      ],
+      "family_zh": "唇形科",
+      "intro_en": "Check the species behind the culinary name thyme."
+    },
+    {
+      "id": "rosemary",
+      "name": "迷迭香",
+      "english": "Rosemary",
+      "scientific": "Salvia rosmarinus",
+      "family": "Lamiaceae",
+      "aliases": [
+        "Rosmarinus officinalis"
+      ],
+      "group": "leaf",
+      "baidu": "迷迭香",
+      "intro": "认识针状叶片、鲜枝与干叶的不同形态。",
+      "wiki": {
+        "zhwiki": "迷迭香",
+        "enwiki": "Rosemary"
+      },
+      "commons_query": "Salvia rosmarinus",
+      "forms": [
+        {
+          "id": "leaf",
+          "name": "枝叶",
+          "part": "叶 / 嫩枝",
+          "theme": "leaf",
+          "image_query": "Salvia rosmarinus rosemary",
+          "commons_query": "Salvia rosmarinus"
+        }
+      ],
+      "references": {},
+      "groups": [
+        "leaf"
+      ],
+      "family_zh": "唇形科",
+      "intro_en": "Explore rosemary shoots and leaves."
+    },
+    {
+      "id": "cumin",
+      "name": "孜然",
+      "english": "Cumin",
+      "scientific": "Cuminum cyminum",
+      "family": "Apiaceae",
+      "aliases": [
+        "孜然芹",
+        "枯茗"
+      ],
+      "group": "seed",
+      "baidu": "孜然芹",
+      "intro": "以整粒与粉末两种常见形态认识孜然。",
+      "wiki": {
+        "zhwiki": "孜然芹",
+        "enwiki": "Cumin"
+      },
+      "commons_query": "Cuminum cyminum",
+      "forms": [
+        {
+          "id": "seed",
+          "name": "整粒",
+          "part": "果实",
+          "theme": "seed",
+          "image_query": "cumin seeds",
+          "commons_query": "cumin seeds"
+        },
+        {
+          "id": "ground",
+          "name": "粉末",
+          "part": "果实",
+          "theme": "seed",
+          "image_query": "ground cumin",
+          "commons_query": "ground cumin"
+        }
+      ],
+      "references": {},
+      "groups": [
+        "seed"
+      ],
+      "family_zh": "伞形科",
+      "intro_en": "Explore whole and ground cumin fruits."
+    },
+    {
+      "id": "pepper",
+      "name": "黑胡椒",
+      "english": "Black pepper",
+      "scientific": "Piper nigrum",
+      "family": "Piperaceae",
+      "aliases": [
+        "胡椒",
+        "Peppercorn"
+      ],
+      "group": "fruit",
+      "baidu": "黑胡椒",
+      "intro": "植物、完整胡椒粒与研磨粉末分别浏览。",
+      "wiki": {
+        "zhwiki": "黑胡椒",
+        "enwiki": "Black pepper"
+      },
+      "commons_query": "Piper nigrum",
+      "forms": [
+        {
+          "id": "whole",
+          "name": "整粒",
+          "part": "果实",
+          "theme": "bark",
+          "image_query": "black peppercorns",
+          "commons_query": "black peppercorns",
+          "preferred_images": [
+            "Tellicherry Black Peppercorns.jpg"
+          ]
+        },
+        {
+          "id": "ground",
+          "name": "粉末",
+          "part": "果实",
+          "theme": "bark",
+          "image_query": "ground black pepper",
+          "commons_query": "ground black pepper"
+        }
+      ],
+      "references": {},
+      "groups": [
+        "fruit"
+      ],
+      "family_zh": "胡椒科",
+      "intro_en": "Explore the plant, peppercorns and ground black pepper."
+    },
+    {
+      "id": "cinnamon",
+      "name": "肉桂",
+      "english": "Cinnamon",
+      "scientific": "Cinnamomum（属）",
+      "family": "Lauraceae",
+      "aliases": [
+        "桂皮",
+        "Cassia"
+      ],
+      "group": "bark",
+      "baidu": "肉桂",
+      "intro": "从树皮材料认识桂类香辛料，并核对不同商品的植物来源。",
+      "scope_note": "中文“肉桂”与英文 cinnamon 的商品范围不完全相同，具体产品可能来自不同樟属植物。",
+      "wiki": {
+        "zhwiki": "肉桂",
+        "enwiki": "Cinnamon"
+      },
+      "commons_query": "cinnamon bark",
+      "forms": [
+        {
+          "id": "bark",
+          "name": "完整树皮",
+          "part": "树皮",
+          "theme": "bark",
+          "image_query": "cinnamon bark sticks",
+          "commons_query": "cinnamon sticks",
+          "preferred_images": [
+            "Cinnamon sticks (1).jpg"
+          ]
+        },
+        {
+          "id": "ground",
+          "name": "粉末",
+          "part": "树皮",
+          "theme": "bark",
+          "image_query": "ground cinnamon",
+          "commons_query": "ground cinnamon"
+        }
+      ],
+      "references": {},
+      "groups": [
+        "bark"
+      ],
+      "family_zh": "樟科",
+      "intro_en": "Compare the plants and bark ingredients sold as cinnamon."
+    },
+    {
+      "id": "clove",
+      "name": "丁香",
+      "english": "Clove",
+      "scientific": "Syzygium aromaticum",
+      "family": "Myrtaceae",
+      "aliases": [
+        "丁香香料",
+        "Cloves"
+      ],
+      "group": "flower",
+      "baidu": "丁子香",
+      "intro": "此处讨论香料丁香，检索时需要与同名观赏植物区分。",
+      "scope_note": "请核对学名 Syzygium aromaticum；同名的观赏丁香不属于此条目的调味材料。",
+      "wiki": {
+        "zhwiki": "丁子香",
+        "enwiki": "Clove"
+      },
+      "commons_query": "Syzygium aromaticum",
+      "forms": [
+        {
+          "id": "bud",
+          "name": "干花蕾",
+          "part": "花蕾",
+          "theme": "bark",
+          "image_query": "clove spice Syzygium aromaticum",
+          "commons_query": "clove spice",
+          "preferred_images": [
+            "Clove close up.jpg",
+            "Cloves.JPG"
+          ]
+        }
+      ],
+      "references": {},
+      "groups": [
+        "flower"
+      ],
+      "family_zh": "桃金娘科",
+      "intro_en": "This record concerns the spice clove, not unrelated ornamental plants."
+    },
+    {
+      "id": "paprika",
+      "name": "红椒粉",
+      "english": "Paprika",
+      "scientific": "Capsicum（原料属）",
+      "family": "Solanaceae",
+      "aliases": [
+        "Paprika powder",
+        "甜椒粉"
+      ],
+      "group": "fruit",
+      "baidu": "红椒粉",
+      "intro": "以干燥果实研磨的粉末形态认识 paprika。",
+      "scope_note": "Paprika 的原料、辣度与加工类型因产品而异，购买时请核对配料与标签。",
+      "wiki": {
+        "zhwiki": "紅甜椒粉",
+        "enwiki": "Paprika"
+      },
+      "commons_query": "paprika powder",
+      "forms": [
+        {
+          "id": "ground",
+          "name": "粉末",
+          "part": "果实",
+          "theme": "red",
+          "image_query": "paprika powder",
+          "commons_query": "paprika powder",
+          "preferred_images": [
+            "Sppon of Paprika.jpg"
+          ]
+        }
+      ],
+      "references": {},
+      "groups": [
+        "fruit"
+      ],
+      "family_zh": "茄科",
+      "intro_en": "Explore paprika powder and its ingredient and processing differences."
+    }
+  ]
+}

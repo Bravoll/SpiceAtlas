@@ -1,0 +1,104 @@
+{
+  "version": "0.4.0",
+  "checked_at": "2026-10-28T05:38:01.869549+00:00",
+  "backend": {
+    "tests": 87,
+    "passed": true
+  },
+  "dom": {
+    "passed": true,
+    "checks": [
+      "automatic Commons CORS",
+      "no main manual API controls",
+      "manual Simplified international ranking",
+      "Traditional labels and forms",
+      "local-only typing",
+      "form-specific image query",
+      "packaging filter changes image plan only",
+      "local model configuration",
+      "named versions and reorder controls",
+      "favorites",
+      "persistent connection notice",
+      "deferred global reload preserves safe state",
+      "requested Basil action restored and failed Google removed",
+      "manual notice dismissal",
+      "English label coverage"
+    ],
+    "requests": 76
+  },
+  "browser": {
+    "kind": "actual managed Chrome; synthetic article/API fixture",
+    "viewport": [
+      1363,
+      936
+    ],
+    "body_client_height": 936,
+    "body_scroll_height": 936,
+    "pane_client_heights": {
+      "catalogue": 833,
+      "main": 833
+    },
+    "independent_wheel_scroll": {
+      "outer": 0,
+      "catalogue": 936,
+      "main": 936
+    },
+    "header_control_center_y": [
+      50.9375,
+      50.9375,
+      50.9375,
+      50.9375,
+      50.9375,
+      50.9375
+    ],
+    "image_profile_option_count": 13,
+    "reviewed": [
+      "botanical visual layout",
+      "Traditional Chinese labels and dry-leaf glossary",
+      "local/cloud translation settings",
+      "version manager",
+      "source order",
+      "image attribution"
+    ],
+    "screenshots_packaged": false
+  },
+  "data": {
+    "culinary": 92,
+    "botanical": 18287,
+    "nodes": 817,
+    "total": 18379,
+    "audit": {
+      "merged": 206,
+      "pending": 101,
+      "rejected": 392
+    },
+    "metadata": {
+      "schema": 4,
+      "cleaned_at": "2026-10-28T05:13:37+00:00",
+      "source_cutoff": "2026-10-27T04:34:04+00:00",
+      "original_total": 19078,
+      "original_culinary": 1239,
+      "retained": 18379,
+      "scope_counts": {
+        "botanical": 18287,
+        "culinary": 92
+      },
+      "decisions": {
+        "keep": 18379,
+        "merged": 206,
+        "rejected": 392,
+        "pending": 101
+      },
+      "evidence_entities": 1222,
+      "evidence_types": 175,
+      "safety_note": "Botanical taxonomy is not a statement of edibility. A source description is not a food safety review."
+    }
+  },
+  "live_report": "verification_v04_live.json",
+  "limits": [
+    "Personal LM Studio endpoint not accessible here",
+    "No personal Google/Azure translation credentials used",
+    "Visual QA is a synthetic fixture; live Python APIs checked separately",
+    "No mobile device visual test"
+  ]
+}

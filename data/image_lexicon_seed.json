@@ -1,0 +1,4162 @@
+{
+  "schema": 1,
+  "created_at": "2026-10-28T05:06:23+00:00",
+  "updated_at": "2026-10-28T05:08:53+00:00",
+  "scope": "Image query planning and ranking only. Manual seed meanings; live Commons filename token counts. Not culinary evidence, edibility evidence, a random botanical sample, or individually verified image identification.",
+  "profiles": {
+    "fresh": {
+      "id": "fresh",
+      "zh": "鲜叶",
+      "en": "Fresh leaves",
+      "terms": [
+        "fresh",
+        "leaf",
+        "leaves",
+        "sprig",
+        "sprigs",
+        "鲜叶",
+        "鮮葉",
+        "叶片",
+        "葉片",
+        "frisch",
+        "frais"
+      ],
+      "negative": [
+        "dried",
+        "powder",
+        "flakes"
+      ],
+      "query_terms": [
+        "fresh leaves",
+        "leaves"
+      ]
+    },
+    "flakes": {
+      "id": "flakes",
+      "zh": "干叶碎",
+      "en": "Dried flakes",
+      "terms": [
+        "dried",
+        "dry",
+        "flakes",
+        "flaked",
+        "getrocknet",
+        "séché",
+        "干叶",
+        "乾葉",
+        "叶碎",
+        "葉碎"
+      ],
+      "negative": [
+        "powder",
+        "seed",
+        "root",
+        "flower",
+        "plantation"
+      ],
+      "query_terms": [
+        "dried flakes",
+        "dried"
+      ]
+    },
+    "ground": {
+      "id": "ground",
+      "zh": "粉末",
+      "en": "Ground / powder",
+      "terms": [
+        "ground",
+        "powder",
+        "powdered",
+        "粉",
+        "gemahlen",
+        "poudre"
+      ],
+      "negative": [
+        "plantation",
+        "flowering"
+      ],
+      "query_terms": [
+        "ground powder",
+        "powder"
+      ]
+    },
+    "whole": {
+      "id": "whole",
+      "zh": "完整原料／整粒",
+      "en": "Whole raw material",
+      "terms": [
+        "whole",
+        "seed",
+        "seeds",
+        "peppercorn",
+        "grain",
+        "籽",
+        "粒",
+        "pod",
+        "pods",
+        "整粒",
+        "完整"
+      ],
+      "negative": [
+        "ground",
+        "powder",
+        "powdered"
+      ],
+      "query_terms": [
+        "whole",
+        "whole seeds"
+      ]
+    },
+    "bark": {
+      "id": "bark",
+      "zh": "树皮／桂皮条",
+      "en": "Bark / quills",
+      "terms": [
+        "bark",
+        "stick",
+        "sticks",
+        "quill",
+        "quills",
+        "树皮",
+        "樹皮",
+        "桂皮"
+      ],
+      "negative": [
+        "powder",
+        "ground"
+      ],
+      "query_terms": [
+        "bark sticks",
+        "sticks"
+      ]
+    },
+    "bud": {
+      "id": "bud",
+      "zh": "干燥花蕾",
+      "en": "Dried flower buds",
+      "terms": [
+        "clove",
+        "cloves",
+        "bud",
+        "buds",
+        "花蕾",
+        "蕾"
+      ],
+      "negative": [
+        "powder",
+        "ground",
+        "flowering"
+      ],
+      "query_terms": [
+        "dried buds",
+        "buds"
+      ]
+    },
+    "flower": {
+      "id": "flower",
+      "zh": "花／柱头",
+      "en": "Flowers / stigmas",
+      "terms": [
+        "flower",
+        "flowers",
+        "stigma",
+        "stigmas",
+        "saffron",
+        "花",
+        "柱头",
+        "柱頭"
+      ],
+      "negative": [
+        "ground",
+        "powder"
+      ],
+      "query_terms": [
+        "dried stigmas",
+        "flowers"
+      ]
+    },
+    "root": {
+      "id": "root",
+      "zh": "鲜根茎",
+      "en": "Fresh roots / rhizomes",
+      "terms": [
+        "root",
+        "roots",
+        "rhizome",
+        "rhizomes",
+        "ginger",
+        "根",
+        "茎",
+        "莖"
+      ],
+      "negative": [
+        "ground",
+        "powder"
+      ],
+      "query_terms": [
+        "fresh root",
+        "rhizome"
+      ]
+    },
+    "sliced": {
+      "id": "sliced",
+      "zh": "切片",
+      "en": "Slices",
+      "terms": [
+        "sliced",
+        "slices",
+        "slice",
+        "切片",
+        "薑片",
+        "姜片"
+      ],
+      "negative": [
+        "powder",
+        "ground"
+      ],
+      "query_terms": [
+        "dried slices",
+        "sliced"
+      ]
+    },
+    "jar": {
+      "id": "jar",
+      "zh": "玻璃罐包装",
+      "en": "Glass jar packaging",
+      "terms": [
+        "jar",
+        "jars",
+        "glass",
+        "罐",
+        "瓶",
+        "罐装",
+        "罐裝"
+      ],
+      "negative": [],
+      "query_terms": [
+        "spice glass jar",
+        "glass jar"
+      ]
+    },
+    "bag": {
+      "id": "bag",
+      "zh": "袋装",
+      "en": "Bag packaging",
+      "terms": [
+        "bag",
+        "bags",
+        "pouch",
+        "pouches",
+        "sachet",
+        "袋",
+        "袋装",
+        "袋裝"
+      ],
+      "negative": [],
+      "query_terms": [
+        "spice bag pouch",
+        "bag"
+      ]
+    },
+    "overview": {
+      "id": "overview",
+      "zh": "原植物",
+      "en": "Plant overview",
+      "terms": [],
+      "negative": [],
+      "query_terms": [
+        ""
+      ]
+    }
+  },
+  "samples": [
+    {
+      "name": "parsley",
+      "scientific": "Petroselinum crispum",
+      "profile": "fresh",
+      "query": "parsley fresh leaves",
+      "source": "https://commons.wikimedia.org/w/api.php",
+      "request_parameters": {
+        "action": "query",
+        "list": "search",
+        "srnamespace": 6,
+        "srsearch": "parsley fresh leaves filetype:bitmap",
+        "srlimit": 10,
+        "format": "json",
+        "formatversion": 2,
+        "maxlag": 10
+      },
+      "query_url": "https://commons.wikimedia.org/w/api.php?action=query&list=search&srnamespace=6&srsearch=parsley+fresh+leaves+filetype%3Abitmap&srlimit=10&format=json&formatversion=2&maxlag=10",
+      "checked_at": "2026-10-28T05:07:38+00:00",
+      "status": "ok",
+      "http_status": 200,
+      "results": [
+        {
+          "title": "File:Fresh Parsley leaves.jpg",
+          "pageid": 163376193
+        },
+        {
+          "title": "File:CACIK (Basil, parsley, coriander).jpg",
+          "pageid": 61535697
+        },
+        {
+          "title": "File:Liat Portal for Foodie Disorder - Parsley.jpg",
+          "pageid": 180280937
+        },
+        {
+          "title": "File:DFC 5021 A savory plate of spaghetti topped with crispy bacon grated cheese and a sprig of fresh parsley.jpg",
+          "pageid": 188631474
+        },
+        {
+          "title": "File:Fresh vegetarian pasta (2528005054).jpg",
+          "pageid": 8193512
+        },
+        {
+          "title": "File:DFC 5259- Grilled marinated pork skewers sizzling on the grill, garnished with fresh herbs and ready to eat..jpg",
+          "pageid": 188520675
+        },
+        {
+          "title": "File:DFC 5508 Close-up of savory stuffed potatoes topped with tomato wedges fresh herbs and hearty pieces of meat.jpg",
+          "pageid": 199938233
+        },
+        {
+          "title": "File:Vichyssoise in Turkey.jpg",
+          "pageid": 68435914
+        },
+        {
+          "title": "File:Coriander Flower (Coriandrum sativum) in Sarog Village of Shimla District.jpg",
+          "pageid": 190870966
+        },
+        {
+          "title": "File:Կանաչի 3.JPG",
+          "pageid": 18230384
+        }
+      ]
+    },
+    {
+      "name": "parsley",
+      "scientific": "Petroselinum crispum",
+      "profile": "flakes",
+      "query": "parsley dried flakes",
+      "source": "https://commons.wikimedia.org/w/api.php",
+      "request_parameters": {
+        "action": "query",
+        "list": "search",
+        "srnamespace": 6,
+        "srsearch": "parsley dried flakes filetype:bitmap",
+        "srlimit": 10,
+        "format": "json",
+        "formatversion": 2,
+        "maxlag": 10
+      },
+      "query_url": "https://commons.wikimedia.org/w/api.php?action=query&list=search&srnamespace=6&srsearch=parsley+dried+flakes+filetype%3Abitmap&srlimit=10&format=json&formatversion=2&maxlag=10",
+      "checked_at": "2026-10-28T05:07:39+00:00",
+      "status": "ok",
+      "http_status": 200,
+      "results": []
+    },
+    {
+      "name": "coriander",
+      "scientific": "Coriandrum sativum",
+      "profile": "fresh",
+      "query": "coriander fresh leaves",
+      "source": "https://commons.wikimedia.org/w/api.php",
+      "request_parameters": {
+        "action": "query",
+        "list": "search",
+        "srnamespace": 6,
+        "srsearch": "coriander fresh leaves filetype:bitmap",
+        "srlimit": 10,
+        "format": "json",
+        "formatversion": 2,
+        "maxlag": 10
+      },
+      "query_url": "https://commons.wikimedia.org/w/api.php?action=query&list=search&srnamespace=6&srsearch=coriander+fresh+leaves+filetype%3Abitmap&srlimit=10&format=json&formatversion=2&maxlag=10",
+      "checked_at": "2026-10-28T05:07:41+00:00",
+      "status": "ok",
+      "http_status": 200,
+      "results": [
+        {
+          "title": "File:Kaeng khae-963.JPG",
+          "pageid": 22931237
+        },
+        {
+          "title": "File:Bunches of coriander leaves.jpg",
+          "pageid": 87687224
+        },
+        {
+          "title": "File:Coriander whose leaves are fresh with a slight citrus taste usually used as a herb as well as a spice 01.jpg",
+          "pageid": 163968172
+        },
+        {
+          "title": "File:Coriander whose leaves are fresh with a slight citrus taste usually used as a herb as well as a spice 06.jpg",
+          "pageid": 163968180
+        },
+        {
+          "title": "File:Coriander whose leaves are fresh with a slight citrus taste usually used as a herb as well as a spice 05.jpg",
+          "pageid": 163968181
+        },
+        {
+          "title": "File:Coriander whose leaves are fresh with a slight citrus taste usually used as a herb as well as a spice 04.jpg",
+          "pageid": 163968178
+        },
+        {
+          "title": "File:Coriander whose leaves are fresh with a slight citrus taste usually used as a herb as well as a spice 03.jpg",
+          "pageid": 163968173
+        },
+        {
+          "title": "File:Coriander whose leaves are fresh with a slight citrus taste usually used as a herb as well as a spice 02.jpg",
+          "pageid": 163968174
+        },
+        {
+          "title": "File:Coriander Flower (Coriandrum sativum) in Sarog Village of Shimla District.jpg",
+          "pageid": 190870966
+        },
+        {
+          "title": "File:CACIK (Basil, parsley, coriander).jpg",
+          "pageid": 61535697
+        }
+      ]
+    },
+    {
+      "name": "coriander",
+      "scientific": "Coriandrum sativum",
+      "profile": "whole",
+      "query": "coriander seeds",
+      "source": "https://commons.wikimedia.org/w/api.php",
+      "request_parameters": {
+        "action": "query",
+        "list": "search",
+        "srnamespace": 6,
+        "srsearch": "coriander seeds filetype:bitmap",
+        "srlimit": 10,
+        "format": "json",
+        "formatversion": 2,
+        "maxlag": 10
+      },
+      "query_url": "https://commons.wikimedia.org/w/api.php?action=query&list=search&srnamespace=6&srsearch=coriander+seeds+filetype%3Abitmap&srlimit=10&format=json&formatversion=2&maxlag=10",
+      "checked_at": "2026-10-28T05:07:42+00:00",
+      "status": "ok",
+      "http_status": 200,
+      "results": [
+        {
+          "title": "File:Coriander Seeds.jpg",
+          "pageid": 63929911
+        },
+        {
+          "title": "File:Bumbu Rawon.jpg",
+          "pageid": 108012976
+        },
+        {
+          "title": "File:(MHNT) Coriandrum sativum - inflorescence.jpg",
+          "pageid": 118380438
+        },
+        {
+          "title": "File:Coriandrum sativum - Köhler–s Medizinal-Pflanzen-193.jpg",
+          "pageid": 255535
+        },
+        {
+          "title": "File:Coriander Green Seeds (Coriandrum sativum) in Shimla.jpg",
+          "pageid": 191150409
+        },
+        {
+          "title": "File:Whole coriander seeds to make Du'ah (dukkah).JPG",
+          "pageid": 37004304
+        },
+        {
+          "title": "File:Coriandrum sativum (Flora of Tajikistan).png",
+          "pageid": 159091147
+        },
+        {
+          "title": "File:Coriandrum sativum Blattläuse, Josef Schlaghecken.jpg",
+          "pageid": 153039412
+        },
+        {
+          "title": "File:Coriandrum sativum kz05.jpg",
+          "pageid": 135509091
+        },
+        {
+          "title": "File:Koriandersamen.jpg",
+          "pageid": 2131693
+        }
+      ]
+    },
+    {
+      "name": "celery",
+      "scientific": "Apium graveolens",
+      "profile": "fresh",
+      "query": "celery fresh leaves",
+      "source": "https://commons.wikimedia.org/w/api.php",
+      "request_parameters": {
+        "action": "query",
+        "list": "search",
+        "srnamespace": 6,
+        "srsearch": "celery fresh leaves filetype:bitmap",
+        "srlimit": 10,
+        "format": "json",
+        "formatversion": 2,
+        "maxlag": 10
+      },
+      "query_url": "https://commons.wikimedia.org/w/api.php?action=query&list=search&srnamespace=6&srsearch=celery+fresh+leaves+filetype%3Abitmap&srlimit=10&format=json&formatversion=2&maxlag=10",
+      "checked_at": "2026-10-28T05:07:44+00:00",
+      "status": "ok",
+      "http_status": 200,
+      "results": [
+        {
+          "title": "File:Fresh produce sits on a counter waiting to be juiced by U.S. Air Force Senior Airman Megan Stanton, a medic with the 366th Medical Operations Squadron, at her home in Mountain Home, Idaho, July 17, 2013 130717-F-NW635-243.jpg",
+          "pageid": 27535200
+        },
+        {
+          "title": "File:Medical prescription issued by Bimaristan Qalawun.jpg",
+          "pageid": 28975400
+        },
+        {
+          "title": "File:Pasta Bolognese (833149342).jpg",
+          "pageid": 70211469
+        },
+        {
+          "title": "File:Simple vegetable soup 2009.jpg",
+          "pageid": 164315336
+        },
+        {
+          "title": "File:Farm and floral guide (1899) (19930355244).jpg",
+          "pageid": 42348234
+        },
+        {
+          "title": "File:Annual of true blue seeds (1905) (18426011685).jpg",
+          "pageid": 41734267
+        },
+        {
+          "title": "File:Bolgiano's 1902 catalogue (15727553324).jpg",
+          "pageid": 42606453
+        },
+        {
+          "title": "File:Bolgiano's 1902 catalogue (16163789329).jpg",
+          "pageid": 42606458
+        },
+        {
+          "title": "File:Manns' superior seeds (16389114982).jpg",
+          "pageid": 42628121
+        },
+        {
+          "title": "File:Burpee's farm annual - garden, farm, and flower seeds, thoroughbred stock (1884) (20321672800).jpg",
+          "pageid": 42298115
+        }
+      ]
+    },
+    {
+      "name": "dill",
+      "scientific": "Anethum graveolens",
+      "profile": "fresh",
+      "query": "dill fresh leaves",
+      "source": "https://commons.wikimedia.org/w/api.php",
+      "request_parameters": {
+        "action": "query",
+        "list": "search",
+        "srnamespace": 6,
+        "srsearch": "dill fresh leaves filetype:bitmap",
+        "srlimit": 10,
+        "format": "json",
+        "formatversion": 2,
+        "maxlag": 10
+      },
+      "query_url": "https://commons.wikimedia.org/w/api.php?action=query&list=search&srnamespace=6&srsearch=dill+fresh+leaves+filetype%3Abitmap&srlimit=10&format=json&formatversion=2&maxlag=10",
+      "checked_at": "2026-10-28T05:07:45+00:00",
+      "status": "ok",
+      "http_status": 200,
+      "results": [
+        {
+          "title": "File:Fresh Dill Leaves.JPG",
+          "pageid": 12191668
+        },
+        {
+          "title": "File:Soup with mushrooms and dill.jpg",
+          "pageid": 39612231
+        },
+        {
+          "title": "File:DFC 1021 Seared salmon fillet topped with shrimp and dill served with coleslaw roasted potatoes and a side of creamed spinach on a bed of greens.jpg",
+          "pageid": 194794230
+        },
+        {
+          "title": "File:Green broad beans.jpg",
+          "pageid": 39478030
+        },
+        {
+          "title": "File:Bakla (broad beans) Turkish style.jpg",
+          "pageid": 39478029
+        },
+        {
+          "title": "File:Składniki do przygotowania kiszonych ogórków.jpg",
+          "pageid": 176760537
+        },
+        {
+          "title": "File:A serving of various dolmas.jpg",
+          "pageid": 50997768
+        },
+        {
+          "title": "File:The American artist's manual; (1814) (14750620556).jpg",
+          "pageid": 43640225
+        },
+        {
+          "title": "File:Everything for the garden (16389149001).jpg",
+          "pageid": 42627226
+        }
+      ]
+    },
+    {
+      "name": "basil",
+      "scientific": "Ocimum basilicum",
+      "profile": "fresh",
+      "query": "basil fresh leaves",
+      "source": "https://commons.wikimedia.org/w/api.php",
+      "request_parameters": {
+        "action": "query",
+        "list": "search",
+        "srnamespace": 6,
+        "srsearch": "basil fresh leaves filetype:bitmap",
+        "srlimit": 10,
+        "format": "json",
+        "formatversion": 2,
+        "maxlag": 10
+      },
+      "query_url": "https://commons.wikimedia.org/w/api.php?action=query&list=search&srnamespace=6&srsearch=basil+fresh+leaves+filetype%3Abitmap&srlimit=10&format=json&formatversion=2&maxlag=10",
+      "checked_at": "2026-10-28T05:07:46+00:00",
+      "status": "ok",
+      "http_status": 200,
+      "results": [
+        {
+          "title": "File:Fresh Basil Plant.jpg",
+          "pageid": 183539062
+        },
+        {
+          "title": "File:Fresh green basil leaves (54986224214).jpg",
+          "pageid": 181654611
+        },
+        {
+          "title": "File:CACIK (Basil, parsley, coriander).jpg",
+          "pageid": 61535697
+        },
+        {
+          "title": "File:Liat Portal for Foodie Disorder - Mozzarella basil and salmon caviar bites with cherry tomato salad.jpg",
+          "pageid": 182219714
+        },
+        {
+          "title": "File:DSCF1165 Crispy fried pork with peanuts fresh green chilies and kaffir lime leaves - a spicy crunchy Thai-style appetizer.jpg",
+          "pageid": 194311901
+        },
+        {
+          "title": "File:Liat Portal for Foodie Disorder - Open sandwich with mozzarella basil and salmon roe.jpg",
+          "pageid": 182219710
+        },
+        {
+          "title": "File:Liat Portal for Foodie Disorder – Fried Egg on Whole Grain Bread with Fresh Vegetables.jpg",
+          "pageid": 182599032
+        },
+        {
+          "title": "File:Just 10 munits Chicken Ricotta Meatballs with Risoni in Tomato Basil Sauce.jpg",
+          "pageid": 152824922
+        },
+        {
+          "title": "File:Ugandan local Breakfast.jpg",
+          "pageid": 192688051
+        },
+        {
+          "title": "File:Liat Portal for Foodie Disorder - Mozzarella Open Sandwich.jpg",
+          "pageid": 182322260
+        }
+      ]
+    },
+    {
+      "name": "oregano",
+      "scientific": "Origanum vulgare",
+      "profile": "flakes",
+      "query": "oregano dried",
+      "source": "https://commons.wikimedia.org/w/api.php",
+      "request_parameters": {
+        "action": "query",
+        "list": "search",
+        "srnamespace": 6,
+        "srsearch": "oregano dried filetype:bitmap",
+        "srlimit": 10,
+        "format": "json",
+        "formatversion": 2,
+        "maxlag": 10
+      },
+      "query_url": "https://commons.wikimedia.org/w/api.php?action=query&list=search&srnamespace=6&srsearch=oregano+dried+filetype%3Abitmap&srlimit=10&format=json&formatversion=2&maxlag=10",
+      "checked_at": "2026-10-28T05:07:48+00:00",
+      "status": "ok",
+      "http_status": 200,
+      "results": [
+        {
+          "title": "File:Oregano dried.JPG",
+          "pageid": 12175348
+        },
+        {
+          "title": "File:Dried oregano - ξερή ρίγανη.jpg",
+          "pageid": 61563327
+        },
+        {
+          "title": "File:Dried Oregano.JPG",
+          "pageid": 42283928
+        },
+        {
+          "title": "File:Dried oregano.tif",
+          "pageid": 164021926
+        },
+        {
+          "title": "File:Oregano SEM.tif",
+          "pageid": 164021940
+        },
+        {
+          "title": "File:Drying oregano on hangers.jpg",
+          "pageid": 23619539
+        },
+        {
+          "title": "File:Hot and Spicy Oregano.jpg",
+          "pageid": 151971317
+        },
+        {
+          "title": "File:OreganoDried1.JPG",
+          "pageid": 134741013
+        },
+        {
+          "title": "File:Carretto siciliano - Simone 'u Sicilianu 02.jpg",
+          "pageid": 63969774
+        },
+        {
+          "title": "File:Cauliflower crust pizza sauce ingredients (17024768096).jpg",
+          "pageid": 39964356
+        }
+      ]
+    },
+    {
+      "name": "thyme",
+      "scientific": "Thymus vulgaris",
+      "profile": "flakes",
+      "query": "thyme dried",
+      "source": "https://commons.wikimedia.org/w/api.php",
+      "request_parameters": {
+        "action": "query",
+        "list": "search",
+        "srnamespace": 6,
+        "srsearch": "thyme dried filetype:bitmap",
+        "srlimit": 10,
+        "format": "json",
+        "formatversion": 2,
+        "maxlag": 10
+      },
+      "query_url": "https://commons.wikimedia.org/w/api.php?action=query&list=search&srnamespace=6&srsearch=thyme+dried+filetype%3Abitmap&srlimit=10&format=json&formatversion=2&maxlag=10",
+      "checked_at": "2026-10-28T05:07:49+00:00",
+      "status": "ok",
+      "http_status": 200,
+      "results": [
+        {
+          "title": "File:Thyme-spice.jpg",
+          "pageid": 172715
+        },
+        {
+          "title": "File:Spice thyme scale.jpg",
+          "pageid": 7477030
+        },
+        {
+          "title": "File:Jwano.jpg",
+          "pageid": 126299631
+        },
+        {
+          "title": "File:Wild dark dry brown desert ground foliage creeping thyme lawn seamless texture.jpg",
+          "pageid": 122120231
+        },
+        {
+          "title": "File:Thyme on outcrop on Little Little Snaizwold Fell - geograph.org.uk - 6900870.jpg",
+          "pageid": 154415353
+        },
+        {
+          "title": "File:Spice thyme.jpg",
+          "pageid": 7468532
+        },
+        {
+          "title": "File:1426Cuisine foods of Bulacan 59.jpg",
+          "pageid": 95277778
+        },
+        {
+          "title": "File:1426Cuisine foods of Bulacan 56.jpg",
+          "pageid": 95277772
+        },
+        {
+          "title": "File:1426Cuisine foods of Bulacan 48.jpg",
+          "pageid": 95277757
+        },
+        {
+          "title": "File:1426Cuisine foods of Bulacan 57.jpg",
+          "pageid": 95277776
+        }
+      ]
+    },
+    {
+      "name": "rosemary",
+      "scientific": "Salvia rosmarinus",
+      "profile": "fresh",
+      "query": "rosemary fresh leaves",
+      "source": "https://commons.wikimedia.org/w/api.php",
+      "request_parameters": {
+        "action": "query",
+        "list": "search",
+        "srnamespace": 6,
+        "srsearch": "rosemary fresh leaves filetype:bitmap",
+        "srlimit": 10,
+        "format": "json",
+        "formatversion": 2,
+        "maxlag": 10
+      },
+      "query_url": "https://commons.wikimedia.org/w/api.php?action=query&list=search&srnamespace=6&srsearch=rosemary+fresh+leaves+filetype%3Abitmap&srlimit=10&format=json&formatversion=2&maxlag=10",
+      "checked_at": "2026-10-28T05:07:51+00:00",
+      "status": "ok",
+      "http_status": 200,
+      "results": [
+        {
+          "title": "File:Rosemary plant with flowers.jpg",
+          "pageid": 124099475
+        },
+        {
+          "title": "File:The American artist's manual; (1814) (14750620556).jpg",
+          "pageid": 43640225
+        },
+        {
+          "title": "File:Everything for the garden (16389149001).jpg",
+          "pageid": 42627226
+        }
+      ]
+    },
+    {
+      "name": "cumin",
+      "scientific": "Cuminum cyminum",
+      "profile": "whole",
+      "query": "cumin seeds",
+      "source": "https://commons.wikimedia.org/w/api.php",
+      "request_parameters": {
+        "action": "query",
+        "list": "search",
+        "srnamespace": 6,
+        "srsearch": "cumin seeds filetype:bitmap",
+        "srlimit": 10,
+        "format": "json",
+        "formatversion": 2,
+        "maxlag": 10
+      },
+      "query_url": "https://commons.wikimedia.org/w/api.php?action=query&list=search&srnamespace=6&srsearch=cumin+seeds+filetype%3Abitmap&srlimit=10&format=json&formatversion=2&maxlag=10",
+      "checked_at": "2026-10-28T05:07:52+00:00",
+      "status": "ok",
+      "http_status": 200,
+      "results": [
+        {
+          "title": "File:Seeds of Cumin.jpg",
+          "pageid": 63732537
+        },
+        {
+          "title": "File:Dried cumin seeds.jpg",
+          "pageid": 151826144
+        },
+        {
+          "title": "File:Cumin seed.jpg",
+          "pageid": 90612322
+        },
+        {
+          "title": "File:Whole Cumin Seeds.jpg",
+          "pageid": 151971314
+        },
+        {
+          "title": "File:Lidded basket with cumin seeds and fruits Vegetable fibers, organic remains - Museo Egizio Turin S 8415 p01.jpg",
+          "pageid": 145137603
+        },
+        {
+          "title": "File:Lidded basket with cumin seeds and fruits Vegetable fibers, organic remains - Museo Egizio Turin S 8415 p02.jpg",
+          "pageid": 145137606
+        },
+        {
+          "title": "File:Lidded basket with cumin seeds and fruits Vegetable fibers, organic remains - Museo Egizio Turin S 8415 p04.jpg",
+          "pageid": 145137614
+        },
+        {
+          "title": "File:Dried cumin seeds (20241008).jpg",
+          "pageid": 153662761
+        },
+        {
+          "title": "File:Cesto con coperchio con semi e frutti di cumino AFP 0316.tif",
+          "pageid": 131668634
+        },
+        {
+          "title": "File:Cumin Seed.tif",
+          "pageid": 164021924
+        }
+      ]
+    },
+    {
+      "name": "black pepper",
+      "scientific": "Piper nigrum",
+      "profile": "whole",
+      "query": "black pepper whole",
+      "source": "https://commons.wikimedia.org/w/api.php",
+      "request_parameters": {
+        "action": "query",
+        "list": "search",
+        "srnamespace": 6,
+        "srsearch": "black pepper whole filetype:bitmap",
+        "srlimit": 10,
+        "format": "json",
+        "formatversion": 2,
+        "maxlag": 10
+      },
+      "query_url": "https://commons.wikimedia.org/w/api.php?action=query&list=search&srnamespace=6&srsearch=black+pepper+whole+filetype%3Abitmap&srlimit=10&format=json&formatversion=2&maxlag=10",
+      "checked_at": "2026-10-28T05:07:54+00:00",
+      "status": "ok",
+      "http_status": 200,
+      "results": [
+        {
+          "title": "File:Tuna on whole wheat linguine, with pesto, olive oil, and black pepper - Massachusetts.jpg",
+          "pageid": 129150837
+        },
+        {
+          "title": "File:Smoked cod liver, green peas, and tomatoes on whole wheat linguine, with black pepper - Massachusetts.jpg",
+          "pageid": 127859757
+        },
+        {
+          "title": "File:Cheeseburger on toasted whole wheat bread with aged cheddar, French mustard, and black pepper - Massachusetts.jpg",
+          "pageid": 108204009
+        },
+        {
+          "title": "File:Mixed vegetables, chicken sausage, and chopped ginger on whole wheat linguine, with soy sauce, and black pepper - Massachusetts.jpg",
+          "pageid": 125338486
+        },
+        {
+          "title": "File:Black pepper whole.JPG",
+          "pageid": 5982965
+        },
+        {
+          "title": "File:Turkey and roast beef spread on toast of mixed rye and whole wheat bread, with cornichons, cheddar cheese, mustard, and black pepper - Massachusetts.jpg",
+          "pageid": 135592431
+        },
+        {
+          "title": "File:Tuna fish and cornichons mixed with garlic mayonnaise, topped with grape tomatoes and black pepper, on toasted whole wheat bread, with baby carrots - Massachusetts.jpg",
+          "pageid": 150900242
+        },
+        {
+          "title": "File:Tellicherry Black Peppercorns.jpg",
+          "pageid": 151971300
+        },
+        {
+          "title": "File:A pepper Plant.jpg",
+          "pageid": 54668589
+        },
+        {
+          "title": "File:Pancreatic well-differentiated neuroendocrine tumor with salt-and-pepper chromatin.png",
+          "pageid": 121877144
+        }
+      ]
+    },
+    {
+      "name": "cinnamon",
+      "scientific": "Cinnamomum verum",
+      "profile": "bark",
+      "query": "cinnamon bark sticks",
+      "source": "https://commons.wikimedia.org/w/api.php",
+      "request_parameters": {
+        "action": "query",
+        "list": "search",
+        "srnamespace": 6,
+        "srsearch": "cinnamon bark sticks filetype:bitmap",
+        "srlimit": 10,
+        "format": "json",
+        "formatversion": 2,
+        "maxlag": 10
+      },
+      "query_url": "https://commons.wikimedia.org/w/api.php?action=query&list=search&srnamespace=6&srsearch=cinnamon+bark+sticks+filetype%3Abitmap&srlimit=10&format=json&formatversion=2&maxlag=10",
+      "checked_at": "2026-10-28T05:07:55+00:00",
+      "status": "ok",
+      "http_status": 200,
+      "results": [
+        {
+          "title": "File:Gewuerze 004 2024 08 10.jpg",
+          "pageid": 151419675
+        },
+        {
+          "title": "File:Canelle Cinnamomum burmanni Luc Viatour.jpg",
+          "pageid": 3567532
+        },
+        {
+          "title": "File:Ground Cinnamon Powder and a Cinnamon Stick.jpg",
+          "pageid": 97084670
+        },
+        {
+          "title": "File:Health Benefits of Cinnamon with text labels.jpg",
+          "pageid": 97084523
+        },
+        {
+          "title": "File:Cassia sticks.jpg",
+          "pageid": 101400489
+        },
+        {
+          "title": "File:Cassia bark (2).jpg",
+          "pageid": 150259412
+        },
+        {
+          "title": "File:Cinnamon Bark Madagascar.jpg",
+          "pageid": 52742022
+        },
+        {
+          "title": "File:Cinnamon sticks (3).jpg",
+          "pageid": 151584394
+        },
+        {
+          "title": "File:Cinnamon stick and nutmegs.jpg",
+          "pageid": 151477034
+        },
+        {
+          "title": "File:Cassia bark (5).jpg",
+          "pageid": 145541040
+        }
+      ]
+    },
+    {
+      "name": "clove",
+      "scientific": "Syzygium aromaticum",
+      "profile": "bud",
+      "query": "clove dried buds",
+      "source": "https://commons.wikimedia.org/w/api.php",
+      "request_parameters": {
+        "action": "query",
+        "list": "search",
+        "srnamespace": 6,
+        "srsearch": "clove dried buds filetype:bitmap",
+        "srlimit": 10,
+        "format": "json",
+        "formatversion": 2,
+        "maxlag": 10
+      },
+      "query_url": "https://commons.wikimedia.org/w/api.php?action=query&list=search&srnamespace=6&srsearch=clove+dried+buds+filetype%3Abitmap&srlimit=10&format=json&formatversion=2&maxlag=10",
+      "checked_at": "2026-10-28T05:07:56+00:00",
+      "status": "ok",
+      "http_status": 200,
+      "results": [
+        {
+          "title": "File:Cloves – dried flower buds, fragrant caps.jpg",
+          "pageid": 151581649
+        },
+        {
+          "title": "File:Seasonal clove buds drying on Pemba1.jpg",
+          "pageid": 32428776
+        },
+        {
+          "title": "File:Dried cloves.jpg",
+          "pageid": 184684268
+        },
+        {
+          "title": "File:ClovesDried.jpg",
+          "pageid": 2128984
+        },
+        {
+          "title": "File:Cloves from india.jpg",
+          "pageid": 147162416
+        },
+        {
+          "title": "File:Nutmegs and Clove, illustration from The Encyclopedia of Food by Artemas Ward.jpg",
+          "pageid": 83665155
+        },
+        {
+          "title": "File:Clove-scented Plum (5600636608).jpg",
+          "pageid": 51557169
+        },
+        {
+          "title": "File:Cariophylli flos - Myrtaceae 245049.jpg",
+          "pageid": 13652752
+        },
+        {
+          "title": "File:Cariophylli flos - Myrtaceae 298051.jpg",
+          "pageid": 13652818
+        },
+        {
+          "title": "File:Cloves - unknown Southeast Asian artist - 27 1924 17.png",
+          "pageid": 169163279
+        }
+      ]
+    },
+    {
+      "name": "paprika",
+      "scientific": "Capsicum annuum",
+      "profile": "ground",
+      "query": "paprika powder",
+      "source": "https://commons.wikimedia.org/w/api.php",
+      "request_parameters": {
+        "action": "query",
+        "list": "search",
+        "srnamespace": 6,
+        "srsearch": "paprika powder filetype:bitmap",
+        "srlimit": 10,
+        "format": "json",
+        "formatversion": 2,
+        "maxlag": 10
+      },
+      "query_url": "https://commons.wikimedia.org/w/api.php?action=query&list=search&srnamespace=6&srsearch=paprika+powder+filetype%3Abitmap&srlimit=10&format=json&formatversion=2&maxlag=10",
+      "checked_at": "2026-10-28T05:07:58+00:00",
+      "status": "ok",
+      "http_status": 200,
+      "results": [
+        {
+          "title": "File:Aleva paprika.jpg",
+          "pageid": 87040177
+        },
+        {
+          "title": "File:Paprika Powder, Jan 2026.jpg",
+          "pageid": 182117530
+        },
+        {
+          "title": "File:Smoked paprika in lemon juice.jpg",
+          "pageid": 17945573
+        },
+        {
+          "title": "File:Paprika flakes (red and green).jpg",
+          "pageid": 145447284
+        },
+        {
+          "title": "File:Paprika-spice.jpg",
+          "pageid": 172709
+        },
+        {
+          "title": "File:Sppon of Paprika.jpg",
+          "pageid": 152000139
+        },
+        {
+          "title": "File:Dried paprika sale.jpg",
+          "pageid": 2801893
+        },
+        {
+          "title": "File:Street stall. Paprika. - Batthyány street, Tihany.JPG",
+          "pageid": 47012376
+        },
+        {
+          "title": "File:06-07-2017 Margão, Paprika, Portugal.JPG",
+          "pageid": 60703392
+        },
+        {
+          "title": "File:Paprika Shop (8035957004).jpg",
+          "pageid": 24338231
+        }
+      ]
+    },
+    {
+      "name": "star anise",
+      "scientific": "Illicium verum",
+      "profile": "whole",
+      "query": "star anise whole",
+      "source": "https://commons.wikimedia.org/w/api.php",
+      "request_parameters": {
+        "action": "query",
+        "list": "search",
+        "srnamespace": 6,
+        "srsearch": "star anise whole filetype:bitmap",
+        "srlimit": 10,
+        "format": "json",
+        "formatversion": 2,
+        "maxlag": 10
+      },
+      "query_url": "https://commons.wikimedia.org/w/api.php?action=query&list=search&srnamespace=6&srsearch=star+anise+whole+filetype%3Abitmap&srlimit=10&format=json&formatversion=2&maxlag=10",
+      "checked_at": "2026-10-28T05:07:59+00:00",
+      "status": "ok",
+      "http_status": 200,
+      "results": []
+    },
+    {
+      "name": "ginger",
+      "scientific": "Zingiber officinale",
+      "profile": "root",
+      "query": "ginger fresh rhizome",
+      "source": "https://commons.wikimedia.org/w/api.php",
+      "request_parameters": {
+        "action": "query",
+        "list": "search",
+        "srnamespace": 6,
+        "srsearch": "ginger fresh rhizome filetype:bitmap",
+        "srlimit": 10,
+        "format": "json",
+        "formatversion": 2,
+        "maxlag": 10
+      },
+      "query_url": "https://commons.wikimedia.org/w/api.php?action=query&list=search&srnamespace=6&srsearch=ginger+fresh+rhizome+filetype%3Abitmap&srlimit=10&format=json&formatversion=2&maxlag=10",
+      "checked_at": "2026-10-28T05:08:01+00:00",
+      "status": "ok",
+      "http_status": 200,
+      "results": [
+        {
+          "title": "File:Fresh ginger rhizome 01.jpg",
+          "pageid": 161735284
+        },
+        {
+          "title": "File:Fresh ginger rhizome 02.jpg",
+          "pageid": 161735288
+        },
+        {
+          "title": "File:Ginger Yogic Secrets.png",
+          "pageid": 112548751
+        },
+        {
+          "title": "File:Liat Portal for Foodie Disorder - Fresh ginger root from San Francisco farmers market.jpg",
+          "pageid": 183820854
+        },
+        {
+          "title": "File:Mango Ginger Chammanthi by Manoj Karingamadathil.jpg",
+          "pageid": 40702526
+        },
+        {
+          "title": "File:Ginger Rogers as Roxie Hart 1942.jpg",
+          "pageid": 29192345
+        },
+        {
+          "title": "File:Heliconia - torch ginger.jpg",
+          "pageid": 19088679
+        },
+        {
+          "title": "File:Bundaberg Ginger Beer Brew Process.png",
+          "pageid": 34971324
+        },
+        {
+          "title": "File:Ginger wine with stem ginger 3000x4000.jpg",
+          "pageid": 47353092
+        },
+        {
+          "title": "File:Dry Ginger 1.jpg",
+          "pageid": 114405648
+        }
+      ]
+    },
+    {
+      "name": "turmeric",
+      "scientific": "Curcuma longa",
+      "profile": "ground",
+      "query": "turmeric powder",
+      "source": "https://commons.wikimedia.org/w/api.php",
+      "request_parameters": {
+        "action": "query",
+        "list": "search",
+        "srnamespace": 6,
+        "srsearch": "turmeric powder filetype:bitmap",
+        "srlimit": 10,
+        "format": "json",
+        "formatversion": 2,
+        "maxlag": 10
+      },
+      "query_url": "https://commons.wikimedia.org/w/api.php?action=query&list=search&srnamespace=6&srsearch=turmeric+powder+filetype%3Abitmap&srlimit=10&format=json&formatversion=2&maxlag=10",
+      "checked_at": "2026-10-28T05:08:02+00:00",
+      "status": "ok",
+      "http_status": 200,
+      "results": [
+        {
+          "title": "File:Curcuma longa roots.jpg",
+          "pageid": 31748137
+        },
+        {
+          "title": "File:Bumbu dan Rempah - rempah.jpg",
+          "pageid": 107999332
+        },
+        {
+          "title": "File:Kunyit Bubuk.jpg",
+          "pageid": 107942195
+        },
+        {
+          "title": "File:Khandoba temple Pune.jpg",
+          "pageid": 62945901
+        },
+        {
+          "title": "File:Chlorofeel Spices Turmeric Powder Packet.jpg",
+          "pageid": 115614305
+        },
+        {
+          "title": "File:Turmeric Powder Spelled Out.jpg",
+          "pageid": 97084161
+        },
+        {
+          "title": "File:Chlorofeel Spices Turmeric, Coriander and Cumin Powder.jpg",
+          "pageid": 115614693
+        },
+        {
+          "title": "File:Turmeric Powder on a Spoon - Black Background.jpg",
+          "pageid": 94015094
+        },
+        {
+          "title": "File:Chlorofeel Spices Turmeric Powder Packet Image.jpg",
+          "pageid": 115614312
+        },
+        {
+          "title": "File:Chlorofeel Spices Turmeric Powder.jpg",
+          "pageid": 115614306
+        }
+      ]
+    },
+    {
+      "name": "cardamom",
+      "scientific": "Elettaria cardamomum",
+      "profile": "whole",
+      "query": "cardamom pods whole",
+      "source": "https://commons.wikimedia.org/w/api.php",
+      "request_parameters": {
+        "action": "query",
+        "list": "search",
+        "srnamespace": 6,
+        "srsearch": "cardamom pods whole filetype:bitmap",
+        "srlimit": 10,
+        "format": "json",
+        "formatversion": 2,
+        "maxlag": 10
+      },
+      "query_url": "https://commons.wikimedia.org/w/api.php?action=query&list=search&srnamespace=6&srsearch=cardamom+pods+whole+filetype%3Abitmap&srlimit=10&format=json&formatversion=2&maxlag=10",
+      "checked_at": "2026-10-28T05:08:04+00:00",
+      "status": "ok",
+      "http_status": 200,
+      "results": [
+        {
+          "title": "File:Green Cardamom Pods.jpg",
+          "pageid": 151971310
+        },
+        {
+          "title": "File:Gajar Halwa (Carrot fudge).jpg",
+          "pageid": 28439029
+        },
+        {
+          "title": "File:Spices, seasonings, herbs and vegetables.jpg",
+          "pageid": 27939374
+        },
+        {
+          "title": "File:The Gardeners' chronicle - a weekly illustrated journal of horticulture and allied subjects (1877) (14597634089).jpg",
+          "pageid": 44242966
+        },
+        {
+          "title": "File:Florists' review (microform) (16679628402).jpg",
+          "pageid": 44113439
+        }
+      ]
+    },
+    {
+      "name": "saffron",
+      "scientific": "Crocus sativus",
+      "profile": "flower",
+      "query": "saffron dried stigmas",
+      "source": "https://commons.wikimedia.org/w/api.php",
+      "request_parameters": {
+        "action": "query",
+        "list": "search",
+        "srnamespace": 6,
+        "srsearch": "saffron dried stigmas filetype:bitmap",
+        "srlimit": 10,
+        "format": "json",
+        "formatversion": 2,
+        "maxlag": 10
+      },
+      "query_url": "https://commons.wikimedia.org/w/api.php?action=query&list=search&srnamespace=6&srsearch=saffron+dried+stigmas+filetype%3Abitmap&srlimit=10&format=json&formatversion=2&maxlag=10",
+      "checked_at": "2026-10-28T05:08:05+00:00",
+      "status": "ok",
+      "http_status": 200,
+      "results": [
+        {
+          "title": "File:Saffron Crop.JPG",
+          "pageid": 12696970
+        },
+        {
+          "title": "File:Saffron-IMG 6634-2.jpg",
+          "pageid": 31310926
+        },
+        {
+          "title": "File:Saffron-IMG 6640-2.jpg",
+          "pageid": 31310927
+        },
+        {
+          "title": "File:Saffron-IMG 6681-2.jpg",
+          "pageid": 31310932
+        },
+        {
+          "title": "File:Saffron-IMG 6644-2.jpg",
+          "pageid": 31310931
+        },
+        {
+          "title": "File:Saffron-IMG 6603-3-2.jpg",
+          "pageid": 31310928
+        },
+        {
+          "title": "File:Monkey, Goddess, griffin, fresco from Akrotiri, 17th c BC, MPTh, 226307x.jpg",
+          "pageid": 125424957
+        },
+        {
+          "title": "File:Girl, monkey, Goddess, fresco from Akrotiri, 17th c BC, MPTh, 226307.jpg",
+          "pageid": 125383313
+        },
+        {
+          "title": "File:An encyclopedia of plants; - comprising the specific culture, history, application in the arts, and every other desirable particular respecting all the plants indigenous, cultivated in, or introduced (16485051290).jpg",
+          "pageid": 43268115
+        }
+      ]
+    },
+    {
+      "name": "nutmeg",
+      "scientific": "Myristica fragrans",
+      "profile": "whole",
+      "query": "nutmeg whole",
+      "source": "https://commons.wikimedia.org/w/api.php",
+      "request_parameters": {
+        "action": "query",
+        "list": "search",
+        "srnamespace": 6,
+        "srsearch": "nutmeg whole filetype:bitmap",
+        "srlimit": 10,
+        "format": "json",
+        "formatversion": 2,
+        "maxlag": 10
+      },
+      "query_url": "https://commons.wikimedia.org/w/api.php?action=query&list=search&srnamespace=6&srsearch=nutmeg+whole+filetype%3Abitmap&srlimit=10&format=json&formatversion=2&maxlag=10",
+      "checked_at": "2026-10-28T05:08:07+00:00",
+      "status": "ok",
+      "http_status": 200,
+      "results": [
+        {
+          "title": "File:Whole Nutmeg.jpg",
+          "pageid": 151971307
+        },
+        {
+          "title": "File:Nutmeg whole.JPG",
+          "pageid": 6004344
+        },
+        {
+          "title": "File:Nutmegs and Clove, illustration from The Encyclopedia of Food by Artemas Ward.jpg",
+          "pageid": 83665155
+        },
+        {
+          "title": "File:Brandy flip in stemmed cocktail glass.jpg",
+          "pageid": 82869794
+        },
+        {
+          "title": "File:Brandy flip in stemmed cocktail glass 2.jpg",
+          "pageid": 87605740
+        },
+        {
+          "title": "File:Garam masala.jpg",
+          "pageid": 37905798
+        },
+        {
+          "title": "File:Dictionary, practical, theoretical and historical, of commerce and commercial navigation; (1841) (14577404688).jpg",
+          "pageid": 44174969
+        },
+        {
+          "title": "File:Pasta Bolognese (833149342).jpg",
+          "pageid": 70211469
+        },
+        {
+          "title": "File:Puran Poli with Ghee in making.jpg",
+          "pageid": 101689259
+        },
+        {
+          "title": "File:Flu and Headache Remedies – 15th Century.jpg",
+          "pageid": 141865854
+        }
+      ]
+    },
+    {
+      "name": "fennel",
+      "scientific": "Foeniculum vulgare",
+      "profile": "whole",
+      "query": "fennel seeds",
+      "source": "https://commons.wikimedia.org/w/api.php",
+      "request_parameters": {
+        "action": "query",
+        "list": "search",
+        "srnamespace": 6,
+        "srsearch": "fennel seeds filetype:bitmap",
+        "srlimit": 10,
+        "format": "json",
+        "formatversion": 2,
+        "maxlag": 10
+      },
+      "query_url": "https://commons.wikimedia.org/w/api.php?action=query&list=search&srnamespace=6&srsearch=fennel+seeds+filetype%3Abitmap&srlimit=10&format=json&formatversion=2&maxlag=10",
+      "checked_at": "2026-10-28T05:08:08+00:00",
+      "status": "ok",
+      "http_status": 200,
+      "results": [
+        {
+          "title": "File:Foeniculum July 2011-1a.jpg",
+          "pageid": 15855012
+        },
+        {
+          "title": "File:Fennel seeds 01.jpg",
+          "pageid": 101401094
+        },
+        {
+          "title": "File:Fennel seed.jpg",
+          "pageid": 1426781
+        },
+        {
+          "title": "File:Fennel seeds gn1.jpg",
+          "pageid": 147891295
+        },
+        {
+          "title": "File:Fennel seeds and rock sugar, Indian aftermint.jpg",
+          "pageid": 40833978
+        },
+        {
+          "title": "File:Fennel (Foeniculum vulgare) - Parc Natural de s'Albufera, Spain 2022-04-18 (02).jpg",
+          "pageid": 136017354
+        },
+        {
+          "title": "File:Fennel (Foeniculum vulgare).jpg",
+          "pageid": 176737728
+        },
+        {
+          "title": "File:Dried Tribulus Terrestris, Uziza Seeds, Pine Bark Mulch, Fennel Seeds, Liberian Coffee Beans Grains and Garlics displayed on a wooden tale at bakin dogo market, Kaduna North.jpg",
+          "pageid": 163423501
+        },
+        {
+          "title": "File:Fennel - Foeniculum vulgare (28872863408).jpg",
+          "pageid": 74079204
+        },
+        {
+          "title": "File:Fennel seeds.jpg",
+          "pageid": 500690
+        }
+      ]
+    },
+    {
+      "name": "bay leaf",
+      "scientific": "Laurus nobilis",
+      "profile": "flakes",
+      "query": "bay leaf dried",
+      "source": "https://commons.wikimedia.org/w/api.php",
+      "request_parameters": {
+        "action": "query",
+        "list": "search",
+        "srnamespace": 6,
+        "srsearch": "bay leaf dried filetype:bitmap",
+        "srlimit": 10,
+        "format": "json",
+        "formatversion": 2,
+        "maxlag": 10
+      },
+      "query_url": "https://commons.wikimedia.org/w/api.php?action=query&list=search&srnamespace=6&srsearch=bay+leaf+dried+filetype%3Abitmap&srlimit=10&format=json&formatversion=2&maxlag=10",
+      "checked_at": "2026-10-28T05:08:09+00:00",
+      "status": "ok",
+      "http_status": 200,
+      "results": [
+        {
+          "title": "File:Dried bay leaves (20240502).jpg",
+          "pageid": 151888500
+        },
+        {
+          "title": "File:A bay leaf known as sweet bay or bay laurel.jpg",
+          "pageid": 180114823
+        },
+        {
+          "title": "File:Indian bay leaf - tejpatta - indisches Lorbeerblatt.jpg",
+          "pageid": 3967705
+        },
+        {
+          "title": "File:BayLeaf.jpg",
+          "pageid": 580972
+        },
+        {
+          "title": "File:Tlingit Indian sealers' camp, Yakutat Bay, Alaska, June 1899 (HARRIMAN 83).jpg",
+          "pageid": 100618386
+        },
+        {
+          "title": "File:Tlingit Indian sealers' camp, Yakutat Bay, Alaska, June 1899 (HARRIMAN 88).jpg",
+          "pageid": 100618430
+        },
+        {
+          "title": "File:Tlingit Indian sealers' camp, Yakutat Bay, Alaska, June 1899 (HARRIMAN 84).jpg",
+          "pageid": 100618406
+        },
+        {
+          "title": "File:Botrychium multifidum Garrett Bay Wisconsin.jpg",
+          "pageid": 89459942
+        },
+        {
+          "title": "File:Herbesdeprovence.jpg",
+          "pageid": 3620923
+        },
+        {
+          "title": "File:Empetrum nigrum (Black Crowberry) (3749608069).jpg",
+          "pageid": 75666612
+        }
+      ]
+    },
+    {
+      "name": "lemongrass",
+      "scientific": "Cymbopogon citratus",
+      "profile": "fresh",
+      "query": "lemongrass fresh",
+      "source": "https://commons.wikimedia.org/w/api.php",
+      "request_parameters": {
+        "action": "query",
+        "list": "search",
+        "srnamespace": 6,
+        "srsearch": "lemongrass fresh filetype:bitmap",
+        "srlimit": 10,
+        "format": "json",
+        "formatversion": 2,
+        "maxlag": 10
+      },
+      "query_url": "https://commons.wikimedia.org/w/api.php?action=query&list=search&srnamespace=6&srsearch=lemongrass+fresh+filetype%3Abitmap&srlimit=10&format=json&formatversion=2&maxlag=10",
+      "checked_at": "2026-10-28T05:08:11+00:00",
+      "status": "ok",
+      "http_status": 200,
+      "results": [
+        {
+          "title": "File:Lemongrass Fresh.jpg",
+          "pageid": 176368243
+        },
+        {
+          "title": "File:Cymbopogon citratus lemongrass plant in garden.jpg",
+          "pageid": 195748726
+        },
+        {
+          "title": "File:Fresh Lemongrass.jpg",
+          "pageid": 102778713
+        },
+        {
+          "title": "File:Growing Lemongrass.jpg",
+          "pageid": 183134285
+        },
+        {
+          "title": "File:Julia's Lemongrass Pork Chops.jpg",
+          "pageid": 164459019
+        },
+        {
+          "title": "File:HK SKD TKO 西貢 Sai Kung District 將軍澳 TKO 康城路1號 Lohas Park Road Montara LOHAS Park 日出康城商場 The Lohas Shopping Mall shop Fresh Supermarket Kagome brand Mr Juicy March 2022 Px2.jpg",
+          "pageid": 116274823
+        },
+        {
+          "title": "File:Blood sausage with lemongrass.jpg",
+          "pageid": 33347453
+        },
+        {
+          "title": "File:DSCF0333 Fresh bamboo shoots stacked beside bags of chilies limes and other produce at a bustling market stall.jpg",
+          "pageid": 199983099
+        },
+        {
+          "title": "File:Deep fried catfish.jpg",
+          "pageid": 77138975
+        },
+        {
+          "title": "File:Bumbu Soto.jpg",
+          "pageid": 107980708
+        }
+      ]
+    },
+    {
+      "name": "sumac",
+      "scientific": "Rhus coriaria",
+      "profile": "ground",
+      "query": "sumac ground",
+      "source": "https://commons.wikimedia.org/w/api.php",
+      "request_parameters": {
+        "action": "query",
+        "list": "search",
+        "srnamespace": 6,
+        "srsearch": "sumac ground filetype:bitmap",
+        "srlimit": 10,
+        "format": "json",
+        "formatversion": 2,
+        "maxlag": 10
+      },
+      "query_url": "https://commons.wikimedia.org/w/api.php?action=query&list=search&srnamespace=6&srsearch=sumac+ground+filetype%3Abitmap&srlimit=10&format=json&formatversion=2&maxlag=10",
+      "checked_at": "2026-10-28T05:08:12+00:00",
+      "status": "ok",
+      "http_status": 200,
+      "results": [
+        {
+          "title": "File:Sumac plant.jpg",
+          "pageid": 71280311
+        },
+        {
+          "title": "File:2011-10-29 13 00 00 18 A Staghorn Sumac at a house along Terrace Boulevard with 1.3 inches of snow on the ground during the 2011 Halloween nor'easter in Ewing Township, Mercer County, New Jersey.jpg",
+          "pageid": 29267711
+        },
+        {
+          "title": "File:2011-10-29 14 00 00 23 A Staghorn Sumac at a house along Terrace Boulevard with 1.8 inches of snow on the ground during the 2011 Halloween nor'easter in Ewing Township, Mercer County, New Jersey.jpg",
+          "pageid": 29268009
+        },
+        {
+          "title": "File:2011-10-29 12 00 00 18 A Staghorn Sumac at a house along Terrace Boulevard with 0.4 inches of snow on the ground during the 2011 Halloween nor'easter in Ewing Township, Mercer County, New Jersey.jpg",
+          "pageid": 29267575
+        },
+        {
+          "title": "File:015 Black Mountain Road Views (5) - Rhus Ovata, AKA Sugar Sumac (2).jpg",
+          "pageid": 144090488
+        },
+        {
+          "title": "File:014 Black Mountain Road Views (4) - Rhus Ovata, AKA Sugar Sumac (1).jpg",
+          "pageid": 144090484
+        },
+        {
+          "title": "File:Сумах оленерогий (Сумах пушистый, Уксусное дерево) - Rhus typhina - Staghorn sumac - Влакнест шмак - Essigbaum (23408707041).jpg",
+          "pageid": 45504388
+        },
+        {
+          "title": "File:Starr-230107-0836-Rhus sandwicensis-fall colors deciduous leaves on ground-Hawea Pl Olinda-Maui (52665875754).jpg",
+          "pageid": 145743044
+        },
+        {
+          "title": "File:Starr-230107-0832-Rhus sandwicensis-fall colors deciduous leaves on ground-Hawea Pl Olinda-Maui (52666016280).jpg",
+          "pageid": 145742972
+        },
+        {
+          "title": "File:Starr-230107-0834-Rhus sandwicensis-fall colors deciduous leaves on ground with boots-Hawea Pl Olinda-Maui (52666081063).jpg",
+          "pageid": 145743015
+        }
+      ]
+    },
+    {
+      "name": "mustard",
+      "scientific": "Brassica nigra",
+      "profile": "whole",
+      "query": "mustard seeds",
+      "source": "https://commons.wikimedia.org/w/api.php",
+      "request_parameters": {
+        "action": "query",
+        "list": "search",
+        "srnamespace": 6,
+        "srsearch": "mustard seeds filetype:bitmap",
+        "srlimit": 10,
+        "format": "json",
+        "formatversion": 2,
+        "maxlag": 10
+      },
+      "query_url": "https://commons.wikimedia.org/w/api.php?action=query&list=search&srnamespace=6&srsearch=mustard+seeds+filetype%3Abitmap&srlimit=10&format=json&formatversion=2&maxlag=10",
+      "checked_at": "2026-10-28T05:08:14+00:00",
+      "status": "ok",
+      "http_status": 200,
+      "results": [
+        {
+          "title": "File:Senf-Variationen.jpg",
+          "pageid": 3391306
+        },
+        {
+          "title": "File:Senf-Variationen edit2.jpg",
+          "pageid": 3535615
+        },
+        {
+          "title": "File:Senf-Variationen edit.jpg",
+          "pageid": 3467484
+        },
+        {
+          "title": "File:Mustard Seeds in a plate at Reganigudem.jpg",
+          "pageid": 26097579
+        },
+        {
+          "title": "File:Mustard Seeds (8630655446).jpg",
+          "pageid": 35716521
+        },
+        {
+          "title": "File:Sinapis alba graines.JPG",
+          "pageid": 7909761
+        },
+        {
+          "title": "File:Mustard Seeds (Sarson) (49696132737).jpg",
+          "pageid": 89478746
+        },
+        {
+          "title": "File:Mustard Oil & Seeds - Kolkata 2003-10-31 00537.JPG",
+          "pageid": 17426295
+        },
+        {
+          "title": "File:Mustard Seeds.JPG",
+          "pageid": 23632626
+        },
+        {
+          "title": "File:A view of mustard seed.jpg",
+          "pageid": 17940433
+        }
+      ]
+    },
+    {
+      "name": "juniper",
+      "scientific": "Juniperus communis",
+      "profile": "whole",
+      "query": "juniper berries",
+      "source": "https://commons.wikimedia.org/w/api.php",
+      "request_parameters": {
+        "action": "query",
+        "list": "search",
+        "srnamespace": 6,
+        "srsearch": "juniper berries filetype:bitmap",
+        "srlimit": 10,
+        "format": "json",
+        "formatversion": 2,
+        "maxlag": 10
+      },
+      "query_url": "https://commons.wikimedia.org/w/api.php?action=query&list=search&srnamespace=6&srsearch=juniper+berries+filetype%3Abitmap&srlimit=10&format=json&formatversion=2&maxlag=10",
+      "checked_at": "2026-10-28T05:08:16+00:00",
+      "status": "ok",
+      "http_status": 200,
+      "results": [
+        {
+          "title": "File:Juniperi pseudo-fructus 196159.jpg",
+          "pageid": 13655635
+        },
+        {
+          "title": "File:Lidded basket with juniper berries - Museo Egizio Turin S 8416 p03.jpg",
+          "pageid": 144250750
+        },
+        {
+          "title": "File:Lidded basket with juniper berries - Museo Egizio Turin S 8416 p01.jpg",
+          "pageid": 144250741
+        },
+        {
+          "title": "File:Lidded basket with juniper berries - Museo Egizio Turin S 8416 p04.jpg",
+          "pageid": 144250753
+        },
+        {
+          "title": "File:Lidded basket with juniper berries - Museo Egizio Turin S 8416 p02.jpg",
+          "pageid": 144250745
+        },
+        {
+          "title": "File:Juniper berries 1776.jpg",
+          "pageid": 120837324
+        },
+        {
+          "title": "File:Lidded basket with juniper berries, vegetable fibers, organic remains - Museo Egizio, Turin S 8414 p02.jpg",
+          "pageid": 147308211
+        },
+        {
+          "title": "File:Lidded basket with juniper berries, vegetable fibers, organic remains - Museo Egizio, Turin S 8414 p04.jpg",
+          "pageid": 147306828
+        },
+        {
+          "title": "File:Lidded basket with juniper berries, vegetable fibers, organic remains - Museo Egizio, Turin S 8414 p01.jpg",
+          "pageid": 147308207
+        },
+        {
+          "title": "File:Sauerkraut with juniper berries, curry powder, and black pepper - Massachusetts.jpg",
+          "pageid": 110929319
+        }
+      ]
+    },
+    {
+      "name": "annatto",
+      "scientific": "Bixa orellana",
+      "profile": "whole",
+      "query": "annatto seeds",
+      "source": "https://commons.wikimedia.org/w/api.php",
+      "request_parameters": {
+        "action": "query",
+        "list": "search",
+        "srnamespace": 6,
+        "srsearch": "annatto seeds filetype:bitmap",
+        "srlimit": 10,
+        "format": "json",
+        "formatversion": 2,
+        "maxlag": 10
+      },
+      "query_url": "https://commons.wikimedia.org/w/api.php?action=query&list=search&srnamespace=6&srsearch=annatto+seeds+filetype%3Abitmap&srlimit=10&format=json&formatversion=2&maxlag=10",
+      "checked_at": "2026-10-28T05:08:17+00:00",
+      "status": "ok",
+      "http_status": 200,
+      "results": [
+        {
+          "title": "File:Achiote Powder Annatto Seeds (4422836316).jpg",
+          "pageid": 157384063
+        },
+        {
+          "title": "File:Annatto Seeds.jpg",
+          "pageid": 151971302
+        },
+        {
+          "title": "File:Annatto Seeds (2426863624).jpg",
+          "pageid": 157378107
+        },
+        {
+          "title": "File:Annatto Seeds (4422836542).jpg",
+          "pageid": 157384029
+        },
+        {
+          "title": "File:Achiote (6806974612).jpg",
+          "pageid": 157379938
+        },
+        {
+          "title": "File:Mercado de Pacajus - colorau.jpg",
+          "pageid": 135369210
+        },
+        {
+          "title": "File:Achiote Hidropoeticas.jpg",
+          "pageid": 193692080
+        },
+        {
+          "title": "File:Annatto Bixa orellana Mozambique.jpg",
+          "pageid": 20744790
+        },
+        {
+          "title": "File:Achiote pigmento.png",
+          "pageid": 65920017
+        },
+        {
+          "title": "File:9799Stir fried bottle gourd and chayote with Mak Kuk-soo and annatto in lemon grass 03.jpg",
+          "pageid": 97085189
+        }
+      ]
+    },
+    {
+      "name": "sesame",
+      "scientific": "Sesamum indicum",
+      "profile": "whole",
+      "query": "sesame seeds",
+      "source": "https://commons.wikimedia.org/w/api.php",
+      "request_parameters": {
+        "action": "query",
+        "list": "search",
+        "srnamespace": 6,
+        "srsearch": "sesame seeds filetype:bitmap",
+        "srlimit": 10,
+        "format": "json",
+        "formatversion": 2,
+        "maxlag": 10
+      },
+      "query_url": "https://commons.wikimedia.org/w/api.php?action=query&list=search&srnamespace=6&srsearch=sesame+seeds+filetype%3Abitmap&srlimit=10&format=json&formatversion=2&maxlag=10",
+      "checked_at": "2026-10-28T05:08:19+00:00",
+      "status": "ok",
+      "http_status": 200,
+      "results": [
+        {
+          "title": "File:Sa white sesame seeds.jpg",
+          "pageid": 2389127
+        },
+        {
+          "title": "File:Sesamum indicum 13062014.jpg",
+          "pageid": 33366932
+        },
+        {
+          "title": "File:Sesamum indicum 1369.jpg",
+          "pageid": 61067519
+        },
+        {
+          "title": "File:Sesamum indicum 7465.jpg",
+          "pageid": 61543441
+        },
+        {
+          "title": "File:Sesame Seed Candy.jpg",
+          "pageid": 85718606
+        },
+        {
+          "title": "File:Sandakan Sabah Sim-Sim-CityMosque-03.jpg",
+          "pageid": 24862506
+        },
+        {
+          "title": "File:Sesamum indicum 2.jpg",
+          "pageid": 1846251
+        },
+        {
+          "title": "File:Sesamum indicum-- The Sesame Flower (26779961292).jpg",
+          "pageid": 50051677
+        },
+        {
+          "title": "File:Sesamum indicum L..jpg",
+          "pageid": 61049632
+        },
+        {
+          "title": "File:Sesamum indicum 4.jpg",
+          "pageid": 157583662
+        }
+      ]
+    },
+    {
+      "name": "garlic",
+      "scientific": "Allium sativum",
+      "profile": "whole",
+      "query": "garlic whole bulb",
+      "source": "https://commons.wikimedia.org/w/api.php",
+      "request_parameters": {
+        "action": "query",
+        "list": "search",
+        "srnamespace": 6,
+        "srsearch": "garlic whole bulb filetype:bitmap",
+        "srlimit": 10,
+        "format": "json",
+        "formatversion": 2,
+        "maxlag": 10
+      },
+      "query_url": "https://commons.wikimedia.org/w/api.php?action=query&list=search&srnamespace=6&srsearch=garlic+whole+bulb+filetype%3Abitmap&srlimit=10&format=json&formatversion=2&maxlag=10",
+      "checked_at": "2026-10-28T05:08:20+00:00",
+      "status": "ok",
+      "http_status": 200,
+      "results": [
+        {
+          "title": "File:Liat Portal for Foodie Disorder - Garlic Bulbs and Cloves.jpg",
+          "pageid": 180036800
+        },
+        {
+          "title": "File:Garlic Acceptance, Garlic History and Garlic Uses..jpg",
+          "pageid": 19796872
+        },
+        {
+          "title": "File:Liat Portal for Foodie Disorder - Onions and Garlic from San Francisco Farmers Market.jpg",
+          "pageid": 182662126
+        },
+        {
+          "title": "File:Garlic Cloves.jpg",
+          "pageid": 19796875
+        },
+        {
+          "title": "File:Garlic Minced.jpg",
+          "pageid": 19796879
+        },
+        {
+          "title": "File:Blended garlic confit.jpg",
+          "pageid": 65119351
+        },
+        {
+          "title": "File:Green Garlic East Liberty Farmers Market.jpg",
+          "pageid": 24612873
+        },
+        {
+          "title": "File:Spices, seasonings, herbs and vegetables.jpg",
+          "pageid": 27939374
+        },
+        {
+          "title": "File:A companion to the United States pharmacopia; (1884) (14778655501).jpg",
+          "pageid": 43429895
+        }
+      ]
+    },
+    {
+      "name": "mint",
+      "scientific": "Mentha",
+      "profile": "fresh",
+      "query": "mint fresh leaves",
+      "source": "https://commons.wikimedia.org/w/api.php",
+      "request_parameters": {
+        "action": "query",
+        "list": "search",
+        "srnamespace": 6,
+        "srsearch": "mint fresh leaves filetype:bitmap",
+        "srlimit": 10,
+        "format": "json",
+        "formatversion": 2,
+        "maxlag": 10
+      },
+      "query_url": "https://commons.wikimedia.org/w/api.php?action=query&list=search&srnamespace=6&srsearch=mint+fresh+leaves+filetype%3Abitmap&srlimit=10&format=json&formatversion=2&maxlag=10",
+      "checked_at": "2026-10-28T05:08:21+00:00",
+      "status": "ok",
+      "http_status": 200,
+      "results": [
+        {
+          "title": "File:Fresh Mint leaves.jpg",
+          "pageid": 81535766
+        },
+        {
+          "title": "File:Fresh mint leaves.jpg",
+          "pageid": 163376214
+        },
+        {
+          "title": "File:Mint farm.jpg",
+          "pageid": 164370164
+        },
+        {
+          "title": "File:Fresh mint for Moroccan lamb (22423774116).jpg",
+          "pageid": 57948655
+        },
+        {
+          "title": "File:Liat Portal for Foodie Disorder - Fresh Mint from San Francisco Farmers Market.jpg",
+          "pageid": 180282016
+        },
+        {
+          "title": "File:Fresh Mint Tea.jpg",
+          "pageid": 27245093
+        },
+        {
+          "title": "File:Fresh mint tea in a glass.jpg",
+          "pageid": 31707948
+        },
+        {
+          "title": "File:Mint from Senegal 05.jpg",
+          "pageid": 163517670
+        },
+        {
+          "title": "File:Mint from Senegal 10.jpg",
+          "pageid": 163517677
+        },
+        {
+          "title": "File:Mint from Senegal 02.jpg",
+          "pageid": 163517667
+        }
+      ]
+    },
+    {
+      "name": "sage",
+      "scientific": "Salvia officinalis",
+      "profile": "flakes",
+      "query": "sage dried leaves",
+      "source": "https://commons.wikimedia.org/w/api.php",
+      "request_parameters": {
+        "action": "query",
+        "list": "search",
+        "srnamespace": 6,
+        "srsearch": "sage dried leaves filetype:bitmap",
+        "srlimit": 10,
+        "format": "json",
+        "formatversion": 2,
+        "maxlag": 10
+      },
+      "query_url": "https://commons.wikimedia.org/w/api.php?action=query&list=search&srnamespace=6&srsearch=sage+dried+leaves+filetype%3Abitmap&srlimit=10&format=json&formatversion=2&maxlag=10",
+      "checked_at": "2026-10-28T05:08:23+00:00",
+      "status": "ok",
+      "http_status": 200,
+      "results": [
+        {
+          "title": "File:Greater sage-grouse cecal tar (51115062160).jpg",
+          "pageid": 162928751
+        },
+        {
+          "title": "File:Greater sage-grouse cecal tar (51114279886).jpg",
+          "pageid": 162928748
+        },
+        {
+          "title": "File:Greater Sage Grouse Seedskadee NWR (15636193595).jpg",
+          "pageid": 69183519
+        },
+        {
+          "title": "File:Greater Sage Grouse Seedskadee NWR (15783425046).jpg",
+          "pageid": 69183857
+        },
+        {
+          "title": "File:Greater Sage Grouse Seedskadee NWR (15017676313).jpg",
+          "pageid": 69183608
+        },
+        {
+          "title": "File:Greater Sage Grouse Seedskadee NWR (15450389598).jpg",
+          "pageid": 69183568
+        },
+        {
+          "title": "File:Greater Sage Grouse Seedskadee NWR (15621724678).jpg",
+          "pageid": 69183833
+        },
+        {
+          "title": "File:Greater Sage Grouse Seedskadee NWR (15622189880).jpg",
+          "pageid": 69183829
+        },
+        {
+          "title": "File:Greater Sage Grouse Seedskadee NWR (15015729184).jpg",
+          "pageid": 69183537
+        },
+        {
+          "title": "File:Greater Sage Grouse on Seedskadee NWR (15635063511).jpg",
+          "pageid": 69183615
+        }
+      ]
+    },
+    {
+      "name": "ginger",
+      "scientific": "Zingiber officinale",
+      "profile": "sliced",
+      "query": "ginger dried slices",
+      "source": "https://commons.wikimedia.org/w/api.php",
+      "request_parameters": {
+        "action": "query",
+        "list": "search",
+        "srnamespace": 6,
+        "srsearch": "ginger dried slices filetype:bitmap",
+        "srlimit": 10,
+        "format": "json",
+        "formatversion": 2,
+        "maxlag": 10
+      },
+      "query_url": "https://commons.wikimedia.org/w/api.php?action=query&list=search&srnamespace=6&srsearch=ginger+dried+slices+filetype%3Abitmap&srlimit=10&format=json&formatversion=2&maxlag=10",
+      "checked_at": "2026-10-28T05:08:24+00:00",
+      "status": "ok",
+      "http_status": 200,
+      "results": [
+        {
+          "title": "File:Dried ginger slices (1).jpg",
+          "pageid": 148873550
+        },
+        {
+          "title": "File:Dried ginger slices.jpg",
+          "pageid": 148605140
+        },
+        {
+          "title": "File:DFC 3969 Sizzling pan of sliced sausages garlic onions and dried red chilies browning in oil.jpg",
+          "pageid": 189410092
+        },
+        {
+          "title": "File:Rajbangshi Thali with rice, Taro leaf chhyaka, Bottle gourd curry and crispy fried dried Indian Carplet fishes, Siliguri, West Bengal DSC 0047.jpg",
+          "pageid": 103645565
+        },
+        {
+          "title": "File:Rajbangshi Thali with rice, Taro leaf chhyaka, Bottle gourd curry and crispy fried dried Indian Carplet fishes, Siliguri, West Bengal DSC 0052.jpg",
+          "pageid": 103645569
+        },
+        {
+          "title": "File:Rajbangshi Thali with rice, Taro leaf chhyaka, Bottle gourd curry and crispy fried dried Indian Carplet fishes, Siliguri, West Bengal DSC 0049.jpg",
+          "pageid": 103645568
+        },
+        {
+          "title": "File:Wassail (4221293123).jpg",
+          "pageid": 12219231
+        },
+        {
+          "title": "File:Pepper Chicken (869566714).jpg",
+          "pageid": 87475009
+        },
+        {
+          "title": "File:Baigan Ka Salan.JPG",
+          "pageid": 40904881
+        },
+        {
+          "title": "File:Sister Song's Fish Soup (宋嫂魚羹).png",
+          "pageid": 133224146
+        }
+      ]
+    },
+    {
+      "name": "parsley",
+      "scientific": "Petroselinum crispum",
+      "profile": "jar",
+      "query": "parsley spice glass jar",
+      "source": "https://commons.wikimedia.org/w/api.php",
+      "request_parameters": {
+        "action": "query",
+        "list": "search",
+        "srnamespace": 6,
+        "srsearch": "parsley spice glass jar filetype:bitmap",
+        "srlimit": 10,
+        "format": "json",
+        "formatversion": 2,
+        "maxlag": 10
+      },
+      "query_url": "https://commons.wikimedia.org/w/api.php?action=query&list=search&srnamespace=6&srsearch=parsley+spice+glass+jar+filetype%3Abitmap&srlimit=10&format=json&formatversion=2&maxlag=10",
+      "checked_at": "2026-10-28T05:08:25+00:00",
+      "status": "ok",
+      "http_status": 200,
+      "results": []
+    },
+    {
+      "name": "cumin",
+      "scientific": "Cuminum cyminum",
+      "profile": "bag",
+      "query": "cumin spice bag pouch",
+      "source": "https://commons.wikimedia.org/w/api.php",
+      "request_parameters": {
+        "action": "query",
+        "list": "search",
+        "srnamespace": 6,
+        "srsearch": "cumin spice bag pouch filetype:bitmap",
+        "srlimit": 10,
+        "format": "json",
+        "formatversion": 2,
+        "maxlag": 10
+      },
+      "query_url": "https://commons.wikimedia.org/w/api.php?action=query&list=search&srnamespace=6&srsearch=cumin+spice+bag+pouch+filetype%3Abitmap&srlimit=10&format=json&formatversion=2&maxlag=10",
+      "checked_at": "2026-10-28T05:08:27+00:00",
+      "status": "ok",
+      "http_status": 200,
+      "results": []
+    },
+    {
+      "name": "rosemary",
+      "scientific": "Salvia rosmarinus",
+      "profile": "overview",
+      "query": "Salvia rosmarinus plant",
+      "source": "https://commons.wikimedia.org/w/api.php",
+      "request_parameters": {
+        "action": "query",
+        "list": "search",
+        "srnamespace": 6,
+        "srsearch": "Salvia rosmarinus plant filetype:bitmap",
+        "srlimit": 10,
+        "format": "json",
+        "formatversion": 2,
+        "maxlag": 10
+      },
+      "query_url": "https://commons.wikimedia.org/w/api.php?action=query&list=search&srnamespace=6&srsearch=Salvia+rosmarinus+plant+filetype%3Abitmap&srlimit=10&format=json&formatversion=2&maxlag=10",
+      "checked_at": "2026-10-28T05:08:28+00:00",
+      "status": "ok",
+      "http_status": 200,
+      "results": [
+        {
+          "title": "File:Rosmarinus officinalis MHNT.BOT.2008.1.19.jpg",
+          "pageid": 31984559
+        },
+        {
+          "title": "File:Salvia rosmarinus MHNT.BOT.2023.13.45.jpg",
+          "pageid": 179713599
+        },
+        {
+          "title": "File:Rosmarinus officinalis (1).jpg",
+          "pageid": 11760719
+        },
+        {
+          "title": "File:Rosmarinus officinalis in Vieussan.jpg",
+          "pageid": 113959168
+        },
+        {
+          "title": "File:Rosmarinus officinalis133095382.jpg",
+          "pageid": 3258359
+        },
+        {
+          "title": "File:Vitoria - Olarizu - Cantera - Romero 01.jpg",
+          "pageid": 57389505
+        },
+        {
+          "title": "File:Jardín Botánico Olarizu 25.jpg",
+          "pageid": 54728156
+        },
+        {
+          "title": "File:P1090247(4x3)-Rosmarinus officinalis (41960388224).jpg",
+          "pageid": 86071597
+        },
+        {
+          "title": "File:Salvia rosmarinus 5Dsr 0084.jpg",
+          "pageid": 127330339
+        },
+        {
+          "title": "File:Salvia rosmarinus Rozmaryn lekarski 2024-01-21 Malaga 01.jpg",
+          "pageid": 155365218
+        }
+      ]
+    },
+    {
+      "name": "parsley",
+      "scientific": "Petroselinum crispum",
+      "profile": "flakes",
+      "query": "parsley dried",
+      "source": "https://commons.wikimedia.org/w/api.php",
+      "request_parameters": {
+        "action": "query",
+        "list": "search",
+        "srnamespace": 6,
+        "srsearch": "parsley dried filetype:bitmap",
+        "srlimit": 10,
+        "format": "json",
+        "formatversion": 2,
+        "maxlag": 10
+      },
+      "query_url": "https://commons.wikimedia.org/w/api.php?action=query&list=search&srnamespace=6&srsearch=parsley+dried+filetype%3Abitmap&srlimit=10&format=json&formatversion=2&maxlag=10",
+      "checked_at": "2026-10-28T05:08:49+00:00",
+      "status": "ok",
+      "http_status": 200,
+      "results": [
+        {
+          "title": "File:Ciboulette replaced by dried parsley.jpg",
+          "pageid": 68923450
+        },
+        {
+          "title": "File:Cacık with dried parsley and sweet red pepper.jpg",
+          "pageid": 61882280
+        },
+        {
+          "title": "File:A sea of dry cow parsley stalks - geograph.org.uk - 600702.jpg",
+          "pageid": 13140056
+        },
+        {
+          "title": "File:Lorry on a country lane near Parsley Hay - geograph.org.uk - 2870345.jpg",
+          "pageid": 113281444
+        },
+        {
+          "title": "File:Parsley Dried.JPG",
+          "pageid": 12175267
+        },
+        {
+          "title": "File:Lane and dry stone walls near Parsley Hay - geograph.org.uk - 8131217.jpg",
+          "pageid": 176379816
+        },
+        {
+          "title": "File:Last year's dry stalks of cow parsley at Broälven Nature Reserve.jpg",
+          "pageid": 75284870
+        },
+        {
+          "title": "File:Cow Parsley - geograph.org.uk - 547340.jpg",
+          "pageid": 13072887
+        },
+        {
+          "title": "File:Cow Parsley at Burnhope - geograph.org.uk - 8230524.jpg",
+          "pageid": 183636417
+        },
+        {
+          "title": "File:Parsley Fern, Cryptogramma crispa - geograph.org.uk - 3177450.jpg",
+          "pageid": 114935266
+        }
+      ]
+    },
+    {
+      "name": "star anise",
+      "scientific": "Illicium verum",
+      "profile": "whole",
+      "query": "star anise",
+      "source": "https://commons.wikimedia.org/w/api.php",
+      "request_parameters": {
+        "action": "query",
+        "list": "search",
+        "srnamespace": 6,
+        "srsearch": "star anise filetype:bitmap",
+        "srlimit": 10,
+        "format": "json",
+        "formatversion": 2,
+        "maxlag": 10
+      },
+      "query_url": "https://commons.wikimedia.org/w/api.php?action=query&list=search&srnamespace=6&srsearch=star+anise+filetype%3Abitmap&srlimit=10&format=json&formatversion=2&maxlag=10",
+      "checked_at": "2026-10-28T05:08:50+00:00",
+      "status": "ok",
+      "http_status": 200,
+      "results": [
+        {
+          "title": "File:Dried Star Anise Fruit Seeds.jpg",
+          "pageid": 64020989
+        },
+        {
+          "title": "File:Gewuerze 004 2024 08 10.jpg",
+          "pageid": 151419675
+        },
+        {
+          "title": "File:Illicium verum20170511 7548.jpg",
+          "pageid": 90160570
+        },
+        {
+          "title": "File:Illicium verum20170511 7549.jpg",
+          "pageid": 59195206
+        },
+        {
+          "title": "File:Illicium verum20170511 7551.jpg",
+          "pageid": 59284624
+        },
+        {
+          "title": "File:Illicium verum20170511 7552.jpg",
+          "pageid": 59529972
+        },
+        {
+          "title": "File:Star aniseed.jpg",
+          "pageid": 11233709
+        },
+        {
+          "title": "File:Illicium verum 4zz.jpg",
+          "pageid": 60982693
+        },
+        {
+          "title": "File:Illicium verum 2006-10-17.jpg",
+          "pageid": 2131852
+        },
+        {
+          "title": "File:Illicium verum 0zz.jpg",
+          "pageid": 60850305
+        }
+      ]
+    },
+    {
+      "name": "cumin",
+      "scientific": "Cuminum cyminum",
+      "profile": "jar",
+      "query": "cumin jar",
+      "source": "https://commons.wikimedia.org/w/api.php",
+      "request_parameters": {
+        "action": "query",
+        "list": "search",
+        "srnamespace": 6,
+        "srsearch": "cumin jar filetype:bitmap",
+        "srlimit": 10,
+        "format": "json",
+        "formatversion": 2,
+        "maxlag": 10
+      },
+      "query_url": "https://commons.wikimedia.org/w/api.php?action=query&list=search&srnamespace=6&srsearch=cumin+jar+filetype%3Abitmap&srlimit=10&format=json&formatversion=2&maxlag=10",
+      "checked_at": "2026-10-28T05:08:52+00:00",
+      "status": "ok",
+      "http_status": 200,
+      "results": [
+        {
+          "title": "File:Cumin.JPG",
+          "pageid": 3084668
+        }
+      ]
+    }
+  ],
+  "observed_terms": {
+    "fresh": [
+      [
+        "fresh",
+        27
+      ],
+      [
+        "with",
+        20
+      ],
+      [
+        "leaves",
+        13
+      ],
+      [
+        "coriander",
+        12
+      ],
+      [
+        "and",
+        12
+      ],
+      [
+        "mint",
+        10
+      ],
+      [
+        "for",
+        9
+      ],
+      [
+        "basil",
+        8
+      ],
+      [
+        "the",
+        7
+      ],
+      [
+        "parsley",
+        6
+      ],
+      [
+        "liat",
+        6
+      ],
+      [
+        "portal",
+        6
+      ],
+      [
+        "foodie",
+        6
+      ],
+      [
+        "disorder",
+        6
+      ],
+      [
+        "whose",
+        6
+      ],
+      [
+        "are",
+        6
+      ],
+      [
+        "slight",
+        6
+      ],
+      [
+        "citrus",
+        6
+      ],
+      [
+        "taste",
+        6
+      ],
+      [
+        "usually",
+        6
+      ],
+      [
+        "used",
+        6
+      ],
+      [
+        "herb",
+        6
+      ],
+      [
+        "well",
+        6
+      ],
+      [
+        "spice",
+        6
+      ],
+      [
+        "lemongrass",
+        6
+      ],
+      [
+        "dfc",
+        4
+      ],
+      [
+        "farm",
+        4
+      ],
+      [
+        "garden",
+        4
+      ],
+      [
+        "from",
+        4
+      ],
+      [
+        "cacik",
+        3
+      ],
+      [
+        "topped",
+        3
+      ],
+      [
+        "pork",
+        3
+      ],
+      [
+        "tomato",
+        3
+      ],
+      [
+        "flower",
+        3
+      ],
+      [
+        "district",
+        3
+      ],
+      [
+        "seeds",
+        3
+      ],
+      [
+        "dill",
+        3
+      ],
+      [
+        "salmon",
+        3
+      ],
+      [
+        "green",
+        3
+      ],
+      [
+        "plant",
+        3
+      ],
+      [
+        "mozzarella",
+        3
+      ],
+      [
+        "fried",
+        3
+      ],
+      [
+        "lohas",
+        3
+      ],
+      [
+        "senegal",
+        3
+      ],
+      [
+        "savory",
+        2
+      ],
+      [
+        "crispy",
+        2
+      ],
+      [
+        "pasta",
+        2
+      ],
+      [
+        "herbs",
+        2
+      ],
+      [
+        "potatoes",
+        2
+      ],
+      [
+        "coriandrum",
+        2
+      ],
+      [
+        "sativum",
+        2
+      ],
+      [
+        "sarog",
+        2
+      ],
+      [
+        "village",
+        2
+      ],
+      [
+        "shimla",
+        2
+      ],
+      [
+        "produce",
+        2
+      ],
+      [
+        "medical",
+        2
+      ],
+      [
+        "home",
+        2
+      ],
+      [
+        "soup",
+        2
+      ],
+      [
+        "annual",
+        2
+      ],
+      [
+        "bolgiano",
+        2
+      ]
+    ],
+    "flakes": [
+      [
+        "greater",
+        10
+      ],
+      [
+        "sage",
+        10
+      ],
+      [
+        "grouse",
+        10
+      ],
+      [
+        "parsley",
+        10
+      ],
+      [
+        "bay",
+        9
+      ],
+      [
+        "dried",
+        8
+      ],
+      [
+        "seedskadee",
+        8
+      ],
+      [
+        "nwr",
+        8
+      ],
+      [
+        "oregano",
+        7
+      ],
+      [
+        "geograph",
+        7
+      ],
+      [
+        "org",
+        7
+      ],
+      [
+        "thyme",
+        5
+      ],
+      [
+        "dry",
+        4
+      ],
+      [
+        "cuisine",
+        4
+      ],
+      [
+        "foods",
+        4
+      ],
+      [
+        "bulacan",
+        4
+      ],
+      [
+        "indian",
+        4
+      ],
+      [
+        "cow",
+        4
+      ],
+      [
+        "and",
+        3
+      ],
+      [
+        "spice",
+        3
+      ],
+      [
+        "tlingit",
+        3
+      ],
+      [
+        "sealers",
+        3
+      ],
+      [
+        "camp",
+        3
+      ],
+      [
+        "yakutat",
+        3
+      ],
+      [
+        "alaska",
+        3
+      ],
+      [
+        "june",
+        3
+      ],
+      [
+        "harriman",
+        3
+      ],
+      [
+        "little",
+        2
+      ],
+      [
+        "leaf",
+        2
+      ],
+      [
+        "sweet",
+        2
+      ],
+      [
+        "cecal",
+        2
+      ],
+      [
+        "tar",
+        2
+      ],
+      [
+        "stalks",
+        2
+      ],
+      [
+        "lane",
+        2
+      ],
+      [
+        "near",
+        2
+      ],
+      [
+        "hay",
+        2
+      ],
+      [
+        "sem",
+        1
+      ],
+      [
+        "drying",
+        1
+      ],
+      [
+        "hangers",
+        1
+      ],
+      [
+        "hot",
+        1
+      ],
+      [
+        "spicy",
+        1
+      ],
+      [
+        "oreganodried",
+        1
+      ],
+      [
+        "carretto",
+        1
+      ],
+      [
+        "siciliano",
+        1
+      ],
+      [
+        "simone",
+        1
+      ],
+      [
+        "sicilianu",
+        1
+      ],
+      [
+        "cauliflower",
+        1
+      ],
+      [
+        "crust",
+        1
+      ],
+      [
+        "pizza",
+        1
+      ],
+      [
+        "sauce",
+        1
+      ],
+      [
+        "ingredients",
+        1
+      ],
+      [
+        "scale",
+        1
+      ],
+      [
+        "jwano",
+        1
+      ],
+      [
+        "wild",
+        1
+      ],
+      [
+        "dark",
+        1
+      ],
+      [
+        "brown",
+        1
+      ],
+      [
+        "desert",
+        1
+      ],
+      [
+        "ground",
+        1
+      ],
+      [
+        "foliage",
+        1
+      ],
+      [
+        "creeping",
+        1
+      ]
+    ],
+    "ground": [
+      [
+        "paprika",
+        10
+      ],
+      [
+        "powder",
+        7
+      ],
+      [
+        "sumac",
+        7
+      ],
+      [
+        "turmeric",
+        6
+      ],
+      [
+        "the",
+        6
+      ],
+      [
+        "ground",
+        6
+      ],
+      [
+        "rhus",
+        6
+      ],
+      [
+        "chlorofeel",
+        4
+      ],
+      [
+        "spices",
+        4
+      ],
+      [
+        "staghorn",
+        4
+      ],
+      [
+        "with",
+        4
+      ],
+      [
+        "black",
+        3
+      ],
+      [
+        "house",
+        3
+      ],
+      [
+        "along",
+        3
+      ],
+      [
+        "terrace",
+        3
+      ],
+      [
+        "boulevard",
+        3
+      ],
+      [
+        "inches",
+        3
+      ],
+      [
+        "snow",
+        3
+      ],
+      [
+        "during",
+        3
+      ],
+      [
+        "halloween",
+        3
+      ],
+      [
+        "nor",
+        3
+      ],
+      [
+        "easter",
+        3
+      ],
+      [
+        "ewing",
+        3
+      ],
+      [
+        "township",
+        3
+      ],
+      [
+        "mercer",
+        3
+      ],
+      [
+        "county",
+        3
+      ],
+      [
+        "new",
+        3
+      ],
+      [
+        "jersey",
+        3
+      ],
+      [
+        "starr",
+        3
+      ],
+      [
+        "sandwicensis",
+        3
+      ],
+      [
+        "fall",
+        3
+      ],
+      [
+        "colors",
+        3
+      ],
+      [
+        "deciduous",
+        3
+      ],
+      [
+        "leaves",
+        3
+      ],
+      [
+        "hawea",
+        3
+      ],
+      [
+        "olinda",
+        3
+      ],
+      [
+        "maui",
+        3
+      ],
+      [
+        "and",
+        2
+      ],
+      [
+        "street",
+        2
+      ],
+      [
+        "rempah",
+        2
+      ],
+      [
+        "packet",
+        2
+      ],
+      [
+        "mountain",
+        2
+      ],
+      [
+        "road",
+        2
+      ],
+      [
+        "views",
+        2
+      ],
+      [
+        "ovata",
+        2
+      ],
+      [
+        "aka",
+        2
+      ],
+      [
+        "sugar",
+        2
+      ],
+      [
+        "aleva",
+        1
+      ],
+      [
+        "jan",
+        1
+      ],
+      [
+        "smoked",
+        1
+      ],
+      [
+        "lemon",
+        1
+      ],
+      [
+        "juice",
+        1
+      ],
+      [
+        "flakes",
+        1
+      ],
+      [
+        "red",
+        1
+      ],
+      [
+        "green",
+        1
+      ],
+      [
+        "spice",
+        1
+      ],
+      [
+        "sppon",
+        1
+      ],
+      [
+        "dried",
+        1
+      ],
+      [
+        "sale",
+        1
+      ],
+      [
+        "stall",
+        1
+      ]
+    ],
+    "whole": [
+      [
+        "and",
+        29
+      ],
+      [
+        "seeds",
+        27
+      ],
+      [
+        "with",
+        22
+      ],
+      [
+        "whole",
+        11
+      ],
+      [
+        "lidded",
+        10
+      ],
+      [
+        "basket",
+        10
+      ],
+      [
+        "museo",
+        10
+      ],
+      [
+        "egizio",
+        10
+      ],
+      [
+        "turin",
+        10
+      ],
+      [
+        "pepper",
+        10
+      ],
+      [
+        "garlic",
+        10
+      ],
+      [
+        "cumin",
+        9
+      ],
+      [
+        "black",
+        9
+      ],
+      [
+        "fennel",
+        9
+      ],
+      [
+        "juniper",
+        9
+      ],
+      [
+        "berries",
+        9
+      ],
+      [
+        "mustard",
+        8
+      ],
+      [
+        "massachusetts",
+        7
+      ],
+      [
+        "sesamum",
+        7
+      ],
+      [
+        "indicum",
+        7
+      ],
+      [
+        "illicium",
+        7
+      ],
+      [
+        "verum",
+        7
+      ],
+      [
+        "coriandrum",
+        6
+      ],
+      [
+        "sativum",
+        6
+      ],
+      [
+        "vegetable",
+        6
+      ],
+      [
+        "fibers",
+        6
+      ],
+      [
+        "organic",
+        6
+      ],
+      [
+        "remains",
+        6
+      ],
+      [
+        "wheat",
+        6
+      ],
+      [
+        "annatto",
+        6
+      ],
+      [
+        "seed",
+        5
+      ],
+      [
+        "green",
+        4
+      ],
+      [
+        "dried",
+        4
+      ],
+      [
+        "the",
+        4
+      ],
+      [
+        "foeniculum",
+        4
+      ],
+      [
+        "achiote",
+        4
+      ],
+      [
+        "coriander",
+        3
+      ],
+      [
+        "fruits",
+        3
+      ],
+      [
+        "linguine",
+        3
+      ],
+      [
+        "bread",
+        3
+      ],
+      [
+        "mixed",
+        3
+      ],
+      [
+        "vegetables",
+        3
+      ],
+      [
+        "vulgare",
+        3
+      ],
+      [
+        "market",
+        3
+      ],
+      [
+        "senf",
+        3
+      ],
+      [
+        "variationen",
+        3
+      ],
+      [
+        "sesame",
+        3
+      ],
+      [
+        "con",
+        2
+      ],
+      [
+        "tuna",
+        2
+      ],
+      [
+        "oil",
+        2
+      ],
+      [
+        "tomatoes",
+        2
+      ],
+      [
+        "toasted",
+        2
+      ],
+      [
+        "cheddar",
+        2
+      ],
+      [
+        "cornichons",
+        2
+      ],
+      [
+        "spices",
+        2
+      ],
+      [
+        "seasonings",
+        2
+      ],
+      [
+        "herbs",
+        2
+      ],
+      [
+        "nutmeg",
+        2
+      ],
+      [
+        "from",
+        2
+      ],
+      [
+        "brandy",
+        2
+      ]
+    ],
+    "bark": [
+      [
+        "cinnamon",
+        6
+      ],
+      [
+        "cassia",
+        3
+      ],
+      [
+        "bark",
+        3
+      ],
+      [
+        "and",
+        2
+      ],
+      [
+        "stick",
+        2
+      ],
+      [
+        "sticks",
+        2
+      ],
+      [
+        "gewuerze",
+        1
+      ],
+      [
+        "canelle",
+        1
+      ],
+      [
+        "cinnamomum",
+        1
+      ],
+      [
+        "burmanni",
+        1
+      ],
+      [
+        "luc",
+        1
+      ],
+      [
+        "viatour",
+        1
+      ],
+      [
+        "ground",
+        1
+      ],
+      [
+        "powder",
+        1
+      ],
+      [
+        "health",
+        1
+      ],
+      [
+        "benefits",
+        1
+      ],
+      [
+        "with",
+        1
+      ],
+      [
+        "text",
+        1
+      ],
+      [
+        "labels",
+        1
+      ],
+      [
+        "madagascar",
+        1
+      ],
+      [
+        "nutmegs",
+        1
+      ]
+    ],
+    "bud": [
+      [
+        "cloves",
+        4
+      ],
+      [
+        "clove",
+        3
+      ],
+      [
+        "dried",
+        2
+      ],
+      [
+        "buds",
+        2
+      ],
+      [
+        "from",
+        2
+      ],
+      [
+        "cariophylli",
+        2
+      ],
+      [
+        "flos",
+        2
+      ],
+      [
+        "myrtaceae",
+        2
+      ],
+      [
+        "flower",
+        1
+      ],
+      [
+        "fragrant",
+        1
+      ],
+      [
+        "caps",
+        1
+      ],
+      [
+        "seasonal",
+        1
+      ],
+      [
+        "drying",
+        1
+      ],
+      [
+        "pemba",
+        1
+      ],
+      [
+        "clovesdried",
+        1
+      ],
+      [
+        "india",
+        1
+      ],
+      [
+        "nutmegs",
+        1
+      ],
+      [
+        "and",
+        1
+      ],
+      [
+        "illustration",
+        1
+      ],
+      [
+        "the",
+        1
+      ],
+      [
+        "encyclopedia",
+        1
+      ],
+      [
+        "food",
+        1
+      ],
+      [
+        "artemas",
+        1
+      ],
+      [
+        "ward",
+        1
+      ],
+      [
+        "scented",
+        1
+      ],
+      [
+        "plum",
+        1
+      ],
+      [
+        "unknown",
+        1
+      ],
+      [
+        "southeast",
+        1
+      ],
+      [
+        "asian",
+        1
+      ],
+      [
+        "artist",
+        1
+      ]
+    ],
+    "flower": [
+      [
+        "saffron",
+        6
+      ],
+      [
+        "img",
+        5
+      ],
+      [
+        "the",
+        3
+      ],
+      [
+        "monkey",
+        2
+      ],
+      [
+        "goddess",
+        2
+      ],
+      [
+        "fresco",
+        2
+      ],
+      [
+        "from",
+        2
+      ],
+      [
+        "akrotiri",
+        2
+      ],
+      [
+        "mpth",
+        2
+      ],
+      [
+        "plants",
+        2
+      ],
+      [
+        "crop",
+        1
+      ],
+      [
+        "griffin",
+        1
+      ],
+      [
+        "girl",
+        1
+      ],
+      [
+        "encyclopedia",
+        1
+      ],
+      [
+        "comprising",
+        1
+      ],
+      [
+        "specific",
+        1
+      ],
+      [
+        "culture",
+        1
+      ],
+      [
+        "history",
+        1
+      ],
+      [
+        "application",
+        1
+      ],
+      [
+        "arts",
+        1
+      ],
+      [
+        "and",
+        1
+      ],
+      [
+        "every",
+        1
+      ],
+      [
+        "other",
+        1
+      ],
+      [
+        "desirable",
+        1
+      ],
+      [
+        "particular",
+        1
+      ],
+      [
+        "respecting",
+        1
+      ],
+      [
+        "all",
+        1
+      ],
+      [
+        "indigenous",
+        1
+      ],
+      [
+        "cultivated",
+        1
+      ],
+      [
+        "introduced",
+        1
+      ]
+    ],
+    "root": [
+      [
+        "ginger",
+        11
+      ],
+      [
+        "fresh",
+        3
+      ],
+      [
+        "rhizome",
+        2
+      ],
+      [
+        "yogic",
+        1
+      ],
+      [
+        "secrets",
+        1
+      ],
+      [
+        "liat",
+        1
+      ],
+      [
+        "portal",
+        1
+      ],
+      [
+        "for",
+        1
+      ],
+      [
+        "foodie",
+        1
+      ],
+      [
+        "disorder",
+        1
+      ],
+      [
+        "root",
+        1
+      ],
+      [
+        "from",
+        1
+      ],
+      [
+        "san",
+        1
+      ],
+      [
+        "francisco",
+        1
+      ],
+      [
+        "farmers",
+        1
+      ],
+      [
+        "market",
+        1
+      ],
+      [
+        "mango",
+        1
+      ],
+      [
+        "chammanthi",
+        1
+      ],
+      [
+        "manoj",
+        1
+      ],
+      [
+        "karingamadathil",
+        1
+      ],
+      [
+        "rogers",
+        1
+      ],
+      [
+        "roxie",
+        1
+      ],
+      [
+        "hart",
+        1
+      ],
+      [
+        "heliconia",
+        1
+      ],
+      [
+        "torch",
+        1
+      ],
+      [
+        "bundaberg",
+        1
+      ],
+      [
+        "beer",
+        1
+      ],
+      [
+        "brew",
+        1
+      ],
+      [
+        "process",
+        1
+      ],
+      [
+        "wine",
+        1
+      ],
+      [
+        "with",
+        1
+      ],
+      [
+        "stem",
+        1
+      ],
+      [
+        "dry",
+        1
+      ]
+    ],
+    "sliced": [
+      [
+        "dried",
+        6
+      ],
+      [
+        "and",
+        4
+      ],
+      [
+        "rajbangshi",
+        3
+      ],
+      [
+        "thali",
+        3
+      ],
+      [
+        "with",
+        3
+      ],
+      [
+        "rice",
+        3
+      ],
+      [
+        "taro",
+        3
+      ],
+      [
+        "leaf",
+        3
+      ],
+      [
+        "chhyaka",
+        3
+      ],
+      [
+        "bottle",
+        3
+      ],
+      [
+        "gourd",
+        3
+      ],
+      [
+        "curry",
+        3
+      ],
+      [
+        "crispy",
+        3
+      ],
+      [
+        "fried",
+        3
+      ],
+      [
+        "indian",
+        3
+      ],
+      [
+        "carplet",
+        3
+      ],
+      [
+        "fishes",
+        3
+      ],
+      [
+        "siliguri",
+        3
+      ],
+      [
+        "west",
+        3
+      ],
+      [
+        "bengal",
+        3
+      ],
+      [
+        "dsc",
+        3
+      ],
+      [
+        "ginger",
+        2
+      ],
+      [
+        "slices",
+        2
+      ],
+      [
+        "dfc",
+        1
+      ],
+      [
+        "sizzling",
+        1
+      ],
+      [
+        "pan",
+        1
+      ],
+      [
+        "sliced",
+        1
+      ],
+      [
+        "sausages",
+        1
+      ],
+      [
+        "garlic",
+        1
+      ],
+      [
+        "onions",
+        1
+      ],
+      [
+        "red",
+        1
+      ],
+      [
+        "chilies",
+        1
+      ],
+      [
+        "browning",
+        1
+      ],
+      [
+        "oil",
+        1
+      ],
+      [
+        "wassail",
+        1
+      ],
+      [
+        "pepper",
+        1
+      ],
+      [
+        "chicken",
+        1
+      ],
+      [
+        "baigan",
+        1
+      ],
+      [
+        "salan",
+        1
+      ],
+      [
+        "sister",
+        1
+      ],
+      [
+        "song",
+        1
+      ],
+      [
+        "fish",
+        1
+      ],
+      [
+        "soup",
+        1
+      ]
+    ],
+    "jar": [
+      [
+        "cumin",
+        1
+      ]
+    ],
+    "bag": [],
+    "overview": [
+      [
+        "rosmarinus",
+        8
+      ],
+      [
+        "officinalis",
+        5
+      ],
+      [
+        "salvia",
+        3
+      ],
+      [
+        "mhnt",
+        2
+      ],
+      [
+        "bot",
+        2
+      ],
+      [
+        "olarizu",
+        2
+      ],
+      [
+        "vieussan",
+        1
+      ],
+      [
+        "vitoria",
+        1
+      ],
+      [
+        "cantera",
+        1
+      ],
+      [
+        "romero",
+        1
+      ],
+      [
+        "jardín",
+        1
+      ],
+      [
+        "botánico",
+        1
+      ],
+      [
+        "dsr",
+        1
+      ],
+      [
+        "rozmaryn",
+        1
+      ],
+      [
+        "lekarski",
+        1
+      ],
+      [
+        "malaga",
+        1
+      ]
+    ]
+  },
+  "frequency_measure": "Total Latin-script token occurrences in returned file titles, after removing File: and filename extensions; not image relevance, popularity or plant prevalence.",
+  "sampled_materials": 30,
+  "sampled_queries": 39,
+  "planned_queries": 39,
+  "failed_queries": 0,
+  "nonempty_queries": 35,
+  "returned_file_titles": 326,
+  "materials_with_results": 30,
+  "source_documentation": "https://www.mediawiki.org/wiki/API:Search",
+  "image_reuse_guidance": "https://commons.wikimedia.org/wiki/Commons:Reusing_content_outside_Wikimedia"
+}
