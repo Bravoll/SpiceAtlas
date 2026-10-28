@@ -1,0 +1,1 @@
+{"fetched_at":"2026-10-28T05:06:25+00:00","source_url":"https://zh.wikipedia.org/w/api.php","parameters":{"action":"query","titles":"篆香","redirects":1,"prop":"pageprops","formatversion":2},"http_status":200,"response":{"batchcomplete":true,"query":{"pages":[{"pageid":7863502,"ns":0,"title":"篆香","pageprops":{"unexpectedUnconnectedPage":"0"}}]}}}
