@@ -105,6 +105,82 @@ help_policy	仅“自动＋系统简体中文”优先百度百科、国内 Bing
 help_health	启动时以欧芹 / Parsley 检查网页、API 及已配置的功能服务，并每 10 分钟重试全部服务。网络失败与禁止嵌入分开记录。全部正常时不通知；状态变化通知需手动关闭。布局变更延迟到下一次内容操作，并保留条目、形态、列表和阅读位置后刷新。浏览器直连可与后台网络结果不同。	Startup checks use Parsley for webpages, APIs and configured functional services, then recheck all services every 10 minutes. Connection failure and framing restrictions are distinct. Healthy checks are silent. Change notices persist until dismissed. Layout changes wait for the next content action, then reload while preserving the entry, form, list and reading position. Browser and backend connectivity can differ.
 help_images	图片形态词库来自多种代表性原料的 Commons 文件名实测，查询和时间保存在研究记录中。鲜叶、干叶碎、粉末、整粒、树皮、花蕾、根、切片、罐装和袋装分别组合检索。仅影响图片排序；候选图仍应核对对象和文件说明，包装不等于植物身份。	Image-form vocabulary uses recorded Commons filename searches across representative materials. Fresh leaves, flakes, powder, whole seeds, bark, buds, roots, slices, jars and bags use distinct queries. This affects image retrieval only. Verify candidate subjects and file descriptions; packaging is not botanical identity.
 help_versions	复制会暂停来源版本的导入任务并保存可续传状态；内置默认版本不含你的密钥、收藏或历史。切换后异步请求继续归属于发起版本，旧标签页写入会被拒绝。版本删除进入可恢复区；版本管理日志单独保存。	Copying pauses imports and preserves resumable progress. A default version includes no personal keys, favorites or history. Async requests stay with their originating version, and stale tabs cannot write into the new active version. Deleted versions are recoverable. Manager logs are stored separately.'''
+text+='''
+photosDirect	浏览器实时加载远程图片	Remote images loaded by your browser
+sourceWindowShown	原站搜索视窗已开启，随容器适应；也可打开上方原站链接。	Source window open and fitted to this container; original-site links remain above.
+goBack	返回	Back
+goForward	前进	Forward
+randomExplore	随机探索	Surprise me
+openElsewhere	新窗口	Open elsewhere
+fitWindow	适应视窗	Fit window
+nativeWindow	原始尺寸	Native size
+adaptiveFrameNote	适应模式随视窗缩放原站页面。原站排版与嵌入权限由来源控制；若空白，可打开原站。	Fit mode scales the source page as this viewport changes. Layout and embedding permissions remain controlled by the source; open the original if the frame is blank.
+readingComfort	阅读排版与动态效果	Reading comfort & motion
+readingComfortNote	正文文字可独立调整，右侧 Aa 标签可随时打开快捷栏。	Resize article text independently. The Aa tab at the right opens reading shortcuts at any time.
+openReadingTools	打开阅读快捷栏	Open reading shortcuts
+readingTools	阅读	Reading
+done	完成	Done
+drawerIntro	调整仅作用于文章文字。点击外侧即可保存并继续阅读。	Adjust article typography without scaling the interface. Click outside to save and continue reading.
+fontSize	正文字号	Article text size
+fontSmall	小	Small
+fontStandard	标准	Regular
+fontLarge	大	Large
+fontExtra	特大	Extra
+lineHeight	行间距	Line spacing
+readingFont	正文字体	Article typeface
+fontSerif	书页 · 衬线	Book · Serif
+fontSans	清晰 · 无衬线	Clear · Sans
+fontKai	手稿 · 楷体	Script · Kai
+animationLevel	动画层级	Motion level
+motion0	0 · 无动画	0 · Still
+motion1	1 · 轻量	1 · Minimal
+motion2	2 · 舒适	2 · Refined
+motion3	3 · 艺术	3 · Botanical
+motionNote	动画遵循系统“减少动态效果”。最高档使用浏览器原生合成动画，实际帧率由屏幕与设备决定。	Respects your system’s reduced-motion preference. The highest level uses native browser animation; the display and device determine the actual frame rate.
+readingSample	一片叶，一段风味的旅程。Every leaf holds a story.	Every leaf holds a story. Follow the quiet journey from plant to spice.
+resetReading	恢复阅读默认	Reset reading defaults
+startupMode	启动时展示	On startup
+startupResume	继续上次阅读	Continue last reading
+startupBasil	固定罗勒	Always open Basil
+startupRandom	随机一个条目	Open a random record
+randomScope	随机探索范围	Random exploration scope
+listenEnglish	英语发音	Hear English
+ipaUnavailable	英式语音优先；音标缺失或暂不可用时不生成。	British voice preferred; IPA is shown only when sourced.
+pinyinNote	自动生成的普通话拼音，多音字及专名应以可靠词典为准。	Automatically generated Mandarin pinyin. Check a reliable dictionary for polyphonic characters and proper names.
+pinyinAuto	自动拼音	Auto pinyin
+pronunciationSource	词典来源 ↗	Dictionary source ↗
+speechUnavailable	本机暂未提供可播放的英语语音。请安装系统英语语音包，或稍后重试词典音频。	No usable English voice is available. Install an English system voice, or retry dictionary audio later.
+speechBritish	浏览器合成语音 · en-GB	Browser speech · en-GB
+speechSystem	已请求 en-GB；本机可用口音由语音包决定。	Requested en-GB; the available accent depends on installed voices.
+speechRecording	词典英式录音	British dictionary recording
+help_pronunciation	进入条目时读取公开词典 API 的英语音标，并保留词典链接。播放优先使用标为 UK / GB 的词典音频，否则调用浏览器 Web Speech API，优先选择 en-GB 语音；本机没有英式语音包时会明确提示。中文拼音由本地 pypinyin 自动生成，多音字应核实；拉丁学名不合成朗读。词典或音频临时不可用时不会编造音标。	English IPA is retrieved from a public dictionary API with a source link. Playback prefers a UK / GB recording, then browser Web Speech with an en-GB voice. If a British voice is unavailable, the interface says so. Mandarin pinyin is generated locally by pypinyin and should be checked for polyphonic characters. Latin taxonomic names are not synthesized. Unavailable IPA is never invented.
+help_reading	右侧 Aa 快捷栏可调整正文字号、行距、衬线／无衬线／楷体字体与四档动画。点击外侧或完成会保存到当前版本，保存失败时保留面板。0 关闭动画，1 轻量，2 常规细节，3 植物晕染与更丰富的过渡；系统减少动态效果优先。返回／前进记录最近 60 个阅读操作，包含条目、形态、来源、图片筛选、目录、阅读模式与位置；回退后新操作清除前进分支。设置或收藏修改不会被撤销。	The Aa drawer adjusts article size, spacing, typeface and four motion levels. Clicking outside or Done saves to the current version; failed saves keep the drawer open. Motion levels are 0 Still, 1 Minimal, 2 Refined and 3 Botanical, with system reduced motion taking priority. Back / Forward remembers up to 60 reading states including entry, form, source, image filter, catalogue, reading mode and position. A new action after going back discards forward states. Settings and saved-list changes are not undone.
+pronunciationHelp	音标、拼音与发音	IPA, pinyin & pronunciation
+navigationHelp	阅读快捷栏与导航	Reading shortcuts & navigation'''
+text+='''\nresponsiveWindow	自适应宽度	Responsive width
+scaledWindow	缩放预览	Scaled preview
+expandWindow	放大视窗	Expand window
+collapseWindow	收回视窗	Return inline
+adaptiveFrameNote	按当前视窗宽度加载原站，完整查看可放大视窗。原站内部排版与嵌入权限仍由来源控制。	The source uses the current viewport width. Expand the window for a full browser-width view. The source controls its own layout and embedding permissions.
+sourceWindowShown	原站搜索视窗已开启；可自适应宽度、切换缩放预览或放大查看。	Source window open. Use responsive width, scaled preview or expand it for more space.
+repeatAction	重复上次操作	Repeat last action
+catalogNextLabel	目录下一页	Next catalogue page
+catalogPreviousLabel	目录上一页	Previous catalogue page
+imageNextLabel	下一张图片	Next image
+imagePreviousLabel	上一张图片	Previous image
+auditNextLabel	加载更多审核记录	More audit records
+logsNextLabel	加载更多日志	More log entries
+keyboardShortcuts	键盘快捷键	Keyboard shortcuts
+shortcutHint	? 查看快捷键	? Keyboard shortcuts
+repeatHelp	Repeat：在当前状态重复最近一次可重复操作，如目录翻页、随机探索、图片切换或加载更多。	Repeat the last repeatable command against the current state: paging, random exploration, image stepping or loading more records.
+pageShortcutHelp	Next / Previous：当前本地目录的下一页／上一页。	Next / Previous page in the current local catalogue.
+navigationShortcutHelp	返回／前进至之前的阅读状态。	Back / Forward through reading states.
+escapeShortcutHelp	关闭当前浮层；阅读侧栏先保存。原站放大视窗收回到页面内。	Close the current popup, saving reading-drawer changes first. An expanded source window returns inline.
+searchShortcutHelp	聚焦左侧的本地搜索。	Focus the local catalogue search.
+imageShortcutHelp	图片查看器中切换上一张／下一张。	Previous / next image while the image viewer is open.
+shortcutsShortcutHelp	打开此快捷键说明。	Open this shortcut reference.
+shortcutSafety	输入框、下拉选择、可编辑区域及输入法组合输入时，不抢占单键。原站内嵌网页中的输入由原站处理。Esc 不撤销数据库、设置或收藏。	Single-letter shortcuts do not capture input fields, selects, editable text or IME composition. Embedded websites handle their own input. Escape does not undo database, settings or saved-list changes.
+help_reading	右侧 Aa 快捷栏独立调整正文。返回／前进悬浮于正文左上角，最多记录 60 个阅读状态。R 在当前状态重复上次可重复操作，N/P 目录翻页；Alt+方向键浏览历史，? 查看快捷键。0–3 动画覆盖弹窗进入与退出、列表与状态，系统减少动态效果优先。	The Aa drawer adjusts article typography independently. Back / Forward floats at the top left of the reading pane and retains up to 60 reading states. R repeats a command against the current state, N/P page the catalogue, Alt+arrows navigate history and ? opens help. Four motion levels cover popup entry/exit, lists and status; system reduced motion takes priority.'''
 zh={};en={}
 for line in text.splitlines():
  key,a,b=line.split('\t');zh[key]=a;en[key]=b

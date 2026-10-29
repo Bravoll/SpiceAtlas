@@ -18,6 +18,7 @@ data/versions.json
 data/version_manager.jsonl
 data/media/
 data/snapshots/
+data/launcher/
 data/cache.sqlite3
 *-wal
 *-shm

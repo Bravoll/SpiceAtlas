@@ -1,0 +1,136 @@
+{
+  "release": "0.6.0",
+  "date_local": "2026-10-29",
+  "timezone": "Australia/Sydney",
+  "git_base": "73d59e5b344c317387e80fe86f2943015ab92125",
+  "commit_push_performed": false,
+  "deployment_performed": false,
+  "backend_tests": {
+    "passed": 121,
+    "command": "python -m unittest discover -s tests -q"
+  },
+  "dom_checks": {
+    "legacy": 15,
+    "experience": 16,
+    "interactions": 17,
+    "total": 48,
+    "passed": true
+  },
+  "syntax_checks": [
+    "static/app.js",
+    "static/experience.js",
+    "static/interactions.js"
+  ],
+  "frozen_dependencies": "uv sync --frozen: 24 packages checked",
+  "document_links": {
+    "files_checked": 10,
+    "broken": 0,
+    "home_order": "complete English, complete Chinese",
+    "standalone_guides": [
+      "README.en.md",
+      "README.zh-CN.md"
+    ]
+  },
+  "fresh_start_smoke": {
+    "passed": true,
+    "version": "0.6.0",
+    "records": 18379,
+    "audit_decisions": 699,
+    "checks": [
+      "fresh workspace initialization",
+      "clean catalogue and JDB exclusion",
+      "default settings and no saved keys",
+      "English scientific labels preserve raw metadata",
+      "local pinyin and random exclusion",
+      "expanded/responsive view persistence",
+      "view excludes unknown secret fields",
+      "unmanaged shutdown unavailable",
+      "settings roundtrip",
+      "all new static assets served",
+      "application lifespan shutdown"
+    ]
+  },
+  "managed_server_smoke": {
+    "passed": true,
+    "entrypoint": "launch.py --managed --no-browser",
+    "real_local_http": true,
+    "instance_matched": true,
+    "wrong_key_status": 403,
+    "shutdown_status": 200,
+    "exit_code": 0,
+    "external_health_probes": "disabled for isolated smoke"
+  },
+  "browser_qa": {
+    "environment": "Managed Chrome, synthetic QA preview; not live Bing or encyclopedia text",
+    "viewport_css_px": [
+      1363,
+      936
+    ],
+    "inline_iframe_width_css_px": 951,
+    "inline_viewport_width_css_px": 951,
+    "expanded_panel_css_px": [
+      1331,
+      904
+    ],
+    "expanded_iframe_width_css_px": 1287,
+    "expanded_viewport_width_css_px": 1287,
+    "same_source_input_retained_after_expand_collapse": true,
+    "source_query_sample": "Preserved query · v0.6",
+    "parent_reading_scroll_before_after_css_px": [
+      3115,
+      3115
+    ],
+    "floating_navigation_position_css_px": {
+      "left": 306.515625,
+      "top": 112.890625
+    },
+    "floating_navigation_stayed_anchored_across_scroll": true,
+    "catalogue_mouse_next_then_R_pages": [
+      "31–60",
+      "61–90"
+    ],
+    "english_catalogue_notes": [
+      "Cinnamomum (genus)",
+      "Capsicum (ingredient genus)",
+      "Thymus (genus)"
+    ],
+    "thyme_hero_matches_selected_record_and_shows_english_note": true,
+    "image_popup_open_close_and_focus_return": true,
+    "motion_level_3_exercised": true,
+    "settings_outer_css_px": [
+      920,
+      800
+    ],
+    "browser_input_issue": "Some Playwright input calls timed out; documented native click/key APIs completed the checks.",
+    "screenshot_names": [
+      "spice-atlas-v06-expanded-1793206650500.jpg",
+      "spice-atlas-v06-final-1793207090110.jpg"
+    ]
+  },
+  "display_data_audit": {
+    "baseline_records": 18379,
+    "affected_scientific_annotations": 3,
+    "raw_scientific_and_ids_preserved": true
+  },
+  "package_policy": {
+    "baseline": "consistent SQLite backup",
+    "windows_cmd_line_endings": "CRLF",
+    "exclude": [
+      "personal versions and keys",
+      "launcher runtime files",
+      "caches",
+      "virtual environments",
+      "Git credentials",
+      "downloaded photographs and recordings"
+    ]
+  },
+  "not_tested": [
+    "Windows native Tk window/tray/DPI and process-tree behaviour on an actual Windows device",
+    "personal LM Studio/Google/Azure credentials",
+    "target-device audible UK speech and installed voices",
+    "120 Hz display performance",
+    "mobile-device browser",
+    "third-party iframe permissions in every region"
+  ],
+  "acceptance_gate": "Deliver the local ZIP first; commit and push only after explicit user acceptance and permission."
+}

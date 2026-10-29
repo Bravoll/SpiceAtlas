@@ -12,6 +12,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--port", type=int, default=8765)
     parser.add_argument("--no-browser", action="store_true")
+    parser.add_argument("--managed", action="store_true", help="Owned by the windowed desktop launcher")
     args = parser.parse_args()
     url = f"http://127.0.0.1:{args.port}"
     if not args.no_browser:
@@ -26,4 +27,7 @@ if __name__ == "__main__":
         threading.Thread(target=open_when_ready, daemon=True).start()
     print("香料图鉴：" + url)
     print("关闭此窗口或按 Ctrl+C 停止服务。")
-    uvicorn.run(app, host="127.0.0.1", port=args.port, log_level="warning")
+    server=uvicorn.Server(uvicorn.Config(app,host="127.0.0.1",port=args.port,log_level="warning"))
+    if args.managed:
+        app.state.launcher_shutdown=lambda:setattr(server,'should_exit',True)
+    server.run()

@@ -40,6 +40,8 @@ pydantic==2.14.1
     # via fastapi
 pydantic-core==2.50.1
     # via pydantic
+pypinyin==0.55.0
+    # via spice-atlas-local-20261027
 socksio==1.0.0
     # via httpx
 soupsieve==2.10 ; python_full_version < '3.11.5'

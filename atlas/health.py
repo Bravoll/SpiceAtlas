@@ -46,6 +46,7 @@ class Health:
  def specs(self):
   p=preferences.values();rows=[{**x,'kind':'api'} for x in BROWSER_PROBES]
   rows.extend([
+   {'id':'pronunciation_dictionary','url':'https://api.dictionaryapi.dev/api/v2/entries/en/parsley','kind':'api','dictionary':True},
    {'id':'wikidata','url':'https://www.wikidata.org/w/api.php','params':{'action':'wbsearchentities','search':'parsley','language':'en','limit':1,'format':'json'},'kind':'api'},
    {'id':'gbif','url':'https://api.gbif.org/v1/species/match','params':{'name':'Petroselinum crispum'},'kind':'api'},
    {'id':'commons_web','url':'https://commons.wikimedia.org/wiki/Category:Petroselinum_crispum','kind':'web'},
@@ -89,7 +90,9 @@ class Health:
    if response.status_code!=200:return {**result,'ok':False,'message':'HTTP '+str(response.status_code)}
    if spec['kind'] in {'api','function'}:
     data=response.json()
-    if not isinstance(data,dict) or data.get('error'):return {**result,'ok':False,'message':'API error or invalid JSON'}
+    if spec.get('dictionary'):
+     if not isinstance(data,list) or not data or not data[0].get('word'):return {**result,'ok':False,'message':'Invalid dictionary response'}
+    elif not isinstance(data,dict) or data.get('error'):return {**result,'ok':False,'message':'API error or invalid JSON'}
     if spec.get('local') and not data.get('data'):return {**result,'ok':False,'message':'No loaded model'}
    else:
     text=response.text[:30000].lower();url=str(response.url).lower()

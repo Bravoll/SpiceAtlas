@@ -33,14 +33,14 @@ def client_options(timeout=None):
     return options
 
 
-async def fetch_json(url, params=None, *, timeout=None, headers=None):
+async def fetch_json(url, params=None, *, timeout=None, headers=None, gate=None):
     host = urlsplit(url).hostname
     options = client_options(timeout)
     if headers:
         options["headers"].update(headers)
     try:
         async with httpx.AsyncClient(**options) as client:
-            async with GATE:
+            async with (gate or GATE):
                 response = await client.get(url, params=params)
                 if response.status_code in (429, 503):
                     await asyncio.sleep(2)

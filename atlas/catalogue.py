@@ -12,7 +12,7 @@ from pathlib import Path
 
 from .storage import DATA, ROOT, now_iso
 from .workspaces import workspaces, ClosingConnection
-from .localization import to_hant
+from .localization import to_hant, scientific_english
 from opencc import OpenCC
 _simplify=OpenCC("t2s")
 
@@ -139,6 +139,7 @@ class Catalogue:
             botanical=data.get("scope")=="botanical"
             data["forms"]=[{"id":"overview","name":"原植物" if botanical else "条目概览","name_en":"Plant overview" if botanical else "Record overview","part":"未核实烹饪部位","part_en":"Culinary use not verified","theme":"neutral","image_query":query,"commons_query":query}]
         data.setdefault("commons_query",data.get("scientific") or en or zh)
+        data['scientific_en']=scientific_english(data.get('scientific',''))
         data.setdefault("baidu",zh or en or data.get("scientific",""))
         data["family_zh_hant"]=to_hant(data.get("family_zh",data.get("family","")))
         data["intro_hant"]=to_hant(data.get("intro",""))
@@ -164,6 +165,19 @@ class Catalogue:
         with self.connect() as db:
             row=db.execute("SELECT id FROM entries WHERE wikidata_id=? ORDER BY CASE review_state WHEN 'curated' THEN 0 ELSE 1 END LIMIT 1",(qid,)).fetchone()
         return row[0] if row else None
+
+    def random_entry(self,scope='culinary',exclude=''):
+        """Uniform selection from local, admitted records; quarantine is never sampled."""
+        import secrets
+        clauses=[];params=[]
+        if scope!='all':clauses.append('scope=?');params.append(scope)
+        if exclude:clauses.append('id<>?');params.append(exclude)
+        where=' AND '.join(clauses) or '1=1'
+        with self.connect() as db:
+            count=db.execute('SELECT COUNT(*) FROM entries WHERE '+where,params).fetchone()[0]
+            if not count:return None
+            row=db.execute('SELECT id FROM entries WHERE '+where+' ORDER BY id LIMIT 1 OFFSET ?',[*params,secrets.randbelow(count)]).fetchone()
+        return {'id':row[0],'scope':scope,'eligible_count':count}
 
     def by_scientific(self,name,db=None):
         own=db is None;db=db or self.connect()

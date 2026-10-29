@@ -14,7 +14,7 @@
   "azure_region": "",
   "google_api_key": "",
   "google_cse_id": "",
-  "user_agent": "SpiceAtlas/0.4 (local botanical reference reader)",
+  "user_agent": "SpiceAtlas/0.6 (local botanical reference reader)",
   "proxy_url": "",
   "trust_env": true,
   "timeout_seconds": 25,
@@ -22,5 +22,11 @@
   "image_mode": "direct",
   "browser_images": true,
   "appearance": "light",
-  "history_order": "recent"
+  "history_order": "recent",
+  "reader_font_size": 17,
+  "reader_line_height": 1.85,
+  "reader_font": "serif",
+  "animation_level": 2,
+  "startup_mode": "resume",
+  "random_scope": "culinary"
 }

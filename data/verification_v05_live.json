@@ -1,0 +1,35 @@
+{
+  "checked_at": "2026-10-28T13:55:40+00:00",
+  "service": "Free Dictionary API / Wiktionary",
+  "sample": [
+    {
+      "entry": "parsley",
+      "delivery": "live",
+      "ipa_count": 1,
+      "audio_regions": [
+        "US"
+      ],
+      "source_url": "https://en.wiktionary.org/wiki/parsley",
+      "unavailable": false
+    },
+    {
+      "entry": "basil",
+      "delivery": null,
+      "ipa_count": 0,
+      "audio_regions": [],
+      "source_url": "",
+      "unavailable": true
+    },
+    {
+      "entry": "cumin",
+      "delivery": null,
+      "ipa_count": 0,
+      "audio_regions": [],
+      "source_url": "",
+      "unavailable": true
+    }
+  ],
+  "audible_playback_tested": false,
+  "user_credentials_used": false,
+  "note": "Network observations only; not proof of installed browser voices or audible output."
+}

@@ -1,0 +1,13 @@
+{
+  "name": "spice-atlas-local",
+  "version": "0.6.0",
+  "private": true,
+  "description": "Optional synthetic UI preview and browser QA; the application runs with Python.",
+  "scripts": {
+    "dev": "node tests/preview_fixture.mjs --port 4173",
+    "test:ui": "node tests/ui_acceptance.cjs && node tests/experience_acceptance.cjs && node tests/interactions_acceptance.cjs"
+  },
+  "devDependencies": {
+    "linkedom": "0.18.12"
+  }
+}

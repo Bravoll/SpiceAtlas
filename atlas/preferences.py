@@ -12,9 +12,11 @@ DEFAULTS={
  'translation_provider':'local','excluded_languages':[],'lm_enabled':False,
  'lm_base_url':'http://127.0.0.1:1234/v1','lm_model':'','lm_api_key':'',
  'google_translate_key':'','azure_translate_key':'','azure_region':'',
- 'google_api_key':'','google_cse_id':'','user_agent':'SpiceAtlas/0.4 (local botanical reference reader)',
+ 'google_api_key':'','google_cse_id':'','user_agent':'SpiceAtlas/0.6 (local botanical reference reader)',
  'proxy_url':'','trust_env':True,'timeout_seconds':25,'live_first':True,'image_mode':'direct',
  'browser_images':True,'appearance':'light','history_order':'recent',
+ 'reader_font_size':17,'reader_line_height':1.85,'reader_font':'serif','animation_level':2,
+ 'startup_mode':'resume','random_scope':'culinary',
 }
 ENV={'lm_base_url':'LM_BASE_URL','lm_model':'LM_MODEL','lm_api_key':'LM_API_KEY','google_api_key':'GOOGLE_API_KEY',
  'google_cse_id':'GOOGLE_CSE_ID','user_agent':'SPICE_USER_AGENT','proxy_url':'SPICE_PROXY_URL',
@@ -63,8 +65,12 @@ class Preferences:
     value=list(dict.fromkeys(value))
    elif key=='timeout_seconds':
     if not isinstance(value,(int,float)) or isinstance(value,bool) or not 5<=value<=120:raise ValueError('Timeout must be 5–120 seconds')
-   elif key in ('image_mode','translation_provider','appearance','history_order'):
-    options={'image_mode':{'direct','proxy'},'translation_provider':{'local','google','azure','off'},'appearance':{'light','dark'},'history_order':{'recent','custom'}}
+   elif key in ('reader_font_size','reader_line_height','animation_level'):
+    low,high={'reader_font_size':(14,28),'reader_line_height':(1.5,2.3),'animation_level':(0,3)}[key]
+    if not isinstance(value,(int,float)) or isinstance(value,bool) or not low<=value<=high:raise ValueError('Unsupported '+key)
+    if key in {'reader_font_size','animation_level'} and value!=int(value):raise ValueError(key+' must be an integer')
+   elif key in ('image_mode','translation_provider','appearance','history_order','reader_font','startup_mode','random_scope'):
+    options={'image_mode':{'direct','proxy'},'translation_provider':{'local','google','azure','off'},'appearance':{'light','dark'},'history_order':{'recent','custom'},'reader_font':{'serif','sans','kai'},'startup_mode':{'resume','basil','random'},'random_scope':{'culinary','botanical','all'}}
     if value not in options[key]:raise ValueError('Unsupported '+key)
    elif key=='lm_base_url':
     value=str(value).strip().rstrip('/');p=urlsplit(value)

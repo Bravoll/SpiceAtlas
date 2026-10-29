@@ -1,0 +1,89 @@
+{
+  "release": "0.5.0",
+  "date_local": "2026-10-29",
+  "git_base": "73d59e5b344c317387e80fe86f2943015ab92125",
+  "commit_push_performed": false,
+  "backend_tests": {
+    "passed": 106,
+    "command": "python -m unittest discover -s tests -q"
+  },
+  "dom_checks": {
+    "legacy": 15,
+    "experience": 16,
+    "total": 31,
+    "passed": true
+  },
+  "syntax_checks": [
+    "static/app.js",
+    "static/experience.js"
+  ],
+  "document_links_valid": true,
+  "fresh_start_smoke": {
+    "passed": true,
+    "version": "0.5.0",
+    "catalogue_records": 18379,
+    "checks": [
+      "first-start workspace initialization",
+      "clean baseline and JDB excluded",
+      "reading defaults and empty credentials",
+      "English name and local pinyin",
+      "local random exclusion",
+      "image/frame/anchor view persistence",
+      "unknown view keys excluded",
+      "reading settings roundtrip",
+      "new static assets and audio CSP",
+      "application lifespan shutdown"
+    ]
+  },
+  "browser_qa": {
+    "type": "managed Chrome / synthetic article fixture",
+    "viewport": [
+      1363,
+      936
+    ],
+    "body_client_scroll_height": [
+      936,
+      936
+    ],
+    "header_control_center_y": 50.9375,
+    "article_font_before_after_px": [
+      17,
+      24
+    ],
+    "header_width_unchanged_px": 1363,
+    "article_width_px": 700.96875,
+    "frame_container_width_px": 951,
+    "frame_layout_width_px": 1024,
+    "frame_visible_width_px": 951,
+    "fit_scale": 0.9287,
+    "reading_back_restored_full_mode": true,
+    "new_branch_cleared_forward": true,
+    "theme_level_3_switch_completed": true,
+    "layout_is_fixture_not_live_encyclopedia": true,
+    "late_language_article_preserves_picture_anchor": true,
+    "picture_top_after_rapid_language_jump_px": 102.921875
+  },
+  "resize_math_checks_css_px": [
+    420,
+    900
+  ],
+  "live_observations": "verification_v05_live.json",
+  "not_tested": [
+    "personal LM Studio or cloud translation credentials",
+    "audible playback and installed voices on user device",
+    "120 Hz display performance",
+    "mobile device browser",
+    "third-party source permission across all regions"
+  ],
+  "packaging_policy": {
+    "baseline": "clean SQLite backup",
+    "exclude": [
+      "personal workspace directories",
+      "keys",
+      "runtime caches",
+      "Git credentials",
+      "downloaded photos and recordings",
+      "virtual environments"
+    ]
+  }
+}

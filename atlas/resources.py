@@ -15,6 +15,7 @@ def language_policy(mode='auto',browser='en',preferred='auto'):
          'variant':'zh-hant' if content=='zh-Hant' else 'zh-hans','market':'zh-CN' if mode=='auto' and ui=='zh-Hans' else 'zh-TW' if content.startswith('zh') else 'en-AU'}
 
 def available(service,report=None):
+ if (report or {}).get('phase')=='checking':return True
  row=(report or {}).get('services',{}).get(service,{})
  return row.get('ok') is not False
 

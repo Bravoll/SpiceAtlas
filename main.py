@@ -2,6 +2,8 @@ from __future__ import annotations
 import argparse
 import asyncio
 import json
+import os
+import secrets
 from typing import Literal
 from contextlib import asynccontextmanager
 from atlas.workspaces import workspaces
@@ -10,6 +12,8 @@ from atlas.health import health, BROWSER_PROBES
 from atlas.resources import resource_plan, image_gateways, language_policy, available
 from atlas.providers import ARTICLE_VARIANT
 from atlas.image_lexicon import lexicon
+from atlas.pronunciation import name_metadata, pronunciations
+from atlas.launcher_protocol import runtime_identity
 from urllib.parse import urlsplit
 
 import httpx
@@ -32,7 +36,7 @@ async def lifespan(app):
     await health.stop()
     for version in workspaces.list()["versions"]:await jobs.pause_all(version["id"])
 
-app=FastAPI(title="Spice Atlas · Live Catalogue",version="0.4.0",lifespan=lifespan)
+app=FastAPI(title="Spice Atlas · Live Catalogue",version="0.6.0",lifespan=lifespan)
 reader=Reader()
 
 @app.exception_handler(ValueError)
@@ -62,7 +66,7 @@ async def boundaries(request:Request,call_next):
     response.headers["X-Atlas-Version"]=workspaces.active_id
     response.headers["X-Content-Type-Options"]="nosniff"
     response.headers["Referrer-Policy"]="strict-origin-when-cross-origin"
-    response.headers["Content-Security-Policy"]="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' https: data:; connect-src 'self' https://zh.wikipedia.org https://en.wikipedia.org https://commons.wikimedia.org; frame-src 'self' https://www.bing.com https://*.bing.com; object-src 'none'; base-uri 'self'"
+    response.headers["Content-Security-Policy"]="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' https: data:; media-src 'self' https://api.dictionaryapi.dev https://upload.wikimedia.org https://ssl.gstatic.com; connect-src 'self' https://zh.wikipedia.org https://en.wikipedia.org https://commons.wikimedia.org; frame-src 'self' https://www.bing.com https://*.bing.com; object-src 'none'; base-uri 'self'"
     return response
 
 @app.get("/")
@@ -75,6 +79,12 @@ def catalog(q:str="",scope:Literal["culinary","botanical","all"]="all",node:str|
 @app.get("/api/catalog/stats")
 def catalog_stats():return catalogue.stats()
 
+@app.get('/api/catalog/random')
+def random_record(scope:Literal['culinary','botanical','all']|None=None,exclude:str=''):
+    value=catalogue.random_entry(scope or preferences.values()['random_scope'],exclude[:180])
+    if not value:raise HTTPException(404,'No eligible local records in this scope')
+    return value
+
 @app.get("/api/catalog/nodes")
 def nodes(parent:str="root-culinary",language:str="zh-Hans"):
     return {"parent":parent,"nodes":catalogue.children(parent,language)}
@@ -84,7 +94,11 @@ async def entry(entry_id:str,resolve:bool=False,browser_language:str="en"):
     p=preferences.values()
     item=await resolve_entry(entry_id,force=True) if resolve else entry_for(entry_id)
     plan=resource_plan(item,p["ui_language"],browser_language,p["content_language"],health.report())
-    return {**item,**plan,"image_gateways":image_gateways(item,mode=p["ui_language"],browser=browser_language,preferred=p["content_language"],report=health.report()),"related":catalogue.related(item),"favorite":any(r["entry_id"]==entry_id for r in activity.collection("favorites"))}
+    return {**item,**name_metadata(item),**plan,"image_gateways":image_gateways(item,mode=p["ui_language"],browser=browser_language,preferred=p["content_language"],report=health.report()),"related":catalogue.related(item),"favorite":any(r["entry_id"]==entry_id for r in activity.collection("favorites"))}
+
+@app.get('/api/pronunciation/{entry_id}')
+async def pronunciation(entry_id:str):
+    return await pronunciations.for_entry(entry_for(entry_id),online=available('pronunciation_dictionary',health.report()))
 
 @app.get("/api/article/{entry_id}")
 async def article(entry_id:str,source:str="auto",refresh:bool=False,preferred:str="auto",browser_language:str="en"):
@@ -148,13 +162,22 @@ async def diagnose():
 
 @app.get("/api/status")
 def status():
-    return {"version":"0.4.0","active_version":workspaces.active_id,"cache":reader.store.stats(),"catalogue":catalogue.stats(),
+    return {"version":"0.6.0",**runtime_identity(ROOT),"active_version":workspaces.active_id,"cache":reader.store.stats(),"catalogue":catalogue.stats(),
             "providers":[{"id":"wikimedia","name":"Wikipedia / Commons","mode":"live_api"},
                          {"id":"wikidata","name":"Wikidata names / aliases","mode":"metadata_api"},
                          {"id":"gbif","name":"GBIF botanical reference","mode":"taxonomy_api"},
                          {"id":"baidu","name":"Baidu","mode":"external"},
                          {"id":"bing","name":"Bing","mode":"frame_if_permitted"},
                          {"id":"google","name":"Google","mode":"existing_key_only"}]}
+
+@app.post('/api/launcher/shutdown')
+async def launcher_shutdown(request:Request):
+    expected=os.environ.get('SPICE_LAUNCHER_CONTROL_TOKEN','')
+    shutdown=getattr(app.state,'launcher_shutdown',None)
+    if not expected or not callable(shutdown):raise HTTPException(404,'Managed launcher is not active')
+    if not secrets.compare_digest(request.headers.get('X-Atlas-Launcher',''),expected):raise HTTPException(403,'Launcher authorization required')
+    shutdown()
+    return {'ok':True}
 
 class BrowserIngest(BaseModel):
     entry_id:str
@@ -298,7 +321,7 @@ def history_entry(entry_id:str):entry_for(entry_id);activity.visit(entry_id);ret
 @app.get('/api/logs')
 def logs(before:int|None=None,limit:int=100,manager:bool=False):return {'rows':workspaces.manager_logs(before,limit) if manager else activity.events(before,limit)}
 
-VIEW_KEYS={'entry','form','source','imageProvider','query','scope','node','path','offset','group','collection','mainScroll','catalogScroll','readerMode','textMode','typeStyle'}
+VIEW_KEYS={'entry','form','source','imageProvider','imageProfile','query','scope','node','path','offset','group','collection','mainScroll','catalogScroll','windowScroll','readerMode','textMode','typeStyle','frameOpen','frameFit','frameMode','frameExpanded','anchor'}
 @app.get('/api/view-state')
 def view_state():
     path=workspaces.directory()/'view_state.json';return json.loads(path.read_text('utf-8')) if path.exists() else {}
