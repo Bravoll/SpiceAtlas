@@ -15,7 +15,7 @@ def language_policy(mode='auto',browser='en',preferred='auto'):
          'variant':'zh-hant' if content=='zh-Hant' else 'zh-hans','market':'zh-CN' if mode=='auto' and ui=='zh-Hans' else 'zh-TW' if content.startswith('zh') else 'en-AU'}
 
 def available(service,report=None):
- if (report or {}).get('phase')=='checking':return True
+ if (report or {}).get('phase')=='checking' and not (report or {}).get('completed_rounds',0):return True
  row=(report or {}).get('services',{}).get(service,{})
  return row.get('ok') is not False
 
@@ -28,8 +28,8 @@ def resource_plan(item,mode='auto',browser='en',preferred='auto',report=None):
   wik={'id':wiki,'name':'中文维基' if chinese else '英文维基','name_en':'Chinese Wikipedia' if chinese else 'English Wikipedia','kind':'api' if title else 'search','available':bool(title),'url':wiki_url,'service':wiki}
   domestic=policy['domestic'] and primary;bing='bing_cn' if domestic else 'bing';bhost='https://cn.bing.com' if domestic else 'https://www.bing.com';market='zh-CN' if domestic else ('zh-TW' if chinese else 'en-AU')
   baidu={'id':'baidu','name':'百度百科','name_en':'Baidu Baike','kind':'external','url':'https://baike.baidu.com/item/'+q,'service':'baidu'}
-  bingrow={'id':'bing','name':'必应（国内）' if domestic else 'Bing（国际）','name_en':'Bing China' if domestic else 'Bing International','kind':'external','url':bhost+'/search?q='+q+'&mkt='+market,'service':bing}
-  google={'id':'google','name':'Google','name_en':'Google','kind':'external','url':'https://www.google.com/search?q='+q+'&hl='+('zh-TW' if policy['locale']=='zh-Hant' else 'zh-CN' if chinese else 'en')+'&lr=lang_'+language,'service':'google'}
+  bingrow={'id':'bing','name':'必应（国内）' if domestic else 'Bing（国际）','name_en':'Bing China' if domestic else 'Bing International','kind':'search','url':bhost+'/search?q='+q+'&mkt='+market,'service':bing}
+  google={'id':'google','name':'Google','name_en':'Google','kind':'search','url':'https://www.google.com/search?q='+q+'&hl='+('zh-TW' if policy['locale']=='zh-Hant' else 'zh-CN' if chinese else 'en')+'&lr=lang_'+language,'service':'google'}
   rows=[baidu,bingrow,wik] if domestic else [wik,bingrow,google]
   if not domestic and chinese:rows.append(baidu)
   for key,ref in item.get('references',{}).items():
@@ -38,6 +38,7 @@ def resource_plan(item,mode='auto',browser='en',preferred='auto',report=None):
   if item.get('wikidata_id'):rows.append({'id':'wikidata','name':'Wikidata 名称资料','name_en':'Wikidata names','kind':'external','url':'https://www.wikidata.org/wiki/'+item['wikidata_id'],'service':'wikidata_web'})
   for row in rows:
    if available(row['service'],report):output.append({**row,'name':to_hant(row['name']) if policy['ui']=='zh-Hant' else row['name'],'key':row['id']+':'+language,'language':language,'primary':primary,'query':query})
+ if available('other_sources',report):output.append({'id':'other','key':'other','name':to_hant('其他来源') if policy['ui']=='zh-Hant' else '其他来源','name_en':'Other sources','kind':'aggregate','service':'other_sources','available':True,'language':'multi','primary':True,'url':'#otherSourcesBoard','query':item.get('scientific') or item.get('name_en') or item.get('name')})
  return {'policy':policy,'sources':output}
 
 def image_gateways(item,form=None,mode='auto',browser='en',preferred='auto',report=None,profile=None):

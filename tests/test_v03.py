@@ -97,7 +97,7 @@ class FallbackAndImageTests(unittest.IsolatedAsyncioTestCase):
         self.entry={"id":"example","name":"Example","english":"Example","review_state":"curated","wiki":{"enwiki":"Example"},"forms":[{"id":"overview","commons_query":"Example"}],"commons_query":"Example"}
     async def asyncTearDown(self):self.temp.cleanup()
     async def test_missing_chinese_uses_english_without_claiming_connection_failure(self):
-        with patch("atlas.providers.entry_for",return_value=self.entry),patch.object(self.reader,"_article_one",new_callable=AsyncMock,return_value={"source":"enwiki","mode":"article"}) as remote:
+        with patch("atlas.providers.entry_for",return_value=self.entry),patch("atlas.wiki_languages.resolve_languages",new_callable=AsyncMock,return_value={"mapping":{"en":"Example"},"state":"resolved"}),patch.object(self.reader,"_article_one",new_callable=AsyncMock,return_value={"source":"enwiki","mode":"article"}) as remote:
             result=await self.reader.article("example","auto",preferred="zh")
         self.assertEqual(result["source"],"enwiki");self.assertEqual(result["fallback"]["reason"],"missing_language")
         self.assertEqual(remote.await_count,1)
@@ -107,7 +107,7 @@ class FallbackAndImageTests(unittest.IsolatedAsyncioTestCase):
             result=await self.reader.article("example","auto")
         self.assertEqual(result["fallback"]["reason"],"connection_failure")
     async def test_missing_language_is_not_retrieved_as_a_fake_article(self):
-        with patch("atlas.providers.entry_for",return_value=self.entry):
+        with patch("atlas.providers.entry_for",return_value=self.entry),patch("atlas.wiki_languages.resolve_languages",new_callable=AsyncMock,return_value={"mapping":{"en":"Example"},"state":"resolved"}):
             result=await self.reader.article("example","zhwiki")
         self.assertEqual(result["mode"],"unavailable")
     async def test_failed_metadata_lookup_is_not_evidence_of_a_missing_page(self):
@@ -130,7 +130,8 @@ class FallbackAndImageTests(unittest.IsolatedAsyncioTestCase):
         params=self.reader.commons_params({**self.entry,"primary_image":"Example plant.jpg"},"overview")
         self.assertEqual(params["titles"],"File:Example plant.jpg");self.assertNotIn("generator",params)
     async def test_google_frame_is_not_forced_through_a_proxy(self):
-        result=await frame_capability({**self.entry,"forms":[{"id":"overview","image_query":"Example"}]},"google")
+        with patch("atlas.web_sources.frame_check",new_callable=AsyncMock,return_value={"can_try":False,"code":"frame_denied"}):
+            result=await frame_capability({**self.entry,"forms":[{"id":"overview","image_query":"Example"}]},"google")
         self.assertFalse(result["can_try"])
 
 

@@ -97,11 +97,13 @@ class WorkspaceTests(unittest.TestCase):
 
  def test_application_startup_and_shutdown_manage_background_check(self):
   from atlas.health import health
-  with patch.object(health,'check',new_callable=AsyncMock,return_value={}) as checker:
+  with patch.object(health,'specs',return_value=[]):
    with TestClient(app) as client:
     self.assertEqual(client.get('/api/status').status_code,200)
     self.assertIsNotNone(health.loop_task)
-   self.assertGreaterEqual(checker.await_count,1);self.assertIsNone(health.loop_task)
+    report=client.post('/api/health/round').json()
+    self.assertEqual(report['phase'],'checking');self.assertTrue(report['round_id']);self.assertLessEqual(report['remaining_ms'],2000)
+   self.assertIsNone(health.loop_task);self.assertEqual(health.tasks,{})
 
  def test_late_async_write_stays_in_origin_version(self):
   next_version=workspaces.create('Next')
@@ -119,7 +121,15 @@ class HealthTests(WorkspaceTests):
  def test_health_lifecycle_silent_success_and_persistent_changes(self):
   health=Health();row={'id':'google','ok':True};health.publish([row]);self.assertEqual(activity.notifications(),[]);health.publish([{'id':'google','ok':False,'http_status':403}]);self.assertEqual(len(activity.notifications()),1);health.publish([{'id':'google','ok':False}]);self.assertEqual(len(activity.notifications()),1);health.publish([row]);self.assertEqual(len(activity.notifications()),2);activity.dismiss(activity.notifications()[0]['id']);self.assertEqual(len(activity.notifications()),1);self.assertEqual(row,{'id':'google','ok':True})
  def test_browser_route_overrides_backend_failure(self):
-  health=Health();health.browser_results([{'id':'commons','ok':True}]);report=health.publish([{'id':'commons','ok':False}]);self.assertTrue(report['services']['commons']['ok']);self.assertFalse(report['services']['commons']['backend_ok'])
+  async def scenario():
+   health=Health(budget_ms=35)
+   with patch.object(health,'specs',return_value=[{'id':'commons','kind':'api','url':'https://commons.wikimedia.org/w/api.php'}]),patch.object(health,'probe',new_callable=AsyncMock,return_value={'id':'commons','ok':False}):
+    health.restart();plan=health.browser_plan();health.browser_results([{'id':'commons','ok':True}],plan['round_id'])
+    report=await health.tasks[workspaces.current_id]
+    self.assertTrue(report['services']['commons']['ok']);self.assertFalse(report['services']['commons']['backend_ok'])
+    late=health.browser_results([{'id':'commons','ok':False}],plan['round_id']);self.assertTrue(late['browser_results_ignored']);self.assertTrue(late['services']['commons']['ok'])
+  asyncio.run(scenario())
+
  def test_unconfigured_functions_are_ignored(self):self.assertFalse(any(s['kind']=='function' for s in Health().specs()));self.assertEqual(Health.interval,600)
 
 class CloudTests(unittest.IsolatedAsyncioTestCase):

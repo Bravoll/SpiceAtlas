@@ -1,0 +1,22 @@
+{
+  "capture_origin": "Two unmodified PNG screenshots supplied by the project owner on 2026-10-30",
+  "image_editing": "None; application display crops/scales candidate images",
+  "main-en-basil.png": {
+    "title": "Ocimum Basilicum leaf lighted by the left.jpg",
+    "author": "BernaBotto",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Ocimum_Basilicum_leaf_lighted_by_the_left.jpg",
+    "original_url": "https://upload.wikimedia.org/wikipedia/commons/3/32/Ocimum_Basilicum_leaf_lighted_by_the_left.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/Ocimum_Basilicum_leaf_lighted_by_the_left.jpg/960px-Ocimum_Basilicum_leaf_lighted_by_the_left.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "main-zh-staranise.png": {
+    "title": "Illicium verum 4zz.jpg",
+    "author": "Photo by David J. Stang",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Illicium_verum_4zz.jpg",
+    "original_url": "https://upload.wikimedia.org/wikipedia/commons/6/68/Illicium_verum_4zz.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/68/Illicium_verum_4zz.jpg/960px-Illicium_verum_4zz.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  }
+}

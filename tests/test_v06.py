@@ -111,6 +111,7 @@ class BootstrapTests(unittest.TestCase):
         self.assertEqual(stages,[5,15,30,70,80,88,90,97,100])
         self.browser.assert_called_once_with('http://127.0.0.1:8777')
         self.assertIn('--managed',starter.runner.commands[-1])
+        self.assertIn('--inexact',starter.runner.commands[0])
         self.assertEqual(starter.runner.environment['SPICE_LAUNCHER_INSTANCE'],starter.instance)
         self.assertNotIn(starter.control_token,starter.session.read_text())
         self.assertNotIn(starter.control_token,starter.log.path.read_text())

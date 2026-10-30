@@ -1,0 +1,2289 @@
+{
+  "version": "0.7.0",
+  "worker": "b",
+  "assignment": "sample_index % 3 == 1",
+  "expected_entry_count": 61,
+  "searched_entry_count": 61,
+  "initial_entry_search_calls": 16,
+  "initial_entry_query_count": 61,
+  "followup_entry_search_calls": 6,
+  "followup_entry_query_count": 13,
+  "total_entry_query_count": 74,
+  "provider_documentation_query_count": 9,
+  "selected_result_count": 112,
+  "completed_at": "2026-10-29T05:21:13.233Z",
+  "status": "complete",
+  "provenance": "SUPPLEMENTAL SEARCH-SERVICE RESULTS",
+  "method_note": "These are search_service system2/system1 results selected from returned titles and excerpts. They are not a capture of Google's, international Bing's, or China Bing's first page. General search-provider retrieval time is recorded in ISO UTC. No full article bodies are stored. Query and source matches do not establish culinary use or rarity.",
+  "quality_notes": [
+    "61 of 61 assigned entries searched; all selected links were returned by the search service, never synthesized.",
+    "Primary botanical gardens, universities, government agencies, regional floras and original research were preferred. Two records retain secondary-context sources with explicit limitations.",
+    "All botanical-only entries remain botanical references. Named blends and ambiguous common names were not forced into a single botanical identity.",
+    "A source returned by search has not necessarily been fetched successfully; result-level retrieval_level records that distinction."
+  ],
+  "domain_counts": {
+    "powo.science.kew.org": 37,
+    "plants.ces.ncsu.edu": 2,
+    "www.kew.org": 3,
+    "hort.extension.wisc.edu": 1,
+    "ag.purdue.edu": 1,
+    "ask.ifas.ufl.edu": 1,
+    "www.maff.go.jp": 2,
+    "cpi.nmsu.edu": 2,
+    "www.nps.gov": 1,
+    "lrsotree.uada.edu": 1,
+    "www.indianspices.com": 2,
+    "www.agmrc.org": 1,
+    "search.ipindia.gov.in": 1,
+    "www.saveur.com": 1,
+    "jurcon.ums.edu.my": 1,
+    "ir.uitm.edu.my": 1,
+    "pmc.ncbi.nlm.nih.gov": 2,
+    "koreantk.com": 1,
+    "www.cifor-icraf.org": 1,
+    "mpns.science.kew.org": 1,
+    "biblio.ugent.be": 1,
+    "pza.sanbi.org": 1,
+    "sun.gardenexplorer.org": 1,
+    "pubmed.ncbi.nlm.nih.gov": 1,
+    "worldspecies.org": 1,
+    "bellatlas.umn.edu": 2,
+    "www.ipni.org": 8,
+    "www.worldfloraonline.org": 4,
+    "nzflora.info": 1,
+    "www.nzpcn.org.nz": 2,
+    "www.biodiversidadcanarias.es": 1,
+    "www.udea.edu.co": 1,
+    "efloras.org": 2,
+    "www.iplant.cn": 1,
+    "www.efloras.org": 1,
+    "dryades.units.it": 1,
+    "www.mybis.gov.my": 1,
+    "catalogoplantas.udec.cl": 1,
+    "prosea.prota4u.org": 1,
+    "www.ncbi.nlm.nih.gov": 1,
+    "indiaflora-ces.iisc.ac.in": 1,
+    "itis.gov": 3,
+    "monografiasfloradobrasil.jbrj.gov.br": 2,
+    "core.ac.uk": 1,
+    "npgsweb.ars-grin.gov": 1,
+    "herbaria.plants.ox.ac.uk": 1,
+    "profiles.ala.org.au": 1,
+    "dspace.utpl.edu.ec": 1,
+    "bie.ala.org.au": 1,
+    "hortflora.rbg.vic.gov.au": 2,
+    "journals.tubitak.gov.tr": 1,
+    "www.eu-nomen.eu": 1
+  },
+  "entries": [
+    {
+      "entry_id": "oregano",
+      "sample_index": 1,
+      "query": "Origanum vulgare Oregano botanical herb spice cultivation culinary knowledge",
+      "search_tool_kind": "search_service.system2_search_query",
+      "searched_at": "2026-10-29T05:13:29.388Z",
+      "result_provenance": "supplemental_search_service_results",
+      "not_search_engine_first_page": true,
+      "results": [
+        {
+          "title": "Origanum vulgare L. | Plants of the World Online | Kew Science",
+          "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A453395-1/general-information",
+          "reference_id": "turn39search10",
+          "domain": "powo.science.kew.org",
+          "relevance": "Kew taxonomic profile with overview, culinary uses and cultivation.",
+          "evidence_scope": "botanical/cultivation/culinary introduction; no rarity inference",
+          "retrieved_at": "2026-10-29T05:13:29.388Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        },
+        {
+          "title": "Origanum vulgare (English Marjoram, Oregano, Winter sweet) | North Carolina Extension Gardener Plant Toolbox",
+          "url": "https://plants.ces.ncsu.edu/plants/origanum-vulgare/",
+          "reference_id": "turn39search14",
+          "domain": "plants.ces.ncsu.edu",
+          "relevance": "University extension plant introduction and culinary/cultivation guidance.",
+          "evidence_scope": "botanical/cultivation/culinary introduction; no rarity inference",
+          "retrieved_at": "2026-10-29T05:13:29.388Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        }
+      ],
+      "unavailable_or_no_result_reason": null,
+      "query_name": "Origanum vulgare",
+      "common_name": "Oregano",
+      "original_scope": "culinary",
+      "match_scope": "ingredient_or_plant_introduction"
+    },
+    {
+      "entry_id": "rosemary",
+      "sample_index": 4,
+      "query": "Salvia rosmarinus Rosemary botanical herb spice cultivation culinary knowledge",
+      "search_tool_kind": "search_service.system2_search_query",
+      "searched_at": "2026-10-29T05:13:29.388Z",
+      "result_provenance": "supplemental_search_service_results",
+      "not_search_engine_first_page": true,
+      "results": [
+        {
+          "title": "Rosemary - Salvia rosmarinus | Plants | Kew",
+          "url": "https://www.kew.org/plants/rosemary",
+          "reference_id": "turn39search3",
+          "domain": "www.kew.org",
+          "relevance": "Kew species introduction links rosemary identity with culinary and horticultural uses.",
+          "evidence_scope": "botanical/cultivation/culinary introduction; no rarity inference",
+          "retrieved_at": "2026-10-29T05:13:29.388Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        },
+        {
+          "title": "Salvia rosmarinus (Rosemary) | North Carolina Extension Gardener Plant Toolbox",
+          "url": "https://plants.ces.ncsu.edu/plants/salvia-rosmarinus/",
+          "reference_id": "turn39search35",
+          "domain": "plants.ces.ncsu.edu",
+          "relevance": "University extension botanical and cultivation profile.",
+          "evidence_scope": "botanical/cultivation/culinary introduction; no rarity inference",
+          "retrieved_at": "2026-10-29T05:13:29.388Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        }
+      ],
+      "unavailable_or_no_result_reason": null,
+      "query_name": "Salvia rosmarinus",
+      "common_name": "Rosemary",
+      "original_scope": "culinary",
+      "match_scope": "ingredient_or_plant_introduction"
+    },
+    {
+      "entry_id": "parsley",
+      "sample_index": 7,
+      "query": "Petroselinum crispum Parsley botanical herb spice cultivation culinary knowledge",
+      "search_tool_kind": "search_service.system2_search_query",
+      "searched_at": "2026-10-29T05:13:29.388Z",
+      "result_provenance": "supplemental_search_service_results",
+      "not_search_engine_first_page": true,
+      "results": [
+        {
+          "title": "Parsley, Petroselinum crispum – Wisconsin Horticulture",
+          "url": "https://hort.extension.wisc.edu/articles/parsley-petroselinum-crispum/",
+          "reference_id": "turn39search2",
+          "domain": "hort.extension.wisc.edu",
+          "relevance": "University extension botanical description, cultivation, and culinary use.",
+          "evidence_scope": "botanical/cultivation/culinary introduction; no rarity inference",
+          "retrieved_at": "2026-10-29T05:13:29.388Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        },
+        {
+          "title": "HO-202: Parsley: A Production Guide",
+          "url": "https://ag.purdue.edu/department/hla/extension/extension-publications-library/ext-pubs/ho-202-w.html",
+          "reference_id": "turn39search4",
+          "domain": "ag.purdue.edu",
+          "relevance": "University production guide covering identity and cultivation.",
+          "evidence_scope": "botanical/cultivation/culinary introduction; no rarity inference",
+          "retrieved_at": "2026-10-29T05:13:29.388Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        }
+      ],
+      "unavailable_or_no_result_reason": null,
+      "query_name": "Petroselinum crispum",
+      "common_name": "Parsley",
+      "original_scope": "culinary",
+      "match_scope": "ingredient_or_plant_introduction"
+    },
+    {
+      "entry_id": "wd-Q13241",
+      "sample_index": 10,
+      "query": "vanilla  botanical herb spice cultivation culinary knowledge",
+      "search_tool_kind": "search_service.system2_search_query",
+      "searched_at": "2026-10-29T05:13:29.388Z",
+      "result_provenance": "supplemental_search_service_results",
+      "not_search_engine_first_page": true,
+      "results": [
+        {
+          "title": "Vanilla - Vanilla planifolia | Plants | Kew",
+          "url": "https://www.kew.org/plants/vanilla",
+          "reference_id": "turn39search38",
+          "domain": "www.kew.org",
+          "relevance": "Kew introduction to vanilla source plant, pollination and food uses.",
+          "evidence_scope": "botanical/cultivation/culinary introduction; no rarity inference",
+          "retrieved_at": "2026-10-29T05:13:29.388Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        },
+        {
+          "title": "HS1348/HS1348: Vanilla Growing in South Florida",
+          "url": "https://ask.ifas.ufl.edu/publication/HS1348",
+          "reference_id": "turn39search42",
+          "domain": "ask.ifas.ufl.edu",
+          "relevance": "University extension vanilla growing guide and botanical source explanation.",
+          "evidence_scope": "botanical/cultivation/culinary introduction; no rarity inference",
+          "retrieved_at": "2026-10-29T05:13:29.388Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        }
+      ],
+      "unavailable_or_no_result_reason": null,
+      "query_name": "vanilla",
+      "common_name": "vanilla",
+      "original_scope": "culinary",
+      "match_scope": "ingredient_or_plant_introduction"
+    },
+    {
+      "entry_id": "wd-Q1541119",
+      "sample_index": 13,
+      "query": "yuzukoshō  botanical herb spice cultivation culinary knowledge",
+      "search_tool_kind": "search_service.system2_search_query",
+      "searched_at": "2026-10-29T05:13:52.490Z",
+      "result_provenance": "supplemental_search_service_results",
+      "not_search_engine_first_page": true,
+      "followup_searches": [
+        {
+          "query": "\"yuzukoshō\" spice introduction site:maff.go.jp",
+          "search_tool_kind": "search_service.system1_search_query",
+          "searched_at": "2026-10-29T05:14:07.115Z",
+          "reason": "Primary-source verification / coverage fill."
+        }
+      ],
+      "results": [
+        {
+          "title": "Yuzu Gosho (Yuzu Citrus Pepper) ｜ Our Regional Cuisines : MAFF",
+          "url": "https://www.maff.go.jp/e/policies/market/k_ryouri/search_menu/5740/index.html",
+          "reference_id": "turn45search14",
+          "domain": "www.maff.go.jp",
+          "relevance": "Japanese agriculture ministry's regional cuisine introduction and ingredients.",
+          "evidence_scope": "identity/culinary/cultivation evidence as described; no rarity inference",
+          "retrieved_at": "2026-10-29T05:13:52.490Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        },
+        {
+          "title": "ゆずごしょう 福岡県 | うちの郷土料理：農林水産省",
+          "url": "https://www.maff.go.jp/j/keikaku/syokubunka/k_ryouri/search_menu/menu/yuzu_gosyo_fukuoka.html",
+          "reference_id": "turn50search0",
+          "domain": "www.maff.go.jp",
+          "relevance": "Japanese agriculture ministry explains local naming and chili/yuzu composition.",
+          "evidence_scope": "identity/culinary/cultivation evidence as described; no rarity inference",
+          "retrieved_at": "2026-10-29T05:14:07.115Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        }
+      ],
+      "unavailable_or_no_result_reason": null,
+      "query_name": "yuzukoshō",
+      "common_name": "yuzukoshō",
+      "original_scope": "culinary",
+      "match_scope": "ingredient_or_plant_introduction"
+    },
+    {
+      "entry_id": "wd-Q6933754",
+      "sample_index": 16,
+      "query": "Mulato pepper  botanical herb spice cultivation culinary knowledge",
+      "search_tool_kind": "search_service.system2_search_query",
+      "searched_at": "2026-10-29T05:13:52.490Z",
+      "result_provenance": "supplemental_search_service_results",
+      "not_search_engine_first_page": true,
+      "followup_searches": [
+        {
+          "query": "\"Mulato\" chile pepper site:edu OR site:gob.mx",
+          "search_tool_kind": "search_service.system1_search_query",
+          "searched_at": "2026-10-29T05:14:07.115Z",
+          "reason": "Primary-source verification / coverage fill."
+        }
+      ],
+      "results": [
+        {
+          "title": "Chile Terminology | New Mexico State University | BE BOLD. Shape the Future.",
+          "url": "https://cpi.nmsu.edu/chile-info/nutrition-and-food-science-pages/chile-terminology.html",
+          "reference_id": "turn50search2",
+          "domain": "cpi.nmsu.edu",
+          "relevance": "University Chile Pepper Institute definition of the mulato pod type.",
+          "evidence_scope": "identity/culinary/cultivation evidence as described; no rarity inference",
+          "retrieved_at": "2026-10-29T05:14:07.115Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        },
+        {
+          "title": "Mulato",
+          "url": "https://cpi.nmsu.edu/_assets/documents/qr/Mulato%20Recipe.pdf",
+          "reference_id": "turn50search9",
+          "domain": "cpi.nmsu.edu",
+          "relevance": "University Chile Pepper Institute facts about mulato identity, flavor, and culinary use.",
+          "evidence_scope": "identity/culinary/cultivation evidence as described; no rarity inference",
+          "retrieved_at": "2026-10-29T05:14:07.115Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        }
+      ],
+      "unavailable_or_no_result_reason": null,
+      "query_name": "Mulato pepper",
+      "common_name": "Mulato pepper",
+      "original_scope": "culinary",
+      "match_scope": "ingredient_or_plant_introduction"
+    },
+    {
+      "entry_id": "wd-Q3301501",
+      "sample_index": 19,
+      "query": "filé  botanical herb spice cultivation culinary knowledge",
+      "search_tool_kind": "search_service.system2_search_query",
+      "searched_at": "2026-10-29T05:13:52.490Z",
+      "result_provenance": "supplemental_search_service_results",
+      "not_search_engine_first_page": true,
+      "followup_searches": [
+        {
+          "query": "\"filé\" sassafras powder spice site:edu OR site:gov",
+          "search_tool_kind": "search_service.system1_search_query",
+          "searched_at": "2026-10-29T05:14:07.115Z",
+          "reason": "Primary-source verification / coverage fill."
+        }
+      ],
+      "results": [
+        {
+          "title": "Creole Food Ways (U.S. National Park Service)",
+          "url": "https://www.nps.gov/articles/creole-food-ways.htm",
+          "reference_id": "turn50search3",
+          "domain": "www.nps.gov",
+          "relevance": "National Park Service account identifies filé as ground sassafras leaves and explains Creole uses.",
+          "evidence_scope": "identity/culinary/cultivation evidence as described; no rarity inference",
+          "retrieved_at": "2026-10-29T05:14:07.115Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        },
+        {
+          "title": "Arkansas Tree Database - Sassafras",
+          "url": "https://lrsotree.uada.edu/gallery/sassafras/",
+          "reference_id": "turn50search4",
+          "domain": "lrsotree.uada.edu",
+          "relevance": "University extension tree profile records leaves ground for filé powder.",
+          "evidence_scope": "identity/culinary/cultivation evidence as described; no rarity inference",
+          "retrieved_at": "2026-10-29T05:14:07.115Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        }
+      ],
+      "unavailable_or_no_result_reason": "Initial broad query returned no filé-specific result; targeted follow-up located primary sources.",
+      "query_name": "filé",
+      "common_name": "filé",
+      "original_scope": "culinary",
+      "match_scope": "ingredient_or_plant_introduction"
+    },
+    {
+      "entry_id": "wd-Q131748",
+      "sample_index": 22,
+      "query": "mustard  botanical herb spice cultivation culinary knowledge",
+      "search_tool_kind": "search_service.system2_search_query",
+      "searched_at": "2026-10-29T05:13:52.490Z",
+      "result_provenance": "supplemental_search_service_results",
+      "not_search_engine_first_page": true,
+      "followup_searches": [
+        {
+          "query": "\"mustard\" condiment spice site:indianspices.com",
+          "search_tool_kind": "search_service.system1_search_query",
+          "searched_at": "2026-10-29T05:14:07.115Z",
+          "reason": "Primary-source verification / coverage fill."
+        }
+      ],
+      "results": [
+        {
+          "title": "Mustard | Spices Board",
+          "url": "https://www.indianspices.com/spice-catalog/mustard.html",
+          "reference_id": "turn50search5",
+          "domain": "www.indianspices.com",
+          "relevance": "Government Spices Board species, cultivation, commercial seed part and condiment uses.",
+          "evidence_scope": "identity/culinary/cultivation evidence as described; no rarity inference",
+          "retrieved_at": "2026-10-29T05:14:07.115Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        },
+        {
+          "title": "Mustard | Agricultural Marketing Resource Center",
+          "url": "https://www.agmrc.org/commodities-products/grains-oilseeds/mustard",
+          "reference_id": "turn45search17",
+          "domain": "www.agmrc.org",
+          "relevance": "Agricultural marketing resource distinguishes prepared mustard, oil and ground seed uses.",
+          "evidence_scope": "identity/culinary/cultivation evidence as described; no rarity inference",
+          "retrieved_at": "2026-10-29T05:13:52.490Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        }
+      ],
+      "unavailable_or_no_result_reason": null,
+      "query_name": "mustard",
+      "common_name": "mustard",
+      "original_scope": "culinary",
+      "match_scope": "ingredient_or_plant_introduction"
+    },
+    {
+      "entry_id": "wd-Q1937700",
+      "sample_index": 25,
+      "query": "\"mustard seed\"  botanical herb spice culinary introduction",
+      "search_tool_kind": "search_service.system2_search_query",
+      "searched_at": "2026-10-29T05:14:26.354Z",
+      "result_provenance": "supplemental_search_service_results",
+      "not_search_engine_first_page": true,
+      "followup_searches": [
+        {
+          "query": "\"mustard seed\" site:indianspices.com",
+          "search_tool_kind": "search_service.system1_search_query",
+          "searched_at": "2026-10-29T05:14:42.387Z",
+          "reason": "Primary-source verification / coverage fill."
+        }
+      ],
+      "results": [
+        {
+          "title": "Mustard | Spices Board",
+          "url": "https://www.indianspices.com/spice-catalog/mustard.html",
+          "reference_id": "turn62search0",
+          "domain": "www.indianspices.com",
+          "relevance": "Government Spices Board identifies seed as the commercial part and describes culinary uses.",
+          "evidence_scope": "identity/culinary information as described; no health or rarity inference",
+          "retrieved_at": "2026-10-29T05:14:42.387Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        }
+      ],
+      "unavailable_or_no_result_reason": null,
+      "query_name": "mustard seed",
+      "common_name": "mustard seed",
+      "original_scope": "culinary",
+      "match_scope": "ingredient_or_plant_introduction"
+    },
+    {
+      "entry_id": "wd-Q141758765",
+      "sample_index": 28,
+      "query": "\"Jeeravan Masala\"  botanical herb spice culinary introduction",
+      "search_tool_kind": "search_service.system2_search_query",
+      "searched_at": "2026-10-29T05:14:26.354Z",
+      "result_provenance": "supplemental_search_service_results",
+      "not_search_engine_first_page": true,
+      "followup_searches": [
+        {
+          "query": "\"Jeeravan\" site:gov.in OR site:ac.in OR site:org",
+          "search_tool_kind": "search_service.system1_search_query",
+          "searched_at": "2026-10-29T05:14:42.387Z",
+          "reason": "Primary-source verification / coverage fill."
+        }
+      ],
+      "results": [
+        {
+          "title": "Details | Geographical Indications | Intellectual Property India",
+          "url": "https://search.ipindia.gov.in/GIRPublicSearch/Application/Details/1177",
+          "reference_id": "turn62search1",
+          "domain": "search.ipindia.gov.in",
+          "relevance": "Official Indian GI application record confirms the named Indore Jeeravan product; does not establish a granted GI.",
+          "evidence_scope": "identity/culinary information as described; no health or rarity inference",
+          "retrieved_at": "2026-10-29T05:14:42.387Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        },
+        {
+          "title": "A Region-by-Region Guide to Indian Condiments | Saveur",
+          "url": "https://www.saveur.com/indian-condiments-masala-chutney/",
+          "reference_id": "turn56search21",
+          "domain": "www.saveur.com",
+          "relevance": "Specialist food publication introduces the spice blend and culinary context; secondary source.",
+          "evidence_scope": "identity/culinary information as described; no health or rarity inference",
+          "retrieved_at": "2026-10-29T05:14:26.354Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        }
+      ],
+      "unavailable_or_no_result_reason": "No primary general introduction found; official GI application is identity/context only and secondary culinary article is retained.",
+      "query_name": "Jeeravan Masala",
+      "common_name": "Jeeravan Masala",
+      "original_scope": "culinary",
+      "match_scope": "ingredient_or_plant_introduction"
+    },
+    {
+      "entry_id": "wd-Q7452135",
+      "sample_index": 31,
+      "query": "\"tuhau\"  botanical herb spice culinary introduction",
+      "search_tool_kind": "search_service.system2_search_query",
+      "searched_at": "2026-10-29T05:14:26.354Z",
+      "result_provenance": "supplemental_search_service_results",
+      "not_search_engine_first_page": true,
+      "followup_searches": [
+        {
+          "query": "\"tuhau\" \"Etlingera\" site:edu.my OR site:gov.my",
+          "search_tool_kind": "search_service.system1_search_query",
+          "searched_at": "2026-10-29T05:14:42.387Z",
+          "reason": "Primary-source verification / coverage fill."
+        }
+      ],
+      "results": [
+        {
+          "title": "Chemical Composition of Essential Oil from Etlingera coccinea (Blume) S. Sakai & Nagam in Kadamaian, Kota Belud, Sabah | Journal of Tropical Biology & Conservation (JTBC)",
+          "url": "https://jurcon.ums.edu.my/ojums/index.php/jtbc/article/view/3446",
+          "reference_id": "turn62search2",
+          "domain": "jurcon.ums.edu.my",
+          "relevance": "University-hosted original research links Tuhau with Etlingera coccinea and local food use.",
+          "evidence_scope": "identity/culinary information as described; no health or rarity inference",
+          "retrieved_at": "2026-10-29T05:14:42.387Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        },
+        {
+          "title": "Mass-spectrometry phytochemical profiling of Etlingera coccinea (Blume) S. Sakai & Nagam from Sabah - UiTM Institutional Repository",
+          "url": "https://ir.uitm.edu.my/id/eprint/131842/",
+          "reference_id": "turn62search8",
+          "domain": "ir.uitm.edu.my",
+          "relevance": "University repository research abstract describes Tuhau identity and use as a cooking condiment.",
+          "evidence_scope": "identity/culinary information as described; no health or rarity inference",
+          "retrieved_at": "2026-10-29T05:14:42.387Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        }
+      ],
+      "unavailable_or_no_result_reason": null,
+      "query_name": "tuhau",
+      "common_name": "tuhau",
+      "original_scope": "culinary",
+      "match_scope": "ingredient_or_plant_introduction"
+    },
+    {
+      "entry_id": "wd-Q112810682",
+      "sample_index": 34,
+      "query": "\"Sancho\"  botanical herb spice culinary introduction",
+      "search_tool_kind": "search_service.system2_search_query",
+      "searched_at": "2026-10-29T05:14:26.354Z",
+      "result_provenance": "supplemental_search_service_results",
+      "not_search_engine_first_page": true,
+      "followup_searches": [
+        {
+          "query": "\"Sancho\" \"Zanthoxylum\" taxonomy spice Korean",
+          "search_tool_kind": "search_service.system1_search_query",
+          "searched_at": "2026-10-29T05:14:42.387Z",
+          "reason": "Primary-source verification / coverage fill."
+        }
+      ],
+      "results": [
+        {
+          "title": "Development and Application of InDel Markers for Authentication of the Korean Herbs Zanthoxylum schinifolium and Zanthoxylum piperitum",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6963880/",
+          "reference_id": "turn62search4",
+          "domain": "pmc.ncbi.nlm.nih.gov",
+          "relevance": "Original botanical authentication research distinguishes Korean sancho and chopi and records spice use.",
+          "evidence_scope": "identity/culinary information as described; no health or rarity inference",
+          "retrieved_at": "2026-10-29T05:14:42.387Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        },
+        {
+          "title": "Sancho(山椒)B / Zanthoxyli Pericarpium (<i>Zanthoxylum schinifolium</i> S. et Z. (= <i>Zanthoxylum mantschuricum</i>)) [Korean Traditional Knowledge Portal-Herbs]",
+          "url": "https://koreantk.com/ktkp2014/medicine/medicine-view.view?medCd=M0001777",
+          "reference_id": "turn62search6",
+          "domain": "koreantk.com",
+          "relevance": "Traditional knowledge reference documents one Sancho identity; medicinal portal, not proof of culinary safety.",
+          "evidence_scope": "identity/culinary information as described; no health or rarity inference",
+          "retrieved_at": "2026-10-29T05:14:42.387Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        }
+      ],
+      "unavailable_or_no_result_reason": "Sancho is an ambiguous vernacular label; these sources support Korean usage but do not resolve the dataset entity to a single species.",
+      "query_name": "Sancho",
+      "common_name": "Sancho",
+      "original_scope": "culinary",
+      "match_scope": "ambiguous_common_name"
+    },
+    {
+      "entry_id": "wd-Q4732667",
+      "sample_index": 37,
+      "query": "\"alligator pepper\"  botanical herb spice knowledge",
+      "search_tool_kind": "search_service.system2_search_query",
+      "searched_at": "2026-10-29T05:14:59.821Z",
+      "result_provenance": "supplemental_search_service_results",
+      "not_search_engine_first_page": true,
+      "results": [
+        {
+          "title": "Mise en page 1",
+          "url": "https://www.cifor-icraf.org/publications/downloads/Publications/PDFS/LE014164.pdf",
+          "reference_id": "turn66search49",
+          "domain": "www.cifor-icraf.org",
+          "relevance": "CIFOR-ICRAF crop leaflet provides botanical introduction, management and food uses.",
+          "evidence_scope": "botanical/crop/food information as described; no single-species or rarity inference",
+          "retrieved_at": "2026-10-29T05:14:59.821Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        },
+        {
+          "title": "Non scientific name details for alligator pepper - Medicinal Plant Names Services",
+          "url": "https://mpns.science.kew.org/mpns-portal/drugDetail?drugName=alligator+pepper",
+          "reference_id": "turn66search9",
+          "domain": "mpns.science.kew.org",
+          "relevance": "Kew names-service lookup documents vernacular-name associations; name is not assumed to map uniquely to one species.",
+          "evidence_scope": "botanical/crop/food information as described; no single-species or rarity inference",
+          "retrieved_at": "2026-10-29T05:14:59.821Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        }
+      ],
+      "unavailable_or_no_result_reason": "Alligator pepper is a vernacular spice name with potentially differing botanical associations; retained as a name-level lookup.",
+      "query_name": "alligator pepper",
+      "common_name": "alligator pepper",
+      "original_scope": "culinary",
+      "match_scope": "ambiguous_common_name"
+    },
+    {
+      "entry_id": "gbif-7705625",
+      "sample_index": 40,
+      "query": "\"Peperomia jalcaensis\"  botanical herb spice knowledge",
+      "search_tool_kind": "search_service.system2_search_query",
+      "searched_at": "2026-10-29T05:14:59.821Z",
+      "result_provenance": "supplemental_search_service_results",
+      "not_search_engine_first_page": true,
+      "results": [
+        {
+          "title": "Peperomia jalcaensis Pino | Plants of the World Online | Kew Science",
+          "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A77112528-1/general-information",
+          "reference_id": "turn66search10",
+          "domain": "powo.science.kew.org",
+          "relevance": "Kew species taxonomic introduction.",
+          "evidence_scope": "botanical/cultivation reference only; no culinary-use or rarity inference",
+          "retrieved_at": "2026-10-29T05:14:59.821Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        },
+        {
+          "title": "The geophytic Peperomia subgenus Tildenia (Piperaceae) in the Andes with the description of new species in a phylogenetic framework",
+          "url": "https://biblio.ugent.be/publication/1862011",
+          "reference_id": "turn66search46",
+          "domain": "biblio.ugent.be",
+          "relevance": "University repository record for the original descriptive paper, including P. jalcaensis.",
+          "evidence_scope": "botanical/cultivation reference only; no culinary-use or rarity inference",
+          "retrieved_at": "2026-10-29T05:14:59.821Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        }
+      ],
+      "unavailable_or_no_result_reason": null,
+      "query_name": "Peperomia jalcaensis",
+      "common_name": "Peperomia jalcaensis",
+      "original_scope": "botanical",
+      "match_scope": "exact_species_botanical_reference"
+    },
+    {
+      "entry_id": "gbif-3881832",
+      "sample_index": 43,
+      "query": "\"Salvia chamelaeagnea\" Rough blue sage botanical herb spice knowledge",
+      "search_tool_kind": "search_service.system2_search_query",
+      "searched_at": "2026-10-29T05:14:59.821Z",
+      "result_provenance": "supplemental_search_service_results",
+      "not_search_engine_first_page": true,
+      "results": [
+        {
+          "title": "Salvia chamelaeagnea | PlantZAfrica",
+          "url": "https://pza.sanbi.org/salvia-chamelaeagnea",
+          "reference_id": "turn66search0",
+          "domain": "pza.sanbi.org",
+          "relevance": "SANBI PlantZAfrica introduction with botanical and cultivation information.",
+          "evidence_scope": "botanical/cultivation reference only; no culinary-use or rarity inference",
+          "retrieved_at": "2026-10-29T05:14:59.821Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        },
+        {
+          "title": "Salvia chamelaeagnea - Bloublomsalie, Ligblousalie, Rough blue sage, Light-blue sage | Stellenbosch University Botanical Garden, South Africa",
+          "url": "https://sun.gardenexplorer.org/taxon-1099.aspx",
+          "reference_id": "turn66search2",
+          "domain": "sun.gardenexplorer.org",
+          "relevance": "University botanical garden taxon record.",
+          "evidence_scope": "botanical/cultivation reference only; no culinary-use or rarity inference",
+          "retrieved_at": "2026-10-29T05:14:59.821Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        }
+      ],
+      "unavailable_or_no_result_reason": null,
+      "query_name": "Salvia chamelaeagnea",
+      "common_name": "Rough blue sage",
+      "original_scope": "botanical",
+      "match_scope": "exact_species_botanical_reference"
+    },
+    {
+      "entry_id": "gbif-5610621",
+      "sample_index": 46,
+      "query": "\"Nepeta cyrenaica\"  botanical herb spice knowledge",
+      "search_tool_kind": "search_service.system2_search_query",
+      "searched_at": "2026-10-29T05:14:59.821Z",
+      "result_provenance": "supplemental_search_service_results",
+      "not_search_engine_first_page": true,
+      "results": [
+        {
+          "title": "Nepeta cyrenaica Quézel & Zaffran | Plants of the World Online | Kew Science",
+          "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A452370-1/general-information",
+          "reference_id": "turn66search15",
+          "domain": "powo.science.kew.org",
+          "relevance": "Kew taxonomic species profile.",
+          "evidence_scope": "botanical/cultivation reference only; no culinary-use or rarity inference",
+          "retrieved_at": "2026-10-29T05:14:59.821Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        },
+        {
+          "title": "Leaves micromorphology, chemical profile, and bioactivity of in vitro-propagated Nepeta cyrenaica (Lamiaceae).",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/37387322/",
+          "reference_id": "turn66search19",
+          "domain": "pubmed.ncbi.nlm.nih.gov",
+          "relevance": "Original research abstract describes species distribution and in-vitro propagation.",
+          "evidence_scope": "botanical/cultivation reference only; no culinary-use or rarity inference",
+          "retrieved_at": "2026-10-29T05:14:59.821Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        }
+      ],
+      "unavailable_or_no_result_reason": null,
+      "query_name": "Nepeta cyrenaica",
+      "common_name": "Nepeta cyrenaica",
+      "original_scope": "botanical",
+      "match_scope": "exact_species_botanical_reference"
+    },
+    {
+      "entry_id": "gbif-5608662",
+      "sample_index": 49,
+      "query": "\"Galeopsis abyssinica\"  botanical herb spice knowledge",
+      "search_tool_kind": "search_service.system2_search_query",
+      "searched_at": "2026-10-29T05:15:13.672Z",
+      "result_provenance": "supplemental_search_service_results",
+      "not_search_engine_first_page": true,
+      "followup_searches": [
+        {
+          "query": "\"Galeopsis abyssinica\" taxonomy",
+          "search_tool_kind": "search_service.system1_search_query",
+          "searched_at": "2026-10-29T05:15:20.822Z",
+          "reason": "Exact-name/primary-source coverage fill."
+        }
+      ],
+      "results": [
+        {
+          "title": "World Species : Galeopsis (hempnettle)",
+          "url": "https://worldspecies.org/ntaxa/116332",
+          "reference_id": "turn72search0",
+          "domain": "worldspecies.org",
+          "relevance": "Secondary taxonomy aggregator's Galeopsis genus list includes the queried name; no species description or taxonomic resolution.",
+          "evidence_scope": "taxonomy/nomenclature reference only; no culinary-use or rarity inference",
+          "retrieved_at": "2026-10-29T05:15:20.822Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        }
+      ],
+      "unavailable_or_no_result_reason": "No primary exact-species knowledge page found after second search engine verification; only an exact-name mention in a secondary genus list.",
+      "query_name": "Galeopsis abyssinica",
+      "common_name": "Galeopsis abyssinica",
+      "original_scope": "botanical",
+      "match_scope": "exact_name_mention_in_secondary_genus_list"
+    },
+    {
+      "entry_id": "gbif-7725899",
+      "sample_index": 52,
+      "query": "\"Thymus kuminovianus\"  botanical herb spice knowledge",
+      "search_tool_kind": "search_service.system2_search_query",
+      "searched_at": "2026-10-29T05:15:13.672Z",
+      "result_provenance": "supplemental_search_service_results",
+      "not_search_engine_first_page": true,
+      "followup_searches": [
+        {
+          "query": "\"Thymus kuminovianus\" site:powo.science.kew.org OR site:ipni.org OR site:gbif.org",
+          "search_tool_kind": "search_service.system1_search_query",
+          "searched_at": "2026-10-29T05:15:20.822Z",
+          "reason": "Exact-name/primary-source coverage fill."
+        }
+      ],
+      "results": [
+        {
+          "title": "Thymus pavlovii Serg. | Plants of the World Online | Kew Science",
+          "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A461514-1",
+          "reference_id": "turn72search3",
+          "domain": "powo.science.kew.org",
+          "relevance": "Kew accepted-name profile lists Thymus kuminovianus as a synonym of T. pavlovii.",
+          "evidence_scope": "taxonomy/nomenclature reference only; no culinary-use or rarity inference",
+          "retrieved_at": "2026-10-29T05:15:20.822Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        }
+      ],
+      "unavailable_or_no_result_reason": null,
+      "query_name": "Thymus kuminovianus",
+      "common_name": "Thymus kuminovianus",
+      "original_scope": "botanical",
+      "match_scope": "synonym_resolved_by_primary_taxonomy"
+    },
+    {
+      "entry_id": "gbif-4185735",
+      "sample_index": 55,
+      "query": "\"Piper durilimbum\"  botanical herb spice knowledge",
+      "search_tool_kind": "search_service.system2_search_query",
+      "searched_at": "2026-10-29T05:15:13.672Z",
+      "result_provenance": "supplemental_search_service_results",
+      "not_search_engine_first_page": true,
+      "results": [
+        {
+          "title": "Piper durilimbum C.DC. | Plants of the World Online | Kew Science",
+          "url": "https://powo.science.kew.org/taxon/681256-1",
+          "reference_id": "turn70search0",
+          "domain": "powo.science.kew.org",
+          "relevance": "Kew species taxonomy profile.",
+          "evidence_scope": "taxonomy/nomenclature reference only; no culinary-use or rarity inference",
+          "retrieved_at": "2026-10-29T05:15:13.672Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        },
+        {
+          "title": "Minnesota Biodiversity Atlas Checklist: A Dynamic Checklist of the Flora of New Guinea",
+          "url": "https://bellatlas.umn.edu/checklists/checklist.php?clid=135&dynclid=0&pagenumber=21&pid=10&searchsynonyms=1&showalphataxa=1&showauthors=1&showcommon=1&showsynonyms=1&showvouchers=1",
+          "reference_id": "turn70search5",
+          "domain": "bellatlas.umn.edu",
+          "relevance": "University biodiversity atlas checklist includes the species; supplementary distribution context only.",
+          "evidence_scope": "taxonomy/nomenclature reference only; no culinary-use or rarity inference",
+          "retrieved_at": "2026-10-29T05:15:13.672Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        }
+      ],
+      "unavailable_or_no_result_reason": null,
+      "query_name": "Piper durilimbum",
+      "common_name": "Piper durilimbum",
+      "original_scope": "botanical",
+      "match_scope": "exact_species_botanical_reference"
+    },
+    {
+      "entry_id": "gbif-4189202",
+      "sample_index": 58,
+      "query": "\"Piper urubambanum\"  botanical herb spice knowledge",
+      "search_tool_kind": "search_service.system2_search_query",
+      "searched_at": "2026-10-29T05:15:13.672Z",
+      "result_provenance": "supplemental_search_service_results",
+      "not_search_engine_first_page": true,
+      "results": [
+        {
+          "title": "Piper urubambanum Trel. | Plants of the World Online | Kew Science",
+          "url": "https://powo.science.kew.org/taxon/199493-2",
+          "reference_id": "turn70search2",
+          "domain": "powo.science.kew.org",
+          "relevance": "Kew species taxonomy profile.",
+          "evidence_scope": "taxonomy/nomenclature reference only; no culinary-use or rarity inference",
+          "retrieved_at": "2026-10-29T05:15:13.672Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        },
+        {
+          "title": "Piper urubambanum | International Plant Names Index",
+          "url": "https://www.ipni.org/n/199493-2",
+          "reference_id": "turn70search1",
+          "domain": "www.ipni.org",
+          "relevance": "IPNI nomenclatural record for the exact name; no accepted-taxonomy assertion from IPNI alone.",
+          "evidence_scope": "taxonomy/nomenclature reference only; no culinary-use or rarity inference",
+          "retrieved_at": "2026-10-29T05:15:13.672Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        }
+      ],
+      "unavailable_or_no_result_reason": null,
+      "query_name": "Piper urubambanum",
+      "common_name": "Piper urubambanum",
+      "original_scope": "botanical",
+      "match_scope": "exact_species_botanical_reference"
+    },
+    {
+      "entry_id": "gbif-7305472",
+      "sample_index": 61,
+      "query": "\"Piper macedoi\"  botanical herb spice knowledge",
+      "search_tool_kind": "search_service.system2_search_query",
+      "searched_at": "2026-10-29T05:15:37.984Z",
+      "result_provenance": "supplemental_search_service_results",
+      "not_search_engine_first_page": true,
+      "results": [
+        {
+          "title": "Piper macedoi Yunck.",
+          "url": "https://www.worldfloraonline.org/taxon/wfo-0001254077",
+          "reference_id": "turn75search28",
+          "domain": "www.worldfloraonline.org",
+          "relevance": "World Flora Online species taxonomy and botanical profile.",
+          "evidence_scope": "botanical/taxonomic reference only; no culinary-use or rarity inference",
+          "retrieved_at": "2026-10-29T05:15:37.984Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        }
+      ],
+      "unavailable_or_no_result_reason": null,
+      "query_name": "Piper macedoi",
+      "common_name": "Piper macedoi",
+      "original_scope": "botanical",
+      "match_scope": "exact_species_botanical_reference"
+    },
+    {
+      "entry_id": "gbif-5539029",
+      "sample_index": 64,
+      "query": "\"Aciphylla pinnatifida\"  botanical herb spice knowledge",
+      "search_tool_kind": "search_service.system2_search_query",
+      "searched_at": "2026-10-29T05:15:37.984Z",
+      "result_provenance": "supplemental_search_service_results",
+      "not_search_engine_first_page": true,
+      "results": [
+        {
+          "title": "Flora of New Zealand | Taxon Profile | Aciphylla pinnatifida",
+          "url": "https://nzflora.info/factsheet/Taxon/Aciphylla-pinnatifida.html",
+          "reference_id": "turn75search6",
+          "domain": "nzflora.info",
+          "relevance": "Flora of New Zealand detailed morphological taxon profile.",
+          "evidence_scope": "botanical/taxonomic reference only; no culinary-use or rarity inference",
+          "retrieved_at": "2026-10-29T05:15:37.984Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        },
+        {
+          "title": "Aciphylla pinnatifida • New Zealand Plant Conservation Network",
+          "url": "https://www.nzpcn.org.nz/flora/species/aciphylla-pinnatifida/",
+          "reference_id": "turn75search0",
+          "domain": "www.nzpcn.org.nz",
+          "relevance": "New Zealand Plant Conservation Network description and references; conservation text is not generalized as culinary rarity.",
+          "evidence_scope": "botanical/taxonomic reference only; no culinary-use or rarity inference",
+          "retrieved_at": "2026-10-29T05:15:37.984Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        }
+      ],
+      "unavailable_or_no_result_reason": null,
+      "query_name": "Aciphylla pinnatifida",
+      "common_name": "Aciphylla pinnatifida",
+      "original_scope": "botanical",
+      "match_scope": "exact_species_botanical_reference"
+    },
+    {
+      "entry_id": "gbif-5539762",
+      "sample_index": 67,
+      "query": "\"Pimpinella anagodendron\"  botanical herb spice knowledge",
+      "search_tool_kind": "search_service.system2_search_query",
+      "searched_at": "2026-10-29T05:15:37.984Z",
+      "result_provenance": "supplemental_search_service_results",
+      "not_search_engine_first_page": true,
+      "results": [
+        {
+          "title": "Pimpinella anagodendron Bolle | Plants of the World Online | Kew Science",
+          "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A846645-1/general-information",
+          "reference_id": "turn75search4",
+          "domain": "powo.science.kew.org",
+          "relevance": "Kew species taxonomic profile.",
+          "evidence_scope": "botanical/taxonomic reference only; no culinary-use or rarity inference",
+          "retrieved_at": "2026-10-29T05:15:37.984Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        },
+        {
+          "title": "Biota - Pimpinella anagodendron Bolle",
+          "url": "https://www.biodiversidadcanarias.es/biota/especie/F00838",
+          "reference_id": "turn75search32",
+          "domain": "www.biodiversidadcanarias.es",
+          "relevance": "Canary Islands biodiversity taxon record.",
+          "evidence_scope": "botanical/taxonomic reference only; no culinary-use or rarity inference",
+          "retrieved_at": "2026-10-29T05:15:37.984Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        }
+      ],
+      "unavailable_or_no_result_reason": null,
+      "query_name": "Pimpinella anagodendron",
+      "common_name": "Pimpinella anagodendron",
+      "original_scope": "botanical",
+      "match_scope": "exact_species_botanical_reference"
+    },
+    {
+      "entry_id": "gbif-7306001",
+      "sample_index": 70,
+      "query": "\"Piper scabriseptum\"  botanical herb spice knowledge",
+      "search_tool_kind": "search_service.system2_search_query",
+      "searched_at": "2026-10-29T05:15:37.984Z",
+      "result_provenance": "supplemental_search_service_results",
+      "not_search_engine_first_page": true,
+      "results": [
+        {
+          "title": "Piper scabriseptum Trel. | Plants of the World Online | Kew Science",
+          "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A199125-2/general-information",
+          "reference_id": "turn75search1",
+          "domain": "powo.science.kew.org",
+          "relevance": "Kew accepted-species profile and native distribution.",
+          "evidence_scope": "botanical/taxonomic reference only; no culinary-use or rarity inference",
+          "retrieved_at": "2026-10-29T05:15:37.984Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        },
+        {
+          "title": "Piper scabriseptum | International Plant Names Index",
+          "url": "https://www.ipni.org/n/199125-2",
+          "reference_id": "turn75search13",
+          "domain": "www.ipni.org",
+          "relevance": "IPNI nomenclatural publication record.",
+          "evidence_scope": "botanical/taxonomic reference only; no culinary-use or rarity inference",
+          "retrieved_at": "2026-10-29T05:15:37.984Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        }
+      ],
+      "unavailable_or_no_result_reason": null,
+      "query_name": "Piper scabriseptum",
+      "common_name": "Piper scabriseptum",
+      "original_scope": "botanical",
+      "match_scope": "exact_species_botanical_reference"
+    },
+    {
+      "entry_id": "gbif-4183735",
+      "sample_index": 73,
+      "query": "\"Piper jericoense\"  botanical herb spice knowledge",
+      "search_tool_kind": "search_service.system2_search_query",
+      "searched_at": "2026-10-29T05:15:50.303Z",
+      "result_provenance": "supplemental_search_service_results",
+      "not_search_engine_first_page": true,
+      "results": [
+        {
+          "title": "Piper jericoense Trel. & Yunck. | Plants of the World Online | Kew Science",
+          "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A681809-1",
+          "reference_id": "turn77search5",
+          "domain": "powo.science.kew.org",
+          "relevance": "Kew taxonomic species profile.",
+          "evidence_scope": "botanical/taxonomic reference only; no culinary-use or rarity inference",
+          "retrieved_at": "2026-10-29T05:15:50.303Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        },
+        {
+          "title": "Piperaceae **Piper jericoense** Trel. & Yunck.",
+          "url": "https://www.udea.edu.co/wps/wcm/connect/udea/7e2366b5-36c0-48cb-b86c-c9a389964a12/Flora%2Bde%2Blos%2Bbosques%2Bmontanos%2Bde%2BMedellin_compressed_reduce-comprimido.pdf?CVID=mMKuMTF&MOD=AJPERES",
+          "reference_id": "turn77search53",
+          "domain": "www.udea.edu.co",
+          "relevance": "University-published local flora provides the exact species account.",
+          "evidence_scope": "botanical/taxonomic reference only; no culinary-use or rarity inference",
+          "retrieved_at": "2026-10-29T05:15:50.303Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        }
+      ],
+      "unavailable_or_no_result_reason": null,
+      "query_name": "Piper jericoense",
+      "common_name": "Piper jericoense",
+      "original_scope": "botanical",
+      "match_scope": "exact_species_botanical_reference"
+    },
+    {
+      "entry_id": "gbif-4186561",
+      "sample_index": 76,
+      "query": "\"Piper campii\"  botanical herb spice knowledge",
+      "search_tool_kind": "search_service.system2_search_query",
+      "searched_at": "2026-10-29T05:15:50.303Z",
+      "result_provenance": "supplemental_search_service_results",
+      "not_search_engine_first_page": true,
+      "results": [
+        {
+          "title": "Piper campii Yunck. | Plants of the World Online | Kew Science",
+          "url": "https://powo.science.kew.org/taxon/197494-2",
+          "reference_id": "turn77search7",
+          "domain": "powo.science.kew.org",
+          "relevance": "Kew taxonomic species profile.",
+          "evidence_scope": "botanical/taxonomic reference only; no culinary-use or rarity inference",
+          "retrieved_at": "2026-10-29T05:15:50.303Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        },
+        {
+          "title": "Piper campii | International Plant Names Index",
+          "url": "https://www.ipni.org/n/197494-2",
+          "reference_id": "turn77search12",
+          "domain": "www.ipni.org",
+          "relevance": "IPNI nomenclatural record for the species.",
+          "evidence_scope": "botanical/taxonomic reference only; no culinary-use or rarity inference",
+          "retrieved_at": "2026-10-29T05:15:50.303Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        }
+      ],
+      "unavailable_or_no_result_reason": null,
+      "query_name": "Piper campii",
+      "common_name": "Piper campii",
+      "original_scope": "botanical",
+      "match_scope": "exact_species_botanical_reference"
+    },
+    {
+      "entry_id": "gbif-6026982",
+      "sample_index": 79,
+      "query": "\"Bupleurum petiolulatum\"  botanical herb spice knowledge",
+      "search_tool_kind": "search_service.system2_search_query",
+      "searched_at": "2026-10-29T05:15:50.303Z",
+      "result_provenance": "supplemental_search_service_results",
+      "not_search_engine_first_page": true,
+      "results": [
+        {
+          "title": "Bupleurum petiolulatum in Flora of China @ efloras.org",
+          "url": "https://efloras.org/florataxon.aspx?flora_id=2&taxon_id=200015448",
+          "reference_id": "turn77search3",
+          "domain": "efloras.org",
+          "relevance": "Flora of China species account provides morphology and taxonomy.",
+          "evidence_scope": "botanical/taxonomic reference only; no culinary-use or rarity inference",
+          "retrieved_at": "2026-10-29T05:15:50.303Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        },
+        {
+          "title": "Flora of China 14: 1–205. 2005.",
+          "url": "https://www.iplant.cn/foc/pdf/Apiaceae.pdf",
+          "reference_id": "turn77search48",
+          "domain": "www.iplant.cn",
+          "relevance": "Flora of China family treatment, including the exact species account.",
+          "evidence_scope": "botanical/taxonomic reference only; no culinary-use or rarity inference",
+          "retrieved_at": "2026-10-29T05:15:50.303Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        }
+      ],
+      "unavailable_or_no_result_reason": null,
+      "query_name": "Bupleurum petiolulatum",
+      "common_name": "Bupleurum petiolulatum",
+      "original_scope": "botanical",
+      "match_scope": "exact_species_botanical_reference"
+    },
+    {
+      "entry_id": "gbif-4183698",
+      "sample_index": 82,
+      "query": "\"Peperomia quaerata\"  botanical herb spice knowledge",
+      "search_tool_kind": "search_service.system2_search_query",
+      "searched_at": "2026-10-29T05:15:50.303Z",
+      "result_provenance": "supplemental_search_service_results",
+      "not_search_engine_first_page": true,
+      "results": [
+        {
+          "title": "Peperomia quaerata Trel. | Plants of the World Online | Kew Science",
+          "url": "https://powo.science.kew.org/taxon/189505-2",
+          "reference_id": "turn77search0",
+          "domain": "powo.science.kew.org",
+          "relevance": "Kew accepted-species profile, habit, distribution and classification.",
+          "evidence_scope": "botanical/taxonomic reference only; no culinary-use or rarity inference",
+          "retrieved_at": "2026-10-29T05:15:50.303Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        },
+        {
+          "title": "Peperomia quaerata | International Plant Names Index",
+          "url": "https://www.ipni.org/n/189505-2",
+          "reference_id": "turn77search2",
+          "domain": "www.ipni.org",
+          "relevance": "IPNI nomenclatural publication record.",
+          "evidence_scope": "botanical/taxonomic reference only; no culinary-use or rarity inference",
+          "retrieved_at": "2026-10-29T05:15:50.303Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        }
+      ],
+      "unavailable_or_no_result_reason": null,
+      "query_name": "Peperomia quaerata",
+      "common_name": "Peperomia quaerata",
+      "original_scope": "botanical",
+      "match_scope": "exact_species_botanical_reference"
+    },
+    {
+      "entry_id": "gbif-3885548",
+      "sample_index": 85,
+      "query": "\"Phlomoides hybrida\"  botanical herb spice knowledge",
+      "search_tool_kind": "search_service.system2_search_query",
+      "searched_at": "2026-10-29T05:16:02.664Z",
+      "result_provenance": "supplemental_search_service_results",
+      "not_search_engine_first_page": true,
+      "results": [
+        {
+          "title": "Phlomoides hybrida (Zelen.) Kamelin & Makhm. | Plants of the World Online | Kew Science",
+          "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A947676-1/general-information",
+          "reference_id": "turn79search2",
+          "domain": "powo.science.kew.org",
+          "relevance": "Kew accepted-species profile, distribution and classification.",
+          "evidence_scope": "botanical/taxonomic reference only; no culinary-use or rarity inference",
+          "retrieved_at": "2026-10-29T05:16:02.664Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        }
+      ],
+      "unavailable_or_no_result_reason": null,
+      "query_name": "Phlomoides hybrida",
+      "common_name": "Phlomoides hybrida",
+      "original_scope": "botanical",
+      "match_scope": "exact_species_botanical_reference"
+    },
+    {
+      "entry_id": "gbif-7595068",
+      "sample_index": 88,
+      "query": "\"Paraphlomis lancidentata\"  botanical herb spice knowledge",
+      "search_tool_kind": "search_service.system2_search_query",
+      "searched_at": "2026-10-29T05:16:02.664Z",
+      "result_provenance": "supplemental_search_service_results",
+      "not_search_engine_first_page": true,
+      "results": [
+        {
+          "title": "Paraphlomis lancidentata Y.Z.Sun | Plants of the World Online | Kew Science",
+          "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A453699-1",
+          "reference_id": "turn79search0",
+          "domain": "powo.science.kew.org",
+          "relevance": "Kew accepted-species profile.",
+          "evidence_scope": "botanical/taxonomic reference only; no culinary-use or rarity inference",
+          "retrieved_at": "2026-10-29T05:16:02.664Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        },
+        {
+          "title": "Paraphlomis lancidentata in Flora of China @ efloras.org",
+          "url": "https://www.efloras.org/florataxon.aspx?flora_id=2&taxon_id=200019953",
+          "reference_id": "turn79search4",
+          "domain": "www.efloras.org",
+          "relevance": "Flora of China morphological species account.",
+          "evidence_scope": "botanical/taxonomic reference only; no culinary-use or rarity inference",
+          "retrieved_at": "2026-10-29T05:16:02.664Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        }
+      ],
+      "unavailable_or_no_result_reason": null,
+      "query_name": "Paraphlomis lancidentata",
+      "common_name": "Paraphlomis lancidentata",
+      "original_scope": "botanical",
+      "match_scope": "exact_species_botanical_reference"
+    },
+    {
+      "entry_id": "gbif-5608964",
+      "sample_index": 91,
+      "query": "\"Isodon leucophyllus\"  botanical herb spice knowledge",
+      "search_tool_kind": "search_service.system2_search_query",
+      "searched_at": "2026-10-29T05:16:02.664Z",
+      "result_provenance": "supplemental_search_service_results",
+      "not_search_engine_first_page": true,
+      "results": [
+        {
+          "title": "Isodon leucophyllus (Dunn) Kudô | Plants of the World Online | Kew Science",
+          "url": "https://powo.science.kew.org/taxon/448589-1",
+          "reference_id": "turn79search1",
+          "domain": "powo.science.kew.org",
+          "relevance": "Kew accepted-species profile and synonyms.",
+          "evidence_scope": "botanical/taxonomic reference only; no culinary-use or rarity inference",
+          "retrieved_at": "2026-10-29T05:16:02.664Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        },
+        {
+          "title": "Isodon leucophyllus in Flora of China @ efloras.org",
+          "url": "https://efloras.org/florataxon.aspx?flora_id=2&taxon_id=210000791",
+          "reference_id": "turn79search12",
+          "domain": "efloras.org",
+          "relevance": "Flora of China species account.",
+          "evidence_scope": "botanical/taxonomic reference only; no culinary-use or rarity inference",
+          "retrieved_at": "2026-10-29T05:16:02.664Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        }
+      ],
+      "unavailable_or_no_result_reason": null,
+      "query_name": "Isodon leucophyllus",
+      "common_name": "Isodon leucophyllus",
+      "original_scope": "botanical",
+      "match_scope": "exact_species_botanical_reference"
+    },
+    {
+      "entry_id": "gbif-7805620",
+      "sample_index": 94,
+      "query": "\"Peperomia ciezae\"  botanical herb spice knowledge",
+      "search_tool_kind": "search_service.system2_search_query",
+      "searched_at": "2026-10-29T05:16:02.664Z",
+      "result_provenance": "supplemental_search_service_results",
+      "not_search_engine_first_page": true,
+      "results": [
+        {
+          "title": "Peperomia ciezae Pino",
+          "url": "https://www.worldfloraonline.org/taxon/wfo-1000070121",
+          "reference_id": "turn79search18",
+          "domain": "www.worldfloraonline.org",
+          "relevance": "World Flora Online exact-species taxonomic profile; retrieved URL contains a site session suffix.",
+          "evidence_scope": "botanical/taxonomic reference only; no culinary-use or rarity inference",
+          "retrieved_at": "2026-10-29T05:16:02.664Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        }
+      ],
+      "unavailable_or_no_result_reason": null,
+      "query_name": "Peperomia ciezae",
+      "common_name": "Peperomia ciezae",
+      "original_scope": "botanical",
+      "match_scope": "exact_species_botanical_reference"
+    },
+    {
+      "entry_id": "gbif-5540405",
+      "sample_index": 97,
+      "query": "\"Oenanthe globulosa\"  botanical herb spice knowledge",
+      "search_tool_kind": "search_service.system2_search_query",
+      "searched_at": "2026-10-29T05:16:17.208Z",
+      "result_provenance": "supplemental_search_service_results",
+      "not_search_engine_first_page": true,
+      "results": [
+        {
+          "title": "Oenanthe globulosa L. | Plants of the World Online | Kew Science",
+          "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A845288-1",
+          "reference_id": "turn81search3",
+          "domain": "powo.science.kew.org",
+          "relevance": "Kew accepted-species taxonomic profile.",
+          "evidence_scope": "botanical/taxonomic reference only; no culinary-use or rarity inference",
+          "retrieved_at": "2026-10-29T05:16:17.208Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        },
+        {
+          "title": "Oenanthe globulosa L. - An interactive guide to the flora of the temporary ponds of Sardinia (Italy)",
+          "url": "https://dryades.units.it/stagnisardi_en/index.php?id=3506&num=8243&procedure=taxon_page",
+          "reference_id": "turn81search9",
+          "domain": "dryades.units.it",
+          "relevance": "University flora guide introduces habitat and plant identity; no culinary interpretation.",
+          "evidence_scope": "botanical/taxonomic reference only; no culinary-use or rarity inference",
+          "retrieved_at": "2026-10-29T05:16:17.208Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        }
+      ],
+      "unavailable_or_no_result_reason": null,
+      "query_name": "Oenanthe globulosa",
+      "common_name": "Oenanthe globulosa",
+      "original_scope": "botanical",
+      "match_scope": "exact_species_botanical_reference"
+    },
+    {
+      "entry_id": "gbif-3890762",
+      "sample_index": 100,
+      "query": "\"Aegiphila saltensis\"  botanical herb spice knowledge",
+      "search_tool_kind": "search_service.system2_search_query",
+      "searched_at": "2026-10-29T05:16:17.208Z",
+      "result_provenance": "supplemental_search_service_results",
+      "not_search_engine_first_page": true,
+      "results": [
+        {
+          "title": "Aegiphila saltensis Legname | Plants of the World Online | Kew Science",
+          "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A5808-2/general-information",
+          "reference_id": "turn81search5",
+          "domain": "powo.science.kew.org",
+          "relevance": "Kew exact-species taxonomic profile.",
+          "evidence_scope": "botanical/taxonomic reference only; no culinary-use or rarity inference",
+          "retrieved_at": "2026-10-29T05:16:17.208Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        },
+        {
+          "title": "Aegiphila saltensis | International Plant Names Index",
+          "url": "https://www.ipni.org/n/5808-2",
+          "reference_id": "turn81search14",
+          "domain": "www.ipni.org",
+          "relevance": "IPNI nomenclatural publication record.",
+          "evidence_scope": "botanical/taxonomic reference only; no culinary-use or rarity inference",
+          "retrieved_at": "2026-10-29T05:16:17.208Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        }
+      ],
+      "unavailable_or_no_result_reason": null,
+      "query_name": "Aegiphila saltensis",
+      "common_name": "Aegiphila saltensis",
+      "original_scope": "botanical",
+      "match_scope": "exact_species_botanical_reference"
+    },
+    {
+      "entry_id": "gbif-3892883",
+      "sample_index": 103,
+      "query": "\"Clerodendrum haematolasium\"  botanical herb spice knowledge",
+      "search_tool_kind": "search_service.system2_search_query",
+      "searched_at": "2026-10-29T05:16:17.208Z",
+      "result_provenance": "supplemental_search_service_results",
+      "not_search_engine_first_page": true,
+      "results": [
+        {
+          "title": "Clerodendrum haematolasium Hallier f. | Plants of the World Online | Kew Science",
+          "url": "https://powo.science.kew.org/taxon/862118-1",
+          "reference_id": "turn81search1",
+          "domain": "powo.science.kew.org",
+          "relevance": "Kew accepted-species profile and synonyms.",
+          "evidence_scope": "botanical/taxonomic reference only; no culinary-use or rarity inference",
+          "retrieved_at": "2026-10-29T05:16:17.208Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        },
+        {
+          "title": "Clerodendrum haematolasium",
+          "url": "https://www.mybis.gov.my/sp/16530",
+          "reference_id": "turn81search24",
+          "domain": "www.mybis.gov.my",
+          "relevance": "Malaysian government biodiversity taxon record.",
+          "evidence_scope": "botanical/taxonomic reference only; no culinary-use or rarity inference",
+          "retrieved_at": "2026-10-29T05:16:17.208Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        }
+      ],
+      "unavailable_or_no_result_reason": null,
+      "query_name": "Clerodendrum haematolasium",
+      "common_name": "Clerodendrum haematolasium",
+      "original_scope": "botanical",
+      "match_scope": "exact_species_botanical_reference"
+    },
+    {
+      "entry_id": "gbif-3633957",
+      "sample_index": 106,
+      "query": "\"Geocaryum tuberosum\"  botanical herb spice knowledge",
+      "search_tool_kind": "search_service.system2_search_query",
+      "searched_at": "2026-10-29T05:16:17.208Z",
+      "result_provenance": "supplemental_search_service_results",
+      "not_search_engine_first_page": true,
+      "results": [
+        {
+          "title": "Geocaryum tuberosum (W.D.J.Koch) Engstrand | Plants of the World Online | Kew Science",
+          "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A842747-1",
+          "reference_id": "turn81search7",
+          "domain": "powo.science.kew.org",
+          "relevance": "Kew exact-species taxonomic profile.",
+          "evidence_scope": "botanical/taxonomic reference only; no culinary-use or rarity inference",
+          "retrieved_at": "2026-10-29T05:16:17.208Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        }
+      ],
+      "unavailable_or_no_result_reason": null,
+      "query_name": "Geocaryum tuberosum",
+      "common_name": "Geocaryum tuberosum",
+      "original_scope": "botanical",
+      "match_scope": "exact_species_botanical_reference"
+    },
+    {
+      "entry_id": "gbif-6027420",
+      "sample_index": 109,
+      "query": "\"Bowlesia tropaeolifolia\"  botanical herb spice knowledge",
+      "search_tool_kind": "search_service.system2_search_query",
+      "searched_at": "2026-10-29T05:16:33.996Z",
+      "result_provenance": "supplemental_search_service_results",
+      "not_search_engine_first_page": true,
+      "results": [
+        {
+          "title": "Bowlesia tropaeolifolia Gillies & Hook. | Plants of the World Online | Kew Science",
+          "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A838799-1/general-information",
+          "reference_id": "turn82search0",
+          "domain": "powo.science.kew.org",
+          "relevance": "Kew species taxonomic and distribution profile.",
+          "evidence_scope": "botanical/taxonomic reference only; no culinary-use or rarity inference",
+          "retrieved_at": "2026-10-29T05:16:33.996Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        },
+        {
+          "title": "Bowlesia tropaeolifolia Gillies & Hook. | catalogoplantas.udec.cl",
+          "url": "https://catalogoplantas.udec.cl/?q=node%2F1714",
+          "reference_id": "turn82search10",
+          "domain": "catalogoplantas.udec.cl",
+          "relevance": "University flora catalogue exact-species record.",
+          "evidence_scope": "botanical/taxonomic reference only; no culinary-use or rarity inference",
+          "retrieved_at": "2026-10-29T05:16:33.996Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        }
+      ],
+      "unavailable_or_no_result_reason": null,
+      "query_name": "Bowlesia tropaeolifolia",
+      "common_name": "Bowlesia tropaeolifolia",
+      "original_scope": "botanical",
+      "match_scope": "exact_species_botanical_reference"
+    },
+    {
+      "entry_id": "gbif-4186241",
+      "sample_index": 112,
+      "query": "\"Piper ribesioides\"  botanical herb spice knowledge",
+      "search_tool_kind": "search_service.system2_search_query",
+      "searched_at": "2026-10-29T05:16:33.996Z",
+      "result_provenance": "supplemental_search_service_results",
+      "not_search_engine_first_page": true,
+      "results": [
+        {
+          "title": "Piper ribesioides Wall. | Plants of the World Online | Kew Science",
+          "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A683097-1/general-information",
+          "reference_id": "turn82search3",
+          "domain": "powo.science.kew.org",
+          "relevance": "Kew exact-species taxonomy profile.",
+          "evidence_scope": "botanical/taxonomic reference only; no culinary-use or rarity inference",
+          "retrieved_at": "2026-10-29T05:16:33.996Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        },
+        {
+          "title": "PROSEA - Plant Resources of South East Asia",
+          "url": "https://prosea.prota4u.org/view.aspx?id=590",
+          "reference_id": "turn82search16",
+          "domain": "prosea.prota4u.org",
+          "relevance": "PROSEA Piper crop account includes this species for botanical knowledge context.",
+          "evidence_scope": "botanical/taxonomic reference only; no culinary-use or rarity inference",
+          "retrieved_at": "2026-10-29T05:16:33.996Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        }
+      ],
+      "unavailable_or_no_result_reason": null,
+      "query_name": "Piper ribesioides",
+      "common_name": "Piper ribesioides",
+      "original_scope": "botanical",
+      "match_scope": "exact_species_botanical_reference"
+    },
+    {
+      "entry_id": "gbif-5608403",
+      "sample_index": 115,
+      "query": "\"Scutellaria raddeana\"  botanical herb spice knowledge",
+      "search_tool_kind": "search_service.system2_search_query",
+      "searched_at": "2026-10-29T05:16:33.996Z",
+      "result_provenance": "supplemental_search_service_results",
+      "not_search_engine_first_page": true,
+      "results": [
+        {
+          "title": "Taxonomy browser Taxonomy Browser (Scutellaria raddeana)",
+          "url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?command=show&id=2858898&lvl=&mode=node",
+          "reference_id": "turn82search6",
+          "domain": "www.ncbi.nlm.nih.gov",
+          "relevance": "NCBI exact-name taxonomy node; sparse nomenclatural context.",
+          "evidence_scope": "botanical/taxonomic reference only; no culinary-use or rarity inference",
+          "retrieved_at": "2026-10-29T05:16:33.996Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        }
+      ],
+      "unavailable_or_no_result_reason": "Primary taxonomy node found, but a fuller primary introduction was not visible in the returned results.",
+      "query_name": "Scutellaria raddeana",
+      "common_name": "Scutellaria raddeana",
+      "original_scope": "botanical",
+      "match_scope": "exact_name_taxonomy_node_sparse_context"
+    },
+    {
+      "entry_id": "gbif-4185817",
+      "sample_index": 118,
+      "query": "\"Piper medinaense\"  botanical herb spice knowledge",
+      "search_tool_kind": "search_service.system2_search_query",
+      "searched_at": "2026-10-29T05:16:33.996Z",
+      "result_provenance": "supplemental_search_service_results",
+      "not_search_engine_first_page": true,
+      "results": [
+        {
+          "title": "Piper medinaense Yunck.",
+          "url": "https://www.worldfloraonline.org/taxon/wfo-0001261674",
+          "reference_id": "turn82search25",
+          "domain": "www.worldfloraonline.org",
+          "relevance": "World Flora Online exact-species taxonomy profile; retrieved URL includes session suffix.",
+          "evidence_scope": "botanical/taxonomic reference only; no culinary-use or rarity inference",
+          "retrieved_at": "2026-10-29T05:16:33.996Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        }
+      ],
+      "unavailable_or_no_result_reason": null,
+      "query_name": "Piper medinaense",
+      "common_name": "Piper medinaense",
+      "original_scope": "botanical",
+      "match_scope": "exact_species_botanical_reference"
+    },
+    {
+      "entry_id": "gbif-10321453",
+      "sample_index": 121,
+      "query": "\"Galeopsis bifida x speciosa\"  botanical herb spice knowledge",
+      "search_tool_kind": "search_service.system2_search_query",
+      "searched_at": "2026-10-29T05:16:46.332Z",
+      "result_provenance": "supplemental_search_service_results",
+      "not_search_engine_first_page": true,
+      "followup_searches": [
+        {
+          "query": "\"Galeopsis\" \"bifida\" \"speciosa\" hybrid site:powo.science.kew.org OR site:floraveg.eu OR site:gbif.org",
+          "search_tool_kind": "search_service.system1_search_query",
+          "searched_at": "2026-10-29T05:16:55.574Z",
+          "reason": "Resolve hybrid formula to a primary accepted hybrid profile."
+        }
+      ],
+      "results": [
+        {
+          "title": "Galeopsis × sulfurea Druce | Plants of the World Online | Kew Science",
+          "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A447134-1",
+          "reference_id": "turn85search0",
+          "domain": "powo.science.kew.org",
+          "relevance": "Kew accepted hybrid profile explicitly supplies the matching formula G. bifida × G. speciosa.",
+          "evidence_scope": "botanical/taxonomic reference only; no culinary-use or rarity inference",
+          "retrieved_at": "2026-10-29T05:16:55.574Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        }
+      ],
+      "unavailable_or_no_result_reason": null,
+      "query_name": "Galeopsis bifida x speciosa",
+      "common_name": "Galeopsis bifida x speciosa",
+      "original_scope": "botanical",
+      "match_scope": "hybrid_formula_resolved_by_primary_taxonomy"
+    },
+    {
+      "entry_id": "gbif-3897753",
+      "sample_index": 124,
+      "query": "\"Ocimum filamentosum\" long-stamen basil botanical herb spice knowledge",
+      "search_tool_kind": "search_service.system2_search_query",
+      "searched_at": "2026-10-29T05:16:46.332Z",
+      "result_provenance": "supplemental_search_service_results",
+      "not_search_engine_first_page": true,
+      "results": [
+        {
+          "title": "Ocimum filamentosum Forssk. | Plants of the World Online | Kew Science",
+          "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A452942-1/general-information",
+          "reference_id": "turn84search4",
+          "domain": "powo.science.kew.org",
+          "relevance": "Kew taxonomic profile and botanical morphological description.",
+          "evidence_scope": "botanical/taxonomic reference only; no culinary-use or rarity inference",
+          "retrieved_at": "2026-10-29T05:16:46.332Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        },
+        {
+          "title": "Herbarium JCB",
+          "url": "https://indiaflora-ces.iisc.ac.in/FloraPeninsular/herbsheet.php?cat=7&id=4938",
+          "reference_id": "turn84search24",
+          "domain": "indiaflora-ces.iisc.ac.in",
+          "relevance": "Indian Institute of Science herbarium botanical species account.",
+          "evidence_scope": "botanical/taxonomic reference only; no culinary-use or rarity inference",
+          "retrieved_at": "2026-10-29T05:16:46.332Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        }
+      ],
+      "unavailable_or_no_result_reason": null,
+      "query_name": "Ocimum filamentosum",
+      "common_name": "long-stamen basil",
+      "original_scope": "botanical",
+      "match_scope": "exact_species_botanical_reference"
+    },
+    {
+      "entry_id": "gbif-2926450",
+      "sample_index": 127,
+      "query": "\"Phyllostegia yamaguchii\" Yamaguchi phyllostegia botanical herb spice knowledge",
+      "search_tool_kind": "search_service.system2_search_query",
+      "searched_at": "2026-10-29T05:16:46.332Z",
+      "result_provenance": "supplemental_search_service_results",
+      "not_search_engine_first_page": true,
+      "results": [
+        {
+          "title": "ITIS - Report: Phyllostegia yamaguchii",
+          "url": "https://itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=832948",
+          "reference_id": "turn84search1",
+          "domain": "itis.gov",
+          "relevance": "ITIS exact-name record points to the accepted hybrid spelling with ×.",
+          "evidence_scope": "botanical/taxonomic reference only; no culinary-use or rarity inference",
+          "retrieved_at": "2026-10-29T05:16:46.332Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        },
+        {
+          "title": "ITIS - Report: Phyllostegia X yamaguchii",
+          "url": "https://itis.gov/servlet/SingleRpt/SingleRpt?print_version=SCR&search_topic=TSN&search_value=504366&source=from_print",
+          "reference_id": "turn84search10",
+          "domain": "itis.gov",
+          "relevance": "ITIS accepted Phyllostegia × yamaguchii record.",
+          "evidence_scope": "botanical/taxonomic reference only; no culinary-use or rarity inference",
+          "retrieved_at": "2026-10-29T05:16:46.332Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        }
+      ],
+      "unavailable_or_no_result_reason": null,
+      "query_name": "Phyllostegia yamaguchii",
+      "common_name": "Yamaguchi phyllostegia",
+      "original_scope": "botanical",
+      "match_scope": "orthographic_variant_points_to_hybrid"
+    },
+    {
+      "entry_id": "gbif-4187863",
+      "sample_index": 130,
+      "query": "\"Peperomia egleri\"  botanical herb spice knowledge",
+      "search_tool_kind": "search_service.system2_search_query",
+      "searched_at": "2026-10-29T05:16:46.332Z",
+      "result_provenance": "supplemental_search_service_results",
+      "not_search_engine_first_page": true,
+      "results": [
+        {
+          "title": "Peperomia egleri Yunck. | Plants of the World Online | Kew Science",
+          "url": "https://powo.science.kew.org/taxon/188673-2",
+          "reference_id": "turn84search5",
+          "domain": "powo.science.kew.org",
+          "relevance": "Kew exact-species taxonomic profile.",
+          "evidence_scope": "botanical/taxonomic reference only; no culinary-use or rarity inference",
+          "retrieved_at": "2026-10-29T05:16:46.332Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        },
+        {
+          "title": "Angiospermas Piperaceae Giske",
+          "url": "https://monografiasfloradobrasil.jbrj.gov.br/piperaceae.pdf",
+          "reference_id": "turn84search48",
+          "domain": "monografiasfloradobrasil.jbrj.gov.br",
+          "relevance": "Brazilian botanical garden Piperaceae flora monograph includes the species.",
+          "evidence_scope": "botanical/taxonomic reference only; no culinary-use or rarity inference",
+          "retrieved_at": "2026-10-29T05:16:46.332Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        }
+      ],
+      "unavailable_or_no_result_reason": null,
+      "query_name": "Peperomia egleri",
+      "common_name": "Peperomia egleri",
+      "original_scope": "botanical",
+      "match_scope": "exact_species_botanical_reference"
+    },
+    {
+      "entry_id": "gbif-4184143",
+      "sample_index": 133,
+      "query": "\"Peperomia gracilicaulis\"  botanical herb spice knowledge",
+      "search_tool_kind": "search_service.system2_search_query",
+      "searched_at": "2026-10-29T05:17:07.817Z",
+      "result_provenance": "supplemental_search_service_results",
+      "not_search_engine_first_page": true,
+      "results": [
+        {
+          "title": "Peperomia gracilicaulis Yunck. | Plants of the World Online | Kew Science",
+          "url": "https://powo.science.kew.org/taxon/188828-2",
+          "reference_id": "turn87search0",
+          "domain": "powo.science.kew.org",
+          "relevance": "Kew accepted-species profile.",
+          "evidence_scope": "botanical/taxonomic reference only; no culinary-use or rarity inference",
+          "retrieved_at": "2026-10-29T05:17:07.817Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        },
+        {
+          "title": "Angiospermas Piperaceae Giseke",
+          "url": "https://monografiasfloradobrasil.jbrj.gov.br/piperaceae.pdf",
+          "reference_id": "turn87search48",
+          "domain": "monografiasfloradobrasil.jbrj.gov.br",
+          "relevance": "Brazilian botanical garden flora monograph provides morphology and distribution.",
+          "evidence_scope": "botanical/taxonomic reference only; no culinary-use or rarity inference",
+          "retrieved_at": "2026-10-29T05:17:07.817Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        }
+      ],
+      "unavailable_or_no_result_reason": null,
+      "query_name": "Peperomia gracilicaulis",
+      "common_name": "Peperomia gracilicaulis",
+      "original_scope": "botanical",
+      "match_scope": "exact_species_botanical_reference"
+    },
+    {
+      "entry_id": "gbif-3894999",
+      "sample_index": 136,
+      "query": "\"Salvia nazalena\"  botanical herb spice knowledge",
+      "search_tool_kind": "search_service.system2_search_query",
+      "searched_at": "2026-10-29T05:17:07.817Z",
+      "result_provenance": "supplemental_search_service_results",
+      "not_search_engine_first_page": true,
+      "results": [
+        {
+          "title": "Salvia nazalena Hedge & Mouterde | Plants of the World Online | Kew Science",
+          "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A456768-1/general-information",
+          "reference_id": "turn87search7",
+          "domain": "powo.science.kew.org",
+          "relevance": "Kew exact-species taxonomic profile.",
+          "evidence_scope": "botanical/taxonomic reference only; no culinary-use or rarity inference",
+          "retrieved_at": "2026-10-29T05:17:07.817Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        }
+      ],
+      "unavailable_or_no_result_reason": null,
+      "query_name": "Salvia nazalena",
+      "common_name": "Salvia nazalena",
+      "original_scope": "botanical",
+      "match_scope": "exact_species_botanical_reference"
+    },
+    {
+      "entry_id": "gbif-3900742",
+      "sample_index": 139,
+      "query": "\"Plectranthus zenkeri\"  botanical herb spice knowledge",
+      "search_tool_kind": "search_service.system2_search_query",
+      "searched_at": "2026-10-29T05:17:07.817Z",
+      "result_provenance": "supplemental_search_service_results",
+      "not_search_engine_first_page": true,
+      "followup_searches": [
+        {
+          "query": "\"Plectranthus zenkeri\" taxonomy site:powo.science.kew.org OR site:ipni.org OR site:worldfloraonline.org",
+          "search_tool_kind": "search_service.system1_search_query",
+          "searched_at": "2026-10-29T05:17:14.601Z",
+          "reason": "Resolve exact name after sparse genus-list matches."
+        }
+      ],
+      "results": [
+        {
+          "title": "Nomenclatural changes in Coleus and",
+          "url": "https://core.ac.uk/download/228131162.pdf",
+          "reference_id": "turn89search4",
+          "domain": "core.ac.uk",
+          "relevance": "Original nomenclatural paper lists the query name under Isodon ramosissimus; title is truncated by retrieval.",
+          "evidence_scope": "botanical/taxonomic reference only; no culinary-use or rarity inference",
+          "retrieved_at": "2026-10-29T05:17:14.601Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        },
+        {
+          "title": "Nomenclatural changes in Coleus and Plectranthus (Lamiaceae): a tale of more than two genera - PMC",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6717120/",
+          "reference_id": "turn87search18",
+          "domain": "pmc.ncbi.nlm.nih.gov",
+          "relevance": "Full original nomenclatural paper in PMC for genus reassignment context.",
+          "evidence_scope": "botanical/taxonomic reference only; no culinary-use or rarity inference",
+          "retrieved_at": "2026-10-29T05:17:07.817Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        }
+      ],
+      "unavailable_or_no_result_reason": "A direct follow-up retrieval of the PMC paper produced a reCAPTCHA page. The matching nomenclatural statement was visible in the original paper's CORE-hosted PDF search result.",
+      "query_name": "Plectranthus zenkeri",
+      "common_name": "Plectranthus zenkeri",
+      "original_scope": "botanical",
+      "match_scope": "name_resolved_in_original_nomenclatural_paper"
+    },
+    {
+      "entry_id": "gbif-3640822",
+      "sample_index": 142,
+      "query": "\"Daucus muricatus\"  botanical herb spice knowledge",
+      "search_tool_kind": "search_service.system2_search_query",
+      "searched_at": "2026-10-29T05:17:07.817Z",
+      "result_provenance": "supplemental_search_service_results",
+      "not_search_engine_first_page": true,
+      "results": [
+        {
+          "title": "Daucus muricatus (L.) L. | Plants of the World Online | Kew Science",
+          "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A841171-1",
+          "reference_id": "turn87search4",
+          "domain": "powo.science.kew.org",
+          "relevance": "Kew accepted-species profile and synonyms.",
+          "evidence_scope": "botanical/taxonomic reference only; no culinary-use or rarity inference",
+          "retrieved_at": "2026-10-29T05:17:07.817Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        },
+        {
+          "title": "Daucus muricatus (L.) L. GRIN-Global",
+          "url": "https://npgsweb.ars-grin.gov/gringlobal/taxon/taxonomydetail?id=13351",
+          "reference_id": "turn87search6",
+          "domain": "npgsweb.ars-grin.gov",
+          "relevance": "USDA GRIN taxonomy record.",
+          "evidence_scope": "botanical/taxonomic reference only; no culinary-use or rarity inference",
+          "retrieved_at": "2026-10-29T05:17:07.817Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        }
+      ],
+      "unavailable_or_no_result_reason": null,
+      "query_name": "Daucus muricatus",
+      "common_name": "Daucus muricatus",
+      "original_scope": "botanical",
+      "match_scope": "exact_species_botanical_reference"
+    },
+    {
+      "entry_id": "wd-Q515610",
+      "sample_index": 145,
+      "query": "\"Jasminum officinale\"  botanical herb spice knowledge",
+      "search_tool_kind": "search_service.system2_search_query",
+      "searched_at": "2026-10-29T05:17:33.791Z",
+      "result_provenance": "supplemental_search_service_results",
+      "not_search_engine_first_page": true,
+      "results": [
+        {
+          "title": "Common jasmine | Kew",
+          "url": "https://www.kew.org/plants/common-jasmine",
+          "reference_id": "turn92search7",
+          "domain": "www.kew.org",
+          "relevance": "Kew public botanical introduction.",
+          "evidence_scope": "botanical/taxonomic reference only; no culinary-use or rarity inference",
+          "retrieved_at": "2026-10-29T05:17:33.791Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        },
+        {
+          "title": "Oxford University Plants 400: Jasminum officinale",
+          "url": "https://herbaria.plants.ox.ac.uk/bol/plants400/Profiles/IJ/Jasminum",
+          "reference_id": "turn92search17",
+          "domain": "herbaria.plants.ox.ac.uk",
+          "relevance": "Oxford University botanical/cultivation history profile.",
+          "evidence_scope": "botanical/taxonomic reference only; no culinary-use or rarity inference",
+          "retrieved_at": "2026-10-29T05:17:33.791Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        }
+      ],
+      "unavailable_or_no_result_reason": null,
+      "query_name": "Jasminum officinale",
+      "common_name": "Jasminum officinale",
+      "original_scope": "botanical",
+      "match_scope": "exact_species_botanical_reference"
+    },
+    {
+      "entry_id": "gbif-3632442",
+      "sample_index": 148,
+      "query": "\"Seseli alaicum\"  botanical herb spice knowledge",
+      "search_tool_kind": "search_service.system2_search_query",
+      "searched_at": "2026-10-29T05:17:33.791Z",
+      "result_provenance": "supplemental_search_service_results",
+      "not_search_engine_first_page": true,
+      "results": [
+        {
+          "title": "Seseli alaicum Pimenov | Plants of the World Online | Kew Science",
+          "url": "https://powo.science.kew.org/taxon/939205-1",
+          "reference_id": "turn92search3",
+          "domain": "powo.science.kew.org",
+          "relevance": "Kew exact-species taxonomy profile.",
+          "evidence_scope": "botanical/taxonomic reference only; no culinary-use or rarity inference",
+          "retrieved_at": "2026-10-29T05:17:33.791Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        },
+        {
+          "title": "Seseli alaicum | International Plant Names Index",
+          "url": "https://www.ipni.org/n/939205-1",
+          "reference_id": "turn92search10",
+          "domain": "www.ipni.org",
+          "relevance": "IPNI nomenclatural publication record.",
+          "evidence_scope": "botanical/taxonomic reference only; no culinary-use or rarity inference",
+          "retrieved_at": "2026-10-29T05:17:33.791Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        }
+      ],
+      "unavailable_or_no_result_reason": null,
+      "query_name": "Seseli alaicum",
+      "common_name": "Seseli alaicum",
+      "original_scope": "botanical",
+      "match_scope": "exact_species_botanical_reference"
+    },
+    {
+      "entry_id": "gbif-7308359",
+      "sample_index": 151,
+      "query": "\"Teucrium leucocladum\"  botanical herb spice knowledge",
+      "search_tool_kind": "search_service.system2_search_query",
+      "searched_at": "2026-10-29T05:17:33.791Z",
+      "result_provenance": "supplemental_search_service_results",
+      "not_search_engine_first_page": true,
+      "results": [
+        {
+          "title": "Teucrium leucocladum Boiss. | Plants of the World Online | Kew Science",
+          "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A460512-1/general-information",
+          "reference_id": "turn92search6",
+          "domain": "powo.science.kew.org",
+          "relevance": "Kew exact-species taxonomy profile.",
+          "evidence_scope": "botanical/taxonomic reference only; no culinary-use or rarity inference",
+          "retrieved_at": "2026-10-29T05:17:33.791Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        },
+        {
+          "title": "Teucrium leucocladum | International Plant Names Index",
+          "url": "https://www.ipni.org/n/460512-1",
+          "reference_id": "turn92search14",
+          "domain": "www.ipni.org",
+          "relevance": "IPNI nomenclatural publication record.",
+          "evidence_scope": "botanical/taxonomic reference only; no culinary-use or rarity inference",
+          "retrieved_at": "2026-10-29T05:17:33.791Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        }
+      ],
+      "unavailable_or_no_result_reason": null,
+      "query_name": "Teucrium leucocladum",
+      "common_name": "Teucrium leucocladum",
+      "original_scope": "botanical",
+      "match_scope": "exact_species_botanical_reference"
+    },
+    {
+      "entry_id": "gbif-7805239",
+      "sample_index": 154,
+      "query": "\"Stachys turkestanica\"  botanical herb spice knowledge",
+      "search_tool_kind": "search_service.system2_search_query",
+      "searched_at": "2026-10-29T05:17:33.791Z",
+      "result_provenance": "supplemental_search_service_results",
+      "not_search_engine_first_page": true,
+      "results": [
+        {
+          "title": "Stachys turkestanica (Regel) Popov ex Knorring | Plants of the World Online | Kew Science",
+          "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A460065-1/general-information",
+          "reference_id": "turn92search1",
+          "domain": "powo.science.kew.org",
+          "relevance": "Kew exact-species taxonomy profile.",
+          "evidence_scope": "botanical/taxonomic reference only; no culinary-use or rarity inference",
+          "retrieved_at": "2026-10-29T05:17:33.791Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        },
+        {
+          "title": "Stachys turkestanica (Regel) Popov ex Knorring",
+          "url": "https://www.worldfloraonline.org/taxon/wfo-0001069963",
+          "reference_id": "turn92search23",
+          "domain": "www.worldfloraonline.org",
+          "relevance": "World Flora Online species profile and synonyms.",
+          "evidence_scope": "botanical/taxonomic reference only; no culinary-use or rarity inference",
+          "retrieved_at": "2026-10-29T05:17:33.791Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        }
+      ],
+      "unavailable_or_no_result_reason": null,
+      "query_name": "Stachys turkestanica",
+      "common_name": "Stachys turkestanica",
+      "original_scope": "botanical",
+      "match_scope": "exact_species_botanical_reference"
+    },
+    {
+      "entry_id": "wd-Q66104781",
+      "sample_index": 157,
+      "query": "\"Piper excelsum subsp. psittacorum\"  botanical herb spice knowledge",
+      "search_tool_kind": "search_service.system2_search_query",
+      "searched_at": "2026-10-29T05:17:47.837Z",
+      "result_provenance": "supplemental_search_service_results",
+      "not_search_engine_first_page": true,
+      "results": [
+        {
+          "title": "Piper excelsum subsp. psittacorum (Endl.) de Lange | Plants of the World Online | Kew Science",
+          "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A77124429-1",
+          "reference_id": "turn95search5",
+          "domain": "powo.science.kew.org",
+          "relevance": "Kew exact-name record states synonymy with Piper psittacorum.",
+          "evidence_scope": "botanical/taxonomic reference only; no culinary-use or rarity inference",
+          "retrieved_at": "2026-10-29T05:17:47.837Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        },
+        {
+          "title": "Piper excelsum subsp. psittacorum",
+          "url": "https://www.nzpcn.org.nz/site/assets/files/0/15/025/piper-excelsum-subsp-psittacorum.pdf",
+          "reference_id": "turn95search47",
+          "domain": "www.nzpcn.org.nz",
+          "relevance": "NZPCN subspecies description, comparison with related taxa and propagation guidance.",
+          "evidence_scope": "botanical/taxonomic reference only; no culinary-use or rarity inference",
+          "retrieved_at": "2026-10-29T05:17:47.837Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        },
+        {
+          "title": "Profile",
+          "url": "https://profiles.ala.org.au/opus/foa/profile/Piper%20excelsum%20subsp.%20psittacorum",
+          "reference_id": "turn95search7",
+          "domain": "profiles.ala.org.au",
+          "relevance": "Australian Flora government taxon account.",
+          "evidence_scope": "botanical/taxonomic reference only; no culinary-use or rarity inference",
+          "retrieved_at": "2026-10-29T05:17:47.837Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        }
+      ],
+      "unavailable_or_no_result_reason": null,
+      "query_name": "Piper excelsum subsp. psittacorum",
+      "common_name": "Piper excelsum subsp. psittacorum",
+      "original_scope": "botanical",
+      "match_scope": "exact_subspecies_name_and_synonymy"
+    },
+    {
+      "entry_id": "gbif-4185531",
+      "sample_index": 160,
+      "query": "\"Piper ecuadorense\"  botanical herb spice knowledge",
+      "search_tool_kind": "search_service.system2_search_query",
+      "searched_at": "2026-10-29T05:17:47.837Z",
+      "result_provenance": "supplemental_search_service_results",
+      "not_search_engine_first_page": true,
+      "results": [
+        {
+          "title": "Piper ecuadorense Sodiro | Plants of the World Online | Kew Science",
+          "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A681264-1",
+          "reference_id": "turn95search4",
+          "domain": "powo.science.kew.org",
+          "relevance": "Kew exact-species taxonomy profile.",
+          "evidence_scope": "botanical/taxonomic reference only; no culinary-use or rarity inference",
+          "retrieved_at": "2026-10-29T05:17:47.837Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        },
+        {
+          "title": "2.2.3. Características botánicas de la especie *Piper ecuadorense* sodiro (Matico)",
+          "url": "https://dspace.utpl.edu.ec/bitstream/123456789/1871/3/UTPL_Rivera_Rogel_Guisella_del_Roc%C3%ADo_1025076.pdf",
+          "reference_id": "turn95search50",
+          "domain": "dspace.utpl.edu.ec",
+          "relevance": "University thesis includes botanical characteristics of the species.",
+          "evidence_scope": "botanical/taxonomic reference only; no culinary-use or rarity inference",
+          "retrieved_at": "2026-10-29T05:17:47.837Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        }
+      ],
+      "unavailable_or_no_result_reason": null,
+      "query_name": "Piper ecuadorense",
+      "common_name": "Piper ecuadorense",
+      "original_scope": "botanical",
+      "match_scope": "exact_species_botanical_reference"
+    },
+    {
+      "entry_id": "gbif-5609601",
+      "sample_index": 163,
+      "query": "\"Nepeta sudanica\"  botanical herb spice knowledge",
+      "search_tool_kind": "search_service.system2_search_query",
+      "searched_at": "2026-10-29T05:17:47.837Z",
+      "result_provenance": "supplemental_search_service_results",
+      "not_search_engine_first_page": true,
+      "followup_searches": [
+        {
+          "query": "\"Nepeta sudanica\" plant taxonomy",
+          "search_tool_kind": "search_service.system1_search_query",
+          "searched_at": "2026-10-29T05:17:55.539Z",
+          "reason": "Exact-name primary-source coverage fill."
+        }
+      ],
+      "retrieval_checks": [
+        {
+          "kind": "search_service.open/find",
+          "url": "https://powo.science.kew.org/taxon/328179-2",
+          "checked_at": "2026-10-29T05:18:22.628Z",
+          "outcome": "Genus list contains exact name but a direct species link was not exposed in the retrieved representation."
+        }
+      ],
+      "results": [
+        {
+          "title": "Nepeta L. | Plants of the World Online | Kew Science",
+          "url": "https://powo.science.kew.org/taxon/328179-2",
+          "reference_id": "turn97search0",
+          "domain": "powo.science.kew.org",
+          "relevance": "Kew genus taxonomy profile lists Nepeta sudanica; exact-name mention only.",
+          "evidence_scope": "botanical/taxonomic reference only; no culinary-use or rarity inference",
+          "retrieved_at": "2026-10-29T05:17:55.539Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        },
+        {
+          "title": "Minnesota Biodiversity Atlas Checklist: A Preliminary Checklist of the Flora of Africa",
+          "url": "https://bellatlas.umn.edu/checklists/checklist.php?clid=601&dynclid=0&pagenumber=50&searchsynonyms=1&showauthors=1&showcommon=1&showsynonyms=1&showvouchers=1&thesfilter=1",
+          "reference_id": "turn97search3",
+          "domain": "bellatlas.umn.edu",
+          "relevance": "University biodiversity atlas flora-of-Africa checklist includes the species.",
+          "evidence_scope": "botanical/taxonomic reference only; no culinary-use or rarity inference",
+          "retrieved_at": "2026-10-29T05:17:55.539Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        }
+      ],
+      "unavailable_or_no_result_reason": "After two search engines, primary exact-name mentions were found in genus/checklist pages but no full species introduction.",
+      "query_name": "Nepeta sudanica",
+      "common_name": "Nepeta sudanica",
+      "original_scope": "botanical",
+      "match_scope": "exact_name_mentions_in_primary_genus_and_checklist_pages"
+    },
+    {
+      "entry_id": "gbif-3888121",
+      "sample_index": 166,
+      "query": "\"Hemiandra rubriflora\"  botanical herb spice knowledge",
+      "search_tool_kind": "search_service.system2_search_query",
+      "searched_at": "2026-10-29T05:17:47.837Z",
+      "result_provenance": "supplemental_search_service_results",
+      "not_search_engine_first_page": true,
+      "results": [
+        {
+          "title": "Hemiandra rubriflora O.H.Sarg. | Plants of the World Online | Kew Science",
+          "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A447731-1",
+          "reference_id": "turn95search6",
+          "domain": "powo.science.kew.org",
+          "relevance": "Kew exact-species taxonomy profile.",
+          "evidence_scope": "botanical/taxonomic reference only; no culinary-use or rarity inference",
+          "retrieved_at": "2026-10-29T05:17:47.837Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        },
+        {
+          "title": "Hemiandra rubriflora | Atlas of Living Australia",
+          "url": "https://bie.ala.org.au/species/https%3A/id.biodiversity.org.au/node/apni/2888638",
+          "reference_id": "turn95search8",
+          "domain": "bie.ala.org.au",
+          "relevance": "Atlas of Living Australia species/taxonomy profile.",
+          "evidence_scope": "botanical/taxonomic reference only; no culinary-use or rarity inference",
+          "retrieved_at": "2026-10-29T05:17:47.837Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        }
+      ],
+      "unavailable_or_no_result_reason": null,
+      "query_name": "Hemiandra rubriflora",
+      "common_name": "Hemiandra rubriflora",
+      "original_scope": "botanical",
+      "match_scope": "exact_species_botanical_reference"
+    },
+    {
+      "entry_id": "gbif-8317767",
+      "sample_index": 169,
+      "query": "\"Thymus marschallianus\"  botanical herb spice knowledge",
+      "search_tool_kind": "search_service.system2_search_query",
+      "searched_at": "2026-10-29T05:18:22.630Z",
+      "result_provenance": "supplemental_search_service_results",
+      "not_search_engine_first_page": true,
+      "results": [
+        {
+          "title": "Thymus marschallianus Willd. | Plants of the World Online | Kew Science",
+          "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A461400-1",
+          "reference_id": "turn102search14",
+          "domain": "powo.science.kew.org",
+          "relevance": "Kew exact-species taxonomic profile.",
+          "evidence_scope": "botanical/taxonomic reference only; no culinary-use or rarity inference",
+          "retrieved_at": "2026-10-29T05:18:22.630Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        },
+        {
+          "title": "HortFlora",
+          "url": "https://hortflora.rbg.vic.gov.au/taxon/ada1ea3a-5340-11e7-b82b-005056b0018f",
+          "reference_id": "turn102search2",
+          "domain": "hortflora.rbg.vic.gov.au",
+          "relevance": "Royal Botanic Gardens Victoria HortFlora discusses cultivated material and naming.",
+          "evidence_scope": "botanical/taxonomic reference only; no culinary-use or rarity inference",
+          "retrieved_at": "2026-10-29T05:18:22.630Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        }
+      ],
+      "unavailable_or_no_result_reason": null,
+      "query_name": "Thymus marschallianus",
+      "common_name": "Thymus marschallianus",
+      "original_scope": "botanical",
+      "match_scope": "exact_species_botanical_reference"
+    },
+    {
+      "entry_id": "gbif-4188466",
+      "sample_index": 172,
+      "query": "\"Piper boquetense\"  botanical herb spice knowledge",
+      "search_tool_kind": "search_service.system2_search_query",
+      "searched_at": "2026-10-29T05:18:22.630Z",
+      "result_provenance": "supplemental_search_service_results",
+      "not_search_engine_first_page": true,
+      "results": [
+        {
+          "title": "Piper boquetense Yunck. | Plants of the World Online | Kew Science",
+          "url": "https://powo.science.kew.org/taxon/197415-2",
+          "reference_id": "turn102search15",
+          "domain": "powo.science.kew.org",
+          "relevance": "Kew exact-species taxonomy profile.",
+          "evidence_scope": "botanical/taxonomic reference only; no culinary-use or rarity inference",
+          "retrieved_at": "2026-10-29T05:18:22.630Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        },
+        {
+          "title": "Piper boquetense | International Plant Names Index",
+          "url": "https://www.ipni.org/n/197415-2",
+          "reference_id": "turn102search18",
+          "domain": "www.ipni.org",
+          "relevance": "IPNI nomenclatural publication record.",
+          "evidence_scope": "botanical/taxonomic reference only; no culinary-use or rarity inference",
+          "retrieved_at": "2026-10-29T05:18:22.630Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        }
+      ],
+      "unavailable_or_no_result_reason": null,
+      "query_name": "Piper boquetense",
+      "common_name": "Piper boquetense",
+      "original_scope": "botanical",
+      "match_scope": "exact_species_botanical_reference"
+    },
+    {
+      "entry_id": "wd-Q156865",
+      "sample_index": 175,
+      "query": "\"Agrimonia eupatoria\"  botanical herb spice knowledge",
+      "search_tool_kind": "search_service.system2_search_query",
+      "searched_at": "2026-10-29T05:18:22.630Z",
+      "result_provenance": "supplemental_search_service_results",
+      "not_search_engine_first_page": true,
+      "results": [
+        {
+          "title": "Agrimonia eupatoria L. | Plants of the World Online | Kew Science",
+          "url": "https://powo.science.kew.org/taxon/316550-2",
+          "reference_id": "turn102search6",
+          "domain": "powo.science.kew.org",
+          "relevance": "Kew species taxonomic profile.",
+          "evidence_scope": "botanical/taxonomic reference only; no culinary-use or rarity inference",
+          "retrieved_at": "2026-10-29T05:18:22.630Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        },
+        {
+          "title": "HortFlora",
+          "url": "https://hortflora.rbg.vic.gov.au/taxon/ad94d9c6-5340-11e7-b82b-005056b0018f",
+          "reference_id": "turn102search1",
+          "domain": "hortflora.rbg.vic.gov.au",
+          "relevance": "Royal Botanic Gardens Victoria HortFlora species introduction.",
+          "evidence_scope": "botanical/taxonomic reference only; no culinary-use or rarity inference",
+          "retrieved_at": "2026-10-29T05:18:22.630Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        }
+      ],
+      "unavailable_or_no_result_reason": null,
+      "query_name": "Agrimonia eupatoria",
+      "common_name": "Agrimonia eupatoria",
+      "original_scope": "botanical",
+      "match_scope": "exact_species_botanical_reference"
+    },
+    {
+      "entry_id": "gbif-3086345",
+      "sample_index": 178,
+      "query": "\"Piper caracasanum\"  botanical herb spice knowledge",
+      "search_tool_kind": "search_service.system2_search_query",
+      "searched_at": "2026-10-29T05:18:22.630Z",
+      "result_provenance": "supplemental_search_service_results",
+      "not_search_engine_first_page": true,
+      "results": [
+        {
+          "title": "Piper caracasanum Bredem. ex Link | Plants of the World Online | Kew Science",
+          "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A680788-1",
+          "reference_id": "turn102search25",
+          "domain": "powo.science.kew.org",
+          "relevance": "Kew exact-name taxonomic profile.",
+          "evidence_scope": "botanical/taxonomic reference only; no culinary-use or rarity inference",
+          "retrieved_at": "2026-10-29T05:18:22.630Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        },
+        {
+          "title": "ITIS - Report: Piper obliquum",
+          "url": "https://itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=895513",
+          "reference_id": "turn102search31",
+          "domain": "itis.gov",
+          "relevance": "ITIS accepted-name record lists Piper caracasanum as a synonym of P. obliquum.",
+          "evidence_scope": "botanical/taxonomic reference only; no culinary-use or rarity inference",
+          "retrieved_at": "2026-10-29T05:18:22.630Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        }
+      ],
+      "unavailable_or_no_result_reason": null,
+      "query_name": "Piper caracasanum",
+      "common_name": "Piper caracasanum",
+      "original_scope": "botanical",
+      "match_scope": "exact_name_and_accepted_synonym_context"
+    },
+    {
+      "entry_id": "gbif-10756299",
+      "sample_index": 181,
+      "query": "\"Micromeria aybalae\"  botanical herb spice knowledge",
+      "search_tool_kind": "search_service.system2_search_query",
+      "searched_at": "2026-10-29T05:18:33.785Z",
+      "result_provenance": "supplemental_search_service_results",
+      "not_search_engine_first_page": true,
+      "results": [
+        {
+          "title": "\"A new species of Micromeria (Lamiaceae) from Köyceğiz (Muğla, southwes\" by HAYRİ DUMAN and TUNCAY DİRMENCİ",
+          "url": "https://journals.tubitak.gov.tr/botany/vol41/iss4/7/",
+          "reference_id": "turn104search0",
+          "domain": "journals.tubitak.gov.tr",
+          "relevance": "Original species-description paper supplies morphology, distribution, habitat and an identification key.",
+          "evidence_scope": "botanical/taxonomic reference only; no culinary-use or rarity inference",
+          "retrieved_at": "2026-10-29T05:18:33.785Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        },
+        {
+          "title": "PESI portal - Micromeria aybalae H. Duman & Dirmenci",
+          "url": "https://www.eu-nomen.eu/portal/taxon.php?GUID=73278e74-34f4-42e9-85c6-25dbaf785d8f",
+          "reference_id": "turn104search4",
+          "domain": "www.eu-nomen.eu",
+          "relevance": "Euro+Med/PESI taxonomic profile for the exact species.",
+          "evidence_scope": "botanical/taxonomic reference only; no culinary-use or rarity inference",
+          "retrieved_at": "2026-10-29T05:18:33.785Z",
+          "retrieval_level": "search_result_title_and_excerpt"
+        }
+      ],
+      "unavailable_or_no_result_reason": null,
+      "query_name": "Micromeria aybalae",
+      "common_name": "Micromeria aybalae",
+      "original_scope": "botanical",
+      "match_scope": "exact_species_botanical_reference"
+    }
+  ],
+  "url_normalization_note": "Temporary jsessionid suffixes were removed from returned candidate URLs, preserving their taxon paths. This is not proof that the normalized page is accessible."
+}

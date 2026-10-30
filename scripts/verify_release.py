@@ -5,6 +5,7 @@ credentials are used. Native Windows GUI validation remains a separate task.
 """
 from __future__ import annotations
 import argparse
+import concurrent.futures
 import hashlib
 import json
 import os
@@ -30,7 +31,7 @@ from atlas.health import health
 with patch.object(health, 'check', new_callable=AsyncMock, return_value={}):
  with TestClient(app) as client:
   status=client.get('/api/status').json()
-  assert status['version']=='0.6.0', status
+  assert status['version']=='0.7.0', status
   assert status['catalogue']['total']==18379
   assert status['app_id']=='spice-atlas-local' and not status['managed']
   assert 'control_token' not in status
@@ -39,6 +40,8 @@ with patch.object(health, 'check', new_callable=AsyncMock, return_value={}):
   prefs=client.get('/api/settings').json()
   assert prefs['reader_font_size']==17 and prefs['animation_level']==2
   assert prefs['startup_mode']=='resume'
+  assert prefs['name_chinese_style']=='botanical' and prefs['name_western_style']=='book'
+  assert prefs['other_source_timeout']==25 and prefs['other_total_timeout']==35
   assert not any(v for k,v in prefs.items() if k.startswith('has_') and k.endswith('_key'))
   for key,label in [('thyme','Thymus (genus)'),('cinnamon','Cinnamomum (genus)'),('paprika','Capsicum (ingredient genus)')]:
    item=client.get('/api/entry/'+key).json()
@@ -54,12 +57,15 @@ with patch.object(health, 'check', new_callable=AsyncMock, return_value={}):
   assert client.post('/api/launcher/shutdown').status_code==404
   assert client.post('/api/settings',json={'reader_font_size':24,'animation_level':3}).status_code==200
   assert client.get('/api/settings').json()['animation_level']==3
-  for asset in ['interactions.js','interactions.css','experience.js','experience.css','atlas-icon.svg','atlas-icon.ico']:
+  assert prefs['shortcuts']=={'tree_previous':'[','tree_next':']','entry_previous':',','entry_next':'.'}
+  assert prefs['cache_session_threshold']==30 and prefs['cache_promote_hits']==6
+  assert client.get('/api/cache/stats').json()['history_total']==0
+  for asset in ['interactions.js','interactions.css','experience.js','experience.css','atlas-icon.svg','atlas-icon.ico','notifications.js','text_motion.js','source_board.js','observatory.css','catalogue_navigation.js','catalogue_navigation.css','remote_cache.js','wiki_reader.js','nameplates.js','browser_sources.js','layout_v07.css']:
    assert client.get('/static/'+asset).status_code==200
   home=client.get('/')
   assert 'interactions.js' in home.text and 'readingNavigator' in home.text
   assert 'media-src' in home.headers['Content-Security-Policy']
-  print(json.dumps({'passed':True,'version':'0.6.0','records':18379,'audit_decisions':699,'checks':['fresh workspace initialization','clean catalogue and JDB exclusion','default settings and no saved keys','English scientific labels preserve raw metadata','local pinyin and random exclusion','expanded/responsive view persistence','view excludes unknown secret fields','unmanaged shutdown unavailable','settings roundtrip','all new static assets served','application lifespan shutdown']}))
+  print(json.dumps({'passed':True,'version':'0.7.0','records':18379,'audit_decisions':699,'checks':['fresh workspace initialization','clean catalogue and JDB exclusion','default settings and no saved keys','English scientific labels preserve raw metadata','local pinyin and random exclusion','expanded/responsive view persistence','view excludes unknown secret fields','unmanaged shutdown unavailable','settings roundtrip','all new static assets served','application lifespan shutdown']}))
 '''
 
 
@@ -74,8 +80,7 @@ def managed_http_smoke(release, env):
 import runpy, sys
 from atlas.health import health
 health.start=lambda:None
-async def idle():pass
-health.stop=idle
+health.specs=lambda:[]
 sys.argv=['launch.py','--managed','--no-browser','--port',sys.argv[1]]
 runpy.run_path('launch.py',run_name='__main__')
 '''
@@ -103,12 +108,52 @@ runpy.run_path('launch.py',run_name='__main__')
             raise AssertionError('Wrong shutdown key was accepted')
         except urllib.error.HTTPError as error:
             assert error.code==403
+        stream=opener.open(url+'/api/runtime/events',timeout=5)
+        def next_event():
+            while True:
+                line=stream.readline().decode('utf-8')
+                if not line:raise AssertionError('Runtime stream ended early')
+                if line.startswith('data: '):return json.loads(line[6:])
+        assert next_event()['kind']=='snapshot'
+        def send_control(action):
+            control=urllib.request.Request(url+'/api/launcher/control',data=json.dumps({'action':action}).encode(),headers={'X-Atlas-Launcher':secret,'Content-Type':'application/json'})
+            with opener.open(control,timeout=3) as response:
+                return json.loads(response.read())
+        with concurrent.futures.ThreadPoolExecutor(max_workers=1) as pool:
+            pause=pool.submit(send_control,'pause')
+            pausing=next_event()
+            assert pausing['kind']=='service.pausing' and not pausing['paused']
+            with opener.open(url+'/api/status',timeout=2) as response:
+                before_gate=json.loads(response.read())
+            assert before_gate['phase']=='pausing' and not before_gate['paused']
+            assert pause.result(timeout=3)['paused']
+        paused=next_event()
+        assert paused['kind']=='service.paused' and paused['notification']['id']==pausing['notification']['id']
+        try:
+            opener.open(url+'/api/catalog',timeout=2)
+            raise AssertionError('Paused content API accepted work')
+        except urllib.error.HTTPError as error:assert error.code==503
+        dismiss=urllib.request.Request(url+'/api/notifications/'+paused['notification']['id']+'/dismiss',data=b'')
+        with opener.open(dismiss,timeout=2) as response:assert response.status==200
+        assert not send_control('resume')['paused']
+        resumed=next_event()
+        assert resumed['kind']=='service.resumed' and resumed['needs_retest']
+        assert resumed['notification']['details']['action']=='retest'
+        with opener.open(url+'/api/status',timeout=2) as response:
+            current=json.loads(response.read())
+            assert not current['paused'] and current['instance_id']==instance
+        with opener.open(url+'/api/health',timeout=2) as response:
+            assert json.loads(response.read())['phase']=='awaiting_retest'
+        with opener.open(urllib.request.Request(url+'/api/settings/diagnostics',data=b''),timeout=2) as response:
+            assert not json.loads(response.read())['needs_retest']
+        with opener.open(url+'/api/catalog?limit=1',timeout=2) as response:assert response.status==200
+        stream.close()
         accepted=urllib.request.Request(url+'/api/launcher/shutdown',data=b'',headers={'X-Atlas-Launcher':secret})
         with opener.open(accepted,timeout=2) as response:
             assert response.status==200
         output=process.communicate(timeout=15)[0]
         assert process.returncode==0 and secret not in output
-        return {'passed':True,'entrypoint':'launch.py --managed --no-browser','real_local_http':True,'instance_matched':True,'wrong_key_status':403,'shutdown_status':200,'exit_code':process.returncode,'external_health_probes':'disabled for isolated smoke'}
+        return {'passed':True,'entrypoint':'launch.py --managed --no-browser','real_local_http':True,'instance_matched':True,'wrong_key_status':403,'pause_resume_same_instance':True,'pre_pause_sse_before_content_gate':True,'paused_notification_dismissal':True,'resume_requires_manual_retest':True,'manual_retest_started':True,'paused_content_status':503,'shutdown_status':200,'exit_code':process.returncode,'external_health_probes':'disabled for isolated smoke'}
     finally:
         if process.poll() is None:
             process.terminate()
@@ -135,9 +180,12 @@ def verify(path):
                 assert not {'node_modules','.venv','.git','__pycache__','launcher','versions','version_trash','media'} & set(relative.parts), relative
                 assert relative.name not in {'config.local.json','versions.json','.env'}, relative
             archive.extractall(directory)
-        required=['main.py','launch.py','Start_Atlas.pyw','run.cmd','run_console.cmd','run.sh','desktop/core.py','desktop/gui.py','desktop/win_native.py','atlas/launcher_protocol.py','README.md','README.en.md','README.zh-CN.md','static/interactions.js','static/interactions.css','static/atlas-icon.ico','static/atlas-icon.svg','docs/MOTION_DESIGN.zh-CN.md','data/catalogue.sqlite3']
+        required=['main.py','launch.py','Start_Atlas.pyw','run.cmd','run_console.cmd','run.sh','desktop/core.py','desktop/gui.py','desktop/win_native.py','atlas/launcher_protocol.py','atlas/anticipation.py','atlas/cache_memory.py','atlas/wiki_languages.py','atlas/web_sources.py','desktop/browser.py','README.md','README.en.md','README.zh-CN.md','static/interactions.js','static/interactions.css','static/atlas-icon.ico','static/atlas-icon.svg','static/catalogue_navigation.js','static/catalogue_navigation.css','static/remote_cache.js','static/wiki_reader.js','tests/test_v07_review3.py','tests/reading_review3_acceptance.cjs','docs/V07_REVIEW3.zh-CN.md','docs/MOTION_RESEARCH_v0.7_review3.zh-CN.md','tests/test_v07_revision.py','tests/revision_acceptance.cjs','docs/MOTION_DESIGN.zh-CN.md','docs/V07_REVIEW_FIXES.zh-CN.md','docs/CACHE_DESIGN.zh-CN.md','data/catalogue.sqlite3','data/other_sources.json','data/source_research/sample_v07.json','data/source_research/live_reading_revision_v07.json']
+        required.extend(['atlas/other_sources.py','atlas/search_pages.py','data/verification_v07.json','data/source_research/adapter_audit_v07_review3.json','data/source_research/live_readers_v07_review3.json','data/source_research/search_reader_v07_review3.json'])
+        required.extend(['tests/test_v07_followup.py','tests/reading_concurrency_acceptance.cjs','docs/V07_REVIEW4.zh-CN.md'])
+        required.extend(['update.py','Update_Atlas.cmd','Update_Atlas.sh','update_manifest.json','scripts/release_support.py','scripts/build_patch.py','scripts/verify_incremental.py','static/nameplates.js','static/browser_sources.js','static/layout_v07.css','browser_helper/manifest.json','browser_helper/background.js','browser_helper/bridge.js','docs/UPGRADING.zh-CN.md','docs/UPGRADING.en.md','docs/ROADMAP.zh-CN.md','docs/V07_REVIEW5.zh-CN.md','AGENTS.md'])
         assert all((release/name).is_file() for name in required), 'Missing required release files'
-        for name in ['run.cmd','run_console.cmd']:
+        for name in ['run.cmd','run_console.cmd','Update_Atlas.cmd']:
             raw=(release/name).read_bytes()
             assert b'\r\n' in raw and b'\n' not in raw.replace(b'\r\n',b''), 'Windows launcher line endings'
         with sqlite3.connect(release/'data/catalogue.sqlite3') as database:

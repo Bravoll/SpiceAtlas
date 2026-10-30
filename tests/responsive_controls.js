@@ -1,0 +1,1 @@
+document.querySelectorAll('[data-size]').forEach(button=>button.addEventListener('click',()=>{const [width,height]=button.dataset.size.split(',');document.querySelector('iframe').style.width=width+'px';document.querySelector('iframe').style.height=height+'px';}));

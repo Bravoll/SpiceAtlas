@@ -1,6 +1,7 @@
 """Version-local logs, collections and manually dismissed service notices."""
 import json,sqlite3,uuid
 from .workspaces import timestamp,workspaces,ClosingConnection
+from .runtime import event
 class Activity:
     def connect(self):
         db=sqlite3.connect(workspaces.directory()/'activity.sqlite3',timeout=30,factory=ClosingConnection);db.row_factory=sqlite3.Row
@@ -12,6 +13,7 @@ class Activity:
     def log(self,action,details=None,severity='info'):
         with self.connect() as db:db.execute('INSERT INTO events(at,action,details,severity) VALUES(?,?,?,?)',(timestamp(),action,json.dumps(details or {},ensure_ascii=False),severity))
         workspaces.touch()
+        event(action,details=details or {},version=workspaces.current_id)
     def events(self,before=None,limit=100):
         with self.connect() as db:rows=db.execute('SELECT * FROM events WHERE (? IS NULL OR id<?) ORDER BY id DESC LIMIT ?',(before,before,min(200,max(1,limit)))).fetchall()
         return [{**dict(r),'details':json.loads(r['details'])} for r in rows]
@@ -39,6 +41,8 @@ class Activity:
         return key
     def notifications(self):
         with self.connect() as db:return [{**dict(r),'details':json.loads(r['details'])} for r in db.execute('SELECT * FROM notifications WHERE dismissed=0 ORDER BY created_at DESC LIMIT 100')]
+    def update_notification(self,key,title,details):
+        with self.connect() as db:db.execute('UPDATE notifications SET title=?,details=? WHERE id=?',(title,json.dumps(details,ensure_ascii=False),key))
     def dismiss(self,key):
         with self.connect() as db:db.execute('UPDATE notifications SET dismissed=1 WHERE id=?',(key,))
 activity=Activity()

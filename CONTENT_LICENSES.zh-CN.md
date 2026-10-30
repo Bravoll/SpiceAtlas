@@ -12,6 +12,12 @@
 - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
 - [MediaWiki 分类成员 API](https://www.mediawiki.org/wiki/API:Categorymembers)
 
+## 其他来源阅读器与研究索引
+
+可选阅读器使用 Wikispecies／Wikibooks 公共 Action API、GBIF 兼容 v1 名称匹配元数据，以及经审阅站点的有界 HTML 读取。没有公开接口的网站标记为 HTML 适配器，不宣称其为官方 API。第三方正文保留来源与适用条款，实时读取不额外授予转载许可。研究文件仅保存查询记录、候选元数据，不保存完整文章；补充检索与指定搜索引擎直接请求分开标注，清理短期 URL 会话后缀。文本名称匹配不代表分类或食用核实。
+
+Wikispecies 和 Wikibooks 卡片保留来源、固定版本与 CC BY-SA 链接；GBIF 卡片说明兼容 v1／旧标识的匹配依据，并链接来源。通用 HTML 读取清理活动内容及文章图片，原站条款仍适用。
+
 ## Wikidata
 
 名称、别名、站点对应关系、学名及主图文件名来自 Wikidata 结构化数据，按 CC0 提供。对应图片文件本身的许可并不因此变成 CC0。
@@ -64,7 +70,9 @@ Google Cloud Translation 与 Azure AI Translator 分别采用其官方服务条�
 - <https://cloud.google.com/products/translate/pricing>
 - <https://learn.microsoft.com/en-us/azure/ai-services/translator/text-translation/reference/v3/translate>
 
-此文件说明第三方内容归属，不代替项目源代码的开源许可证。完整作者署名、非营利用途说明与源代码 license 按项目计划后续确定；本版不擅自为用户指定作者身份或开源许可。
+原创应用代码、图标和原创文档由 Bravoll 维护，采用 [MIT 许可证](LICENSE)，详见 [中文说明](LICENSE.zh-CN.md)。第三方内容保留各自许可。学习与科普定位不对 MIT 增加“禁止商用”限制。
+
+README 使用项目所有者提供的截图，保留原有署名。截图中的 Commons 照片分别适用 CC BY-SA 4.0，见 [截图署名](docs/screenshots/README.md)，不改为 MIT。
 
 ## 0.5：英语音标、录音与中文拼音
 
@@ -81,3 +89,9 @@ Google Cloud Translation 与 Azure AI Translator 分别采用其官方服务条�
 ## 应用图标
 
 `static/atlas-icon.svg` 和多尺寸 ICO 是为启动器及网页绘制的项目原创图形，不含第三方照片。其项目许可状态随源码，本声明不另行授予授权。原站视窗只调整可用宽度或整体预览缩放，展开时保留同一 iframe，不改写来源正文或绕过嵌入限制。
+
+## 本地缓存留存
+
+工作版本可通过重复访问或闲置预热保留已取正文、云译文及图片元数据；保留原来源／版本、获取时间、链接和提供的许可。预测载荷只在内存，运行缓存及操作统计不进入发行包。长期保存和 API 获取不额外授予复用权利。
+
+第三次修订的公开检索阅读器展示有标签的结果元数据与链接，审阅站点 HTML 清理后显示。公开图像结果保留原文件页，不把可获取等同于免费许可。原站 frame 限制与验证保留，不移除安全头或代理活动原站。Wikidata 名称表保留 CC0 来源说明，GBIF v2／v1 仍遵循来源数据集条款。

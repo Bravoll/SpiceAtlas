@@ -24,6 +24,7 @@ STAGES = {'environment': 5, 'prepare': 15, 'dependencies': 30, 'verify': 70,
 def redact(line):
     line = re.sub(r'(https?://)[^\s/@]+(?::[^\s/@]*)?@', r'\1[redacted]@', str(line))
     line = re.sub(r'(?i)(bearer\s+)[a-z0-9._~+/-]+', r'\1[redacted]', line)
+    line = re.sub(r'(?i)((?:[?&]|\b)(?:api[_-]?key|key|token|secret|password)=)[^&\s]+', r'\1[redacted]', line)
     return line[-10000:]
 
 
@@ -135,7 +136,8 @@ class Starter:
         self.cancelled = threading.Event()
         self.job, self.log = job, Log(self.root, emit)
         self.runner = runner_factory(self.root, self.log, self.cancelled, job)
-        self.status_reader, self.browser = status_reader, browser or webbrowser.open
+        from .browser import open_url
+        self.status_reader, self.browser = status_reader, browser or open_url
         self.server = None
         self.port = port
         self.instance = secrets.token_urlsafe(18)
@@ -168,7 +170,7 @@ class Starter:
             uv = shutil.which('uv')
             self.stage('dependencies', busy=True)
             if uv:
-                self.runner.run([uv, 'sync', '--frozen'])
+                self.runner.run([uv, 'sync', '--frozen', '--inexact'])
             else:
                 if not venv_python.is_file():
                     base = Path(sys.executable)
@@ -236,6 +238,22 @@ class Starter:
                         process.wait(timeout=3)
                     except subprocess.TimeoutExpired:
                         process.kill()
+
+    def set_paused(self, paused):
+        """Control only this launcher's matching live instance; keep its port/process."""
+        if self.server is None or self.server.poll() is not None:
+            raise RuntimeError('The managed service is not running.')
+        identity=self.status_reader(self.port)
+        if not identity or identity.get('instance_id')!=self.instance or identity.get('project_key')!=project_key(self.root):
+            raise RuntimeError('The local service is not this launcher instance.')
+        request=urllib.request.Request(self.url+'/api/launcher/control',method='POST',
+            data=json.dumps({'action':'pause' if paused else 'resume'}).encode(),
+            headers={'X-Atlas-Launcher':self.control_token,'Content-Type':'application/json'})
+        opener=urllib.request.build_opener(urllib.request.ProxyHandler({}))
+        with opener.open(request,timeout=5) as response:
+            result=json.loads(response.read(100000))
+        self.log.write('Service paused' if result['paused'] else 'Service resumed')
+        return result
 
     def close(self):
         self.stop()

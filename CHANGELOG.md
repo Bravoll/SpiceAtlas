@@ -4,7 +4,74 @@ English · [简体中文](CHANGELOG.zh-CN.md)
 
 Changes use **Added**, **Changed** and **Fixed**, followed by validation and limitations. Historical 0.1–0.3 entries were reconstructed from the saved design brief and archived release notes. They do not imply that Git tags or commits existed then.
 
-## 0.6.0 — Unreleased
+## 0.7.0 — 2026-10-30
+
+### Public project documentation
+
+- Project display name: 香料图鉴-SpiceAtlas; public repository renamed to `Bravoll/SpiceAtlas`.
+- English-first project overview, independent language guides, architecture and system introduction before the latest changes.
+- Owner-supplied, unmodified English Basil and Simplified Chinese star-anise screenshots with attribution; startup defaults unchanged.
+- MIT source-code licence and Chinese explanation, separated from third-party content terms.
+
+### Review revision 5
+
+- Manifest-based in-place updater and small patch: ordered migration chains, backups, conflict detection and whole-chain rollback; personal data and caches stay in place. Reuse the existing environment and retain extra packages at startup.
+- Chinese/Western nameplates move to the hero with workspace-specific defaults. The reader becomes full width, the outline moves above it, Wiki controls align right in the knowledge heading, and header controls align vertically.
+- Visible image search terms, additional public metadata gallery parsing and an optional native split-view helper. Actual browser APIs determine support; ordinary source tabs remain available. No verification bypass or forced embedding.
+- Record v0.8 focused reading and v0.9 languages, with post-push reminders in the release checklist; future features are not implemented early.
+
+### Review revision 4
+
+- Non-Wiki reading and refresh no longer wait for unrelated Wiki language discovery.
+- English and Chinese discovery survive partial failures; failed refreshes retain verified language links and mark their status unconfirmed. Conflicting Wikidata identities reject related-species matches.
+- Obsolete reviewed-result cache misses cannot issue requests against a newer entry. Translation requests capture their input and cannot override a later original-text choice.
+- Terminal no-service states clear the reader busy indicator. Added six backend and six controlled-concurrency UI regressions, reproduced before the fixes.
+
+### Review revision 3
+
+- English-anchored Wiki language discovery, identity-checked independent Chinese search and a separate Wiki language control; primary-cache and asynchronous language races fixed.
+- Actual GBIF v2/v1, NParks, ICAR and PlantNET reading; proxy-owned DNS support stays restricted to reviewed HTTPS hosts. Bing/Google results and reviewed article details now render inside the reader. Two additional public-page provider profiles.
+- Frame checks use real responses; public image metadata can form a local gallery. Google SAMEORIGIN and Baidu verification remain explicit limits.
+- Immediate theme changes, bounded real-text word/character motion, untouched tables, and progressively animated native pickers. No full-page theme snapshot or article-wide blur/slide.
+- Loading preserves the user’s scroll; title returns home without clearing history/statistics. Windows browser opening is more robust; the log has a scrollbar and Jump to latest.
+- Other-source defaults become 25 s per provider / 35 s per round; existing custom values remain. Old index-page packet caches are invalidated without clearing accumulated counts.
+
+### Added
+
+- Review revision 2: version-local online-operation distributions, resource fingerprints/counts, sequential first-page/favourite warming, six-access retention and weighted depth-one RAM predictions; cache/shortcut settings and documentation.
+
+- Persistent launcher terminal output with a reversible Show / Hide details control, protected soft pause/resume, same-instance checks and a page pause indicator.
+- Other sources: 19 reviewed provider groups, a 184-record stratified sample and 257 candidate links; public API and bounded HTML readers stream complete article cards in completion order with headings, links, independent scrolling and timeouts.
+- A notification bell/count, hover or keyboard/touch expansion, fixed-position first-notice dismissal and animated queue advancement.
+- Level-3 language word dissolution, source ink reveals and arriving-card motion; Chinese word segmentation and immediate level-0 cleanup.
+- A Chinese source investigation with named-engine failures separated from supplemental discovery, live-reader summaries, and new backend/DOM acceptance coverage.
+
+### Changed
+
+- Four bounded catalogue regions, height-dependent page capacity, sticky paths/pagers and pointer-held controls. Imports move to Settings; [ / ] pages subcategories and , / . pages entries, with configurable keys.
+- Launcher measures content and wrapping, with two columns of themed controls. Pause announces before the content gate; resume offers a manual retest and holds automatic diagnostics.
+- Bell uses a 1.5-radius halo and four-sided panel padding, reversible collapse and quick-click protection.
+
+- Window title is 香料图鉴 - Spice Atlas. Tray single click toggles it; double click opens the page. The menu exposes visibility and pause/resume, and the tooltip persists after updates.
+- Diagnostics use one fixed 2,000 ms publication deadline with a round ID. Late results are ignored; the next round starts 600 seconds later, preserving the previous state while checking.
+- Source-reader settings include per-source and total deadlines, card limit and optional search discovery. Old streams are cancelled when stopped or replaced.
+
+### Fixed
+
+- Unfinished two-second probes remain unconfirmed instead of disabling readable sources. Browser successes publish independently; automatic Wiki bodies retain the v0.6 reading fallback.
+- Curated Commons references query live metadata first, then keywords; the first usable image ends the wait. Retained/memory packets precede browser and backend transport.
+- Short-window record clipping and pager stretching on hover no longer hide rows or move click targets.
+
+- Detail output can be hidden with the same button; runtime output continues after readiness.
+- Startup no longer publishes partial disable/recovery states. Dismissed notices do not reappear from stale polls.
+- Generic HTML IDs and links cannot collide with app controls. A late related-species mention alone does not validate the selected article. Temporary source URL session suffixes are removed.
+
+### Validation and limitations
+
+Automated results and release smoke details are recorded in `data/verification_v07.json`. A three-record live-reader check returned seven cards. Named Google/Bing first-page discovery yielded no extractable results in this environment; supplemental research is explicitly distinct. Generic HTML sites encountered DNS limits. Native Windows tray/Tk behaviour and 120 Hz performance still require target-device acceptance. Other-source cards retain their original language. Multiple design-style presets and their separate investigation remain deferred. The owner approved commit/push on 2026-10-30; no hosted application deployment is implied.
+
+## 0.6.0 — 2026-10-29 · reviewed source checkpoint
+
 
 ### Added
 

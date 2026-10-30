@@ -3,385 +3,218 @@
 
 <a id="english"></a>
 
-# Spice Atlas
+# 香料图鉴-SpiceAtlas
 
-English · [简体中文](README.zh-CN.md) · [Release history](CHANGELOG.md)
+English · [简体中文](README.zh-CN.md) · [User guide](docs/USER_GUIDE.en.md) · [MIT licence](LICENSE)
 
-A local botanical reading desk for exploring herbs, spices and their sources. Search a catalogue stored on your computer, open live encyclopedia articles and ingredient images, and keep the references beside what you read. Material colours, quiet typography and botanical transitions give each ingredient its own atmosphere.
+**A botanical reading desk for the ingredients behind everyday cooking.**
 
-**Local-first catalogue · live references · bilingual reading**
+SpiceAtlas brings a searchable local catalogue, source-linked encyclopedia reading and ingredient images into one calm interface. Explore names and plant relationships, compare material forms, and follow a reference back to its original page. The project combines a Python service, a SQLite collection and a browser interface with English, Simplified Chinese and Traditional Chinese support.
 
-The public repository contains the application source. Run the Python service on your own computer; the repository is not a hosted copy of the application. The current feature set is described in the [release history](CHANGELOG.md).
+![English main interface showing Basil, its nameplates and source-linked reading](docs/screenshots/main-en-basil.png)
 
-## Start locally
+*English example: Basil. Screenshots supplied by the project owner retain source credits; they do not change the default startup ingredient. [Capture details and attribution](docs/screenshots/README.md).*
 
-Python **3.11 or newer** is required. The first dependency installation and new online content require internet access.
+## What the current system does
 
-**Windows:** extract the complete release into a writable folder and double-click `run.cmd`. A window shows startup stages while dependency installation and the server run without a persistent console. The page opens only after its local API is ready. The tray icon then lets you reopen the page, view startup status/logs, or choose **Stop service & exit**. Closing the progress window hides it; it does not stop the service. If the tray is unavailable, the status window remains available. The native launcher requires Python with **Tcl/Tk**; `run_console.cmd` provides the visible-console fallback.
-
-The progress percentage represents completed stages, not a download measurement: package checks begin at 30%, server readiness waits at 90%, and the browser opens after readiness. Startup logs are in `data/launcher/logs/`. A second launch from the same folder reopens the running instance. When port 8765 is occupied, the launcher can use a nearby free port and opens its actual address. The Windows tray and progress UI still require validation on a Windows device; the automated lifecycle tests run separately.
-
-**macOS / Linux:** run `sh run.sh` in the extracted folder. Keep the terminal open; Ctrl+C stops the service. The default local address is <http://127.0.0.1:8765>.
-
-| Setup | Commands |
+| Area | Capabilities |
 | --- | --- |
-| With uv | `uv sync --frozen`, then `uv run python launch.py` |
-| With pip | Create a virtual environment, install `requirements.txt`, then run `python launch.py` from that environment |
-| Alternate port | `python launch.py --port 8766` |
+| Local discovery | Chinese/English/scientific-name and alias search, bounded spelling matching, hierarchical navigation, favourites and browsing history |
+| Traceable reading | Wikipedia focus/full articles, language-link resolution, headings, citations, original hyperlinks and reviewed botanical source adapters |
+| Ingredient images | Automatic Commons lookup, separate material/packaging filters, thumbnail/source/licence cards and original search links |
+| Languages & translation | Auto / English / Simplified / Traditional interface modes; configurable LM Studio-compatible, Google Cloud and Azure translation for up to eight focus paragraphs |
+| Personal collections | Named, editable workspaces with separate catalogues, settings, caches and logs; copy, switch, reorder, recover deleted workspaces |
+| Reading experience | Independent article typography, light/dark themes, four motion levels, operation Back/Forward, random exploration and configurable paging shortcuts |
+| Desktop operation | Windows background launcher, progress/details panel, tray controls and pause/resume notifications; console startup on macOS/Linux |
+| Incremental upgrades | Manifest checks, original-folder updates, program backups and failure rollback while retaining personal data and the dependency environment |
 
-Use the local HTTP address. Opening HTML directly cannot connect to the Python API. Node.js is optional and used only for developer checks and the synthetic preview.
+The baseline contains **18,379 records**: **92 culinary candidates** and **18,287 botanical references**. These are not 18,379 verified edible spices. Thirteen examples have curated presentation fields; uncertain culinary identity remains explicit. The cleaning audit retains 699 exclusion, review and exact-identity merge decisions. Catalogue metadata was imported on 27 October 2026, with cleaning evidence obtained on 28 October; live sources have their own fetch times.
 
-Extract upgrades into a **new folder** and keep the old folder as a backup. Avoid overwriting the new cleaned baseline with an older database. On first initialization, an optional root `config.local.json` is migrated into the initial workspace; an existing workspace registry takes precedence. Personal configuration and workspace data are excluded from release packages.
+## A closer look
 
-The Git checkout stores the baseline as `data/catalogue.sqlite3.gz`. First launch verifies its size and SHA-256 before restoring SQLite. Existing databases are preserved. Portable ZIP releases contain the plain baseline and require no manual decompression.
+The full-width reader keeps its chapter outline above the article. Chinese and Western nameplates sit beside pronunciation near the top; each workspace can save its preferred typography. The **Aa** edge tab changes article size and spacing without scaling the whole interface. System reduced-motion preferences take priority over the four motion levels.
 
-## Explore the collection
+“Versions” in the application are editable **collection workspaces**, separate from application release numbers. Each keeps its own catalogue, settings, favourites, history, resource cache and operation counts. The manager registry and program-upgrade history sit outside these workspaces. Retained online resources keep their original source and fetch time; Refresh requests a newer copy.
 
-1. Choose **Auto, Simplified Chinese, Traditional Chinese or English** in the header.
-2. Search names, scientific names or recorded aliases in the left catalogue. Typing queries only the local database.
-3. Select a record to fetch its article and automatically query Wikimedia Commons. Source links, citations, authors and file licences remain accessible.
-4. Switch material forms, such as fresh leaves and dried flakes. The independent image filter also supports powder, seeds, bark, buds, roots, slices, jars and bags.
-5. Use **Back / Forward** to revisit reading states, or **Surprise me** to discover another local record.
-6. Open the **Aa** edge tab to adjust article typography independently. Click outside or Done to save and close.
+## Run on your computer
 
-The desktop catalogue and reading pane scroll independently. Narrow screens use ordinary page scrolling. The image toolbar groups its heading and form filter on the left, and source choices and external links on the right, with space between them.
+This public repository distributes the local application; it is not a hosted web service. Python **3.11+** is required. First installation and new online references need internet access. Node.js is optional for developer UI checks.
 
-### Reading comfort and motion
+**Windows:** extract the complete package into a writable directory and double-click **`run.cmd`**. Python with Tcl/Tk is needed for the desktop window. Startup stages appear before the browser opens; the service stays in the tray. Single-click the tray icon to show/hide the window, double-click to open the page, and use its menu to pause, resume or **Stop service & exit**. `run_console.cmd` provides a visible diagnostic fallback.
 
-Article size ranges from 14–28 px, with quick presets, adjustable line spacing and serif, sans-serif or Kai-style typefaces. Available fonts depend on the operating system. Interface text keeps its own size.
+**macOS / Linux:** run `sh run.sh` and keep its terminal open. Ctrl+C stops the service.
 
-| Level | Behaviour |
+For a source checkout:
+
+```bash
+git clone https://github.com/Bravoll/SpiceAtlas.git
+cd SpiceAtlas
+uv sync --frozen --inexact
+uv run --no-sync python launch.py
+```
+
+Without uv, create a Python virtual environment, install `requirements.txt`, and run `python launch.py`. The default address is <http://127.0.0.1:8765>; an occupied port may cause the launcher to select a nearby free one. Open the address it reports. Opening `index.html` directly cannot use the backend.
+
+**Already using v0.6 or the previous v0.7 candidate?** Stop the old service, extract the new patch/full package elsewhere, run **its** `Update_Atlas.cmd`, and select the original installation directory. Keep the original path and `.venv`; do not replace your `data/` directory with a fresh baseline. [In-place upgrade guide](docs/UPGRADING.en.md). The updater accepts complete migration chains, but this release includes only the real 0.6→0.7 step and supported 0.7 revisions; future versions and automatic GitHub downloading are not implemented.
+
+## How it fits together
+
+| Component | Responsibility |
 | --- | --- |
-| 0 · Still | No application animation or smooth scrolling |
-| 1 · Minimal | Short feedback and simple fades |
-| 2 · Refined | Reading transitions, sliding drawer and theme reveal |
-| 3 · Botanical | Thumbnail-aware popups, directional image changes, layered colour washes, staggered lists and animated reordering |
+| Browser · HTML/CSS/JavaScript | Local catalogue UI, reading states, source cards, image references, accessible controls and motion |
+| FastAPI service | Workspace-scoped APIs, sanitization, source/translation adapters, diagnostics and bounded requests |
+| SQLite & local files | Catalogues, identity evidence, settings, history, caches, resumable imports and audit logs |
+| Desktop launcher | Dependency preparation, owned service lifecycle, readiness checks, tray/window and live process log |
+| External providers | Wikipedia / Commons / Wikidata, GBIF and reviewed websites; optional configured translation services |
 
-System reduced motion overrides all levels. CSS and native browser animations avoid a fixed frame timer. Actual frame rate depends on the display, browser and device; 120 Hz playback has not been measured here. Browsers without View Transitions retain a working theme switch and supported fallback effects.
+Typing in the main search box queries local data. Selecting a record fetches online content. Idle warming retains frequently used references and favourites; depth-one predictions use bounded RAM. Source adapters have timeouts, reject stale responses, and keep links and provenance. A website without an official API is described as an HTML adapter, not an API.
 
-### Pronunciation
+## Sources, translation and practical boundaries
 
-English common names show sourced IPA when returned by **Free Dictionary API / Wiktionary**. Playback first uses a recording explicitly marked UK / GB. Otherwise, browser **Web Speech** requests `en-GB` and prefers an installed British voice. If none is installed, the interface explains that the available accent depends on system voices. No user API key is required.
+- **Wikipedia:** dedicated language controls resolve linked language editions and try identity-checked search when necessary. Missing Chinese can fall back to English. Other sources keep their separate preferred/secondary-language rows. Only automatically detected Simplified Chinese uses the domestic source order; manual language choices use the international order.
+- **Images:** actual search terms are visible. Publicly readable search metadata can produce image cards, but Google/Baidu may return verification or dynamic pages. The latest Google Images probe returned no extractable images. Original-site links remain available. The [optional split helper](browser_helper/README.md) requires actual browser extension API support and is not installed automatically; it was fixture-tested, not installed/native-tested here.
+- **Translation:** configure your own LM Studio / OpenAI-compatible endpoint, Google Cloud Translation or Azure Translator. Original and bilingual focus-paragraph views are supported. Full-article batch translation is not implemented; machine output needs checking. No translation key or local model is bundled.
+- **Pronunciation:** available dictionary IPA/UK recordings retain their sources; browser speech prefers `en-GB`. Voice availability depends on the device. Mandarin pinyin is generated locally and labelled automatic. Latin scientific names are not synthesized.
+- **Content quality:** botanical relatedness does not establish flavour equivalence, substitution or edibility. Source availability and copyright remain provider-specific. Website verification and framing restrictions are respected.
 
-Missing IPA is not invented, and Latin scientific names are not synthesized. Mandarin pinyin is generated locally by **pypinyin**, labelled automatic, and may need checking for polyphonic characters or proper names. Dictionary/audio links retain sources and supplied licensing information. Audio is not bundled.
+Personal keys, editable workspaces, caches, logs and downloaded media are excluded from Git and release bundles. Settings APIs hide saved secret values. Keep the local service on loopback and do not share personal workspace folders. See the [user guide](docs/USER_GUIDE.en.md) for source order, translation setup, caching, shortcuts and import controls.
 
-### Navigation and startup
+## Project, licence and development
 
-The floating navigation bar stays at the upper left of the reading pane while the article scrolls. **Back / Forward** remembers up to **60 reading states** in the current tab, separately for each workspace: record, material form, source, image filter, catalogue query/position, reading mode and scroll positions. After going back, a new reading action discards the forward branch. These controls do not undo settings, favourites or database edits.
+Created and maintained by **[Bravoll](https://github.com/Bravoll)** for learning, engineering practice and botanical/cooking curiosity. Original application code, icons and original documentation use the **[MIT License](LICENSE)**; MIT permits commercial reuse with its notice requirements. The project's educational purpose is not an extra noncommercial restriction.
 
-Settings → Reading & language lets startup continue the last reading, always open **Basil**, or select a random local record. A fresh workspace starts with Basil. Explicit entry URLs and a service-change reload continuation take priority. Random exploration defaults to culinary candidates, excludes the current record, and can optionally include botanical references, which are not evidence of edibility.
+Third-party encyclopedia text, taxonomy data, photographs, audio, fonts and dependencies retain their own terms. A search/API response is not a reuse licence. Read [content notices](CONTENT_LICENSES.md), the [Chinese licence explanation](LICENSE.zh-CN.md) and [screenshot attribution](docs/screenshots/README.md) before reusing those materials.
 
-### Keyboard shortcuts
+- [Full user guide](docs/USER_GUIDE.en.md) · [中文使用指南](docs/USER_GUIDE.zh-CN.md)
+- [Chinese development guide](development.md) · [Cache design](docs/CACHE_DESIGN.zh-CN.md) · [Motion design](docs/MOTION_DESIGN.zh-CN.md)
+- [Version history](CHANGELOG.md) · [Roadmap](docs/ROADMAP.zh-CN.md) · [Source research](docs/SOURCE_RESEARCH_v0.7.zh-CN.md)
 
-| Key | Action |
-| --- | --- |
-| **R** · Repeat | Repeat the last eligible action against the current state, such as the next catalogue page |
-| **N / P** · Next / Previous | Turn the current local catalogue page |
-| **Alt + ← / →** | Back / Forward through reading states |
-| **Esc** | Close the active popup; return an expanded source window inline |
-| **/** | Focus local search |
-| **← / →** in the image viewer | Previous / next image |
-| **?** | Open the shortcut reference |
+```bash
+uv run --no-sync python -m unittest discover -s tests -q
+npm ci
+npm run test:ui
+```
 
-The floating **R** control names the repeatable action. At list boundaries it stops; repeated requests during loading are coalesced. Single-letter commands do not fire in input fields, selects, editable text or IME composition, and commands stay within the active popup. Keys typed inside an external source window belong to that source. Esc closes a surface; it does not undo a database change.
+Verification records **215 backend tests**, **127 UI checks**, responsive Chrome observations and isolated actual-ZIP upgrades from v0.6 / the previous v0.7 candidate. See `data/verification_v07.json`. `npm run dev` is a labelled synthetic QA preview, not the Python service. Windows native UI, default-browser association, personal translation credentials, audible speech and 120 Hz rendering remain target-device checks.
 
-## Languages and source order
+## What's new in v0.7
 
-Interface language, preferred article language and translation target are separate settings.
+- Added bounded catalogue regions, stable paging controls, custom shortcuts and settings-only catalogue management.
+- Added persistent notification cards, pre-pause/resume notices, a 2-second diagnostic publication deadline and periodic rechecks.
+- Added parallel “Other sources” cards, reviewed adapters, Wiki language resolution and reading/translation concurrency fixes.
+- Added per-workspace operation statistics, idle warming, retained resource packets and memory-only predictions.
+- Refined theme/text transitions, popup entry/exit, full-width reading, top nameplates and aligned Wiki/language controls.
+- Added in-place updates and small patches, image-query labels, public image metadata parsing and the optional native split helper.
+- Published bilingual project documentation, attributed interface screenshots and a source-code MIT licence. Startup defaults remain unchanged.
 
-| Interface mode | Preferred-language sources |
-| --- | --- |
-| **Only Auto**, when the browser resolves to Simplified Chinese | Baidu Baike → Bing China → other resources, including available Wikipedia |
-| Auto English / Traditional Chinese; every manual language mode | Matching Wikipedia → Bing International → Google → other resources |
-
-The other language follows afterwards. Manual Simplified Chinese uses the international order. Missing Chinese Wikipedia can fall back to English; connection failure is distinguished from a missing article.
-
-Wikipedia supports live API articles, focus/full views, outlines, citations and source hyperlinks. Other sites may offer an original-site link rather than embedded text. Name-label typography is a modern design treatment, not historical evidence.
-
-## Live images and source windows
-
-On record or form selection, the browser automatically queries the official **Commons CORS API**, with the backend as fallback. Images normally use remote thumbnails. A failed image URL gets one backend-delivery attempt. The release bundles no photo snapshots.
-
-The 12-profile image vocabulary is based on 39 recorded Commons searches across 30 representative materials and 326 returned filenames. Results are candidates, not verified identifications. Packaging queries affect images only. Empty results are preserved rather than replaced with unrelated forms.
-
-The source window defaults to **Responsive width**: its iframe uses the actual available container width at scale 1. **Scaled preview** is an optional overview based on the browser viewport width. **Expand window** opens the same iframe across almost the entire browser viewport; Return inline or Esc restores it without replacing the iframe, so source inputs and scroll state are retained. Container and browser changes recalculate the dimensions. Cross-origin page layout and embedding permissions remain controlled by the source; some pages keep their own minimum width or prohibit embedding.
-
-Images retain file pages, authors, original URLs and supplied licences. API access, search results and hotlinking do not grant reuse rights. Verify individual permissions before producing a video. See [content and dependency notices](CONTENT_LICENSES.md).
-
-## Translation
-
-Settings → Translation services supports:
-
-- Local **LM Studio / OpenAI-compatible** chat API. Default: `http://127.0.0.1:1234/v1`. Start the server and test `/models`; translation uses `/chat/completions`.
-- Official **Google Cloud Translation Basic v2**, with your key and quota.
-- Official **Azure AI Translator v3**, with your key, region and quota.
-
-Automatic translation covers up to **eight suitable focus paragraphs**, preserving link markers and checking numbers. Original, translation and bilingual views are available. Multiple source languages can be excluded. Full-article batch translation is not implemented; model output requires review.
-
-Keys are write-only through the settings API and saved in the selected workspace. Blank fields retain saved credentials; explicit clear controls remove them. Copying a workspace copies its settings and keys. Environment overrides are shown separately. Do not share personal workspace folders.
-
-Configured cloud diagnostics send a small Parsley sample and can count toward usage. Unconfigured translation services are not probed. A remote container’s localhost is not your computer’s LM Studio.
-
-Official references: [LM Studio](https://lmstudio.ai/docs/developer), [Google setup](https://docs.cloud.google.com/translate/docs/setup), [Azure Translator](https://learn.microsoft.com/en-us/azure/ai-services/translator/text-translation/reference/v3/translate).
-
-## Connection checks
-
-Sources start **enabled**. Only after the first complete background check are failed services temporarily disabled and their buttons hidden. The default sample is **Parsley**; specialist sites without a mapping use recorded representative pages. Dictionary pronunciation is also checked.
-
-All services, including failed ones, are rechecked every **600 seconds**. Healthy checks are silent. Change notices appear at the upper right and remain until manually dismissed. Later layout changes wait for the next content action, save safe reading state, reload globally and complete that action.
-
-Browser and backend routes are assessed separately. HTTP failure, missing pages and framing restrictions are different conditions. A temporary 403, 429 or 5xx is not proof of permanent unavailability. Detailed diagnostics and manual retesting live in Settings.
-
-## Catalogue, imports and data quality
-
-The cleaned baseline contains **18,379 records**, not 18,379 confirmed edible spices:
-
-| Records | Count | Meaning |
-| --- | ---: | --- |
-| Culinary material/mixture candidates | 92 | Includes 13 curated examples; others need individual verification |
-| Botanical references | 18,287 | Taxa, cultivars or names; culinary use is not confirmed |
-| Excluded | 392 | Companies, brands, people, events, utensils, dishes and other mismatches |
-| Pending review | 101 | Insufficient/conflicting identity or use evidence |
-| Exact-identity merges | 206 | Shared identity or exact scientific name, with archived input |
-
-JDB Group, masala dabba and other unsuitable records are removed from search. The 699 archived decisions retain reasons, original payloads and evidence. Unknown future imports go to review. Simplified / Traditional Chinese search is normalized; bounded English spelling matching supplements indexed lookup. Related records explain known family relationships, not flavour equivalence or substitution.
-
-The source catalogue cutoff is **2026-10-27T04:34:04Z**; entity evidence and cleaning were obtained on **2026-10-28**. This does not mean all world knowledge is current to those dates. Metadata is visible in Settings → Catalogue imports / About.
-
-**Subcategory depth 2** reads the starting Wikipedia category, children and grandchildren. It is category-link depth, not botanical rank. **Category budget 200** limits processed categories, not ingredient records. The queue and pagination cursor are saved; increase the budget and Resume. Information buttons explain both controls.
-
-Imports synchronize identity, names, aliases, classification and mappings; bodies and images stay on demand. The initial GBIF scope uses three specified Backbone families. Use one application process and avoid simultaneous CLI/UI imports into a workspace. Details are in the [Chinese development guide](development.md).
-
-## Workspaces, saved lists and logs
-
-Named **versions** are independent, editable workspaces. Copy one or create from the built-in baseline/defaults; switch, rename, reorder, delete and restore it. Each contains its catalogue, settings, cache, image vocabulary, favourites, history, reading state and log. The manager registry/log sit outside individual workspaces.
-
-Drag handles or arrows persist ordering. Copying/switching pauses imports and retains resumable cursors. Async requests stay with their originating workspace; stale tabs cannot write into a new active one. Deleted workspaces are recoverable. To freeze a state, copy/name it and keep working in another copy. Back up the data folder with the service stopped.
-
-## Documentation and validation
-
-- [Release history](CHANGELOG.md) · [Chinese release history](CHANGELOG.zh-CN.md)
-- [Chinese developer and acceptance guide](development.md)
-- [Chinese interaction and animation design](docs/MOTION_DESIGN.zh-CN.md)
-- [Chinese decision / conversation log](docs/CONVERSATIONS.zh-CN.md)
-- [Content, audio and dependency notices](CONTENT_LICENSES.md)
-- [Historical design and development notes](docs/history/)
-
-Backend regression: `uv run python -m unittest discover -s tests -q`. Optional UI checks: `npm ci && npm run test:ui`. `npm run dev` starts a clearly labelled **synthetic QA preview**, not the Python application. Current evidence: `data/verification_v06.json`. Earlier evidence and live observations retain their original versioned filenames.
-
-Native Windows UI, personal LM Studio/Google/Azure credentials and target-device audio were not exercised in the Linux test environment. Installed voice packs, audible British output, 120 Hz performance and third-party framing must be checked on the target device. Full-article translation, verified culinary facts for every plant, video production, a full author/licence page and GitHub updating remain future work. **No source-code licence has been selected**; public visibility alone does not grant an open-source licence. Third-party content keeps its own applicable terms.
+[Complete v0.7 changes and earlier releases →](CHANGELOG.md)
 
 ---
 
 <a id="chinese"></a>
 
-# 香料图鉴 · Spice Atlas
+# 香料图鉴-SpiceAtlas
 
-[English](README.en.md) · 简体中文 · [版本记录](CHANGELOG.zh-CN.md)
+[English](README.en.md) · 简体中文 · [完整使用指南](docs/USER_GUIDE.zh-CN.md) · [许可证](LICENSE.zh-CN.md)
 
-**本地目录 · 在线出处 · 双语阅读**
+**从日常厨房里的原料，读到植物与风味背后的资料。**
 
-公开仓库提供应用源码；Python 服务在你的电脑上运行。仓库公开不代表已经部署了在线网站。具体变化见[版本更新记录](CHANGELOG.zh-CN.md)。
+香料图鉴将本地目录搜索、可追溯的百科阅读和原料图片放在同一个界面中。你可以查找中英文名称与别名、浏览植物关系、对照不同形态，并沿引用回到原始网页。系统由 Python 服务、SQLite 数据库和浏览器界面组成，目前支持英文、简体中文及繁體中文。
 
-在自己电脑上运行的植物与调味原料资料阅读器。目录和检索留在本地；点击条目后读取在线百科与图片，保留来源、正文链接和图片署名。页面沿用植物图谱的纸张、材料配色和展签排印。
+![简体中文主界面：八角、植物参考与在线来源](docs/screenshots/main-zh-staranise.png)
 
-## 启动与升级
+*中文示例采用八角。截图由项目所有者提供，保留原有图片署名与植物参考审核提示；仅为展示选择条目，不改变任何语言下的启动默认项。[截图说明与署名](docs/screenshots/README.md)。*
 
-需要 Python **3.11 或更新版本**。首次安装依赖及获取新资料需要联网。
+## 当前系统提供什么
 
-**Windows：**完整解压到可写的新目录，双击 `run.cmd`。启动窗口显示阶段进度，依赖安装和服务在后台运行，不需要一直保留 CMD。确认本地 API 就绪后才打开浏览器；之后可通过托盘图标重新打开网页、查看启动状态／日志，或选择“停止服务并退出”。关闭进度窗会收起窗口，服务继续运行；若托盘不可用，则保留状态窗口。图形启动器需要 Python 的 **Tcl/Tk** 组件；`run_console.cmd` 是可见控制台回退入口。
-
-百分比代表已完成的启动阶段，不是下载字节进度：30% 开始检查依赖，90% 等待本地网页就绪，确认后打开浏览器。日志在 `data/launcher/logs/`。从同一目录再次启动会打开已有实例；8765 端口被占用时可选附近空闲端口并打开实际地址。Windows 原生窗口与托盘仍需在 Windows 设备验收，进程生命周期自动测试另有记录。
-
-**macOS / Linux：**在解压目录执行 `sh run.sh`。保留终端运行，Ctrl+C 停止服务。默认地址为 <http://127.0.0.1:8765>。
-
-| 方式 | 命令 |
+| 区域 | 主要能力 |
 | --- | --- |
-| uv | `uv sync --frozen`，然后 `uv run python launch.py` |
-| pip | 创建虚拟环境，安装 `requirements.txt`，再在该环境运行 `python launch.py` |
-| 更换端口 | `python launch.py --port 8766` |
+| 本地查询 | 中文、英文、学名及别名搜索，有界拼写匹配，多层目录、收藏与浏览历史 |
+| 有出处的阅读 | 维基重点／完整正文、语言版本匹配、章节、引用、原文超链接及已审查植物网站适配器 |
+| 原料图片 | 自动查询 Commons，独立的材料／包装筛选，缩略图、文件页、作者及许可，原站搜索入口 |
+| 语言与翻译 | 自动／英文／简体／繁体界面；可配置 LM Studio 兼容接口、Google Cloud、Azure，翻译最多八个重点段落 |
+| 个人馆藏 | 可命名、复制、切换、排序与恢复的工作版本，分别保存目录、设置、收藏、历史、缓存和日志 |
+| 阅读交互 | 单独调整正文字体，浅深色、四档动画、操作返回／前进、随机探索、可定制翻页快捷键 |
+| 桌面运行 | Windows 后台启动、阶段进度、实时详情、托盘、暂停／继续与通知；macOS/Linux 控制台启动 |
+| 原位升级 | 清单与哈希核对，保持安装路径，备份程序文件并在普通失败时回退，保留个人数据与依赖环境 |
 
-通过本地 HTTP 地址使用；直接打开 HTML 无法连接后台。Node.js 只用于可选开发检查和合成预览。
+内置基线含 **18,379 条记录**，其中 **92 条调味材料候选**、**18,287 条植物参考**，不是 18,379 种已经确认可食用的香料。13 个示例具有人工整理的展签字段，其他记录保留用途与审核边界。699 条排除、待审核和精确身份合并决定均保留档案。目录导入时间为 2026 年 10 月 27 日，清洗证据于 10 月 28 日获取；在线资料另有各自的读取时间。
 
-升级时解压到**新目录**，保留旧目录备份，不用旧数据库覆盖新版已清洗的基线。若需迁移旧配置，可将自己的根级 `config.local.json` 放入新项目；第一次建立初始工作版本时迁入。已有 `data/versions.json` 时以版本内配置为准。旧 `zh` 配置兼容为 `zh-Hans`。个人密钥及工作空间不包含在发行包中。
+## 从查询到阅读
 
-Git 仓库中的基线数据库以 `data/catalogue.sqlite3.gz` 压缩保存，首次启动会核对 `catalogue_seed.json` 中的大小与 SHA-256，自动恢复成本机 SQLite 文件。已存在的数据库不会被解压覆盖。密钥、缓存与可编辑版本目录由 `.gitignore` 排除。
+正文使用右栏完整宽度，章节导航放在正文上方。中西文名称展签位于顶部发音附近，各馆藏可以保存自己的默认排印。右侧 **Aa 阅读** 标签可独立调整字号和行距，不缩放导航。系统“减少动态效果”优先于应用的四档动画设置。
 
-## 阅读体验
+应用中的“版本”指可编辑的**馆藏工作空间**，与 v0.7 这样的程序发行号不同。每个馆藏独立保存目录、配置、收藏、历史、资源缓存和操作次数；版本管理登记与程序升级历史位于馆藏之外。长期缓存保留原来源和读取时间，点击“更新来源”才请求新修订。
 
-- 图片区左侧为章节标题与形态筛选，右侧为服务商与新窗口链接，保持两端对齐和中间留白。
-- 正文增加可用宽度、调整换行。原站视窗默认按实际容器宽度显示，可选缩放预览；“展开视窗”使用几乎整个浏览器视口，收回时保留同一 iframe 的输入和滚动。尺寸变化后自动重算；跨域页面内部排版、最小宽度与嵌入权限仍由原站控制。
-- 右侧 **Aa 阅读**标签滑出快捷栏：字号 14–28 px、行距、书页衬线／无衬线／楷体；文章文字单独改变，导航不随之缩放。点击外侧、完成或 Escape 后保存到当前工作版本；保存失败则保留面板。
-- 四档动画：0 无动画，1 轻量，2 舒适，3 加入缩略图方向的弹窗、图片交接、植物晕染、列表错峰和排序位移。打开和关闭共用动画生命周期，退出完成后归还焦点。系统“减少动态效果”优先。使用 CSS 和浏览器原生动画，不设置固定帧率定时器；实际刷新率由设备和浏览器决定，本次未在 120 Hz 屏幕上测量。
-- 英语常用名称优先展示公开词典返回的 IPA，保留来源。播放优先选择 UK / GB 音频，否则通过浏览器 Web Speech 优先选择 en-GB 语音。本机没有英式语音包时会说明，不能保证每台设备都具备同一口音。没有音标时不生成；不合成拉丁学名朗读。
-- 中文拼音由本地 pypinyin 自动生成并标明“自动拼音”；多音字和专名需核对。词典音频不随包分发，页面保留相应来源和许可。
-- 正文左上角固定的悬浮“返回／前进”记录最多 60 个阅读操作，包含条目、形态、来源、图片筛选、目录、阅读模式和滚动位置。回退后进行新操作会清空前进分支；不会撤销设置、收藏和数据库修改。记录在当前标签页中按工作版本分开保存。
-- “随机探索”只从本地已准入条目抽取，排除当前项，默认范围为香料候选。设置可改为植物参考或全部；随机选中仍不代表可食用。
-- 设置 → 阅读与语言：启动时可继续上次阅读、固定罗勒或随机展示。全新工作版本默认罗勒；明确指定的条目链接和服务变化触发的操作恢复优先。
-- 第一次完整连接测试之前，所有来源默认可选；完成后才临时隐藏失败来源并通知。
+## 在自己的电脑上运行
 
-项目首页按完整英文、完整中文的顺序排列，另有独立的英文和中文文件。更新日志及第三方声明提供两种语言，开发和决策记录用中文维护。英文界面的学名备注使用英文显示，例如 Thymus (genus)；原始名称与身份字段保留。
+公开仓库提供本地应用源码，不是托管的在线服务。需要 **Python 3.11+**；首次安装依赖和读取新资料需要联网。Node.js 只用于可选开发检查。
 
-## 先从这几个操作开始
+**Windows：**完整解压到可写目录，双击 **`run.cmd`**。图形窗口需要 Python 的 Tcl/Tk 组件。窗口显示启动阶段，服务就绪后打开浏览器，并留在托盘运行。单击托盘显示／隐藏窗口，双击打开网页，右键菜单可暂停、继续或“停止服务并退出”。`run_console.cmd` 是可见控制台入口。
 
-1. 页首选择“自动 / 简体中文 / 繁體中文 / English”。自动跟随浏览器首选语言，通常与系统语言相关。
-2. 左侧输入中文、英文、学名或已收录别名。这一步只查询本地数据库，不发送在线搜索。
-3. 点击条目，右侧按语言和当前可用服务列出来源，同时自动查询 Commons 图像。
-4. 点击“鲜叶 / 干叶碎”等材料形态；图片区还可独立选择粉末、整粒、树皮、根、切片、玻璃罐、袋装等检索形态。图片筛选不改变百科内容。
-5. 设置 → 翻译服务：填写本地 LM Studio 接口并测试，或配置自己的 Google Cloud / Azure 翻译密钥。
-6. 点 ☆ 收藏；左侧可切换收藏、历史。在设置中管理排序、版本和操作日志。
+**macOS / Linux：**执行 `sh run.sh` 并保持终端开启；Ctrl+C 停止服务。
 
-桌面页面固定在视口内，目录与正文各自滚动；移动窄屏恢复普通页面滚动，目录占用高度有限。名称展签的字体是现代排印意象，不能据此认定香料的历史起源。
+从源码运行：
 
-## 快捷键与重复操作
-
-| 按键 | 功能 |
-| --- | --- |
-| **R** · Repeat | 按当前状态重复最近一次适用动作，例如继续翻到下一页 |
-| **N / P** · Next / Previous | 当前本地目录的下一页／上一页 |
-| **Alt + ← / →** | 返回／前进阅读状态 |
-| **Esc** | 关闭当前浮层；展开的原站视窗收回正文 |
-| **/** | 聚焦本地搜索 |
-| 图片查看器内 **← / →** | 上一张／下一张 |
-| **?** | 打开快捷键说明 |
-
-悬浮栏的 R 会提示当前可重复的动作；到达边界时停止。命令使用当前查询、范围和页码，加载中的连续请求合并处理。输入框、下拉框、可编辑文本和输入法组合期间不触发单键命令。弹窗中的命令仅作用于该弹窗；原站 iframe 内的键盘输入属于原站。Esc 不是撤销数据库修改。
-
-## 语言与来源顺序
-
-界面语言、优先正文语言、翻译目标分别设置。
-
-| 界面模式 | 优先语言的来源顺序 |
-| --- | --- |
-| 仅“自动”，且检测为简体中文（如 zh-CN、zh-SG、zh-Hans） | 百度百科 → 国内 Bing → 其他资源（含可用维基） |
-| 自动英文、自动繁体、手动简体、手动繁体、手动英文 | 对应语言 Wikipedia → 国际 Bing → Google → 其他资源 |
-
-另一语言的来源列在后面。中英文 Bing / Google 各有独立的语言检索参数。手动简体**不会**沿用国内优先策略。
-
-维基正文支持实时读取、重点章节、完整正文、章节导航、外部超链接和引用回原站。没有对应中文页时可回退英文。连接失败不会被当成“条目不存在”。无法读取正文的网站提供原站入口；不会把搜索链接冒充 API 图片或百科全文。
-
-## 翻译设置
-
-默认提供本地兼容接口配置：`http://127.0.0.1:1234/v1`。先在自己的 LM Studio 启动服务器；“保存并测试 / 读取模型”会启用本地连接并调用 `/models`，实际翻译调用 `/chat/completions`。应选择支持聊天和结构化 JSON 输出的文本模型。未启用的本地服务不参加启动诊断。
-
-- 开启自动翻译后，来源语言不同于目标时，默认通过选定服务翻译最多 **8 个合适的重点段落**。
-- 阅读器可切换原文、机器译文、双语；这版尚未做全文批量翻译。
-- 多选“排除语言”可跳过自动翻译；“中文（全部）”同时覆盖简体与繁体。
-- Google 使用官方 Cloud Translation Basic v2；Azure 使用官方 AI Translator v3。需要自己的账号、API 凭据与配额；两者都不是抓取搜索网页上的翻译按钮。
-- Google 翻译密钥与 Google 图片搜索密钥是两个独立配置。
-- 翻译保留来源链接占位符并校验数字，失败时保留原文。任何机器译文仍需核实。
-- 配置好的云端翻译服务会用一小段 Parsley 文字检查连接，可能计入用量。
-
-密钥由本机后台保存在所属版本的 `config.local.json`；设置读取接口只返回是否已配置。输入框留空保留密钥，勾选“删除”才清空。复制版本也会复制其设置与密钥。请勿分享自己的版本目录。环境变量可覆盖配置，界面会保留覆盖字段信息；清空配置不会删除操作系统环境变量。
-
-本项目后台和 LM Studio 应运行在你的电脑上。其他机器、容器或云环境中的 localhost 不指向你的电脑。
-
-官方说明：
-
-- <https://docs.cloud.google.com/translate/docs/setup>
-- <https://cloud.google.com/products/translate/pricing>
-- <https://learn.microsoft.com/en-us/azure/ai-services/translator/text-translation/reference/v3/translate>
-- <https://azure.microsoft.com/en-us/pricing/details/translator/>
-
-## 启动检测与右上角通知
-
-来源在首次完整检测前默认开启。后台启动时检查来源网页、API、公开词典和已配置的功能服务，之后每 **600 秒**重新检查全部服务，包括失败的服务。默认测试欧芹 / Parsley；NParks、ICAR 这类尚无欧芹映射的参考站使用已核实的代表条目页，并在诊断记录标明。
-
-- 全部可用时不弹通知。
-- 无法连接的服务只在当前运行状态中临时禁用，其正文或图库按钮暂时隐藏。
-- 状态改变时显示右上角通知；点击展开，用户手动关闭。
-- 检测不会打断当前阅读。下一次内容操作时保存条目、形态、来源、搜索、目录位置、阅读模式及两栏滚动位置，然后全局刷新并完成刚才的操作。
-- 后台与浏览器直连分别判断；维基和 Commons 的有效浏览器测试可以证明浏览器路径可用。
-- 网页可访问但禁止 iframe，不等于网络失败。Bing 仅在实际响应允许时自动尝试搜索视窗；Google、百度常有嵌入限制，保留原站链接。
-- 详细诊断与手动重测放在设置 → 网络与诊断，正文附近不再放功能性诊断按钮。
-
-403 / 429 / 5xx 是本次请求的状态，不证明来源永久不可用，也不代表其 API 一定不公开。配置代理时填写真实的本机代理地址；不绕过网站的验证或嵌入策略。
-
-## 本地目录与清洗范围
-
-源目录最新导入记录时间为 **2026-10-27T04:34:04Z**；实体证据与清洗在 2026-10-28 获取和执行。它们不是“全球资料均更新到此时”的保证。设置 → 目录与导入 / 关于中可查看这两个时间。
-
-| 内容 | 数量 | 边界 |
-| --- | ---: | --- |
-| 调味材料及混合物候选 | 92 | 包含 13 个保留原范围提示的精选展签；其他材料尚需逐项核实 |
-| 植物分类参考记录 | 18,287 | 植物、品种或俗名参考，不能据此判断可食用 |
-| 清洗后本地记录合计 | 18,379 | 不是全球可食用香料数量 |
-| 排除记录 | 392 | 企业、品牌、人物、事件、器具、成菜、饮品等不相符条目 |
-| 待审核 | 101 | 身份或烹饪用途证据不足／冲突 |
-| 精确身份合并 | 206 | 根据相同 Wikidata 身份或精确规范学名合并，保留归档 |
-
-“加多宝 / JDB Group”、香料收纳盒 masala dabba、相关疫情事件等已从可检索目录移出。排除、待审核与合并共 699 条，保存原负载、理由和证据，在“清洗审核档案”查看。未来导入也经过保守类型规则，未知项进入待审核，不因属于香料分类就自动成为香料。
-
-简繁中文检索统一规范化；英文无精确结果时有有界的拼写相似匹配。它不是语义搜索，也不会替你生成不存在的中文名。植物“相关记录”按已知同科关系展示，不能作为味道相似或可替代的依据。
-
-## 目录导入：两个数字是什么意思
-
-“向下分类层数 2”：起始分类是第 0 层，2 表示读取它的子分类和孙分类。它是维基分类链接深度，**不是**植物的科／属／种等级。
-
-“单次分类数量上限 200”：最多处理 200 个分类目录，**不是** 200 个材料条目。达到上限会保存队列与分页游标并暂停；提高上限后点继续即可续传。两项旁的 i 按钮、关于页均有说明。
-
-同步只导入目录、身份、名称、别名和来源映射。正文和图片按需读取。GBIF 默认提供唇形科、伞形科、胡椒科的固定 Backbone 数据集范围，不假定这些植物均为调味材料。
-
-在线查找并导入放在设置里，需要主动点击；主搜索框始终是本地查询。导入途中可暂停、续传，日志记录时间、处理内容和进度；重启后不会自动下载全部正文。
-
-命令行可用 `uv run python scripts/catalogue_sync.py wiki --depth 2 --max-categories 200`，或 `... gbif`。不要同时启动两个应用实例，或同时通过 CLI 和网页导入同一馆藏；版本管理器目前采用单进程的写入协调。
-
-## 版本、收藏、历史与日志
-
-“版本”是一个可继续编辑的独立工作空间：
-
-- 可命名、复制任一版本、从内置基线及默认设置新建、切换、重命名、删除和恢复。
-- 目录、配置、缓存、图片关键词库、收藏、浏览历史、运行日志与阅读状态各自保存。
-- 版本管理登记文件及管理日志在版本之外，不随某个版本复制。
-- 版本按名称、创建时间、修改时间或自定义顺序排列。拖动或使用上下箭头会记住自定义顺序；收藏和历史也支持。
-- 复制／切换前暂停相关导入。复制保留可续传游标；从默认设置创建不会复制个人密钥、收藏或历史。
-- 异步请求绑定发起时的版本；旧标签页不能把修改写入新活动版本。
-- 删除进入可恢复区，本版不提供不可恢复清空按钮。
-
-当前版本会继续变化，并非只读历史备份。需要冻结某个状态时先复制并命名，之后在另一个副本继续。磁盘备份仍建议关闭应用后复制整个 `data/`。
-
-磁盘布局：
-
-```text
-data/catalogue.sqlite3             已清洗的内置基线
- data/versions.json                全局版本登记、活动版本和排序
- data/version_manager.jsonl        全局版本操作日志
- data/versions/<id>/
-   catalogue.sqlite3               该版本的目录、分类、任务、审核档案
-   config.local.json               该版本的设置与密钥
-   activity.sqlite3                收藏、历史、日志、通知
-   cache.sqlite3                   正文、翻译与图片元数据缓存
-   image_keywords.sqlite3          图片形态词库与采样记录
-   view_state.json                 阅读与列表位置
-   media/                          仅在中转需要时缓存的图片
- data/version_trash/<id>/          可恢复的已删除版本
+```bash
+git clone https://github.com/Bravoll/SpiceAtlas.git
+cd SpiceAtlas
+uv sync --frozen --inexact
+uv run --no-sync python launch.py
 ```
 
-## 图片词库、署名与限制
+不用 uv 时，可以创建 Python 虚拟环境，安装 `requirements.txt` 后执行 `python launch.py`。默认地址为 <http://127.0.0.1:8765>；端口占用时启动器可能选择附近空闲端口，以实际显示地址为准。直接打开 `index.html` 无法使用后台。
 
-图片词库包含 12 类形态，依据 30 个不同原料的 39 次真实 Commons bitmap 查询记录，返回文件名共 326 条；4 次空结果也原样保留。查询时间、参数与词频见 `data/image_lexicon_seed.json` 和研究说明。它是代表性抽样，既不是随机样本，也不是植物鉴定或食用证据。
+**从 v0.6 或上一轮 v0.7 更新：**先停止旧服务，将补丁／新完整包解压到别处，运行**新包中的** `Update_Atlas.cmd` 并选择原安装目录。保持原路径和 `.venv`，不要用新版基线覆盖自己的 `data/`。[原位升级步骤](docs/UPGRADING.zh-CN.md)。升级器支持包内完整迁移链；当前只带真实的 0.6→0.7 步骤及已支持的 0.7 修订，没有实现未来版本或 GitHub 自动下载。
 
-进入条目和切换形态时，浏览器自动调用官方 Commons CORS API；失败后尝试后台路径。默认直接显示远程缩略图，图片地址失效时自动尝试后台中转一次。没有随包照片快照。当前筛选会排除常见成菜、显微照片等不合适标题，结果仍是候选图；空结果不会拿鲜叶冒充干叶碎。
+## 系统如何组成
 
-API、直链、iframe 都不等于获得版权豁免。每张图片显示作者、文件页、许可和原图入口。实际用于视频时，应逐图核对并保存署名、许可及修改记录。百度 / Bing / Google 搜索本身不提供图片复用授权。第三方内容许可详见 `CONTENT_LICENSES.zh-CN.md`。
+| 组件 | 职责 |
+| --- | --- |
+| 浏览器 · HTML/CSS/JavaScript | 本地目录交互、阅读状态、来源卡片、图片引用、键盘和动画 |
+| FastAPI 服务 | 按馆藏隔离的接口、HTML 清理、来源／翻译适配、诊断与有界请求 |
+| SQLite 与本地文件 | 目录、身份依据、配置、历史、缓存、可续传导入与审核日志 |
+| 桌面启动器 | 准备依赖、管理所属服务、检查就绪、托盘／窗口与实时过程日志 |
+| 外部来源 | Wikipedia、Commons、Wikidata、GBIF、已审查网站及用户配置的翻译服务 |
 
-## 文档与验证
+在主搜索框输入时只查本地库；点击条目后才获取在线资源。闲置预取照顾目录首页和收藏，深度为 1 的预测只放入有限内存，不替换正在阅读的内容。来源请求具有超时与过时响应保护，并保留链接和出处。没有官方 API 的网站会标为 HTML 适配器。
 
-- [更新日志](CHANGELOG.zh-CN.md) · [英文更新日志](CHANGELOG.md)
-- [中文开发与验收说明](development.md)
-- [交互盘点与动画方案](docs/MOTION_DESIGN.zh-CN.md)
-- [中文决策记录](docs/CONVERSATIONS.zh-CN.md)
-- [来源、音频与依赖声明](CONTENT_LICENSES.zh-CN.md)
+## 来源、翻译与实际边界
 
-后端检查：`uv run python -m unittest discover -s tests -q`。可选 UI 检查：`npm ci`、`npm run test:ui`。`npm run dev` 启动明确标记的合成 QA 预览，不是生产 Python 应用。当前验证见 `data/verification_v06.json`，旧版证据按原版本文件保留。
+- **维基：**独立语言选项先匹配相连语言版本，必要时进行身份核对后的搜索；中文缺失可回退英文。其他来源保持优先／另一语言两行。仅自动检测到简体中文时采用国内来源顺序，手动语言采用国际顺序。
+- **图片：**显示实际检索词，能读取的公开元数据可组成图片卡片。但 Google／百度可能返回验证或动态外壳，本轮 Google 实网读取没有提取到图片。保留原站入口；[可选分屏助手](browser_helper/README.md) 需要浏览器真实扩展 API 支持，不自动安装，本轮仅以接口夹具验证生命周期，未完成安装／原生分屏实测。
+- **翻译：**自行配置 LM Studio / OpenAI 兼容接口、Google Cloud Translation 或 Azure Translator，支持重点段落原文、译文和双语。未实现全文批量翻译，机器结果需核对；不附带密钥或模型。
+- **发音：**词典返回的 IPA／UK 录音保留出处，浏览器朗读优先 `en-GB`，声音取决于设备。中文拼音在本地自动生成并标记；不合成拉丁学名朗读。
+- **知识：**亲缘关系不代表风味、可替代性或食用资格。不同来源的可读性、可访问性和版权不同，应用尊重验证与禁止内嵌的策略。
 
-## 验证与当前边界
+个人密钥、可编辑馆藏、缓存、日志与下载媒体均排除在 Git 和发行包之外，配置接口不返回已保存的密钥值。服务保持本机回环访问，不分享个人馆藏目录。来源顺序、翻译配置、缓存、快捷键和导入参数的详细说明见 [使用指南](docs/USER_GUIDE.zh-CN.md)。
 
-- 后端回归、行为 DOM 测试、真实浏览器双栏与设置布局检查，以及实际 Wikimedia / Commons 连接测试均有记录，见 `development.md`、`data/verification_v04_live.json`。
-- 浏览器视觉验收使用明确标记的合成正文夹具；生产 Python API 则单独测试。没有把夹具当作在线百科正文。
-- Linux 测试环境未运行 Windows 原生托盘和启动窗口；本次未连接你的 LM Studio；Google / Azure 翻译未使用个人密钥实测，官方请求格式以模拟响应回归验证。
-- 尚未实现全文翻译、所有植物的人工烹饪知识核实、全球香料全集、视频生成、完整作者与项目开源许可页、GitHub 更新器。
+## 作者、许可与开发
 
-后续适合继续补充有出处的成分、产地、文化、菜系、代表菜、形态与包装字段，再导出视频章节与图片署名素材。
+由 **[Bravoll](https://github.com/Bravoll)** 创建与维护，面向个人学习、工程实践和植物／烹饪科普。原创应用代码、图标与原创文档采用 **[MIT 许可证](LICENSE)**，中文解释见 [LICENSE.zh-CN.md](LICENSE.zh-CN.md)。MIT 允许商业复用并要求保留许可声明；项目的学习与科普定位不构成额外“禁止商用”限制。
 
-源码许可尚由项目所有者选择；公开可见不等于已授予开源许可。第三方内容各自遵守其来源条款。
+百科文字、植物数据、照片、音频、字体与依赖保留各自条款。API 或搜索返回不等于取得复用授权。相关说明见 [第三方内容声明](CONTENT_LICENSES.zh-CN.md) 和 [截图署名](docs/screenshots/README.md)。
+
+- [中文使用指南](docs/USER_GUIDE.zh-CN.md) · [English guide](docs/USER_GUIDE.en.md)
+- [中文开发说明](development.md) · [缓存设计](docs/CACHE_DESIGN.zh-CN.md) · [动画设计](docs/MOTION_DESIGN.zh-CN.md)
+- [版本日志](CHANGELOG.zh-CN.md) · [路线图](docs/ROADMAP.zh-CN.md) · [来源研究](docs/SOURCE_RESEARCH_v0.7.zh-CN.md)
+
+```bash
+uv run --no-sync python -m unittest discover -s tests -q
+npm ci
+npm run test:ui
+```
+
+现有验证包含 **215 项后端测试**、**127 项界面检查**、Chrome 响应式观察，以及从实际 v0.6／上一轮 v0.7 ZIP 初始化并原位升级的检查，记录见 `data/verification_v07.json`。`npm run dev` 是带标记的合成 QA 预览，不是 Python 服务。Windows 原生界面、默认浏览器关联、个人翻译凭据、可听发音和 120 Hz 表现仍需目标设备验收。
+
+## v0.7 最新变化
+
+- 目录分区与容量限制、稳定翻页控件、自定义快捷键，目录管理移入设置。
+- 常驻通知卡片、暂停前／继续后通知、2 秒诊断发布期限与定期重连。
+- “其他来源”并行阅读卡片、已审查适配器、维基语言匹配和阅读／翻译并发修复。
+- 按馆藏维护的操作统计、闲置预取、长期资源封包与内存预测缓存。
+- 主题／文字过渡和弹窗正反动画优化，全宽正文、顶部名称展签及 Wiki／语言控件对齐。
+- 原位升级与小补丁、图片检索词、公开图片元数据解析及可选原生分屏助手。
+- 中英文项目介绍、具备署名的界面截图及 MIT 源码许可；启动默认条目保持原样。
+
+[完整 v0.7 更新与历史版本 →](CHANGELOG.zh-CN.md)

@@ -1,0 +1,23 @@
+{
+  "sample_count": 184,
+  "planned_first_pages": 552,
+  "engines": {
+    "google": {
+      "http_error": 1,
+      "skipped": 181,
+      "timeout": 2
+    },
+    "bing": {
+      "no_extractable_results": 1,
+      "skipped": 181,
+      "timeout": 2
+    },
+    "bing_cn": {
+      "http_error": 1,
+      "skipped": 181,
+      "timeout": 2
+    }
+  },
+  "actual_results": 0,
+  "supplemental_search_service": "Recorded separately; never counted as a named-engine first page."
+}

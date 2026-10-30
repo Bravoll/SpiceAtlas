@@ -1,0 +1,205 @@
+{
+  "network": "actual application client_options including trust_env/proxy configuration",
+  "article_bodies_saved": false,
+  "results": [
+    {
+      "id": "google_images",
+      "url": "https://www.google.com/search?tbm=isch&q=parsley",
+      "final_url": "https://www.google.com/search?tbm=isch&q=parsley",
+      "status": 200,
+      "seconds": 5.89,
+      "x_frame_options": "SAMEORIGIN",
+      "csp": "object-src 'none';base-uri 'self';script-src 'nonce-[redacted]' 'strict-dynamic' 'report-sample' 'unsafe-eval' 'unsafe-inline' https: http:;report-uri https://csp.withgoogle.com/csp/gws/other",
+      "content_type": "text/html; charset=ISO-8859-1",
+      "bytes": 92271,
+      "title": "Google Search",
+      "headings": []
+    },
+    {
+      "id": "baidu_images",
+      "url": "https://image.baidu.com/search/index?tn=baiduimage&word=%E6%AC%A7%E8%8A%B9",
+      "final_url": "https://wappass.baidu.com/static/captcha/tuxing_v2.html",
+      "status": 200,
+      "seconds": 12.32,
+      "x_frame_options": null,
+      "csp": null,
+      "content_type": "text/html",
+      "bytes": 1488,
+      "title": "百度安全验证",
+      "headings": []
+    },
+    {
+      "id": "bing_images",
+      "url": "https://www.bing.com/images/search?q=parsley",
+      "final_url": "https://www.bing.com/images/search?q=parsley",
+      "status": 200,
+      "seconds": 6.21,
+      "x_frame_options": null,
+      "csp": "script-src https: 'strict-dynamic' 'report-sample' 'wasm-unsafe-eval' 'nonce-[redacted]'; base-uri 'self';",
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 138281,
+      "title": "parsley - Search Images",
+      "headings": [
+        ""
+      ]
+    },
+    {
+      "id": "gbif_v1",
+      "url": "https://api.gbif.org/v1/species/match?name=Petroselinum%20crispum",
+      "final_url": "https://api.gbif.org/v1/species/match?name=Petroselinum%20crispum",
+      "status": 200,
+      "seconds": 4.8,
+      "x_frame_options": null,
+      "csp": null,
+      "content_type": "application/json",
+      "bytes": 470,
+      "json": {
+        "usageKey": 7828157,
+        "scientificName": "Petroselinum crispum (Mill.) Fuss",
+        "canonicalName": "Petroselinum crispum",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "confidence": 97,
+        "matchType": "EXACT",
+        "kingdom": "Plantae",
+        "phylum": "Tracheophyta",
+        "order": "Apiales",
+        "family": "Apiaceae",
+        "genus": "Petroselinum",
+        "species": "Petroselinum crispum",
+        "kingdomKey": 6,
+        "phylumKey": 7707728,
+        "classKey": 220,
+        "orderKey": 1351,
+        "familyKey": 6720,
+        "genusKey": 3034906,
+        "speciesKey": 7828157,
+        "class": "Magnoliopsida"
+      }
+    },
+    {
+      "id": "gbif_v2",
+      "url": "https://api.gbif.org/v2/species/match?scientificName=Petroselinum%20crispum",
+      "final_url": "https://api.gbif.org/v2/species/match?scientificName=Petroselinum%20crispum",
+      "status": 200,
+      "seconds": 5.14,
+      "x_frame_options": null,
+      "csp": null,
+      "content_type": "application/json",
+      "bytes": 912,
+      "json": {
+        "usage": {
+          "key": "7828157",
+          "name": "Petroselinum crispum (Mill.) Fuss",
+          "canonicalName": "Petroselinum crispum",
+          "authorship": "(Mill.) Fuss",
+          "rank": "SPECIES",
+          "code": "BOTANICAL",
+          "status": "ACCEPTED",
+          "genericName": "Petroselinum",
+          "specificEpithet": "crispum",
+          "type": "SCIENTIFIC",
+          "formattedName": "<i>Petroselinum</i> <i>crispum</i> (Mill.) Fuss"
+        },
+        "classification": [
+          {
+            "key": "6",
+            "name": "Plantae",
+            "rank": "KINGDOM"
+          },
+          {
+            "key": "7707728",
+            "name": "Tracheophyta",
+            "rank": "PHYLUM"
+          },
+          {
+            "key": "220",
+            "name": "Magnoliopsida",
+            "rank": "CLASS"
+          },
+          {
+            "key": "1351",
+            "name": "Apiales",
+            "rank": "ORDER"
+          },
+          {
+            "key": "6720",
+            "name": "Apiaceae",
+            "rank": "FAMILY"
+          },
+          {
+            "key": "3034906",
+            "name": "Petroselinum",
+            "rank": "GENUS"
+          },
+          {
+            "key": "7828157",
+            "name": "Petroselinum crispum",
+            "rank": "SPECIES"
+          }
+        ],
+        "diagnostics": {
+          "matchType": "EXACT",
+          "confidence": 97,
+          "timeTaken": 14,
+          "timings": {
+            "nameNRank": 0,
+            "sciNameMatch": 15,
+            "nameParse": 0,
+            "luceneMatch": 15
+          }
+        },
+        "synonym": false,
+        "left": 473129,
+        "right": 473132
+      }
+    },
+    {
+      "id": "nparks",
+      "url": "https://www.nparks.gov.sg/florafaunaweb/flora/5/2/5262",
+      "final_url": "https://www.nparks.gov.sg/florafaunaweb/flora/5/2/5262",
+      "status": 200,
+      "seconds": 12.07,
+      "x_frame_options": null,
+      "csp": null,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 65606,
+      "title": "NParks | Piper nigrum",
+      "headings": [
+        "Piper nigrum",
+        "Piper nigrum",
+        "Piper nigrum",
+        "You may also like",
+        "Flora & Fauna Web"
+      ]
+    },
+    {
+      "id": "icar",
+      "url": "https://spices.res.in/products/spices/cumin.html",
+      "final_url": "https://spices.res.in/products/spices/cumin.html",
+      "status": 200,
+      "seconds": 8.52,
+      "x_frame_options": null,
+      "csp": null,
+      "content_type": "text/html",
+      "bytes": 7659,
+      "title": "Cumin - Cuminum cyminum L. | ICAR-IISR",
+      "headings": [
+        "Cumin"
+      ]
+    },
+    {
+      "id": "plantnet",
+      "url": "https://plantnet.rbgsyd.nsw.gov.au/cgi-bin/NSWfl.pl?lvl=sp&name=Coriandrum~sativum&page=nswfl",
+      "final_url": "https://plantnet.rbgsyd.nsw.gov.au/cgi-bin/NSWfl.pl?lvl=sp&name=Coriandrum~sativum&page=nswfl",
+      "status": 200,
+      "seconds": 4.86,
+      "x_frame_options": null,
+      "csp": null,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 10303,
+      "title": "PlantNET - FloraOnline",
+      "headings": []
+    }
+  ]
+}

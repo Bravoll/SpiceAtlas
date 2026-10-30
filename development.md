@@ -1,96 +1,78 @@
-# v0.6 开发与验收说明
+# v0.7 开发与验收说明
 
-日期：2026-10-29（澳大利亚东部夏令时间）。本地候选，等待用户检验；未 commit、未 push、未部署。仓库已由用户改为公开，此变化不等于应用已上线托管。
+## 2026-10-30：v0.7 公开提交准备
 
-本版基于 0.5 的未提交工作继续修改。上一版完整开发说明保存在 `docs/history/development_v0.5.zh-CN.md`，历史测试与日期不改名冒充当前结果。对外 README 已按可直接随提交使用的产品说明整理，验收流程留在本文件与验证记录。
+用户明确验收并授权 commit／push。仓库保持公开，短名改为 `SpiceAtlas`，展示名为“香料图鉴-SpiceAtlas”。README 改为先简介与用户提供原图，再介绍完整系统，最后说明 v0.7 增量。原长指南移至 `docs/USER_GUIDE.en.md` 与中文版；源码 MIT、中文许可解释及第三方截图署名分别维护。截图只使用所有者最终指定的英文罗勒、简体八角两张，未改默认条目。临时在线取样和拍摄文件不提交。
 
-## 实施范围
 
-### Windows 后台启动
+日期：2026-10-30，第五次审查修订。保留版本 0.7.0；本轮不 commit、不 push、不部署。基于已同步 v0.6 源码 `9e02c9fdaaf6a106e05ed37acfa5928b8640f4d8`。前一次候选说明保存在 `docs/history/development_v0.7_review1.zh-CN.md`，v0.6 记录也保留。
 
-`run.cmd` 只负责定位 pythonw / pyw 并启动 `Start_Atlas.pyw`，随后退出。`desktop/gui.py` 使用标准库 Tk 显示真实阶段：5 环境、15 准备、30 依赖、70 校验、80 目录、88 服务、90 等待就绪、97 浏览器、100 完成。耗时阶段显示忙碌状态；百分比不是下载量或秒数预测。无需管理员权限，不设置开机启动，不更改 PowerShell 执行策略。
+## 第五次审查修订
 
-`desktop/core.py` 优先 `uv sync --frozen`，否则准备虚拟环境并安装锁定 requirements。子进程不经过 shell，Windows 使用 CREATE_NO_WINDOW 和独立进程组；stdout/stderr 持续排空写入时间戳日志，避免管道堵塞。失败保留窗口、日志和未完成进度。可见控制台入口为 `run_console.cmd`。启动窗需要标准 Python 的 Tcl/Tk；缺失时提示回退。
+新增 `update.py`、`scripts/release_support.py`、`scripts/build_patch.py` 和 `scripts/verify_incremental.py`，以远端已确认的 v0.6 为基线生成可校验的小补丁。原目录和所有本地状态保留，失败回退全部步骤；本轮依赖不变，启动同步也保留额外包。完整包同样包含升级入口。
 
-`desktop/win_native.py` 通过 Win32 提供项目级单实例互斥、图标托盘、任务栏重启后恢复和 Job Object。用户关闭进度窗后收起到托盘；无托盘则最小化保留控制窗口。菜单包括打开网页、查看状态、打开日志、停止并退出。只管理本次创建的进程，不根据端口任意结束别的服务。
+`static/nameplates.js` 与 `layout_v07.css` 调整顶部展签、全宽正文、上方章节、右侧 Wiki 与导航对齐；`static/browser_sources.js` 和可选 `browser_helper/` 处理分屏能力。公开图片结果可读时重排为图集并显示关键词；验证或限制仍明确呈现。扩展本轮未安装。
 
-状态探测禁用系统代理，直连 127.0.0.1。API 就绪要求目录哈希与实例 nonce 匹配。托盘退出先发受保护的 `/api/launcher/shutdown`，等待优雅停止，必要时才结束自己持有的子进程；Job 关闭补充清理子进程树。重复启动只打开本目录已有服务，不取得其停止权限。控制密钥只在子进程环境传递，不进入命令行、状态 API、会话文件或日志。常规 console 模式不开放该关闭功能。
+详见 [本轮审查说明](docs/V07_REVIEW5.zh-CN.md)、[升级指南](docs/UPGRADING.zh-CN.md) 与 [路线图](docs/ROADMAP.zh-CN.md)。v0.8／0.9 只记录范围和 push 后提醒，不提前实现。
 
-运行文件位于 `data/launcher/`，已排除 Git 与发行包。原创 SVG 与多尺寸 ICO 放在 `static/`。Linux 可测启动逻辑、身份校验和隐藏进程参数，不能证明 Windows Tk、托盘、DPI 与实际进程退出体验。Windows 补验步骤见下文。
+## 第四次审查修订
 
-### 原站视窗
+对齐已保存的第三次审查包后，继续处理部分连接失败与并发阅读。非 Wiki 正文不再等待 Wiki 语言发现；英文失败仍继续中文搜索，一组中文查询失败不丢弃另一组结果。失败刷新保留以前确认的语言链接，并标记未确认；有 Wikidata 身份冲突时拒绝相关植物的误命中。网页详情及翻译在缓存等待后重新核对阅读代次，返回原文使旧翻译任务失效。
 
-0.5 的“至少 1024 px 再缩小”不再作为默认。默认 responsive 使用实际容器宽度，scale 1；可选 scaled 以当前浏览器宽度取样作整体预览。`ResizeObserver`、窗口 resize 和展开／收回都会重算 iframe 尺寸。
+新增六项后端与六项界面回归；先在旧代码复现，再修复并全量验证。范围及证据见 [第四次修订](docs/V07_REVIEW4.zh-CN.md)。第三次说明已归档为 `docs/history/development_v0.7_review3.zh-CN.md`；本轮未再次探测受限图片站点，也不把旧联网证据当作今日复测。
 
-`frameContainer` 是同一原生 dialog：内嵌时 non-modal，展开时提升到浏览器顶层，宽高为视口减两侧边距，iframe 填满工具栏之外的空间。展开和收回不替换、重挂 iframe 或重写 src，因此保留来源内的查询与滚动。关闭或切换条目／形态仍按正常流程清空旧来源。Esc 在展开状态收回正文。
+## 第三次变更与本轮保留
 
-跨域页面仍自行决定响应式布局和最小宽度。应用不能改写原站 CSS、读其私有内容或绕过 CSP / X-Frame-Options。来源可访问不代表允许嵌入；原站入口始终保留。视图状态允许 frameMode / frameExpanded，旧 frameFit 保持兼容。
+新增 `atlas/wiki_languages.py` 英文锚点、语言映射及独立搜索校验，`atlas/web_sources.py` 专业正文／公开检索／实际 frame 检查，`static/wiki_reader.js` 独立 Wiki 选项及详情导航，`desktop/browser.py` 可靠打开回环网页。`static/text_motion.js` 改用有界真实文本单元，主题即时应用；启动日志增加竖向滚动条。
 
-### 导航与快捷命令
+详见 [第三次修订](docs/V07_REVIEW3.zh-CN.md) 和 [动效调查](docs/MOTION_RESEARCH_v0.7_review3.zh-CN.md)。默认其他来源预算调整为单源 25 秒、整轮 35 秒，保留已有配置。注册表现为 21 组；原 184 条研究的 19 组统计保留为历史。Google SAMEORIGIN、百度验证与实际 API 资格不能由本机强制消除。
 
-返回／前进从随内容滚动的控制移至正文左上角固定悬浮栏。位置根据页首和主栏实际矩形计算，resize 后更新；通知仍在右上角。窄屏目录尚占满页面时不覆盖目录。原有每标签页、每版本最多 60 个阅读快照和分支截断规则保留。
+## 既有实现与本轮保留
 
-`static/interactions.js` 把翻页、随机、图片上／下张、日志／审核加载更多登记为安全命令。R 执行当前命令，页码、查询、范围在执行时取当前状态，不存旧 offset。忙时最多合并一次待执行重复，边界处停下。命令标注当前版本，关闭弹窗后不误用弹窗命令。N/P 是当前目录前／后页，Alt+方向键返回／前进，/ 搜索，? 查看说明，Esc 关闭当前浮层。
 
-单键不抢输入、select、多选、contenteditable、IME 组合或 Ctrl/Meta/Alt 组合。iframe 内按键属于来源。Esc 和阅读返回不承担撤销数据库、设置或收藏的职责。滚动历史持久化去抖 220 ms，pagehide 最后落盘，避免每帧序列化整段历史。
+- `desktop/gui.py` 采用实际控件测量和自适应换行，控制区两列；详情显隐记住分别大小，终端继续显示运行请求。托盘单击显隐、双击打开及 tooltip 保持前一候选语义。
+- `atlas/runtime.py`、`main.py` 提供 SSE 事件；先通知即将暂停，450 ms 后执行内容门禁，随后更新同卡。继续时同实例恢复并要求手动重测，暂停期间允许状态、通知与管理控制。已有外部请求按边界或有界超时结束。
+- `atlas/health.py` 固定 2000 ms 一次发布、600 秒后重测；超时标记未确认，保留旧可用性，首次乐观开启；明确失败才禁用。浏览器结果逐项上报，不扣留快请求，迟到轮次仍拒收。与 v0.6 的阅读流程比较后，自动正文恢复实际 Wiki 映射／请求回退，不拿搜索页替代。
+- `atlas/providers.py` 精选文件先查实时 Commons imageinfo 元数据，关键词为备选，首个有效候选即可呈现；包装筛选独立。正文解析在工作线程，避免闲置预取解析阻塞事件循环。
+- `static/notifications.js` 通用通知队列、1.5 倍感应圈、面板四边外扩、快速点击保护及可中断反向收起；状态轮询补充 SSE。
+- `static/catalogue_navigation.js/css` 四个有界区域、按高度定容量、子集／条目独立分页、区域 sticky 和鼠标驻留控件。低频管理只在设置。[ / ] 和 , / . 分别翻页，可改键。翻页、分类、区域滚动进入阅读操作历史。
+- `atlas/anticipation.py`、`atlas/cache_memory.py`、`static/remote_cache.js` 实现在线操作三列统计、加权深度一预测、资源包字典及访问次数、六次长期留存、第一页／收藏闲置预热。预测载荷只进有界 RAM，用户操作取消旧代次。
+- 保留前候选的终端脱敏、语言／知识源文字动效和“其他来源”流式完整卡片。原 19 组提供方、184 条分层样本、257 个候选链接及指定引擎失败记录未被新修订改写。
 
-### 动效先盘点后实施
+详细设计见 [本轮回归修复](docs/V07_REVIEW_FIXES.zh-CN.md)、[缓存规则](docs/CACHE_DESIGN.zh-CN.md)、[交互盘点](docs/MOTION_DESIGN.zh-CN.md)和[来源调查](docs/SOURCE_RESEARCH_v0.7.zh-CN.md)。目录基线仍为 18,379 条、699 条清洗决定，植物参考不代表食用确认。
 
-完整方案与区域清单见 `docs/MOTION_DESIGN.zh-CN.md`。本次共享浮层进入／退出生命周期，含图片、设置、帮助、阅读抽屉和展开视窗。退出结束前维持 modal，结束后归还焦点；revision 防止旧动画回调关闭新打开的浮层。0 档和系统 reduced motion 结束效果并完成状态，不留下不可关闭窗口。
-
-图片查看器提供上一张、下一张、计数和方向动画。设置固定外框，内容独立滚动；详情保持原生 summary 语义并保留原有输入节点。通知、收藏、选择确认、目录错峰、日志新增行、稳定 ID 列表 FLIP 和 3 档点击墨色反馈纳入同一体系。打印前结束过渡。没有固定 60 FPS JS 绘制循环；120 Hz 需要目标屏幕测量。
-
-### 英文学名显示
-
-审阅基线后发现三处中文注记：Thymus（属）、Cinnamomum（属）、Capsicum（原料属）。`scientific_en` 增加英文显示副本，规范括号和 genus 等注记。原始 scientific、条目 ID、检索身份及清洗证据不改写。英文目录、展签及身份卡使用显示副本，中文保留原始资料。
-
-### README 与版本说明
-
-`README.en.md`、`README.zh-CN.md` 为两份完整语言指南；`python scripts/build_readme.py` 生成默认 README，全文英文在前、中文在后。修改时编辑独立语言文件再生成首页。CHANGELOG 按新增、修改、修复维护，0.6 为 Unreleased；过去的本地包不追造 Git 标签或 Release。开发文档、历史及决策记录用中文维护。
-
-作者身份与项目源码许可证仍由所有者决定，不自动指定 MIT 等授权。公开可见不等于开源授权。第三方文字、图像、音频及依赖来源声明单独维护。
-
-## 数据与打包
-
-基线仍有 18,379 条：92 个材料／混合物候选（含 13 个展签），18,287 个植物分类参考。审核档案 699 条：392 排除、101 待定、206 合并。0.6 没有将所有植物重新判定为香料，也没有声称完成成分、菜系、包装等全库事实审核。
-
-源目录 cutoff 为 2026-10-27T04:34:04Z，实体证据与清洗为 2026-10-28。Git 使用可校验 gzip 种子；ZIP 使用一致性 SQLite backup，包含 desktop、图标、图形／控制台入口、双语文档及测试。排除虚拟环境、个人版本、配置密钥、运行日志、缓存、在线正文与照片。已有未知临时文件不删除、不打包。
-
-## 可复现检查
+## 检查与打包
 
 ```bash
 uv sync --frozen
 uv run python -m unittest discover -s tests -q
-node --check static/app.js
-node --check static/experience.js
-node --check static/interactions.js
-npm ci
 npm run test:ui
-python scripts/build_readme.py
-python scripts/build_release.py
-python scripts/verify_release.py ../Spice_Atlas_Local_v0.6.zip
+uv run python scripts/build_readme.py
+uv run python scripts/build_release.py
+uv run python scripts/verify_release.py ../Spice_Atlas_Local_v0.7.zip
 ```
 
-Node 是可选开发工具；生产仍为 Python。无本地 Node 依赖时可设置 SPICE_LINKEDOM_PATH 指向已安装 LinkeDOM。三个 DOM 套件覆盖目录与版本、阅读体验、浮层与命令生命周期；它们是结构和行为检查，不是原生 Windows 或真实高刷新率测试。
+Node 仅供可选检查；未在项目安装 node_modules 时可用 SPICE_LINKEDOM_PATH 指向 LinkeDOM。当前测试数量、真实浏览器尺寸及实际包验收以 `data/verification_v07.json` 和包外验收报告为准，不能将计划检查当成已通过。
 
-浏览器使用 Sites managed preview，按 package.json 的 dev 指令运行明确标为 synthetic 的 QA 夹具。原站尺寸与输入保留测试使用合成本地页，不能当作真实 Bing 或 Google 的嵌入承诺。生产 Python API 和新解压目录 smoke 单独验证。最终数量、测量和限制见 `data/verification_v06.json`。
+浏览器使用明确标记的合成百科预览，独立测量 1100×820、1000×620、1000×500 与窄屏 680×820 容器；检查完整条目、常驻范围、翻页按钮和通知。真实 Wiki 正文／Commons 图片读取另存 `data/source_research/live_reading_revision_v07.json`，仅摘要、不随包分发正文或图片。
 
-`verify_release.py` 检查 ZIP CRC、目录边界、Windows CRLF、启动文件、SQLite 完整性及中英首页顺序；在临时解压目录建立全新工作版本，进行 TestClient 首次启动与实际 uvicorn 本地 HTTP 就绪／受保护退出检查。该隔离检查禁用外站诊断，不使用个人密钥。QA 样本包含前五页植物参考及初始目录，未知样本明确报错，不再回退为欧芹；图库样本也不将欧芹照片用于其他条目。
+发行验收在隔离新目录检查 CRC、安全路径、无个人版本／密钥、SQLite 完整性与条数、README 组成和全部新增资产；实际启动受控本地 HTTP 进程，验证暂停前 SSE 到达而门禁未关、暂停后 503 和通知可关闭、继续同实例并等待手动诊断、受保护停止及正常进程退出。
 
-## 本机验收顺序
+## 本轮检查补充
 
-1. 将新 ZIP 解压到新目录，保留旧目录备份。Windows 双击 run.cmd，确认依赖阶段有进度，CMD 不需常驻；初次下载时可打开详细日志。
-2. 页面就绪后关闭启动窗，确认托盘仍可重新打开页面和日志；再次双击启动不产生同目录第二个服务。选择“停止服务并退出”，确认网页服务停止，托盘消失。
-3. 分别试依赖安装失败、Tcl/Tk 缺失回退、8765 已占用，以及启动中点击停止；确认没有误杀其他进程或无提示地卡住。首次安装需联网。
-4. 图片源切到允许嵌入的来源；默认实际宽度、缩放预览、展开／收回分别观察。先在原站输入，再展开／收回，检查查询不丢失。第三方拒绝嵌入时使用原站链接。
-5. 正文滚动后仍能用左上角返回／前进。目录点击下一页，再用 R、N/P；输入搜索时这些字母应正常输入，IME 期间不跳页。
-6. 3 档下检查图片打开／退出、左右翻图、设置标签、帮助、详情、通知和列表排序；切 0 档或系统减少动态效果，功能即时可用。
-7. 英文目录检查 Thyme / Cinnamon / Paprika 的学名备注；对比完整中英 README、来源和许可链接。
+`tests/test_v07_review3.py` 覆盖语言关联、无关联搜索校验、GBIF v2/v1、代理 DNS／私网防护、PlantNET 目标识别、真实 framing 检测及 Windows Shell／就绪后打开。`tests/reading_review3_acceptance.cjs` 覆盖文字和表格语义、主题同步生效、语言竞态、加载后滚动、首页重置及检索详情返回／前进。
 
-## 保留边界与发布门槛
+真实浏览器受控延迟时，正文提交前后都停留在 1229 px；实际联网读取摘要在 `live_readers_v07_review3.json`，不将合成 API 当作真实来源。
 
-用户 LM Studio、个人 Google/Azure 凭据、Windows 原生桌面、语音包可听输出和 120 Hz 屏幕没有由 Linux 环境替代验证。全文翻译、全库人工烹饪知识审核、视频生成、完整作者／许可页和 GitHub 自动更新仍未实施。
+## Windows 本机重点验收
 
-先完成检查并交付候选包。**用户明确验收并允许前，不 commit、不 push、不部署、不创建 GitHub Release。** 获准提交后应核对文件范围与验证记录，不将个人运行数据或密钥加入仓库。
+1. 完整解压新目录，双击启动，检查自动打开默认浏览器、两排控制均完整、换行及 DPI 缩放不裁切；同一按钮展开／隐藏日志，右侧滚动条和“跳到最新”可用，后续请求继续输出。保持日志不含凭据。
+2. 托盘悬停名称、单击显隐、双击开网页及右键暂停／继续／退出。关闭窗口保留服务，停止只终止自己创建的实例。
+3. 暂停前先收到通知，暂停后同卡更新；继续另发通知，点击重测才恢复诊断轮次。进程和端口不变。
+4. 铃铛扩大感应圈，面板四边缓冲，移开反向收起；迅速靠近点击不误删。连续关闭保持按钮原位。
+5. 改变浏览器高度，左栏条目不出界；悬停连续翻页和两组自定义按键正确。查看缓存三列表、六次留存、收藏预热与版本复制。
+6. 3 档词／单字过渡、局部主题光晕、下拉及弹窗进出和反复中断；0 档及系统减少动态效果无残留。其他来源卡片逐张完成、独立阅读、停止和换条目不串页。
 
-界面测试夹具在 Git 中采用 `tests/ui_fixtures.json.gz` 无损压缩保存，`fixture_service.cjs` 用 Node 标准库解压，仍兼容旧包中的 JSON。`tests/export_ui_fixture.py` 默认生成压缩夹具，也可显式传入 JSON 输出路径。此调整用于减小源码同步请求，不改变测试资料或应用行为。
+Linux 检查不能代替 Windows 原生视觉、设备音频或 120 Hz 实测。个人 LM Studio／Google／Azure 凭据未连接；第三方嵌入权限、站点可达性仍按实际网络显示。多风格预设及其调查继续暂缓；源码已采用 MIT，项目公开介绍与截图见 README；应用内完整作者 About 与 GitHub 自动下载更新器另列后续。
+
+本版先打包供审查；此次没有提交／推送授权。

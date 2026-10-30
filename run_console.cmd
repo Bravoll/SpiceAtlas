@@ -3,9 +3,9 @@ setlocal
 cd /d "%~dp0"
 where uv >nul 2>nul
 if errorlevel 1 goto python_setup
-uv sync --frozen
+uv sync --frozen --inexact
 if errorlevel 1 goto failed
-uv run python launch.py
+uv run --no-sync python launch.py
 goto finished
 :python_setup
 if exist .venv\Scripts\python.exe goto install

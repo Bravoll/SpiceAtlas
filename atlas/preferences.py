@@ -12,11 +12,15 @@ DEFAULTS={
  'translation_provider':'local','excluded_languages':[],'lm_enabled':False,
  'lm_base_url':'http://127.0.0.1:1234/v1','lm_model':'','lm_api_key':'',
  'google_translate_key':'','azure_translate_key':'','azure_region':'',
- 'google_api_key':'','google_cse_id':'','user_agent':'SpiceAtlas/0.6 (local botanical reference reader)',
+ 'google_api_key':'','google_cse_id':'','user_agent':'SpiceAtlas/0.7 (local botanical reference reader)',
  'proxy_url':'','trust_env':True,'timeout_seconds':25,'live_first':True,'image_mode':'direct',
  'browser_images':True,'appearance':'light','history_order':'recent',
  'reader_font_size':17,'reader_line_height':1.85,'reader_font':'serif','animation_level':2,
  'startup_mode':'resume','random_scope':'culinary',
+ 'name_chinese_style':'botanical','name_western_style':'book',
+ 'shortcuts':{'tree_previous':'[','tree_next':']','entry_previous':',','entry_next':'.'},
+ 'prefetch_enabled':True,'cache_weight_history':0.2,'cache_weight_session':0.3,'cache_weight_recent':0.5,'cache_session_threshold':30,'cache_promote_hits':6,
+ 'other_source_timeout':25,'other_total_timeout':35,'other_max_cards':6,'other_search_enabled':True,
 }
 ENV={'lm_base_url':'LM_BASE_URL','lm_model':'LM_MODEL','lm_api_key':'LM_API_KEY','google_api_key':'GOOGLE_API_KEY',
  'google_cse_id':'GOOGLE_CSE_ID','user_agent':'SPICE_USER_AGENT','proxy_url':'SPICE_PROXY_URL',
@@ -58,17 +62,28 @@ class Preferences:
    if key in ('ui_language','content_language','translation_language'):
     if value=='zh':value='zh-Hans'
     if value not in (TRANSLATION_LANGUAGES if key=='translation_language' else LANGUAGES):raise ValueError('Unsupported language')
-   elif key in ('auto_translate','trust_env','live_first','browser_images','lm_enabled'):
+   elif key in ('auto_translate','trust_env','live_first','browser_images','lm_enabled','other_search_enabled','prefetch_enabled'):
     if not isinstance(value,bool):raise ValueError(key+' must be boolean')
+   elif key=='shortcuts':
+    if not isinstance(value,dict) or set(value)!=set(DEFAULTS['shortcuts']):raise ValueError('Provide all four catalogue shortcuts')
+    value={k:str(v).lower() for k,v in value.items()}
+    if len(set(value.values()))!=4 or any(len(v)!=1 or not 33<=ord(v)<=126 or v in {'?','/','r'} for v in value.values()):raise ValueError('Shortcuts must be four distinct ASCII letters or punctuation; R, / and ? are reserved')
+   elif key in {'cache_weight_history','cache_weight_session','cache_weight_recent'}:
+    if not isinstance(value,(int,float)) or isinstance(value,bool) or not 0<=value<=1:raise ValueError('Cache weights must be between 0 and 1')
+   elif key in {'cache_session_threshold','cache_promote_hits'}:
+    low,high=(5,500) if key=='cache_session_threshold' else (2,100)
+    if not isinstance(value,int) or isinstance(value,bool) or not low<=value<=high:raise ValueError('Unsupported '+key)
    elif key=='excluded_languages':
     if not isinstance(value,list) or len(value)>40 or any(x not in (TRANSLATION_LANGUAGES|{'zh'})-{'auto'} for x in value):raise ValueError('Unsupported excluded language')
     value=list(dict.fromkeys(value))
    elif key=='timeout_seconds':
     if not isinstance(value,(int,float)) or isinstance(value,bool) or not 5<=value<=120:raise ValueError('Timeout must be 5–120 seconds')
-   elif key in ('reader_font_size','reader_line_height','animation_level'):
-    low,high={'reader_font_size':(14,28),'reader_line_height':(1.5,2.3),'animation_level':(0,3)}[key]
+   elif key in ('reader_font_size','reader_line_height','animation_level','other_source_timeout','other_total_timeout','other_max_cards'):
+    low,high={'reader_font_size':(14,28),'reader_line_height':(1.5,2.3),'animation_level':(0,3),'other_source_timeout':(1,30),'other_total_timeout':(2,60),'other_max_cards':(1,12)}[key]
     if not isinstance(value,(int,float)) or isinstance(value,bool) or not low<=value<=high:raise ValueError('Unsupported '+key)
-    if key in {'reader_font_size','animation_level'} and value!=int(value):raise ValueError(key+' must be an integer')
+    if key in {'reader_font_size','animation_level','other_max_cards'} and value!=int(value):raise ValueError(key+' must be an integer')
+   elif key in ('name_chinese_style','name_western_style'):
+    if value not in ({'botanical','scroll'} if key=='name_chinese_style' else {'book','inscription'}):raise ValueError('Unsupported name typography')
    elif key in ('image_mode','translation_provider','appearance','history_order','reader_font','startup_mode','random_scope'):
     options={'image_mode':{'direct','proxy'},'translation_provider':{'local','google','azure','off'},'appearance':{'light','dark'},'history_order':{'recent','custom'},'reader_font':{'serif','sans','kai'},'startup_mode':{'resume','basil','random'},'random_scope':{'culinary','botanical','all'}}
     if value not in options[key]:raise ValueError('Unsupported '+key)
@@ -81,6 +96,7 @@ class Preferences:
     if p.scheme not in {'http','https','socks5','socks5h'} or not p.hostname or p.username or p.password:raise ValueError('Invalid proxy URL')
    elif not isinstance(value,str):raise ValueError(key+' must be text')
    current[key]=value
+  if sum(current[k] for k in ('cache_weight_history','cache_weight_session','cache_weight_recent'))<=0:raise ValueError('At least one cache weight must be positive')
   for field in SECRET_FIELDS:
    if patch.get('clear_'+field):current[field]=''
   if old!=(current['lm_base_url'],current['lm_api_key'],current['lm_model']):current.pop('model_test',None)

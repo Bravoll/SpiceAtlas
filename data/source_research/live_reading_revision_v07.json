@@ -1,0 +1,37 @@
+{
+  "tested_at": "2026-10-29T08:25:32+00:00",
+  "article_bodies_retained": false,
+  "results": [
+    {
+      "kind": "article",
+      "ok": true,
+      "mode": "article",
+      "source": "enwiki",
+      "title": "Parsley",
+      "revision_id": 1380990209,
+      "source_url": "https://en.wikipedia.org/wiki/Parsley",
+      "html_characters": 72551,
+      "headings": 13,
+      "false_probe_override_tested": true
+    },
+    {
+      "kind": "images",
+      "ok": true,
+      "images": 0,
+      "source_urls": [],
+      "licenses": []
+    },
+    {
+      "kind": "images_full_pipeline",
+      "ok": true,
+      "images": 1,
+      "source_urls": [
+        "https://commons.wikimedia.org/wiki/File:Parsley_Dried.JPG"
+      ],
+      "licenses": [
+        "Public domain"
+      ],
+      "retrieval": "Live exact-file metadata first, then keyword candidates; first usable result ends the foreground wait"
+    }
+  ]
+}

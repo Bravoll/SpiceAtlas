@@ -125,6 +125,9 @@ class Reader:
 
     async def article(self,entry_id,source="auto",refresh=False,preferred="zh"):
         item=entry_for(entry_id)
+        from .wiki_languages import cached_mapping,mapped_entry,resolve_languages
+        info=cached_mapping(item,self.store)
+        if info:item=mapped_entry(item,info)
         wanted=("enwiki" if preferred=="en" else "zhwiki") if source=="auto" else source
         missing_wanted=wanted in WIKIS and not item.get("wiki",{}).get(wanted)
         if source in {"auto","zhwiki","enwiki"} and (not item.get("wiki") or not item.get("sources_resolved") and item.get("review_state")!="curated" or refresh and missing_wanted):
@@ -132,9 +135,11 @@ class Reader:
         resolution=item.get("resolution_error")
         if source in {"auto","zhwiki","enwiki"} and resolution and not item.get("wiki"):
             raise SourceError("来源映射尚未完成，不能确认条目是否存在；请先检查连接。",code=resolution.get("code","network_error"),status=resolution.get("http_status"),host=resolution.get("host"),excerpt=resolution.get("response_excerpt",""))
+        if source in {"auto","zhwiki","enwiki"} and not item.get("wiki",{}).get(wanted):
+            item=mapped_entry(item,await resolve_languages(item,self.store,refresh))
         if source=="auto":
             first="enwiki" if preferred=="en" else "zhwiki"
-            order=[s for s in [first,"zhwiki" if first=="enwiki" else "enwiki"] if item.get("wiki",{}).get(s) and available(s,health.report())]
+            order=[s for s in [first,"zhwiki" if first=="enwiki" else "enwiki"] if item.get("wiki",{}).get(s)]
             if not order:
                 return {"mode":"unavailable","source":"auto","title":item["name"],"source_url":item.get("references",{}).get("gbif",{}).get("url",source_url(item,"enwiki")),
                         "message":"尚未找到可核实的维基对应条目。可查看植物分类来源或搜索更多资料。","reason":"no_article","language":None}
@@ -172,7 +177,7 @@ class Reader:
             try:
                 data=await request_json(WIKIS[source]+"/w/api.php",{"action":"parse","page":item["wiki"][source],"redirects":1,"prop":"text|tocdata|images|revid|displaytitle","variant":ARTICLE_VARIANT.get() if source=="zhwiki" else "en","disableeditsection":1,"format":"json","formatversion":2,"maxlag":5})
                 if "parse" not in data:raise SourceError("来源没有正文。",code="not_found")
-                value=self.parse_article(item,source,data["parse"])
+                value=await asyncio.to_thread(self.parse_article,item,source,data["parse"])
                 self.store.put(key,value,900)
                 return {**value,"delivery":"live"}
             except SourceError as exc:
@@ -201,6 +206,10 @@ class Reader:
 
     def commons_plans(self,item,form,profile=None):
         selected=lexicon.form(item,form,profile);base=self.commons_params(item,form,profile);plans=[]
+        if selected.get('preferred_images'):
+            exact={k:v for k,v in base.items() if k not in {'generator','gsrnamespace','gsrlimit','gsrsearch'}}
+            exact.update(titles='|'.join('File:'+title.removeprefix('File:') for title in selected['preferred_images'][:4]),redirects=1)
+            plans.append(exact)
         for query in lexicon.queries(item,selected)["queries"]:
             value=dict(base)
             if "gsrsearch" in value:value["gsrsearch"]=query+" filetype:bitmap"
@@ -255,7 +264,8 @@ class Reader:
                 pages=[]
                 for params in self.commons_plans(item,form,profile):
                     raw=await request_json("https://commons.wikimedia.org/w/api.php",params);pages.extend(raw.get("query",{}).get("pages",[]))
-                    if len(pages)>=12:break
+                    partial={page.get('pageid',page.get('title')):page for page in pages}
+                    if self.normalize_images(item,form,{'query':{'pages':list(partial.values())}},profile)['images']:break
                 unique={page.get("pageid",page.get("title")):page for page in pages}
                 value=self.normalize_images(item,form,{"query":{"pages":list(unique.values())}},profile)
             else:
@@ -356,20 +366,5 @@ class Reader:
 
 async def frame_capability(entry,provider,form=None,url=None):
     if provider not in {"bing","google","baidu"}:raise SourceError("Unsupported frame source",code="not_found")
-    url=url or outbound_images(entry,form)[provider]
-    if provider=="google":
-        return {"url":url,"can_try":False,"reason":"Google 搜索页的 SAMEORIGIN 策略通常禁止本站内嵌。 / Google search normally blocks third-party frames."}
-    if provider=="baidu":
-        return {"url":url,"can_try":False,"reason":"百度可能跳转验证或登录页，本站不绕过这些限制。请在原站查看。 / Baidu may require verification; open the original site."}
-    options=client_options(10);options["headers"]["Accept"]="text/html"
-    try:
-        async with httpx.AsyncClient(**options) as client:
-            response=await client.get(url)
-        policy=response.headers.get("x-frame-options","").upper()
-        csp=response.headers.get("content-security-policy","")
-        restricted=policy in {"DENY","SAMEORIGIN"} or "frame-ancestors" in csp.lower()
-        allowed=response.status_code==200 and not restricted
-        return {"url":url,"can_try":allowed,"http_status":response.status_code,"x_frame_options":policy,
-                "reason":"当前响应未声明禁止内嵌，可尝试来源视窗；浏览器或地区策略仍可能不同。 / No blocking frame header observed; browser policy may still differ." if allowed else "原站限制或网络响应阻止内嵌；可以打开原站。 / The source or network prevents embedding."}
-    except httpx.HTTPError:
-        return {"url":url,"can_try":False,"reason":"无法确认来源的嵌入条件，请打开原站。 / Could not verify framing; open the original site."}
+    from .web_sources import frame_check
+    return await frame_check(url or outbound_images(entry,form)[provider])

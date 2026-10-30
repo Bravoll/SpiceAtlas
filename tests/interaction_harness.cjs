@@ -3,9 +3,9 @@ const fs=require('node:fs'),path=require('node:path'),vm=require('node:vm');
 const {parseHTML}=require(process.env.SPICE_LINKEDOM_PATH||'linkedom'),{createFixture}=require('./fixture_service.cjs');
 const root=path.resolve(__dirname,'..'),delay=ms=>new Promise(resolve=>setTimeout(resolve,ms));
 async function until(check,label){for(let i=0;i<350;i++){if(check())return;await delay(10);}throw new Error('Timed out: '+label);}
-function boot(){
+function boot(options={}){
  const base=createFixture(root),storage=new Map(),motion={auto:true,effects:[]};
- const fixture={requests:base.requests,get prefs(){return base.prefs;},respond(url,options){
+ const fixture={requests:base.requests,get prefs(){return base.prefs;},changeHealth(){base.changeHealth();},respond(url,options){
   const result=base.respond(url,options),u=new URL(url,'http://127.0.0.1');
   if(u.pathname==='/api/catalog'){
    const offset=Number(u.searchParams.get('offset')||0),total=125,scope=u.searchParams.get('scope')||'all';
@@ -30,8 +30,8 @@ function boot(){
  window.innerWidth=1363;window.innerHeight=936;window.scrollY=0;window.scrollTo=()=>{};window.matchMedia=()=>({matches:false,addEventListener(){}});window.getComputedStyle=()=>({paddingLeft:'54px',position:'static'});
  const viewport=document.getElementById('frameViewport');Object.defineProperty(viewport,'clientWidth',{configurable:true,get(){return document.getElementById('frameContainer').dataset.expanded==='true'?1328:420;}});Object.defineProperty(viewport,'clientHeight',{configurable:true,get(){return 700;}});
  const history={state:null,replaceState(value){this.state=value;},pushState(value){this.state=value;}};
- const ctx=vm.createContext({window,document,fetch:async(url,options)=>({ok:true,status:200,json:async()=>fixture.respond(url,options)}),navigator:{languages:['en-GB'],language:'en-GB'},location:{href:'http://127.0.0.1:8765/',search:'',reload(){}},history,sessionStorage:{getItem:k=>storage.get(k)||null,setItem:(k,v)=>storage.set(k,v),removeItem:k=>storage.delete(k)},URL,URLSearchParams,AbortController,setTimeout,clearTimeout,setInterval:()=>0,clearInterval(){},requestAnimationFrame:cb=>setTimeout(cb,0),console});
- for(const file of ['i18n.js','ui_strings.js','interactions.js','experience.js','app.js'])vm.runInContext(fs.readFileSync(path.join(root,'static',file),'utf8'),ctx);
+ const ctx=vm.createContext({window,document,fetch:async(url,request)=>options.fetch?options.fetch(url,request,fixture):({ok:true,status:200,json:async()=>fixture.respond(url,request)}),navigator:{languages:['en-GB'],language:'en-GB'},location:{href:'http://127.0.0.1:8765/',search:'',reload(){}},history,sessionStorage:{getItem:k=>storage.get(k)||null,setItem:(k,v)=>storage.set(k,v),removeItem:k=>storage.delete(k)},URL,URLSearchParams,AbortController,TextDecoder,TextEncoder,ReadableStream,setTimeout,clearTimeout,setInterval:()=>0,clearInterval(){},requestAnimationFrame:cb=>setTimeout(cb,0),console});
+ for(const file of ['i18n.js','ui_strings.js','interactions.js','experience.js','notifications.js','text_motion.js','source_board.js','catalogue_navigation.js','remote_cache.js','wiki_reader.js','nameplates.js','browser_sources.js','app.js'])vm.runInContext(fs.readFileSync(path.join(root,'static',file),'utf8'),ctx);
  return {ctx,window,document,fixture,motion,storage,el:id=>document.getElementById(id),run:code=>vm.runInContext(code,ctx),click(id){document.getElementById(id).click();},key(key,target=document.body,options={}){const e=new window.Event('keydown',{bubbles:true,cancelable:true});Object.assign(e,{key,altKey:false,ctrlKey:false,metaKey:false,shiftKey:false,isComposing:false,...options});target.dispatchEvent(e);return e;}};
 }
 module.exports={boot,until,delay};

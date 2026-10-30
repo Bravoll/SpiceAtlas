@@ -1,0 +1,38 @@
+{
+  "requests": 3,
+  "article_bodies_saved": false,
+  "results": [
+    {
+      "engine": "bing",
+      "query": "Petroselinum crispum",
+      "search_url": "https://www.bing.com/search?mkt=en-US&setlang=en&count=10&first=1&q=Petroselinum+crispum",
+      "page": 1,
+      "status": "no_extractable_results",
+      "http_status": 200,
+      "seconds": 4.22,
+      "result_count": 0,
+      "sample_results": []
+    },
+    {
+      "engine": "google",
+      "query": "Petroselinum crispum",
+      "search_url": "https://www.google.com/search?hl=en&num=10&q=Petroselinum+crispum",
+      "page": 1,
+      "status": "timeout",
+      "seconds": 10.02,
+      "result_count": 0,
+      "sample_results": []
+    },
+    {
+      "engine": "bing_cn",
+      "query": "欧芹",
+      "search_url": "https://cn.bing.com/search?mkt=zh-CN&setlang=zh-Hans&count=10&first=1&q=%E6%AC%A7%E8%8A%B9",
+      "page": 1,
+      "status": "http_error",
+      "http_status": 301,
+      "seconds": 4.47,
+      "result_count": 0,
+      "sample_results": []
+    }
+  ]
+}

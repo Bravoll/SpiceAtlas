@@ -2,7 +2,7 @@
 
 English · [简体中文](CONTENT_LICENSES.zh-CN.md)
 
-The release contains catalogue metadata, cleaning decisions and structured Wikidata evidence. It does not redistribute encyclopedia article snapshots or downloaded photographs. Research extracts are excluded; their source URLs, timestamps and revision/history links are retained. Retrieved texts, images and translations remain subject to their own terms.
+The release contains catalogue metadata, cleaning decisions and structured Wikidata evidence. It does not redistribute encyclopedia article snapshots or standalone downloaded photographs; the README includes two attributed interface screenshots containing Commons photographs. Research extracts are excluded; their source URLs, timestamps and revision/history links are retained. Retrieved texts, images and translations remain subject to their own terms.
 
 ## Wikipedia text and categories
 
@@ -13,6 +13,12 @@ Wikipedia text generally uses CC BY-SA, subject to the original page and applica
 - [Wikimedia Terms of Use](https://foundation.wikimedia.org/wiki/Policy:Terms_of_Use)
 - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
 - [Categorymembers API](https://www.mediawiki.org/wiki/API:Categorymembers)
+
+## Other-source reader and research index
+
+The optional reader uses public Wikispecies / Wikibooks Action APIs, compatible GBIF v1 name-match metadata, and bounded HTML reads from a reviewed host registry. A website without a documented API is identified as an HTML adapter, not advertised as an official API. Third-party HTML keeps its original source link and terms; live retrieval does not supply a republication licence. Research files contain query records and candidate metadata, not full article bodies. Search-service results are distinguished from direct named-engine requests; temporary URL session suffixes are removed. Names matched in text do not establish accepted taxonomy or edible use.
+
+Wikispecies and Wikibooks cards retain source/revision and CC BY-SA links. GBIF cards identify their compatible v1/legacy name-match basis and point to the source. Generic readers remove active content and article images, but the original provider's terms still apply.
 
 ## Wikidata
 
@@ -77,8 +83,16 @@ Google Cloud Translation and Azure AI Translator have their own credentials, quo
 - [Google pricing](https://cloud.google.com/products/translate/pricing)
 - [Azure Translator API](https://learn.microsoft.com/en-us/azure/ai-services/translator/text-translation/reference/v3/translate)
 
-This notice describes third-party provenance. It is not a source-code licence. Full author credits, nonprofit-purpose wording and a project licence remain to be chosen by the owner; this release does not invent an author identity or grant an unsolicited open-source licence.
+Original project code, icons and original documentation use [MIT](LICENSE), copyright 2026 Bravoll. See the [Chinese explanation](LICENSE.zh-CN.md). Third-party content retains its own terms. Educational purpose adds no noncommercial restriction to MIT.
+
+README screenshots supplied by the project owner preserve photo credits. Their Commons photographs have separate CC BY-SA 4.0 terms; see [screenshot attribution](docs/screenshots/README.md). Third-party photographs are not relicensed as MIT.
 
 ## Application icon
 
 `static/atlas-icon.svg` and its multi-resolution ICO are original project artwork, drawn in code for the Windows launcher and page favicon. They contain no third-party photograph. Their project licence status follows the source code; this notice does not grant a new licence.
+
+## Local cache retention
+
+User workspaces can retain fetched articles, cloud translations and image metadata after repeated use or idle warming. Original source/revision, fetch time, links and supplied licences remain attached. Predicted payloads stay in RAM; runtime caches and operation statistics are excluded from portable releases. Retention and API delivery grant no additional reuse rights.
+
+The review-3 public search reader displays labelled result metadata and links; reviewed HTML is sanitized before rendering. Public image-result metadata keeps original file-page links and does not assert a free licence. Frame restrictions and verification are respected, without stripping security headers or proxying active provider pages. Wikidata name tables retain CC0 attribution; GBIF v2 and v1 responses retain their source dataset terms.

@@ -10,6 +10,7 @@ from bs4 import BeautifulSoup
 
 from .preferences import preferences
 from .storage import now_iso
+from .runtime import runtime,event
 
 GATE = asyncio.Semaphore(1)
 EVENTS = deque(maxlen=80)
@@ -35,6 +36,8 @@ def client_options(timeout=None):
 
 async def fetch_json(url, params=None, *, timeout=None, headers=None, gate=None):
     host = urlsplit(url).hostname
+    if runtime.paused:raise SourceFailure('Service paused',code='service_paused',host=host)
+    event('source.request',host=host,path=urlsplit(url).path)
     options = client_options(timeout)
     if headers:
         options["headers"].update(headers)
@@ -44,8 +47,10 @@ async def fetch_json(url, params=None, *, timeout=None, headers=None, gate=None)
                 response = await client.get(url, params=params)
                 if response.status_code in (429, 503):
                     await asyncio.sleep(2)
+                    if runtime.paused:raise SourceFailure('Service paused',code='service_paused',host=host)
                     response = await client.get(url, params=params)
         EVENTS.append({"at": now_iso(), "host": host, "status": response.status_code})
+        event('source.response',host=host,status=response.status_code)
         if response.status_code >= 400:
             excerpt = BeautifulSoup(response.text[:4000], "html.parser").get_text(" ", strip=True)[:240]
             code = {403:"forbidden",404:"not_found",429:"rate_limited",503:"busy"}.get(response.status_code,"http_error")

@@ -1,6 +1,6 @@
-"""Runtime-only provider availability; stored, manually dismissed change notices."""
+"""Two-second diagnostic rounds. Publish once; reject all late browser results."""
 from __future__ import annotations
-import asyncio,copy,time
+import asyncio,copy,time,uuid
 from urllib.parse import urlsplit
 import httpx
 from .activity import activity
@@ -9,6 +9,7 @@ from .preferences import preferences
 from .storage import now_iso
 from .network import client_options
 from .translations import cloud_translate
+from .runtime import runtime,event
 BROWSER_PROBES=[
  {'id':'zhwiki','url':'https://zh.wikipedia.org/w/api.php','params':{'action':'parse','page':'歐芹','redirects':1,'prop':'revid','format':'json','origin':'*'}},
  {'id':'enwiki','url':'https://en.wikipedia.org/w/api.php','params':{'action':'parse','page':'Parsley','redirects':1,'prop':'revid','format':'json','origin':'*'}},
@@ -16,33 +17,62 @@ BROWSER_PROBES=[
 ]
 class Health:
  interval=600
- def __init__(self):self.reports={};self.tasks={};self.browser={};self.loop_task=None;self.wakeup=None
- def report(self):return copy.deepcopy(self.reports.get(workspaces.current_id,{'phase':'checking','revision':0,'services':{},'interval_seconds':self.interval,'sample':'欧芹 / Parsley'}))
- def publish(self,rows):
+ def __init__(self,budget_ms=2000):
+  self.budget_ms=budget_ms;self.reports={};self.tasks={};self.browser={};self.rounds={};self.next_due={};self.activated=set();self.loop_task=None;self.wakeup=None
+ def report(self):
+  key=workspaces.current_id
+  value=copy.deepcopy(self.reports.get(key,{'phase':'checking','revision':0,'services':{},'completed_rounds':0,'initial':True}))
+  current=self.rounds.get(key);active=bool(current and current['active'])
+  value.update(interval_seconds=self.interval,sample='欧芹 / Parsley',budget_ms=self.budget_ms,paused=runtime.paused,needs_retest=runtime.needs_retest)
+  if runtime.needs_retest:value['phase']='awaiting_retest'
+  if current:
+   value.update(round_id=current['id'],remaining_ms=max(0,int((current['deadline']-time.monotonic())*1000)) if active else 0)
+  else:value.update(round_id=None,remaining_ms=0)
+  if active:value['phase']='checking'
+  value['next_check_in_ms']=max(0,int((self.next_due.get(key,time.monotonic())-time.monotonic())*1000))
+  return value
+ def publish(self,rows,browser_rows=None,round_id=None):
   key=workspaces.current_id;previous=self.reports.get(key);services={};changed=[]
+  others=[row for row in rows if row['id'].startswith('other_') and row['id']!='other_sources']
+  if others:
+   aggregate=True if any(row.get('ok') is True for row in others) else False if all(row.get('ok') is False for row in others) else None
+   rows=[*[row for row in rows if row['id']!='other_sources'],{'id':'other_sources','kind':'function','ok':aggregate,'message':'Availability of reviewed knowledge providers; a timeout is inconclusive'}]
   for item in rows:
-   row=dict(item);service=row['id'];row.setdefault('backend_ok',bool(row.get('ok')))
-   browser=self.browser.get((key,service))
-   if browser and time.time()-browser['at']<=self.interval+120:row.update(browser_ok=browser['ok'],browser_checked_at=browser['checked_at'])
+   row=dict(item);service=row['id'];row.setdefault('backend_ok',row.get('ok'))
+   browser=(browser_rows or {}).get(service)
+   if browser is not None:row.update(browser_ok=browser['ok'],browser_checked_at=browser['checked_at'])
    else:row.pop('browser_ok',None);row.pop('browser_checked_at',None)
-   row['ok']=bool(row['backend_ok'] or row.get('browser_ok'));services[service]=row
+   paths=[row['backend_ok']]
+   if service in {'zhwiki','enwiki','commons'}:paths.append(row.get('browser_ok'))
+   resolved=True if True in paths else False if all(value is False for value in paths) else None
    old=(previous or {}).get('services',{}).get(service)
-   if old and old['ok']!=row['ok'] or not old and not row['ok']:changed.append({'service':service,'before':old['ok'] if old else None,'now':row['ok'],'http_status':row.get('http_status'),'message':row.get('message','')})
-  # Do not create a second "initial failure" notice when only browser probes finished first.
-  if previous and previous.get('phase')=='checking':
-   changed=[{'service':k,'before':None,'now':v['ok'],'http_status':v.get('http_status'),'message':v.get('message','')} for k,v in services.items() if not v['ok']]
+   row['status']='available' if resolved is True else 'unavailable' if resolved is False else 'unconfirmed'
+   row['ok']=resolved if resolved is not None else (old or {}).get('ok')
+   services[service]=row
+   if resolved is False and (not old or old.get('ok') is not False) or resolved is True and old and old.get('ok') is False:changed.append({'service':service,'before':old.get('ok') if old else None,'now':resolved,'http_status':row.get('http_status'),'message':row.get('message','')})
   revision=(previous or {}).get('revision',0)+(1 if changed or not previous else 0)
-  report={'phase':'ready','checked_at':now_iso(),'revision':revision,'services':services,'interval_seconds':self.interval,'sample':'欧芹 / Parsley'}
+  report={'phase':'ready','checked_at':now_iso(),'revision':revision,'services':services,'completed_rounds':(previous or {}).get('completed_rounds',0)+1,'initial':False,'round_id':round_id,'interval_seconds':self.interval,'sample':'欧芹 / Parsley','budget_ms':self.budget_ms}
   self.reports[key]=report
   if changed:activity.notify('来源可用性变化 / Source availability changed',{'revision':revision,'changes':changed});activity.log('services.change',{'revision':revision,'changes':changed})
-  return copy.deepcopy(report)
- def browser_results(self,rows):
-  key=workspaces.current_id
-  for row in rows:
-   if row.get('id') in {'zhwiki','enwiki','commons'} and isinstance(row.get('ok'),bool):self.browser[(key,row['id'])]={'ok':row['ok'],'at':time.time(),'checked_at':now_iso()}
-  previous=self.reports.get(key)
-  if previous and previous.get('phase')=='ready':return self.publish(list(previous['services'].values()))
+  event('health.round.finished',round_id=round_id,services=len(services),available=sum(v['ok'] is True for v in services.values()),changes=len(changed),budget_ms=self.budget_ms)
   return self.report()
+ def browser_results(self,rows,round_id=None):
+  key=workspaces.current_id;current=self.rounds.get(key)
+  if not current or not current['active'] or round_id!=current['id'] or time.monotonic()>=current['deadline']:
+   return {**self.report(),'browser_results_ignored':True}
+  for row in rows:
+   if row.get('id') in {'zhwiki','enwiki','commons'} and isinstance(row.get('ok'),bool):
+    value={'ok':row['ok'],'checked_at':now_iso()};current['browser'][row['id']]=value;self.browser[(key,row['id'])]=value
+  return self.report()
+ def browser_plan(self):
+  report=self.report();active=report.get('phase')=='checking' and report.get('remaining_ms',0)>0 and not runtime.paused
+  return {**report,'probes':BROWSER_PROBES if active else []}
+ def begin_for_browser(self):
+  key=workspaces.current_id;self.activated.add(key)
+  if runtime.needs_retest:return self.browser_plan()
+  if not runtime.paused and (key not in self.rounds or time.monotonic()>=self.next_due.get(key,0)):self.restart()
+  if self.wakeup:self.wakeup.set()
+  return self.browser_plan()
  def specs(self):
   p=preferences.values();rows=[{**x,'kind':'api'} for x in BROWSER_PROBES]
   rows.extend([
@@ -73,6 +103,13 @@ class Health:
   if p['google_translate_key']:rows.append({'id':'translation_google','url':'https://translation.googleapis.com','kind':'function','cloud':'google'})
   if p['azure_translate_key']:rows.append({'id':'translation_azure','url':'https://api.cognitive.microsofttranslator.com','kind':'function','cloud':'azure'})
   if p['google_api_key'] and p['google_cse_id']:rows.append({'id':'google_images','url':'https://customsearch.googleapis.com/customsearch/v1','params':{'key':p['google_api_key'],'cx':p['google_cse_id'],'q':'parsley','searchType':'image','num':1},'kind':'api'})
+  from .source_registry import registry
+  for profile in registry()['providers']:
+   url=profile.get('sample_url')
+   if profile['id']=='gbif':url='https://api.gbif.org/v1/species/match?name=Petroselinum%20crispum'
+   elif profile['id']=='wikispecies':url='https://species.wikimedia.org/w/api.php?action=parse&page=Petroselinum_crispum&prop=revid&format=json'
+   elif profile['id']=='wikibooks':url='https://en.wikibooks.org/w/api.php?action=parse&page=Cookbook:Parsley&prop=revid&format=json'
+   if url:rows.append({'id':'other_'+profile['id'],'url':url,'kind':'api' if profile['id'] in {'gbif','wikispecies','wikibooks'} else 'web','tested_entry':'sampled_reference','sample_note':'Known public provider page; not a culinary-use verification'})
   return rows
  async def probe(self,spec,gate):
   result={'id':spec['id'],'kind':spec['kind'],'host':urlsplit(spec['url']).hostname,'url':spec['url'],'checked_at':now_iso(),'tested_entry':spec.get('tested_entry','parsley')}
@@ -100,29 +137,72 @@ class Health:
     if challenge:return {**result,'ok':False,'message':'Verification or consent page'}
     result['frame_restricted']=response.headers.get('x-frame-options','').upper() in {'DENY','SAMEORIGIN'} or 'frame-ancestors' in response.headers.get('content-security-policy','').lower()
    return {**result,'ok':True}
-  except (httpx.HTTPError,ValueError,KeyError,ImportError):return {**result,'ok':False,'message':'Connection, timeout or API response failed'}
+  except httpx.TimeoutException:return {**result,'ok':None,'message':'Connection test timed out; availability is unconfirmed'}
+  except (httpx.HTTPError,ValueError,KeyError,ImportError):return {**result,'ok':False,'message':'Connection or API response failed'}
+ async def _run(self,current):
+  key=current['key'];tasks=[]
+  try:
+   with workspaces.use(key):
+    gate=asyncio.Semaphore(64)
+    specs=self.specs();tasks=[asyncio.create_task(self.probe(spec,gate)) for spec in specs]
+    if tasks:await asyncio.wait(tasks,timeout=max(0,current['deadline']-time.monotonic()))
+    await asyncio.sleep(max(0,current['deadline']-time.monotonic()))
+    if not current['active']:return self.report()
+    rows=[]
+    for spec,task in zip(specs,tasks):
+     if task.done() and not task.cancelled():
+      try:rows.append(task.result());continue
+      except Exception:pass
+     task.cancel()
+     task.add_done_callback(lambda t:None if t.cancelled() else t.exception())
+     rows.append({'id':spec['id'],'kind':spec['kind'],'ok':None,'backend_ok':None,'host':urlsplit(spec['url']).hostname,'code':'round_timeout','message':f'No completed result within {self.budget_ms} ms'})
+    current['active']=False
+    return self.publish(rows,current['browser'],current['id'])
+  finally:
+   current['active']=False
+   for task in tasks:
+    if not task.done():task.cancel()
  async def check(self):
-  gate=asyncio.Semaphore(4);results=await asyncio.gather(*(self.probe(x,gate) for x in self.specs()));return self.publish(results)
- def restart(self):
-  key=workspaces.current_id;task=self.tasks.get(key)
-  if task and not task.done():task.cancel()
-  self.tasks[key]=asyncio.create_task(self.check());return self.report()
+  self.restart(force=True)
+  return await self.tasks[workspaces.current_id]
+ def restart(self,force=False):
+  key=workspaces.current_id;current=self.rounds.get(key)
+  if runtime.paused or runtime.needs_retest and not force:return self.report()
+  if current and current['active'] and not force:return self.report()
+  if current:current['active']=False
+  old=self.tasks.get(key)
+  if old and not old.done():old.cancel()
+  start=time.monotonic();current={'id':uuid.uuid4().hex,'key':key,'start':start,'deadline':start+self.budget_ms/1000,'browser':{},'active':True}
+  self.rounds[key]=current;self.next_due[key]=current['deadline']+self.interval
+  self.tasks[key]=asyncio.create_task(self._run(current))
+  event('health.round.started',round_id=current['id'],budget_ms=self.budget_ms)
+  return self.report()
  async def loop(self):
   while True:
-   key=workspaces.active_id
+   self.wakeup.clear();key=workspaces.active_id;wait=self.interval
    with workspaces.use(key):
-    task=self.tasks.get(key)
-    if not task or task.done():self.restart()
-   self.wakeup.clear()
-   try:await asyncio.wait_for(self.wakeup.wait(),timeout=self.interval)
+    if key in self.activated and not runtime.paused and not runtime.needs_retest:
+     due=self.next_due.get(key,0)
+     if time.monotonic()>=due:self.restart()
+     wait=max(.05,self.next_due.get(key,time.monotonic()+self.interval)-time.monotonic())
+   try:await asyncio.wait_for(self.wakeup.wait(),timeout=min(wait,self.interval))
    except asyncio.TimeoutError:pass
  def start(self):
   self.wakeup=asyncio.Event();self.loop_task=asyncio.create_task(self.loop())
  def switched(self):
   if self.wakeup:self.wakeup.set()
+ async def suspend(self):
+  for current in self.rounds.values():current['active']=False
+  for task in self.tasks.values():task.cancel()
+  await asyncio.gather(*self.tasks.values(),return_exceptions=True)
+  self.tasks.clear()
+ def resume(self):
+  for key in self.activated:self.next_due[key]=time.monotonic()+self.interval
+  self.switched()
  async def stop(self):
   current_loop=asyncio.get_running_loop()
   all_tasks=[task for task in list(self.tasks.values())+([self.loop_task] if self.loop_task else []) if task.get_loop() is current_loop]
+  for current in self.rounds.values():current['active']=False
   for task in all_tasks:task.cancel()
   await asyncio.gather(*all_tasks,return_exceptions=True);self.tasks.clear();self.loop_task=None;self.wakeup=None
 health=Health()

@@ -2,6 +2,9 @@
 from __future__ import annotations
 import ctypes as C
 import os
+import time
+
+APP_NAME='香料图鉴 - Spice Atlas'
 
 
 def _windows():
@@ -76,6 +79,12 @@ class Tray:
         self.old_proc = None
         self.icon = None
         self.added = False
+        self.tooltip=APP_NAME
+        self.paused=False
+        self.service_ready=False
+        self.last_menu=-10.0
+        self.user.GetDoubleClickTime.restype=C.c_uint
+        self.click_delay=int(self.user.GetDoubleClickTime())
         self.user.GetParent.argtypes = [C.c_void_p]
         self.user.GetParent.restype = C.c_void_p
         self.user.LoadImageW.argtypes = [C.c_void_p,C.c_wchar_p,C.c_uint,C.c_int,C.c_int,C.c_uint]
@@ -117,10 +126,15 @@ class Tray:
             try:
                 if message == self.MESSAGE:
                     event = lparam & 0xffff
-                    if event in (0x400,0x401,0x203):
-                        self.send('open')
+                    if event==0x203:
+                        self.send('click:double')
+                    elif event in (0x400,0x202):
+                        self.send('click:single')
+                    elif event==0x401:
+                        self.send('click:keyboard')
                     elif event in (0x7b,0x205):
-                        self.menu()
+                        if time.monotonic()-self.last_menu>.3:
+                            self.last_menu=time.monotonic();self.menu()
                     return 0
                 if message == self.taskbar_created:
                     self.add()
@@ -145,7 +159,7 @@ class Tray:
     def add(self):
         data = self.data()
         data.uFlags, data.uCallbackMessage, data.hIcon = 1|2|4|0x80, self.MESSAGE, self.icon
-        data.szTip = 'Spice Atlas'
+        data.szTip = self.tooltip[:127]
         self.added = bool(self.shell.Shell_NotifyIconW(0,C.byref(data)))
         if self.added:
             data.uVersion = 4
@@ -153,15 +167,17 @@ class Tray:
         return self.added
 
     def status(self, text):
+        self.tooltip=APP_NAME+' · '+text if not text.startswith(APP_NAME) else text
         if self.added:
             data = self.data()
-            data.uFlags, data.szTip = 4|0x80, text[:127]
+            data.uFlags, data.szTip = 4|0x80, self.tooltip[:127]
             self.shell.Shell_NotifyIconW(1,C.byref(data))
 
     def notify(self, text):
         if self.added:
             data = self.data()
-            data.uFlags, data.szInfoTitle, data.szInfo, data.dwInfoFlags = 0x10, 'Spice Atlas', text[:255], 1
+            data.uFlags, data.szInfoTitle, data.szInfo, data.dwInfoFlags = 0x10|4|0x80, APP_NAME, text[:255], 1
+            data.szTip=self.tooltip[:127]
             self.shell.Shell_NotifyIconW(1,C.byref(data))
 
     def menu(self):
@@ -171,15 +187,16 @@ class Tray:
         self.user.GetCursorPos(C.byref(position))
         menu = self.user.CreatePopupMenu()
         try:
-            for item,key in ((1,'open'),(2,'status'),(3,'logs')):
+            for item,key in ((1,'visibility'),(2,'open'),(3,'logs')):
                 self.user.AppendMenuW(menu,0,item,self.labels[key])
+            self.user.AppendMenuW(menu,0 if self.service_ready else 1,4,self.labels['resume' if self.paused else 'pause'])
             self.user.AppendMenuW(menu,0x800,0,None)
-            self.user.AppendMenuW(menu,0,4,self.labels['stop'])
+            self.user.AppendMenuW(menu,0,5,self.labels['stop'])
             self.user.SetForegroundWindow(self.hwnd)
             selected = self.user.TrackPopupMenu(menu,0x100|0x80|2,position.x,position.y,0,self.hwnd,None)
             self.user.PostMessageW(self.hwnd,0,0,0)
             if selected:
-                self.send({1:'open',2:'status',3:'logs',4:'stop'}[selected])
+                self.send({1:'visibility',2:'open',3:'logs',4:'pause',5:'stop'}[selected])
         finally:
             self.user.DestroyMenu(menu)
 

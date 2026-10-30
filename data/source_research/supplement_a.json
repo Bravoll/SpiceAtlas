@@ -1,0 +1,2659 @@
+{
+  "schema_version": "1.0",
+  "research_kind": "supplemental_search_service_results",
+  "assignment": "sample_index % 3 == 0",
+  "sample_version": "0.7.0",
+  "sample_seed": 20261029,
+  "sample_sha256": "98a668142118efa4bc02d45d71b45461a57bfe3d7a0b6e85c85a57b94816bf48",
+  "generated_at": "2026-10-29T05:17:56.106Z",
+  "provenance_notice": "Results were returned by search_service system2/system1 search tools. They are supplemental discovery results and are NOT represented as the first page of Google, international Bing, or Bing China. Search rank was not recorded. URLs were selected from returned results; no article bodies have been copied.",
+  "coverage_notice": "Botanical catalogue entries are reference records, not confirmed culinary or edible materials. A matching plant name does not establish edibility or rarity. Unresolved names, author-qualified ambiguities, and genus-only context are flagged.",
+  "counts": {
+    "assigned_entries": 62,
+    "unique_entries_queried": 62,
+    "unique_entries_completed": 62,
+    "assigned_entry_search_queries": 62,
+    "followup_search_queries": 9,
+    "total_entry_search_queries": 71,
+    "entries_with_selected_results": 62,
+    "selected_result_links": 137,
+    "exact_identity_unavailable": 2,
+    "exact_primary_treatment_unavailable": 1,
+    "tool_errors": 0
+  },
+  "records": [
+    {
+      "entry_id": "paprika",
+      "sample_index": 0,
+      "query_name": "Capsicum",
+      "common_name": "Paprika",
+      "scope": "culinary",
+      "research_kind": "supplemental_search_service_results",
+      "queries": [
+        {
+          "query": "Capsicum Paprika botanical herb spice knowledge cultivation",
+          "tool_kind": "search_service.system2_search_query",
+          "queried_at": "2026-10-29T05:13:16.598Z",
+          "status": "completed",
+          "purpose": "assigned_entry_search"
+        }
+      ],
+      "selected_results": [
+        {
+          "title": "PlantNET - FloraOnline",
+          "url": "https://plantnet.rbgsyd.nsw.gov.au/cgi-bin/NSWfl.pl?lvl=gn&name=Capsicum&page=nswfl",
+          "domain": "plantnet.rbgsyd.nsw.gov.au",
+          "source_ref": "turn38search18",
+          "retrieved_at": "2026-10-29T05:13:16.598Z",
+          "why_relevant": "Genus flora and institutional pepper introduction provide botanical and culinary context for paprika raw materials.",
+          "verification_level": "search_result_metadata_only"
+        },
+        {
+          "title": "Pepper - Capsicum annuum | Kew",
+          "url": "https://www.kew.org/plants/pepper",
+          "domain": "www.kew.org",
+          "source_ref": "turn38search30",
+          "retrieved_at": "2026-10-29T05:13:16.598Z",
+          "why_relevant": "Genus flora and institutional pepper introduction provide botanical and culinary context for paprika raw materials.",
+          "verification_level": "search_result_metadata_only"
+        },
+        {
+          "title": "HortFlora",
+          "url": "https://hortflora.rbg.vic.gov.au/taxon/ad9df7ea-5340-11e7-b82b-005056b0018f",
+          "domain": "hortflora.rbg.vic.gov.au",
+          "source_ref": "turn38search22",
+          "retrieved_at": "2026-10-29T05:13:16.598Z",
+          "why_relevant": "Genus flora and institutional pepper introduction provide botanical and culinary context for paprika raw materials.",
+          "verification_level": "search_result_metadata_only"
+        }
+      ],
+      "status": "completed_with_selected_results",
+      "unavailable_or_no_result": null,
+      "review_note": "Genus-level entry; the Kew pepper page treats Capsicum annuum, a representative raw-material species, not every Capsicum species."
+    },
+    {
+      "entry_id": "cumin",
+      "sample_index": 3,
+      "query_name": "Cuminum cyminum",
+      "common_name": "Cumin",
+      "scope": "culinary",
+      "research_kind": "supplemental_search_service_results",
+      "queries": [
+        {
+          "query": "Cuminum cyminum Cumin botanical herb spice knowledge cultivation",
+          "tool_kind": "search_service.system2_search_query",
+          "queried_at": "2026-10-29T05:13:16.598Z",
+          "status": "completed",
+          "purpose": "assigned_entry_search"
+        }
+      ],
+      "selected_results": [
+        {
+          "title": "Cumin - Cuminum cyminum L. | ICAR-IISR",
+          "url": "https://spices.res.in/products/spices/cumin.html",
+          "domain": "spices.res.in",
+          "source_ref": "turn38search14",
+          "retrieved_at": "2026-10-29T05:13:16.598Z",
+          "why_relevant": "Government spice-research, taxonomic, and horticultural introductions to cumin.",
+          "verification_level": "search_result_metadata_only"
+        },
+        {
+          "title": "Cuminum cyminum L. | Plants of the World Online | Kew Science",
+          "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A840882-1",
+          "domain": "powo.science.kew.org",
+          "source_ref": "turn38search38",
+          "retrieved_at": "2026-10-29T05:13:16.598Z",
+          "why_relevant": "Government spice-research, taxonomic, and horticultural introductions to cumin.",
+          "verification_level": "search_result_metadata_only"
+        },
+        {
+          "title": "Cuminum cyminum | cumin",
+          "url": "https://www.rhs.org.uk/plants/72392/cuminum-cyminum/details",
+          "domain": "www.rhs.org.uk",
+          "source_ref": "turn38search16",
+          "retrieved_at": "2026-10-29T05:13:16.598Z",
+          "why_relevant": "Government spice-research, taxonomic, and horticultural introductions to cumin.",
+          "verification_level": "search_result_metadata_only"
+        }
+      ],
+      "status": "completed_with_selected_results",
+      "unavailable_or_no_result": null
+    },
+    {
+      "entry_id": "celery",
+      "sample_index": 6,
+      "query_name": "Apium graveolens",
+      "common_name": "Celery",
+      "scope": "culinary",
+      "research_kind": "supplemental_search_service_results",
+      "queries": [
+        {
+          "query": "Apium graveolens Celery botanical herb spice knowledge cultivation",
+          "tool_kind": "search_service.system2_search_query",
+          "queried_at": "2026-10-29T05:13:16.598Z",
+          "status": "completed",
+          "purpose": "assigned_entry_search"
+        }
+      ],
+      "selected_results": [
+        {
+          "title": "NParks | Apium graveolens (Chinese celery)",
+          "url": "https://www.nparks.gov.sg/florafaunaweb/flora/4/6/4691",
+          "domain": "www.nparks.gov.sg",
+          "source_ref": "turn38search2",
+          "retrieved_at": "2026-10-29T05:13:16.598Z",
+          "why_relevant": "Government flora, regional flora, and spice-board pages cover celery botany and cultivated uses.",
+          "verification_level": "search_result_metadata_only"
+        },
+        {
+          "title": "PlantNET - FloraOnline",
+          "url": "https://plantnet.rbgsyd.nsw.gov.au/cgi-bin/NSWfl.pl?lvl=sp&name=Apium~graveolens&page=nswfl",
+          "domain": "plantnet.rbgsyd.nsw.gov.au",
+          "source_ref": "turn38search6",
+          "retrieved_at": "2026-10-29T05:13:16.598Z",
+          "why_relevant": "Government flora, regional flora, and spice-board pages cover celery botany and cultivated uses.",
+          "verification_level": "search_result_metadata_only"
+        },
+        {
+          "title": "Celery | Spices Board",
+          "url": "https://www.indianspices.com/node/21.html",
+          "domain": "www.indianspices.com",
+          "source_ref": "turn38search4",
+          "retrieved_at": "2026-10-29T05:13:16.598Z",
+          "why_relevant": "Government flora, regional flora, and spice-board pages cover celery botany and cultivated uses.",
+          "verification_level": "search_result_metadata_only"
+        }
+      ],
+      "status": "completed_with_selected_results",
+      "unavailable_or_no_result": null
+    },
+    {
+      "entry_id": "thyme",
+      "sample_index": 9,
+      "query_name": "Thymus",
+      "common_name": "Thyme",
+      "scope": "culinary",
+      "research_kind": "supplemental_search_service_results",
+      "queries": [
+        {
+          "query": "Thymus Thyme botanical herb spice knowledge cultivation",
+          "tool_kind": "search_service.system2_search_query",
+          "queried_at": "2026-10-29T05:13:16.598Z",
+          "status": "completed",
+          "purpose": "assigned_entry_search"
+        }
+      ],
+      "selected_results": [
+        {
+          "title": "PROSEA - Plant Resources of South East Asia",
+          "url": "https://prosea.prota4u.org/view.aspx?id=599",
+          "domain": "prosea.prota4u.org",
+          "source_ref": "turn38search35",
+          "retrieved_at": "2026-10-29T05:13:16.598Z",
+          "why_relevant": "PROSEA, horticultural, and university extension pages introduce thyme uses and cultivation.",
+          "verification_level": "search_result_metadata_only"
+        },
+        {
+          "title": "How to grow Thyme | RHS Guide",
+          "url": "https://www.rhs.org.uk/herbs/thyme/grow-your-own",
+          "domain": "www.rhs.org.uk",
+          "source_ref": "turn38search23",
+          "retrieved_at": "2026-10-29T05:13:16.598Z",
+          "why_relevant": "PROSEA, horticultural, and university extension pages introduce thyme uses and cultivation.",
+          "verification_level": "search_result_metadata_only"
+        },
+        {
+          "title": "Thyme | Herbs | Illinois Extension | Illinois",
+          "url": "https://extension.illinois.edu/herbs/thyme",
+          "domain": "extension.illinois.edu",
+          "source_ref": "turn38search21",
+          "retrieved_at": "2026-10-29T05:13:16.598Z",
+          "why_relevant": "PROSEA, horticultural, and university extension pages introduce thyme uses and cultivation.",
+          "verification_level": "search_result_metadata_only"
+        }
+      ],
+      "status": "completed_with_selected_results",
+      "unavailable_or_no_result": null,
+      "review_note": "Thymus is a genus entry; these culinary pages mainly treat Thymus vulgaris and should be labeled at that species scope."
+    },
+    {
+      "entry_id": "wd-Q207123",
+      "sample_index": 12,
+      "query_name": "herb",
+      "common_name": "herb",
+      "scope": "culinary",
+      "research_kind": "supplemental_search_service_results",
+      "queries": [
+        {
+          "query": "herb botanical herb spice knowledge cultivation",
+          "tool_kind": "search_service.system2_search_query",
+          "queried_at": "2026-10-29T05:13:30.955Z",
+          "status": "completed",
+          "purpose": "assigned_entry_search"
+        }
+      ],
+      "selected_results": [
+        {
+          "title": "What is the difference between an herb and a spice? | Yard and Garden",
+          "url": "https://yardandgarden.extension.iastate.edu/faq/what-difference-between-herb-and-spice",
+          "domain": "yardandgarden.extension.iastate.edu",
+          "source_ref": "turn41search6",
+          "retrieved_at": "2026-10-29T05:13:30.955Z",
+          "why_relevant": "University extension definitions and growing guides explain the broad culinary-herb concept.",
+          "verification_level": "search_result_metadata_only"
+        },
+        {
+          "title": "Herbs | Home & Garden Information Center",
+          "url": "https://hgic.clemson.edu/factsheet/herbs/",
+          "domain": "hgic.clemson.edu",
+          "source_ref": "turn41search12",
+          "retrieved_at": "2026-10-29T05:13:30.955Z",
+          "why_relevant": "University extension definitions and growing guides explain the broad culinary-herb concept.",
+          "verification_level": "search_result_metadata_only"
+        },
+        {
+          "title": "HO-28: Growing Herbs",
+          "url": "https://ag.purdue.edu/department/hla/extension/extension-publications-library/ext-pubs/ho-28-w.html",
+          "domain": "ag.purdue.edu",
+          "source_ref": "turn41search16",
+          "retrieved_at": "2026-10-29T05:13:30.955Z",
+          "why_relevant": "University extension definitions and growing guides explain the broad culinary-herb concept.",
+          "verification_level": "search_result_metadata_only"
+        }
+      ],
+      "status": "completed_with_selected_results",
+      "unavailable_or_no_result": null,
+      "review_note": "Concept entry, not a single botanical species."
+    },
+    {
+      "entry_id": "wd-Q1963621",
+      "sample_index": 15,
+      "query_name": "allspice",
+      "common_name": "allspice",
+      "scope": "culinary",
+      "research_kind": "supplemental_search_service_results",
+      "queries": [
+        {
+          "query": "allspice botanical herb spice knowledge cultivation",
+          "tool_kind": "search_service.system2_search_query",
+          "queried_at": "2026-10-29T05:13:30.955Z",
+          "status": "completed",
+          "purpose": "assigned_entry_search"
+        }
+      ],
+      "selected_results": [
+        {
+          "title": "Allspice - Pimenta dioica | ICAR-IISR",
+          "url": "https://spices.res.in/products/spices/allspice.html",
+          "domain": "spices.res.in",
+          "source_ref": "turn41search0",
+          "retrieved_at": "2026-10-29T05:13:30.955Z",
+          "why_relevant": "Government spice-research, Kew taxonomy, and Naturalis economic-botany introductions identify allspice.",
+          "verification_level": "search_result_metadata_only"
+        },
+        {
+          "title": "Pimenta dioica (L.) Merr. | Plants of the World Online | Kew Science",
+          "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A196799-2/general-information",
+          "domain": "powo.science.kew.org",
+          "source_ref": "turn41search5",
+          "retrieved_at": "2026-10-29T05:13:30.955Z",
+          "why_relevant": "Government spice-research, Kew taxonomy, and Naturalis economic-botany introductions identify allspice.",
+          "verification_level": "search_result_metadata_only"
+        },
+        {
+          "title": "Pimenta dioica - Useful Plants - An Introduction to Economic Botany: Pimenta dioica",
+          "url": "https://useful-plants.linnaeus.naturalis.nl/linnaeus_ng/app/views/species/taxon.php?epi=202&id=127735",
+          "domain": "useful-plants.linnaeus.naturalis.nl",
+          "source_ref": "turn41search25",
+          "retrieved_at": "2026-10-29T05:13:30.955Z",
+          "why_relevant": "Government spice-research, Kew taxonomy, and Naturalis economic-botany introductions identify allspice.",
+          "verification_level": "search_result_metadata_only"
+        }
+      ],
+      "status": "completed_with_selected_results",
+      "unavailable_or_no_result": null
+    },
+    {
+      "entry_id": "wd-Q2068389",
+      "sample_index": 18,
+      "query_name": "Advieh",
+      "common_name": "Advieh",
+      "scope": "culinary",
+      "research_kind": "supplemental_search_service_results",
+      "queries": [
+        {
+          "query": "Advieh botanical herb spice knowledge cultivation",
+          "tool_kind": "search_service.system2_search_query",
+          "queried_at": "2026-10-29T05:13:30.955Z",
+          "status": "completed",
+          "purpose": "assigned_entry_search"
+        }
+      ],
+      "selected_results": [
+        {
+          "title": "Advieh - Kitchen Dictionary - Food.com",
+          "url": "https://www.food.com/about/advieh-945",
+          "domain": "www.food.com",
+          "source_ref": "turn41search33",
+          "retrieved_at": "2026-10-29T05:13:30.955Z",
+          "why_relevant": "Culinary dictionary and food-reference introductions discuss the Persian spice mixture.",
+          "verification_level": "search_result_metadata_only"
+        },
+        {
+          "title": "Advieh — Foundations",
+          "url": "https://www.tastelab.food/encyclopedia/foundations/advieh",
+          "domain": "www.tastelab.food",
+          "source_ref": "turn41search23",
+          "retrieved_at": "2026-10-29T05:13:30.955Z",
+          "why_relevant": "Culinary dictionary and food-reference introductions discuss the Persian spice mixture.",
+          "verification_level": "search_result_metadata_only"
+        }
+      ],
+      "status": "completed_with_selected_results",
+      "unavailable_or_no_result": null,
+      "review_note": "No institutional botanical introduction returned for this processed blend; selected culinary references are secondary and require editorial review."
+    },
+    {
+      "entry_id": "wd-Q2015681",
+      "sample_index": 21,
+      "query_name": "amchoor",
+      "common_name": "amchoor",
+      "scope": "culinary",
+      "research_kind": "supplemental_search_service_results",
+      "queries": [
+        {
+          "query": "amchoor botanical herb spice knowledge cultivation",
+          "tool_kind": "search_service.system2_search_query",
+          "queried_at": "2026-10-29T05:13:30.955Z",
+          "status": "completed",
+          "purpose": "assigned_entry_search"
+        },
+        {
+          "query": "amchoor dried mango powder site.icar.gov.in",
+          "tool_kind": "search_service.system1_search_query",
+          "queried_at": "2026-10-29T05:15:32.314Z",
+          "status": "completed",
+          "purpose": "coverage_or_identity_followup"
+        }
+      ],
+      "selected_results": [
+        {
+          "title": "Studies on the manufacture, composition, packaging, storage and quality standards of raw mango powder or \"Amchur\". - ePrints@CFTRI",
+          "url": "https://ir.cftri.res.in/5756/",
+          "domain": "ir.cftri.res.in",
+          "source_ref": "turn74search0",
+          "retrieved_at": "2026-10-29T05:15:32.314Z",
+          "why_relevant": "CFTRI research metadata covers manufacture of raw mango powder; the culinary reference covers flavoring context.",
+          "verification_level": "search_result_metadata_only"
+        },
+        {
+          "title": "Amchoor: flavour, pairings and substitutes | SpiceHQ",
+          "url": "https://spicehq.app/spices/amchur",
+          "domain": "spicehq.app",
+          "source_ref": "turn41search31",
+          "retrieved_at": "2026-10-29T05:13:30.955Z",
+          "why_relevant": "CFTRI research metadata covers manufacture of raw mango powder; the culinary reference covers flavoring context.",
+          "verification_level": "search_result_metadata_only"
+        }
+      ],
+      "status": "completed_with_selected_results",
+      "unavailable_or_no_result": null
+    },
+    {
+      "entry_id": "wd-Q2370943",
+      "sample_index": 24,
+      "query_name": "bay leaf",
+      "common_name": "bay leaf",
+      "scope": "culinary",
+      "research_kind": "supplemental_search_service_results",
+      "queries": [
+        {
+          "query": "bay leaf botanical herb spice knowledge cultivation",
+          "tool_kind": "search_service.system2_search_query",
+          "queried_at": "2026-10-29T05:13:30.955Z",
+          "status": "completed",
+          "purpose": "assigned_entry_search"
+        }
+      ],
+      "selected_results": [
+        {
+          "title": "Bay Leaf | Spices Board",
+          "url": "https://www.indianspices.com/node/11.html",
+          "domain": "www.indianspices.com",
+          "source_ref": "turn40search1",
+          "retrieved_at": "2026-10-29T05:13:30.955Z",
+          "why_relevant": "Spice-board and RHS bay introductions plus an ICAR Indian-bay page expose important common-name ambiguity.",
+          "verification_level": "search_result_metadata_only"
+        },
+        {
+          "title": "How to grow Bay | RHS Guide",
+          "url": "https://www.rhs.org.uk/herbs/bay/grow-your-own",
+          "domain": "www.rhs.org.uk",
+          "source_ref": "turn40search2",
+          "retrieved_at": "2026-10-29T05:13:30.955Z",
+          "why_relevant": "Spice-board and RHS bay introductions plus an ICAR Indian-bay page expose important common-name ambiguity.",
+          "verification_level": "search_result_metadata_only"
+        },
+        {
+          "title": "Bay Leaf (Tejpat) - Cinnamomum tamala | ICAR-IISR",
+          "url": "https://spices.res.in/products/spices/bay-leaf.html",
+          "domain": "spices.res.in",
+          "source_ref": "turn40search0",
+          "retrieved_at": "2026-10-29T05:13:30.955Z",
+          "why_relevant": "Spice-board and RHS bay introductions plus an ICAR Indian-bay page expose important common-name ambiguity.",
+          "verification_level": "search_result_metadata_only"
+        }
+      ],
+      "status": "completed_with_selected_results",
+      "unavailable_or_no_result": null,
+      "review_note": "Common name spans distinct plants; Laurus nobilis and Cinnamomum tamala pages must remain separately identified."
+    },
+    {
+      "entry_id": "wd-Q654253",
+      "sample_index": 27,
+      "query_name": "masala",
+      "common_name": "masala",
+      "scope": "culinary",
+      "research_kind": "supplemental_search_service_results",
+      "queries": [
+        {
+          "query": "masala botanical herb spice knowledge cultivation",
+          "tool_kind": "search_service.system2_search_query",
+          "queried_at": "2026-10-29T05:13:30.955Z",
+          "status": "completed",
+          "purpose": "assigned_entry_search"
+        },
+        {
+          "query": "masala spice mixture site.oup.com",
+          "tool_kind": "search_service.system1_search_query",
+          "queried_at": "2026-10-29T05:15:32.314Z",
+          "status": "completed",
+          "purpose": "coverage_or_identity_followup"
+        }
+      ],
+      "selected_results": [
+        {
+          "title": "Masala from Oxford Companion to Food by Alan Davidson",
+          "url": "https://app.ckbk.com/reference/food77337c13s001e098/masala",
+          "domain": "app.ckbk.com",
+          "source_ref": "turn40search23",
+          "retrieved_at": "2026-10-29T05:13:30.955Z",
+          "why_relevant": "Oxford Companion to Food reference entry defines masala as a spice-mixture concept.",
+          "verification_level": "search_result_metadata_only"
+        }
+      ],
+      "status": "completed_with_selected_results",
+      "unavailable_or_no_result": null,
+      "review_note": "Hosted book-reference excerpt; full access may require a ckbk subscription. This is a mixture concept, not one species."
+    },
+    {
+      "entry_id": "wd-Q860808",
+      "sample_index": 30,
+      "query_name": "chipotle",
+      "common_name": "chipotle",
+      "scope": "culinary",
+      "research_kind": "supplemental_search_service_results",
+      "queries": [
+        {
+          "query": "chipotle botanical herb spice knowledge cultivation",
+          "tool_kind": "search_service.system2_search_query",
+          "queried_at": "2026-10-29T05:13:30.955Z",
+          "status": "completed",
+          "purpose": "assigned_entry_search"
+        },
+        {
+          "query": "chipotle smoked jalapeno site.nmsu.edu",
+          "tool_kind": "search_service.system1_search_query",
+          "queried_at": "2026-10-29T05:15:32.314Z",
+          "status": "completed",
+          "purpose": "coverage_or_identity_followup"
+        }
+      ],
+      "selected_results": [
+        {
+          "title": "CHILEMAN & The POPE of PEPPERS",
+          "url": "https://cpi.nmsu.edu/_assets/documents/Eating-Well.pdf",
+          "domain": "cpi.nmsu.edu",
+          "source_ref": "turn74search9",
+          "retrieved_at": "2026-10-29T05:15:32.314Z",
+          "why_relevant": "NMSU-hosted introduction and primary smoking-process research explain chipotle production; culinary reference adds usage context.",
+          "verification_level": "search_result_metadata_only"
+        },
+        {
+          "title": "Effect of the smoking process and firewood type in the phytochemical content and antioxidant capacity of red Jalapeño pepper during its transformation to chipotle pepper - PubMed",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/28455049/",
+          "domain": "pubmed.ncbi.nlm.nih.gov",
+          "source_ref": "turn74search2",
+          "retrieved_at": "2026-10-29T05:15:32.314Z",
+          "why_relevant": "NMSU-hosted introduction and primary smoking-process research explain chipotle production; culinary reference adds usage context.",
+          "verification_level": "search_result_metadata_only"
+        },
+        {
+          "title": "Chipotle: flavour, pairings and substitutes | SpiceHQ",
+          "url": "https://spicehq.app/spices/chipotle",
+          "domain": "spicehq.app",
+          "source_ref": "turn40search6",
+          "retrieved_at": "2026-10-29T05:13:30.955Z",
+          "why_relevant": "NMSU-hosted introduction and primary smoking-process research explain chipotle production; culinary reference adds usage context.",
+          "verification_level": "search_result_metadata_only"
+        }
+      ],
+      "status": "completed_with_selected_results",
+      "unavailable_or_no_result": null,
+      "review_note": "Processed red jalapeno product; botanical classification must be linked to its source pepper rather than treating chipotle as a species."
+    },
+    {
+      "entry_id": "wd-Q838835",
+      "sample_index": 33,
+      "query_name": "pasilla chile",
+      "common_name": "pasilla chile",
+      "scope": "culinary",
+      "research_kind": "supplemental_search_service_results",
+      "queries": [
+        {
+          "query": "pasilla chile botanical herb spice knowledge cultivation",
+          "tool_kind": "search_service.system2_search_query",
+          "queried_at": "2026-10-29T05:13:30.955Z",
+          "status": "completed",
+          "purpose": "assigned_entry_search"
+        }
+      ],
+      "selected_results": [
+        {
+          "title": "Palabras ⋆ Diccionario enciclopédico de la Gastronomía Mexicana ⋆ Chile pasilla ⋆ Larousse Cocina",
+          "url": "https://laroussecocina.mx/palabra/chile-pasilla-2/",
+          "domain": "laroussecocina.mx",
+          "source_ref": "turn40search22",
+          "retrieved_at": "2026-10-29T05:13:30.955Z",
+          "why_relevant": "Mexican gastronomy dictionary and food encyclopedia introduce the dried chilaca pepper.",
+          "verification_level": "search_result_metadata_only"
+        },
+        {
+          "title": "Pasilla Chile Recipe & Nutrition - Precision Nutrition's Encyclopedia of Food",
+          "url": "https://www.precisionnutrition.com/encyclopedia/food/pasilla-chile",
+          "domain": "www.precisionnutrition.com",
+          "source_ref": "turn40search16",
+          "retrieved_at": "2026-10-29T05:13:30.955Z",
+          "why_relevant": "Mexican gastronomy dictionary and food encyclopedia introduce the dried chilaca pepper.",
+          "verification_level": "search_result_metadata_only"
+        }
+      ],
+      "status": "completed_with_selected_results",
+      "unavailable_or_no_result": null,
+      "review_note": "Culinary references; not sufficient alone for taxonomic identity verification."
+    },
+    {
+      "entry_id": "wd-Q1572414",
+      "sample_index": 36,
+      "query_name": "kala namak",
+      "common_name": "kala namak",
+      "scope": "culinary",
+      "research_kind": "supplemental_search_service_results",
+      "queries": [
+        {
+          "query": "kala namak herb spice knowledge",
+          "tool_kind": "search_service.system2_search_query",
+          "queried_at": "2026-10-29T05:13:46.076Z",
+          "status": "completed",
+          "purpose": "assigned_entry_search"
+        }
+      ],
+      "selected_results": [
+        {
+          "title": "Kala Namak - Conclusion (EN).pdf",
+          "url": "https://food.ec.europa.eu/system/files/2022-10/novel-food_consult-status_kala-namak.pdf",
+          "domain": "food.ec.europa.eu",
+          "source_ref": "turn43search48",
+          "retrieved_at": "2026-10-29T05:13:46.076Z",
+          "why_relevant": "European Commission product consultation and culinary introductions cover kala namak.",
+          "verification_level": "search_result_metadata_only"
+        },
+        {
+          "title": "What Is Kala Namak (Indian Black Salt)? | Food Network",
+          "url": "https://www.foodnetwork.com/how-to/packages/food-network-essentials/what-is-indian-black-salt-kala-namak",
+          "domain": "www.foodnetwork.com",
+          "source_ref": "turn43search35",
+          "retrieved_at": "2026-10-29T05:13:46.076Z",
+          "why_relevant": "European Commission product consultation and culinary introductions cover kala namak.",
+          "verification_level": "search_result_metadata_only"
+        },
+        {
+          "title": "Kala Namak Is Nonnegotiable for Vegetarian and Vegan Cooking",
+          "url": "https://www.bonappetit.com/story/black-salt-kala-namak",
+          "domain": "www.bonappetit.com",
+          "source_ref": "turn43search17",
+          "retrieved_at": "2026-10-29T05:13:46.076Z",
+          "why_relevant": "European Commission product consultation and culinary introductions cover kala namak.",
+          "verification_level": "search_result_metadata_only"
+        }
+      ],
+      "status": "completed_with_selected_results",
+      "unavailable_or_no_result": null,
+      "review_note": "Mineral salt product, not botanical material. Regulatory consultation is a source pointer, not current legal advice."
+    },
+    {
+      "entry_id": "wd-Q2827931",
+      "sample_index": 39,
+      "query_name": "black garlic",
+      "common_name": "black garlic",
+      "scope": "culinary",
+      "research_kind": "supplemental_search_service_results",
+      "queries": [
+        {
+          "query": "black garlic herb spice knowledge",
+          "tool_kind": "search_service.system2_search_query",
+          "queried_at": "2026-10-29T05:13:46.076Z",
+          "status": "completed",
+          "purpose": "assigned_entry_search"
+        }
+      ],
+      "selected_results": [
+        {
+          "title": "What is black garlic? | OSU Extension Service",
+          "url": "https://extension.oregonstate.edu/ask-extension/featured/what-black-garlic",
+          "domain": "extension.oregonstate.edu",
+          "source_ref": "turn43search40",
+          "retrieved_at": "2026-10-29T05:13:46.076Z",
+          "why_relevant": "University extension introduction and environmental-health evidence review explain black-garlic processing.",
+          "verification_level": "search_result_metadata_only"
+        },
+        {
+          "title": "Black garlic: Food safety considerations during production and storage",
+          "url": "https://ncceh.ca/resources/evidence-reviews/black-garlic-food-safety-considerations-during-production-and-storage",
+          "domain": "ncceh.ca",
+          "source_ref": "turn43search20",
+          "retrieved_at": "2026-10-29T05:13:46.076Z",
+          "why_relevant": "University extension introduction and environmental-health evidence review explain black-garlic processing.",
+          "verification_level": "search_result_metadata_only"
+        }
+      ],
+      "status": "completed_with_selected_results",
+      "unavailable_or_no_result": null,
+      "review_note": "Processed garlic product; not a distinct botanical species. No production-safety advice has been extracted."
+    },
+    {
+      "entry_id": "gbif-5609878",
+      "sample_index": 42,
+      "query_name": "Nepeta prostrata",
+      "common_name": "Nepeta prostrata",
+      "scope": "botanical",
+      "research_kind": "supplemental_search_service_results",
+      "queries": [
+        {
+          "query": "Nepeta prostrata botanical taxonomy",
+          "tool_kind": "search_service.system2_search_query",
+          "queried_at": "2026-10-29T05:13:46.076Z",
+          "status": "completed",
+          "purpose": "assigned_entry_search"
+        }
+      ],
+      "selected_results": [
+        {
+          "title": "Nepeta prostrata Benth.",
+          "url": "https://science.mnhn.fr/taxon/species/nepeta/prostrata",
+          "domain": "science.mnhn.fr",
+          "source_ref": "turn43search2",
+          "retrieved_at": "2026-10-29T05:13:46.076Z",
+          "why_relevant": "MNHN taxon and type-specimen records establish a botanical reference for the exact name.",
+          "verification_level": "search_result_metadata_only"
+        },
+        {
+          "title": "Specimen - syntype Nepeta prostrata Benth.",
+          "url": "https://science.mnhn.fr/institution/mnhn/collection/p/item/p00743279?listIndex=22",
+          "domain": "science.mnhn.fr",
+          "source_ref": "turn43search6",
+          "retrieved_at": "2026-10-29T05:13:46.076Z",
+          "why_relevant": "MNHN taxon and type-specimen records establish a botanical reference for the exact name.",
+          "verification_level": "search_result_metadata_only"
+        }
+      ],
+      "status": "completed_with_selected_results",
+      "unavailable_or_no_result": null
+    },
+    {
+      "entry_id": "gbif-9619118",
+      "sample_index": 45,
+      "query_name": "Stachys nelsonii",
+      "common_name": "Stachys nelsonii",
+      "scope": "botanical",
+      "research_kind": "supplemental_search_service_results",
+      "queries": [
+        {
+          "query": "Stachys nelsonii botanical taxonomy",
+          "tool_kind": "search_service.system2_search_query",
+          "queried_at": "2026-10-29T05:13:46.076Z",
+          "status": "completed",
+          "purpose": "assigned_entry_search"
+        }
+      ],
+      "selected_results": [
+        {
+          "title": "Stachys nelsonii B.R.Keener & L.J.Davenp.",
+          "url": "https://www.worldfloraonline.org/taxon/wfo-0001330675",
+          "domain": "www.worldfloraonline.org",
+          "source_ref": "turn43search3",
+          "retrieved_at": "2026-10-29T05:13:46.076Z",
+          "why_relevant": "World Flora Online supplies an exact-name taxonomic record.",
+          "verification_level": "search_result_metadata_only"
+        }
+      ],
+      "status": "completed_with_selected_results",
+      "unavailable_or_no_result": null,
+      "review_note": "Search returned a session-bearing URL; verify its permanent record URL before product use."
+    },
+    {
+      "entry_id": "gbif-7471562",
+      "sample_index": 48,
+      "query_name": "Cantinoa mutabilis",
+      "common_name": "Tropical Bushmint",
+      "scope": "botanical",
+      "research_kind": "supplemental_search_service_results",
+      "queries": [
+        {
+          "query": "Cantinoa mutabilis Tropical Bushmint botanical taxonomy",
+          "tool_kind": "search_service.system2_search_query",
+          "queried_at": "2026-10-29T05:13:46.076Z",
+          "status": "completed",
+          "purpose": "assigned_entry_search"
+        }
+      ],
+      "selected_results": [
+        {
+          "title": "Cantinoa mutabilis (Rich.) Harley & J.F.B.Pastore | Plants of the World Online | Kew Science",
+          "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A77120760-1/general-information",
+          "domain": "powo.science.kew.org",
+          "source_ref": "turn44search8",
+          "retrieved_at": "2026-10-29T05:13:46.076Z",
+          "why_relevant": "Kew, IPNI, and Charles Darwin Foundation provide exact-name taxonomy, nomenclature, and regional context.",
+          "verification_level": "search_result_metadata_only"
+        },
+        {
+          "title": "Cantinoa mutabilis | International Plant Names Index",
+          "url": "https://www.ipni.org/n/77120760-1",
+          "domain": "www.ipni.org",
+          "source_ref": "turn44search6",
+          "retrieved_at": "2026-10-29T05:13:46.076Z",
+          "why_relevant": "Kew, IPNI, and Charles Darwin Foundation provide exact-name taxonomy, nomenclature, and regional context.",
+          "verification_level": "search_result_metadata_only"
+        },
+        {
+          "title": "Cantinoa mutabilis",
+          "url": "https://datazone.darwinfoundation.org/en/checklist/?species=20293",
+          "domain": "datazone.darwinfoundation.org",
+          "source_ref": "turn44search1",
+          "retrieved_at": "2026-10-29T05:13:46.076Z",
+          "why_relevant": "Kew, IPNI, and Charles Darwin Foundation provide exact-name taxonomy, nomenclature, and regional context.",
+          "verification_level": "search_result_metadata_only"
+        }
+      ],
+      "status": "completed_with_selected_results",
+      "unavailable_or_no_result": null
+    },
+    {
+      "entry_id": "gbif-10945107",
+      "sample_index": 51,
+      "query_name": "Thymbra thymbrifolia",
+      "common_name": "Thymbra thymbrifolia",
+      "scope": "botanical",
+      "research_kind": "supplemental_search_service_results",
+      "queries": [
+        {
+          "query": "Thymbra thymbrifolia botanical taxonomy",
+          "tool_kind": "search_service.system2_search_query",
+          "queried_at": "2026-10-29T05:13:46.076Z",
+          "status": "completed",
+          "purpose": "assigned_entry_search"
+        }
+      ],
+      "selected_results": [
+        {
+          "title": "Thymbra thymbrifolia (Hedge & Feinbrun) Bräuchler | Plants of the World Online | Kew Science",
+          "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A77190158-1",
+          "domain": "powo.science.kew.org",
+          "source_ref": "turn44search4",
+          "retrieved_at": "2026-10-29T05:13:46.076Z",
+          "why_relevant": "Kew/WFO exact-name records and the primary genus revision provide taxonomic context.",
+          "verification_level": "search_result_metadata_only"
+        },
+        {
+          "title": "Thymbra thymbrifolia (Hedge & Feinbrun) Bräuchler",
+          "url": "https://www.worldfloraonline.org/taxon/wfo-0001428782",
+          "domain": "www.worldfloraonline.org",
+          "source_ref": "turn44search17",
+          "retrieved_at": "2026-10-29T05:13:46.076Z",
+          "why_relevant": "Kew/WFO exact-name records and the primary genus revision provide taxonomic context.",
+          "verification_level": "search_result_metadata_only"
+        },
+        {
+          "title": "Delimitation and revision of the genus Thymbra (Lamiaceae)",
+          "url": "https://phytotaxa.mapress.com/pt/article/download/phytotaxa.369.1.2/15971",
+          "domain": "phytotaxa.mapress.com",
+          "source_ref": "turn44search49",
+          "retrieved_at": "2026-10-29T05:13:46.076Z",
+          "why_relevant": "Kew/WFO exact-name records and the primary genus revision provide taxonomic context.",
+          "verification_level": "search_result_metadata_only"
+        }
+      ],
+      "status": "completed_with_selected_results",
+      "unavailable_or_no_result": null
+    },
+    {
+      "entry_id": "gbif-8173793",
+      "sample_index": 54,
+      "query_name": "Clerodendrum nutans",
+      "common_name": "Clerodendrum nutans",
+      "scope": "botanical",
+      "research_kind": "supplemental_search_service_results",
+      "queries": [
+        {
+          "query": "Clerodendrum nutans botanical taxonomy",
+          "tool_kind": "search_service.system2_search_query",
+          "queried_at": "2026-10-29T05:13:46.076Z",
+          "status": "completed",
+          "purpose": "assigned_entry_search"
+        }
+      ],
+      "selected_results": [
+        {
+          "title": "Clerodendrum nutans Wall. ex D.Don | Plants of the World Online | Kew Science",
+          "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A862555-1",
+          "domain": "powo.science.kew.org",
+          "source_ref": "turn44search5",
+          "retrieved_at": "2026-10-29T05:13:46.076Z",
+          "why_relevant": "Kew records with different author citations and a nomenclatural proposal expose identity ambiguity.",
+          "verification_level": "search_result_metadata_only"
+        },
+        {
+          "title": "Clerodendrum nutans Wall. ex Jack | Plants of the World Online | Kew Science",
+          "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A862283-1",
+          "domain": "powo.science.kew.org",
+          "source_ref": "turn44search22",
+          "retrieved_at": "2026-10-29T05:13:46.076Z",
+          "why_relevant": "Kew records with different author citations and a nomenclatural proposal expose identity ambiguity.",
+          "verification_level": "search_result_metadata_only"
+        },
+        {
+          "title": "(3138) Proposal to conserve the name Clerodendrum nutans (Lamiaceae) with a conserved type - Middleton - 2026 - TAXON - Wiley Online Library",
+          "url": "https://onlinelibrary.wiley.com/doi/full/10.1002/tax.70114",
+          "domain": "onlinelibrary.wiley.com",
+          "source_ref": "turn44search26",
+          "retrieved_at": "2026-10-29T05:13:46.076Z",
+          "why_relevant": "Kew records with different author citations and a nomenclatural proposal expose identity ambiguity.",
+          "verification_level": "search_result_metadata_only"
+        }
+      ],
+      "status": "completed_with_selected_results",
+      "unavailable_or_no_result": null,
+      "review_note": "The same unqualified name resolves to author-qualified records; do not silently merge them or assume one accepted identity."
+    },
+    {
+      "entry_id": "gbif-7361803",
+      "sample_index": 57,
+      "query_name": "Seseli elatum",
+      "common_name": "Seseli elatum",
+      "scope": "botanical",
+      "research_kind": "supplemental_search_service_results",
+      "queries": [
+        {
+          "query": "Seseli elatum botanical taxonomy",
+          "tool_kind": "search_service.system2_search_query",
+          "queried_at": "2026-10-29T05:13:46.076Z",
+          "status": "completed",
+          "purpose": "assigned_entry_search"
+        }
+      ],
+      "selected_results": [
+        {
+          "title": "Seseli elatum L. | Plants of the World Online | Kew Science",
+          "url": "https://powo.science.kew.org/taxon/848531-1",
+          "domain": "powo.science.kew.org",
+          "source_ref": "turn44search0",
+          "retrieved_at": "2026-10-29T05:13:46.076Z",
+          "why_relevant": "Kew and USDA GRIN offer exact-name taxonomic reference records.",
+          "verification_level": "search_result_metadata_only"
+        },
+        {
+          "title": "Seseli elatum L. GRIN-Global",
+          "url": "https://npgsweb.ars-grin.gov/gringlobal/taxon/taxonomydetail?id=456881",
+          "domain": "npgsweb.ars-grin.gov",
+          "source_ref": "turn44search2",
+          "retrieved_at": "2026-10-29T05:13:46.076Z",
+          "why_relevant": "Kew and USDA GRIN offer exact-name taxonomic reference records.",
+          "verification_level": "search_result_metadata_only"
+        }
+      ],
+      "status": "completed_with_selected_results",
+      "unavailable_or_no_result": null
+    },
+    {
+      "entry_id": "gbif-7305064",
+      "sample_index": 60,
+      "query_name": "Piper rotundibaccum",
+      "common_name": "Piper rotundibaccum",
+      "scope": "botanical",
+      "research_kind": "supplemental_search_service_results",
+      "queries": [
+        {
+          "query": "Piper rotundibaccum botanical taxonomy",
+          "tool_kind": "search_service.system2_search_query",
+          "queried_at": "2026-10-29T05:13:57.804Z",
+          "status": "completed",
+          "purpose": "assigned_entry_search"
+        }
+      ],
+      "selected_results": [
+        {
+          "title": "Piper rotundibaccum Trel. | Plants of the World Online | Kew Science",
+          "url": "https://powo.science.kew.org/taxon/199029-2",
+          "domain": "powo.science.kew.org",
+          "source_ref": "turn46search2",
+          "retrieved_at": "2026-10-29T05:13:57.804Z",
+          "why_relevant": "Kew supplies an exact-name botanical reference.",
+          "verification_level": "search_result_metadata_only"
+        }
+      ],
+      "status": "completed_with_selected_results",
+      "unavailable_or_no_result": null
+    },
+    {
+      "entry_id": "gbif-3888365",
+      "sample_index": 63,
+      "query_name": "Lepechinia tomentosa",
+      "common_name": "Lepechinia tomentosa",
+      "scope": "botanical",
+      "research_kind": "supplemental_search_service_results",
+      "queries": [
+        {
+          "query": "Lepechinia tomentosa botanical taxonomy",
+          "tool_kind": "search_service.system2_search_query",
+          "queried_at": "2026-10-29T05:13:57.804Z",
+          "status": "completed",
+          "purpose": "assigned_entry_search"
+        },
+        {
+          "query": "\"Lepechinia tomentosa\" botanical",
+          "tool_kind": "search_service.system1_search_query",
+          "queried_at": "2026-10-29T05:14:44.115Z",
+          "status": "completed",
+          "purpose": "coverage_or_identity_followup"
+        }
+      ],
+      "selected_results": [
+        {
+          "title": "Lepechinia Willd. | Plants of the World Online | Kew Science",
+          "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A20971-1",
+          "domain": "powo.science.kew.org",
+          "source_ref": "turn63search0",
+          "retrieved_at": "2026-10-29T05:14:44.115Z",
+          "why_relevant": "Kew's genus list and a primary botanical-chemistry paper explicitly mention the exact name.",
+          "verification_level": "search_result_metadata_only"
+        },
+        {
+          "title": "Phytochemical profile and rosmarinic acid purification from two Peruvian Lepechinia Willd. species (Salviinae, Mentheae, Lamiaceae) | Scientific Reports",
+          "url": "https://www.nature.com/articles/s41598-021-86692-3",
+          "domain": "www.nature.com",
+          "source_ref": "turn63search1",
+          "retrieved_at": "2026-10-29T05:14:44.115Z",
+          "why_relevant": "Kew's genus list and a primary botanical-chemistry paper explicitly mention the exact name.",
+          "verification_level": "search_result_metadata_only"
+        }
+      ],
+      "status": "completed_with_selected_results",
+      "unavailable_or_no_result": null,
+      "review_note": "A species-specific institutional introduction was not returned; selected sources give listing/context rather than a full species treatment."
+    },
+    {
+      "entry_id": "gbif-3635728",
+      "sample_index": 66,
+      "query_name": "Tetrataenium ceylanicum",
+      "common_name": "Tetrataenium ceylanicum",
+      "scope": "botanical",
+      "research_kind": "supplemental_search_service_results",
+      "queries": [
+        {
+          "query": "Tetrataenium ceylanicum botanical taxonomy",
+          "tool_kind": "search_service.system2_search_query",
+          "queried_at": "2026-10-29T05:13:57.804Z",
+          "status": "completed",
+          "purpose": "assigned_entry_search"
+        }
+      ],
+      "selected_results": [
+        {
+          "title": "Tetrataenium ceylanicum (Gardner ex C.B.Clarke) Manden. | Plants of the World Online | Kew Science",
+          "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A943617-1",
+          "domain": "powo.science.kew.org",
+          "source_ref": "turn46search0",
+          "retrieved_at": "2026-10-29T05:13:57.804Z",
+          "why_relevant": "Kew and IISc India Flora Online provide botanical/taxonomic reference context for this species.",
+          "verification_level": "search_result_metadata_only"
+        },
+        {
+          "title": "India Flora Online",
+          "url": "https://indiaflora-ces.iisc.ac.in/herbsheet.php?cat=13&id=5852",
+          "domain": "indiaflora-ces.iisc.ac.in",
+          "source_ref": "turn46search10",
+          "retrieved_at": "2026-10-29T05:13:57.804Z",
+          "why_relevant": "Kew and IISc India Flora Online provide botanical/taxonomic reference context for this species.",
+          "verification_level": "search_result_metadata_only"
+        }
+      ],
+      "status": "completed_with_selected_results",
+      "unavailable_or_no_result": null
+    },
+    {
+      "entry_id": "gbif-3905422",
+      "sample_index": 69,
+      "query_name": "Vitex golungensis",
+      "common_name": "Vitex golungensis",
+      "scope": "botanical",
+      "research_kind": "supplemental_search_service_results",
+      "queries": [
+        {
+          "query": "Vitex golungensis botanical taxonomy",
+          "tool_kind": "search_service.system2_search_query",
+          "queried_at": "2026-10-29T05:13:57.804Z",
+          "status": "completed",
+          "purpose": "assigned_entry_search"
+        },
+        {
+          "query": "\"Vitex golungensis\" botanical",
+          "tool_kind": "search_service.system1_search_query",
+          "queried_at": "2026-10-29T05:14:44.115Z",
+          "status": "completed",
+          "purpose": "coverage_or_identity_followup"
+        }
+      ],
+      "selected_results": [
+        {
+          "title": "Flora of Mozambique: Species information: Vitex madiensis subsp. milanjiensis",
+          "url": "https://www.mozambiqueflora.com/speciesdata/species.php?ishow_id=1&species_id=148910",
+          "domain": "www.mozambiqueflora.com",
+          "source_ref": "turn63search4",
+          "retrieved_at": "2026-10-29T05:14:44.115Z",
+          "why_relevant": "Regional flora and SANBI checklist discuss the name under a synonym treatment; World Plants records a different provisional status.",
+          "verification_level": "search_result_metadata_only"
+        },
+        {
+          "title": "Strelitzia 22 (2008)                                                                 271",
+          "url": "https://www.sanbi.org/wp-content/uploads/2024/05/2008_Strelitzia22.pdf",
+          "domain": "www.sanbi.org",
+          "source_ref": "turn63search7",
+          "retrieved_at": "2026-10-29T05:14:44.115Z",
+          "why_relevant": "Regional flora and SANBI checklist discuss the name under a synonym treatment; World Plants records a different provisional status.",
+          "verification_level": "search_result_metadata_only"
+        },
+        {
+          "title": "Plant List",
+          "url": "https://www.worldplants.de/world-plants-complete-list/complete-plant-list/?name=Vitex-negundo",
+          "domain": "www.worldplants.de",
+          "source_ref": "turn63search3",
+          "retrieved_at": "2026-10-29T05:14:44.115Z",
+          "why_relevant": "Regional flora and SANBI checklist discuss the name under a synonym treatment; World Plants records a different provisional status.",
+          "verification_level": "search_result_metadata_only"
+        }
+      ],
+      "status": "completed_with_selected_results",
+      "unavailable_or_no_result": null,
+      "review_note": "Taxonomic treatments differ. Retain the source name and flag its synonym/accepted status for review."
+    },
+    {
+      "entry_id": "gbif-6307904",
+      "sample_index": 72,
+      "query_name": "Heracleum barmanicum",
+      "common_name": "Heracleum barmanicum",
+      "scope": "botanical",
+      "research_kind": "supplemental_search_service_results",
+      "queries": [
+        {
+          "query": "Heracleum barmanicum botanical taxonomy",
+          "tool_kind": "search_service.system2_search_query",
+          "queried_at": "2026-10-29T05:13:57.804Z",
+          "status": "completed",
+          "purpose": "assigned_entry_search"
+        },
+        {
+          "query": "\"Heracleum barmanicum\" botanical",
+          "tool_kind": "search_service.system1_search_query",
+          "queried_at": "2026-10-29T05:14:44.115Z",
+          "status": "completed",
+          "purpose": "coverage_or_identity_followup"
+        }
+      ],
+      "selected_results": [
+        {
+          "title": "《中国植物志》手机版",
+          "url": "https://www.iplant.cn/z/frps/30317",
+          "domain": "www.iplant.cn",
+          "source_ref": "turn63search6",
+          "retrieved_at": "2026-10-29T05:14:44.115Z",
+          "why_relevant": "Chinese flora treatments explicitly cover the historical spelling and the interpretation of Chinese records.",
+          "verification_level": "search_result_metadata_only"
+        },
+        {
+          "title": "Heracleum kingdonii in Flora of China @ efloras.org",
+          "url": "https://www.efloras.org/florataxon.aspx?flora_id=2&taxon_id=242444018",
+          "domain": "www.efloras.org",
+          "source_ref": "turn63search5",
+          "retrieved_at": "2026-10-29T05:14:44.115Z",
+          "why_relevant": "Chinese flora treatments explicitly cover the historical spelling and the interpretation of Chinese records.",
+          "verification_level": "search_result_metadata_only"
+        }
+      ],
+      "status": "completed_with_selected_results",
+      "unavailable_or_no_result": null,
+      "review_note": "Flora of China states that Chinese records using the historical barmanicum spelling refer to H. kingdonii; this is not a universal synonym claim for all records."
+    },
+    {
+      "entry_id": "gbif-8064486",
+      "sample_index": 75,
+      "query_name": "Peperomia auberyana",
+      "common_name": "Peperomia auberyana",
+      "scope": "botanical",
+      "research_kind": "supplemental_search_service_results",
+      "queries": [
+        {
+          "query": "Peperomia auberyana botanical taxonomy",
+          "tool_kind": "search_service.system2_search_query",
+          "queried_at": "2026-10-29T05:13:57.804Z",
+          "status": "completed",
+          "purpose": "assigned_entry_search"
+        }
+      ],
+      "selected_results": [
+        {
+          "title": "Peperomia auberyana Trel.",
+          "url": "https://www.worldfloraonline.org/taxon/wfo-0000478280",
+          "domain": "www.worldfloraonline.org",
+          "source_ref": "turn47search10",
+          "retrieved_at": "2026-10-29T05:13:57.804Z",
+          "why_relevant": "World Flora Online returns an exact-name taxonomic record.",
+          "verification_level": "search_result_metadata_only"
+        }
+      ],
+      "status": "completed_with_selected_results",
+      "unavailable_or_no_result": null,
+      "review_note": "Search returned a session-bearing URL; verify the permanent record URL before product use."
+    },
+    {
+      "entry_id": "gbif-10812951",
+      "sample_index": 78,
+      "query_name": "Mentha lithuanica",
+      "common_name": "Mentha lithuanica",
+      "scope": "botanical",
+      "research_kind": "supplemental_search_service_results",
+      "queries": [
+        {
+          "query": "Mentha lithuanica botanical taxonomy",
+          "tool_kind": "search_service.system2_search_query",
+          "queried_at": "2026-10-29T05:13:57.804Z",
+          "status": "completed",
+          "purpose": "assigned_entry_search"
+        },
+        {
+          "query": "\"Mentha lithuanica\" botanical",
+          "tool_kind": "search_service.system1_search_query",
+          "queried_at": "2026-10-29T05:14:44.115Z",
+          "status": "completed",
+          "purpose": "coverage_or_identity_followup"
+        }
+      ],
+      "selected_results": [
+        {
+          "title": "Mentha L. | Plants of the World Online | Kew Science",
+          "url": "https://powo.science.kew.org/taxon/30016176-2",
+          "domain": "powo.science.kew.org",
+          "source_ref": "turn47search3",
+          "retrieved_at": "2026-10-29T05:13:57.804Z",
+          "why_relevant": "Kew genus information and MPNS synonym listings provide related-name context.",
+          "verification_level": "search_result_metadata_only"
+        },
+        {
+          "title": "Plant name details for Mentha × villosa - Medicinal Plant Names Services",
+          "url": "https://mpns.science.kew.org/mpns-portal/plantDetail?dbs=wcs&filter=&fuzzy=false&nameType=all&plantId=125574&query=",
+          "domain": "mpns.science.kew.org",
+          "source_ref": "turn64search2",
+          "retrieved_at": "2026-10-29T05:14:44.115Z",
+          "why_relevant": "Kew genus information and MPNS synonym listings provide related-name context.",
+          "verification_level": "search_result_metadata_only"
+        }
+      ],
+      "status": "exact_identity_unavailable",
+      "unavailable_or_no_result": {
+        "type": "exact_identity_unavailable",
+        "detail": "The exact unqualified binomial Mentha lithuanica was not resolved. MPNS lists infraspecific names containing lithuanica; no equivalence has been asserted."
+      },
+      "review_note": "The exact unqualified binomial Mentha lithuanica was not resolved. MPNS lists infraspecific names containing lithuanica; no equivalence has been asserted."
+    },
+    {
+      "entry_id": "gbif-7707512",
+      "sample_index": 81,
+      "query_name": "Peucedanum nepalense",
+      "common_name": "Peucedanum nepalense",
+      "scope": "botanical",
+      "research_kind": "supplemental_search_service_results",
+      "queries": [
+        {
+          "query": "Peucedanum nepalense botanical taxonomy",
+          "tool_kind": "search_service.system2_search_query",
+          "queried_at": "2026-10-29T05:13:57.804Z",
+          "status": "completed",
+          "purpose": "assigned_entry_search"
+        }
+      ],
+      "selected_results": [
+        {
+          "title": "Peucedanum nepalense P.K.Mukh. | Plants of the World Online | Kew Science",
+          "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A846271-1/general-information",
+          "domain": "powo.science.kew.org",
+          "source_ref": "turn47search1",
+          "retrieved_at": "2026-10-29T05:13:57.804Z",
+          "why_relevant": "Kew, IISc India Flora Online, and NCBI offer exact-name botanical and taxonomic context.",
+          "verification_level": "search_result_metadata_only"
+        },
+        {
+          "title": "India Flora Online",
+          "url": "https://indiaflora-ces.iisc.ac.in/herbsheet.php?cat=13&id=8989",
+          "domain": "indiaflora-ces.iisc.ac.in",
+          "source_ref": "turn47search6",
+          "retrieved_at": "2026-10-29T05:13:57.804Z",
+          "why_relevant": "Kew, IISc India Flora Online, and NCBI offer exact-name botanical and taxonomic context.",
+          "verification_level": "search_result_metadata_only"
+        },
+        {
+          "title": "Taxonomy browser Taxonomy Browser (Peucedanum nepalense)",
+          "url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=3863736",
+          "domain": "www.ncbi.nlm.nih.gov",
+          "source_ref": "turn47search0",
+          "retrieved_at": "2026-10-29T05:13:57.804Z",
+          "why_relevant": "Kew, IISc India Flora Online, and NCBI offer exact-name botanical and taxonomic context.",
+          "verification_level": "search_result_metadata_only"
+        }
+      ],
+      "status": "completed_with_selected_results",
+      "unavailable_or_no_result": null
+    },
+    {
+      "entry_id": "gbif-4189981",
+      "sample_index": 84,
+      "query_name": "Peperomia huacapistanana",
+      "common_name": "Peperomia huacapistanana",
+      "scope": "botanical",
+      "research_kind": "supplemental_search_service_results",
+      "queries": [
+        {
+          "query": "Peperomia huacapistanana botanical taxonomy",
+          "tool_kind": "search_service.system2_search_query",
+          "queried_at": "2026-10-29T05:14:06.989Z",
+          "status": "completed",
+          "purpose": "assigned_entry_search"
+        }
+      ],
+      "selected_results": [
+        {
+          "title": "Peperomia huacapistanana Trel. | Plants of the World Online | Kew Science",
+          "url": "https://powo.science.kew.org/taxon/188905-2",
+          "domain": "powo.science.kew.org",
+          "source_ref": "turn48search0",
+          "retrieved_at": "2026-10-29T05:14:06.989Z",
+          "why_relevant": "Kew, IPNI, and WFO supply exact-name taxonomic and nomenclatural records.",
+          "verification_level": "search_result_metadata_only"
+        },
+        {
+          "title": "Peperomia huacapistanana | International Plant Names Index",
+          "url": "https://www.ipni.org/n/188905-2",
+          "domain": "www.ipni.org",
+          "source_ref": "turn48search2",
+          "retrieved_at": "2026-10-29T05:14:06.989Z",
+          "why_relevant": "Kew, IPNI, and WFO supply exact-name taxonomic and nomenclatural records.",
+          "verification_level": "search_result_metadata_only"
+        },
+        {
+          "title": "Peperomia huacapistanana Trel.",
+          "url": "https://www.worldfloraonline.org/taxon/wfo-0001092538",
+          "domain": "www.worldfloraonline.org",
+          "source_ref": "turn48search3",
+          "retrieved_at": "2026-10-29T05:14:06.989Z",
+          "why_relevant": "Kew, IPNI, and WFO supply exact-name taxonomic and nomenclatural records.",
+          "verification_level": "search_result_metadata_only"
+        }
+      ],
+      "status": "completed_with_selected_results",
+      "unavailable_or_no_result": null
+    },
+    {
+      "entry_id": "gbif-8051206",
+      "sample_index": 87,
+      "query_name": "Oocephalus ganevii",
+      "common_name": "Oocephalus ganevii",
+      "scope": "botanical",
+      "research_kind": "supplemental_search_service_results",
+      "queries": [
+        {
+          "query": "Oocephalus ganevii botanical taxonomy",
+          "tool_kind": "search_service.system2_search_query",
+          "queried_at": "2026-10-29T05:14:06.989Z",
+          "status": "completed",
+          "purpose": "assigned_entry_search"
+        }
+      ],
+      "selected_results": [
+        {
+          "title": "Oocephalus ganevii Harley | Plants of the World Online | Kew Science",
+          "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A77142845-1",
+          "domain": "powo.science.kew.org",
+          "source_ref": "turn48search1",
+          "retrieved_at": "2026-10-29T05:14:06.989Z",
+          "why_relevant": "Kew supplies an exact-name botanical reference.",
+          "verification_level": "search_result_metadata_only"
+        }
+      ],
+      "status": "completed_with_selected_results",
+      "unavailable_or_no_result": null
+    },
+    {
+      "entry_id": "gbif-8397041",
+      "sample_index": 90,
+      "query_name": "Vitex waterlotii",
+      "common_name": "Vitex waterlotii",
+      "scope": "botanical",
+      "research_kind": "supplemental_search_service_results",
+      "queries": [
+        {
+          "query": "Vitex waterlotii botanical taxonomy",
+          "tool_kind": "search_service.system2_search_query",
+          "queried_at": "2026-10-29T05:14:06.989Z",
+          "status": "completed",
+          "purpose": "assigned_entry_search"
+        }
+      ],
+      "selected_results": [
+        {
+          "title": "Vitex waterlotii Danguy (Western Indian Ocean) - Pl@ntNet identify",
+          "url": "https://identify.plantnet.org/en-au/k-western-indian-ocean/species/Vitex%20waterlotii%20Danguy/data",
+          "domain": "identify.plantnet.org",
+          "source_ref": "turn48search10",
+          "retrieved_at": "2026-10-29T05:14:06.989Z",
+          "why_relevant": "Pl@ntNet supplies an exact-name species data page and Kew supplies genus context.",
+          "verification_level": "search_result_metadata_only"
+        },
+        {
+          "title": "Vitex L. | Plants of the World Online | Kew Science",
+          "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A30000069-2",
+          "domain": "powo.science.kew.org",
+          "source_ref": "turn48search11",
+          "retrieved_at": "2026-10-29T05:14:06.989Z",
+          "why_relevant": "Pl@ntNet supplies an exact-name species data page and Kew supplies genus context.",
+          "verification_level": "search_result_metadata_only"
+        }
+      ],
+      "status": "completed_with_selected_results",
+      "unavailable_or_no_result": null,
+      "review_note": "The exact-name page is an identification/data portal; selected Kew reference is genus-level."
+    },
+    {
+      "entry_id": "gbif-3902086",
+      "sample_index": 93,
+      "query_name": "Hyptis odorata",
+      "common_name": "Hyptis odorata",
+      "scope": "botanical",
+      "research_kind": "supplemental_search_service_results",
+      "queries": [
+        {
+          "query": "Hyptis odorata botanical taxonomy",
+          "tool_kind": "search_service.system2_search_query",
+          "queried_at": "2026-10-29T05:14:06.989Z",
+          "status": "completed",
+          "purpose": "assigned_entry_search"
+        }
+      ],
+      "selected_results": [
+        {
+          "title": "Hyptis odorata Benth.",
+          "url": "https://science.mnhn.fr/taxon/species/hyptis/odorata",
+          "domain": "science.mnhn.fr",
+          "source_ref": "turn48search7",
+          "retrieved_at": "2026-10-29T05:14:06.989Z",
+          "why_relevant": "MNHN exact-name taxon and syntype specimen records provide primary collection context.",
+          "verification_level": "search_result_metadata_only"
+        },
+        {
+          "title": "Specimen - syntype Hyptis odorata Benth.",
+          "url": "https://science.mnhn.fr/institution/mnhn/collection/p/item/p00737230?listIndex=264",
+          "domain": "science.mnhn.fr",
+          "source_ref": "turn48search12",
+          "retrieved_at": "2026-10-29T05:14:06.989Z",
+          "why_relevant": "MNHN exact-name taxon and syntype specimen records provide primary collection context.",
+          "verification_level": "search_result_metadata_only"
+        }
+      ],
+      "status": "completed_with_selected_results",
+      "unavailable_or_no_result": null
+    },
+    {
+      "entry_id": "gbif-2925557",
+      "sample_index": 96,
+      "query_name": "Vitex divaricata",
+      "common_name": "Higuerillo",
+      "scope": "botanical",
+      "research_kind": "supplemental_search_service_results",
+      "queries": [
+        {
+          "query": "Vitex divaricata Higuerillo botanical taxonomy",
+          "tool_kind": "search_service.system2_search_query",
+          "queried_at": "2026-10-29T05:14:06.989Z",
+          "status": "completed",
+          "purpose": "assigned_entry_search"
+        }
+      ],
+      "selected_results": [
+        {
+          "title": "Vitex divaricata Sw. | Plants of the World Online | Kew Science",
+          "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A865688-1",
+          "domain": "powo.science.kew.org",
+          "source_ref": "turn49search29",
+          "retrieved_at": "2026-10-29T05:14:06.989Z",
+          "why_relevant": "Kew, USDA GRIN, and ITIS identify the Swartz-authored name corresponding to the common-name context.",
+          "verification_level": "search_result_metadata_only"
+        },
+        {
+          "title": "Vitex divaricata Sw. GRIN-Global",
+          "url": "https://npgsweb.ars-grin.gov/gringlobal/taxon/taxonomydetail?id=466879",
+          "domain": "npgsweb.ars-grin.gov",
+          "source_ref": "turn49search32",
+          "retrieved_at": "2026-10-29T05:14:06.989Z",
+          "why_relevant": "Kew, USDA GRIN, and ITIS identify the Swartz-authored name corresponding to the common-name context.",
+          "verification_level": "search_result_metadata_only"
+        },
+        {
+          "title": "ITIS - Report: Vitex divaricata",
+          "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=32224",
+          "domain": "www.itis.gov",
+          "source_ref": "turn49search1",
+          "retrieved_at": "2026-10-29T05:14:06.989Z",
+          "why_relevant": "Kew, USDA GRIN, and ITIS identify the Swartz-authored name corresponding to the common-name context.",
+          "verification_level": "search_result_metadata_only"
+        }
+      ],
+      "status": "completed_with_selected_results",
+      "unavailable_or_no_result": null,
+      "review_note": "A separate Vitex divaricata Baker record also appeared. Keep authorship during disambiguation."
+    },
+    {
+      "entry_id": "gbif-3629711",
+      "sample_index": 99,
+      "query_name": "Seseli rhodopeum",
+      "common_name": "Seseli rhodopeum",
+      "scope": "botanical",
+      "research_kind": "supplemental_search_service_results",
+      "queries": [
+        {
+          "query": "Seseli rhodopeum botanical taxonomy",
+          "tool_kind": "search_service.system2_search_query",
+          "queried_at": "2026-10-29T05:14:06.989Z",
+          "status": "completed",
+          "purpose": "assigned_entry_search"
+        }
+      ],
+      "selected_results": [
+        {
+          "title": "Seseli rhodopeum Velen. | Plants of the World Online | Kew Science",
+          "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A848689-1",
+          "domain": "powo.science.kew.org",
+          "source_ref": "turn49search3",
+          "retrieved_at": "2026-10-29T05:14:06.989Z",
+          "why_relevant": "Kew/IPNI records and a regional Bulgarian flora provide taxonomy and botanical introduction.",
+          "verification_level": "search_result_metadata_only"
+        },
+        {
+          "title": "Seseli rhodopeum | International Plant Names Index",
+          "url": "https://www.ipni.org/n/848689-1",
+          "domain": "www.ipni.org",
+          "source_ref": "turn49search16",
+          "retrieved_at": "2026-10-29T05:14:06.989Z",
+          "why_relevant": "Kew/IPNI records and a regional Bulgarian flora provide taxonomy and botanical introduction.",
+          "verification_level": "search_result_metadata_only"
+        },
+        {
+          "title": "Seseli rhodopeum - The Bulgarian flora online",
+          "url": "https://bgflora.net/families/apiaceae/seseli/seseli_rhodopeum/seseli_rhodopeum_en.html",
+          "domain": "bgflora.net",
+          "source_ref": "turn49search22",
+          "retrieved_at": "2026-10-29T05:14:06.989Z",
+          "why_relevant": "Kew/IPNI records and a regional Bulgarian flora provide taxonomy and botanical introduction.",
+          "verification_level": "search_result_metadata_only"
+        }
+      ],
+      "status": "completed_with_selected_results",
+      "unavailable_or_no_result": null
+    },
+    {
+      "entry_id": "gbif-10854791",
+      "sample_index": 102,
+      "query_name": "Peperomia aggregata",
+      "common_name": "Peperomia aggregata",
+      "scope": "botanical",
+      "research_kind": "supplemental_search_service_results",
+      "queries": [
+        {
+          "query": "Peperomia aggregata botanical taxonomy",
+          "tool_kind": "search_service.system2_search_query",
+          "queried_at": "2026-10-29T05:14:06.989Z",
+          "status": "completed",
+          "purpose": "assigned_entry_search"
+        }
+      ],
+      "selected_results": [
+        {
+          "title": "Peperomia aggregata E.F.Guim. & Carv.-Silva",
+          "url": "https://www.worldfloraonline.org/taxon/wfo-1000033755",
+          "domain": "www.worldfloraonline.org",
+          "source_ref": "turn49search17",
+          "retrieved_at": "2026-10-29T05:14:06.989Z",
+          "why_relevant": "World Flora Online returns an exact-name taxonomic record.",
+          "verification_level": "search_result_metadata_only"
+        }
+      ],
+      "status": "completed_with_selected_results",
+      "unavailable_or_no_result": null,
+      "review_note": "Search returned a session-bearing URL; verify the permanent record URL before product use."
+    },
+    {
+      "entry_id": "gbif-3629852",
+      "sample_index": 105,
+      "query_name": "Eryngium longifolium",
+      "common_name": "Eryngium longifolium",
+      "scope": "botanical",
+      "research_kind": "supplemental_search_service_results",
+      "queries": [
+        {
+          "query": "Eryngium longifolium botanical taxonomy",
+          "tool_kind": "search_service.system2_search_query",
+          "queried_at": "2026-10-29T05:14:06.989Z",
+          "status": "completed",
+          "purpose": "assigned_entry_search"
+        }
+      ],
+      "selected_results": [
+        {
+          "title": "Eryngium longifolium Cav. | Plants of the World Online | Kew Science",
+          "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A841888-1",
+          "domain": "powo.science.kew.org",
+          "source_ref": "turn49search6",
+          "retrieved_at": "2026-10-29T05:14:06.989Z",
+          "why_relevant": "Kew supplies an exact-name botanical reference; similarly spelled names from other genera were rejected.",
+          "verification_level": "search_result_metadata_only"
+        }
+      ],
+      "status": "completed_with_selected_results",
+      "unavailable_or_no_result": null
+    },
+    {
+      "entry_id": "gbif-9463119",
+      "sample_index": 108,
+      "query_name": "Azorella prolifera",
+      "common_name": "Mother-in-law Cushion",
+      "scope": "botanical",
+      "research_kind": "supplemental_search_service_results",
+      "queries": [
+        {
+          "query": "Azorella prolifera Mother-in-law Cushion botanical taxonomy",
+          "tool_kind": "search_service.system2_search_query",
+          "queried_at": "2026-10-29T05:14:15.547Z",
+          "status": "completed",
+          "purpose": "assigned_entry_search"
+        }
+      ],
+      "selected_results": [
+        {
+          "title": "Azorella prolifera (Cav.) G.M.Plunkett & A.N.Nicolas | Plants of the World Online | Kew Science",
+          "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A60473303-2/general-information",
+          "domain": "powo.science.kew.org",
+          "source_ref": "turn51search22",
+          "retrieved_at": "2026-10-29T05:14:15.547Z",
+          "why_relevant": "Kew and WFO offer exact-name taxonomic/distribution reference records.",
+          "verification_level": "search_result_metadata_only"
+        },
+        {
+          "title": "Azorella prolifera (Cav.) G.M.Plunkett & A.N.Nicolas",
+          "url": "https://www.worldfloraonline.org/taxon/wfo-0001330633",
+          "domain": "www.worldfloraonline.org",
+          "source_ref": "turn51search30",
+          "retrieved_at": "2026-10-29T05:14:15.547Z",
+          "why_relevant": "Kew and WFO offer exact-name taxonomic/distribution reference records.",
+          "verification_level": "search_result_metadata_only"
+        }
+      ],
+      "status": "completed_with_selected_results",
+      "unavailable_or_no_result": null
+    },
+    {
+      "entry_id": "gbif-3629617",
+      "sample_index": 111,
+      "query_name": "Eryngium marocanum",
+      "common_name": "Eryngium marocanum",
+      "scope": "botanical",
+      "research_kind": "supplemental_search_service_results",
+      "queries": [
+        {
+          "query": "Eryngium marocanum botanical taxonomy",
+          "tool_kind": "search_service.system2_search_query",
+          "queried_at": "2026-10-29T05:14:15.547Z",
+          "status": "completed",
+          "purpose": "assigned_entry_search"
+        }
+      ],
+      "selected_results": [
+        {
+          "title": "Eryngium marocanum Pit. | Plants of the World Online | Kew Science",
+          "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A330916-2",
+          "domain": "powo.science.kew.org",
+          "source_ref": "turn51search0",
+          "retrieved_at": "2026-10-29T05:14:15.547Z",
+          "why_relevant": "Kew, MNHN, and GBIF provide exact-name taxonomy and collection/biodiversity reference pointers.",
+          "verification_level": "search_result_metadata_only"
+        },
+        {
+          "title": "Eryngium marocanum Pit.",
+          "url": "https://science.mnhn.fr/taxon/species/eryngium/marocanum",
+          "domain": "science.mnhn.fr",
+          "source_ref": "turn51search5",
+          "retrieved_at": "2026-10-29T05:14:15.547Z",
+          "why_relevant": "Kew, MNHN, and GBIF provide exact-name taxonomy and collection/biodiversity reference pointers.",
+          "verification_level": "search_result_metadata_only"
+        },
+        {
+          "title": "Eryngium marocanum",
+          "url": "https://www.gbif.org/taxon/6GSFG",
+          "domain": "www.gbif.org",
+          "source_ref": "turn51search17",
+          "retrieved_at": "2026-10-29T05:14:15.547Z",
+          "why_relevant": "Kew, MNHN, and GBIF provide exact-name taxonomy and collection/biodiversity reference pointers.",
+          "verification_level": "search_result_metadata_only"
+        }
+      ],
+      "status": "completed_with_selected_results",
+      "unavailable_or_no_result": null
+    },
+    {
+      "entry_id": "gbif-3884138",
+      "sample_index": 114,
+      "query_name": "Stachys collina",
+      "common_name": "Stachys collina",
+      "scope": "botanical",
+      "research_kind": "supplemental_search_service_results",
+      "queries": [
+        {
+          "query": "Stachys collina botanical taxonomy",
+          "tool_kind": "search_service.system2_search_query",
+          "queried_at": "2026-10-29T05:14:15.547Z",
+          "status": "completed",
+          "purpose": "assigned_entry_search"
+        }
+      ],
+      "selected_results": [
+        {
+          "title": "Stachys collina Brandegee",
+          "url": "https://www.worldfloraonline.org/taxon/wfo-0000313866",
+          "domain": "www.worldfloraonline.org",
+          "source_ref": "turn51search29",
+          "retrieved_at": "2026-10-29T05:14:15.547Z",
+          "why_relevant": "World Flora Online supplies an exact-name taxonomic record.",
+          "verification_level": "search_result_metadata_only"
+        }
+      ],
+      "status": "completed_with_selected_results",
+      "unavailable_or_no_result": null
+    },
+    {
+      "entry_id": "wd-Q21389473",
+      "sample_index": 117,
+      "query_name": "Rhododendron subsect. Ledum",
+      "common_name": "Rhododendron subsect. Ledum",
+      "scope": "botanical",
+      "research_kind": "supplemental_search_service_results",
+      "queries": [
+        {
+          "query": "Rhododendron subsect. Ledum botanical taxonomy",
+          "tool_kind": "search_service.system2_search_query",
+          "queried_at": "2026-10-29T05:14:15.547Z",
+          "status": "completed",
+          "purpose": "assigned_entry_search"
+        }
+      ],
+      "selected_results": [
+        {
+          "title": "Confusing boundaries of the Labrador tea species: dispersal history explains the lack of clear species structure | Annals of Botany | Oxford Academic",
+          "url": "https://academic.oup.com/aob/article/134/6/959/7729321",
+          "domain": "academic.oup.com",
+          "source_ref": "turn51search20",
+          "retrieved_at": "2026-10-29T05:14:15.547Z",
+          "why_relevant": "Primary Annals of Botany research examines taxonomy and species boundaries of Labrador teas.",
+          "verification_level": "search_result_metadata_only"
+        }
+      ],
+      "status": "completed_with_selected_results",
+      "unavailable_or_no_result": null,
+      "review_note": "Infrageneric botanical group; a research article is contextual evidence, not culinary approval or a claim of edibility."
+    },
+    {
+      "entry_id": "gbif-4190763",
+      "sample_index": 120,
+      "query_name": "Piper nervulosum",
+      "common_name": "Piper nervulosum",
+      "scope": "botanical",
+      "research_kind": "supplemental_search_service_results",
+      "queries": [
+        {
+          "query": "Piper nervulosum botanical taxonomy",
+          "tool_kind": "search_service.system2_search_query",
+          "queried_at": "2026-10-29T05:14:15.547Z",
+          "status": "completed",
+          "purpose": "assigned_entry_search"
+        }
+      ],
+      "selected_results": [
+        {
+          "title": "Piper nervulosum C.DC. | Plants of the World Online | Kew Science",
+          "url": "https://powo.science.kew.org/taxon/682348-1",
+          "domain": "powo.science.kew.org",
+          "source_ref": "turn52search2",
+          "retrieved_at": "2026-10-29T05:14:15.547Z",
+          "why_relevant": "Kew and WFO provide exact-name botanical reference records.",
+          "verification_level": "search_result_metadata_only"
+        },
+        {
+          "title": "Piper nervulosum C.DC.",
+          "url": "https://www.worldfloraonline.org/taxon/wfo-0001265377",
+          "domain": "www.worldfloraonline.org",
+          "source_ref": "turn52search10",
+          "retrieved_at": "2026-10-29T05:14:15.547Z",
+          "why_relevant": "Kew and WFO provide exact-name botanical reference records.",
+          "verification_level": "search_result_metadata_only"
+        }
+      ],
+      "status": "completed_with_selected_results",
+      "unavailable_or_no_result": null
+    },
+    {
+      "entry_id": "gbif-7893524",
+      "sample_index": 123,
+      "query_name": "Coleus longipetiolatus",
+      "common_name": "Coleus longipetiolatus",
+      "scope": "botanical",
+      "research_kind": "supplemental_search_service_results",
+      "queries": [
+        {
+          "query": "Coleus longipetiolatus botanical taxonomy",
+          "tool_kind": "search_service.system2_search_query",
+          "queried_at": "2026-10-29T05:14:15.547Z",
+          "status": "completed",
+          "purpose": "assigned_entry_search"
+        }
+      ],
+      "selected_results": [
+        {
+          "title": "Coleus longipetiolatus Gürke | Plants of the World Online | Kew Science",
+          "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A446062-1",
+          "domain": "powo.science.kew.org",
+          "source_ref": "turn52search0",
+          "retrieved_at": "2026-10-29T05:14:15.547Z",
+          "why_relevant": "Kew/IPNI nomenclatural records and a regional flora introduce the exact-name taxon.",
+          "verification_level": "search_result_metadata_only"
+        },
+        {
+          "title": "Coleus longipetiolatus | International Plant Names Index",
+          "url": "https://www.ipni.org/n/446062-1",
+          "domain": "www.ipni.org",
+          "source_ref": "turn52search1",
+          "retrieved_at": "2026-10-29T05:14:15.547Z",
+          "why_relevant": "Kew/IPNI nomenclatural records and a regional flora introduce the exact-name taxon.",
+          "verification_level": "search_result_metadata_only"
+        },
+        {
+          "title": "Flora of Mozambique: Species information: Coleus longipetiolatus",
+          "url": "https://www.mozambiqueflora.com/speciesdata/species.php?species_id=208170",
+          "domain": "www.mozambiqueflora.com",
+          "source_ref": "turn52search37",
+          "retrieved_at": "2026-10-29T05:14:15.547Z",
+          "why_relevant": "Kew/IPNI nomenclatural records and a regional flora introduce the exact-name taxon.",
+          "verification_level": "search_result_metadata_only"
+        }
+      ],
+      "status": "completed_with_selected_results",
+      "unavailable_or_no_result": null
+    },
+    {
+      "entry_id": "gbif-3902661",
+      "sample_index": 126,
+      "query_name": "Dracocephalum isabellae",
+      "common_name": "Dracocephalum isabellae",
+      "scope": "botanical",
+      "research_kind": "supplemental_search_service_results",
+      "queries": [
+        {
+          "query": "Dracocephalum isabellae botanical taxonomy",
+          "tool_kind": "search_service.system2_search_query",
+          "queried_at": "2026-10-29T05:14:15.547Z",
+          "status": "completed",
+          "purpose": "assigned_entry_search"
+        }
+      ],
+      "selected_results": [
+        {
+          "title": "Dracocephalum isabellae in Flora of China @ efloras.org",
+          "url": "https://efloras.org/florataxon.aspx?flora_id=2&taxon_id=200019580",
+          "domain": "efloras.org",
+          "source_ref": "turn52search31",
+          "retrieved_at": "2026-10-29T05:14:15.547Z",
+          "why_relevant": "Flora of China, iPlant, and WFO give botanical treatments and exact-name taxonomy.",
+          "verification_level": "search_result_metadata_only"
+        },
+        {
+          "title": "白萼青兰 Dracocephalum isabellae|iPlant 植物智——植物物种信息系统",
+          "url": "https://www.iplant.cn/info/Dracocephalum%20isabellae?t=focn",
+          "domain": "www.iplant.cn",
+          "source_ref": "turn52search30",
+          "retrieved_at": "2026-10-29T05:14:15.547Z",
+          "why_relevant": "Flora of China, iPlant, and WFO give botanical treatments and exact-name taxonomy.",
+          "verification_level": "search_result_metadata_only"
+        },
+        {
+          "title": "Dracocephalum isabellae Forrest ex W.W.Sm.",
+          "url": "https://worldfloraonline.org/taxon/wfo-0000945367",
+          "domain": "worldfloraonline.org",
+          "source_ref": "turn52search4",
+          "retrieved_at": "2026-10-29T05:14:15.547Z",
+          "why_relevant": "Flora of China, iPlant, and WFO give botanical treatments and exact-name taxonomy.",
+          "verification_level": "search_result_metadata_only"
+        }
+      ],
+      "status": "completed_with_selected_results",
+      "unavailable_or_no_result": null
+    },
+    {
+      "entry_id": "gbif-4188384",
+      "sample_index": 129,
+      "query_name": "Piper curvipilum",
+      "common_name": "Piper curvipilum",
+      "scope": "botanical",
+      "research_kind": "supplemental_search_service_results",
+      "queries": [
+        {
+          "query": "Piper curvipilum botanical taxonomy",
+          "tool_kind": "search_service.system2_search_query",
+          "queried_at": "2026-10-29T05:14:15.547Z",
+          "status": "completed",
+          "purpose": "assigned_entry_search"
+        }
+      ],
+      "selected_results": [
+        {
+          "title": "Piper curvipilum Trel. | Plants of the World Online | Kew Science",
+          "url": "https://powo.science.kew.org/taxon/197720-2",
+          "domain": "powo.science.kew.org",
+          "source_ref": "turn52search6",
+          "retrieved_at": "2026-10-29T05:14:15.547Z",
+          "why_relevant": "Kew and IPNI give exact-name taxonomic/nomenclatural records.",
+          "verification_level": "search_result_metadata_only"
+        },
+        {
+          "title": "Piper curvipilum | International Plant Names Index",
+          "url": "https://www.ipni.org/n/197720-2",
+          "domain": "www.ipni.org",
+          "source_ref": "turn52search11",
+          "retrieved_at": "2026-10-29T05:14:15.547Z",
+          "why_relevant": "Kew and IPNI give exact-name taxonomic/nomenclatural records.",
+          "verification_level": "search_result_metadata_only"
+        }
+      ],
+      "status": "completed_with_selected_results",
+      "unavailable_or_no_result": null
+    },
+    {
+      "entry_id": "gbif-3633746",
+      "sample_index": 132,
+      "query_name": "Hymenidium heterosciadium",
+      "common_name": "Hymenidium heterosciadium",
+      "scope": "botanical",
+      "research_kind": "supplemental_search_service_results",
+      "queries": [
+        {
+          "query": "Hymenidium heterosciadium botanical taxonomy",
+          "tool_kind": "search_service.system2_search_query",
+          "queried_at": "2026-10-29T05:14:23.557Z",
+          "status": "completed",
+          "purpose": "assigned_entry_search"
+        }
+      ],
+      "selected_results": [
+        {
+          "title": "Hymenidium heterosciadium (H.Wolff) Pimenov & Kljuykov | Plants of the World Online | Kew Science",
+          "url": "https://powo.science.kew.org/taxon/1018551-1",
+          "domain": "powo.science.kew.org",
+          "source_ref": "turn55search2",
+          "retrieved_at": "2026-10-29T05:14:23.557Z",
+          "why_relevant": "Kew, IPNI, and WFO give exact-name taxonomic/nomenclatural records.",
+          "verification_level": "search_result_metadata_only"
+        },
+        {
+          "title": "Hymenidium heterosciadium | International Plant Names Index",
+          "url": "https://www.ipni.org/n/1018551-1",
+          "domain": "www.ipni.org",
+          "source_ref": "turn55search0",
+          "retrieved_at": "2026-10-29T05:14:23.557Z",
+          "why_relevant": "Kew, IPNI, and WFO give exact-name taxonomic/nomenclatural records.",
+          "verification_level": "search_result_metadata_only"
+        },
+        {
+          "title": "Hymenidium heterosciadium (H.Wolff) Pimenov & Kljuykov",
+          "url": "https://worldfloraonline.org/taxon/wfo-0001274113",
+          "domain": "worldfloraonline.org",
+          "source_ref": "turn55search7",
+          "retrieved_at": "2026-10-29T05:14:23.557Z",
+          "why_relevant": "Kew, IPNI, and WFO give exact-name taxonomic/nomenclatural records.",
+          "verification_level": "search_result_metadata_only"
+        }
+      ],
+      "status": "completed_with_selected_results",
+      "unavailable_or_no_result": null
+    },
+    {
+      "entry_id": "gbif-3631723",
+      "sample_index": 135,
+      "query_name": "Ammi seubertianum",
+      "common_name": "Ammi seubertianum",
+      "scope": "botanical",
+      "research_kind": "supplemental_search_service_results",
+      "queries": [
+        {
+          "query": "Ammi seubertianum botanical taxonomy",
+          "tool_kind": "search_service.system2_search_query",
+          "queried_at": "2026-10-29T05:14:23.557Z",
+          "status": "completed",
+          "purpose": "assigned_entry_search"
+        }
+      ],
+      "selected_results": [
+        {
+          "title": "Ammi seubertianum (H.C.Watson) Trel. | Plants of the World Online | Kew Science",
+          "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A837498-1",
+          "domain": "powo.science.kew.org",
+          "source_ref": "turn55search1",
+          "retrieved_at": "2026-10-29T05:14:23.557Z",
+          "why_relevant": "Kew supplies an exact-name botanical reference.",
+          "verification_level": "search_result_metadata_only"
+        }
+      ],
+      "status": "completed_with_selected_results",
+      "unavailable_or_no_result": null
+    },
+    {
+      "entry_id": "gbif-7305564",
+      "sample_index": 138,
+      "query_name": "Piper longispicum",
+      "common_name": "Piper longispicum",
+      "scope": "botanical",
+      "research_kind": "supplemental_search_service_results",
+      "queries": [
+        {
+          "query": "Piper longispicum botanical taxonomy",
+          "tool_kind": "search_service.system2_search_query",
+          "queried_at": "2026-10-29T05:14:23.557Z",
+          "status": "completed",
+          "purpose": "assigned_entry_search"
+        }
+      ],
+      "selected_results": [
+        {
+          "title": "Piper longispicum C.DC. | Plants of the World Online | Kew Science",
+          "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A198337-2",
+          "domain": "powo.science.kew.org",
+          "source_ref": "turn55search9",
+          "retrieved_at": "2026-10-29T05:14:23.557Z",
+          "why_relevant": "Kew taxonomy and Smithsonian specimen records provide exact-name botanical context.",
+          "verification_level": "search_result_metadata_only"
+        },
+        {
+          "title": "Piper longispicum C. DC. | Smithsonian Institution",
+          "url": "https://www.si.edu/es/object/piper-longispicum-c-dc%3Anmnhbotany_2116509",
+          "domain": "www.si.edu",
+          "source_ref": "turn55search13",
+          "retrieved_at": "2026-10-29T05:14:23.557Z",
+          "why_relevant": "Kew taxonomy and Smithsonian specimen records provide exact-name botanical context.",
+          "verification_level": "search_result_metadata_only"
+        }
+      ],
+      "status": "completed_with_selected_results",
+      "unavailable_or_no_result": null
+    },
+    {
+      "entry_id": "gbif-7307303",
+      "sample_index": 141,
+      "query_name": "Microcorys glabra",
+      "common_name": "Microcorys glabra",
+      "scope": "botanical",
+      "research_kind": "supplemental_search_service_results",
+      "queries": [
+        {
+          "query": "Microcorys glabra botanical taxonomy",
+          "tool_kind": "search_service.system2_search_query",
+          "queried_at": "2026-10-29T05:14:23.557Z",
+          "status": "completed",
+          "purpose": "assigned_entry_search"
+        }
+      ],
+      "selected_results": [
+        {
+          "title": "Microcorys glabra (Bartl.) Benth. | Plants of the World Online | Kew Science",
+          "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A451684-1",
+          "domain": "powo.science.kew.org",
+          "source_ref": "turn55search3",
+          "retrieved_at": "2026-10-29T05:14:23.557Z",
+          "why_relevant": "Kew and Atlas of Living Australia supply exact-name botanical reference records.",
+          "verification_level": "search_result_metadata_only"
+        },
+        {
+          "title": "Microcorys glabra | Atlas of Living Australia",
+          "url": "https://bie.ala.org.au/species/https%3A/id.biodiversity.org.au/node/apni/2921121",
+          "domain": "bie.ala.org.au",
+          "source_ref": "turn55search6",
+          "retrieved_at": "2026-10-29T05:14:23.557Z",
+          "why_relevant": "Kew and Atlas of Living Australia supply exact-name botanical reference records.",
+          "verification_level": "search_result_metadata_only"
+        }
+      ],
+      "status": "completed_with_selected_results",
+      "unavailable_or_no_result": null
+    },
+    {
+      "entry_id": "wd-Q15521563",
+      "sample_index": 144,
+      "query_name": "Allium oporinanthum",
+      "common_name": "Allium oporinanthum",
+      "scope": "botanical",
+      "research_kind": "supplemental_search_service_results",
+      "queries": [
+        {
+          "query": "Allium oporinanthum botanical taxonomy",
+          "tool_kind": "search_service.system2_search_query",
+          "queried_at": "2026-10-29T05:14:23.557Z",
+          "status": "completed",
+          "purpose": "assigned_entry_search"
+        }
+      ],
+      "selected_results": [
+        {
+          "title": "Allium oporinanthum Brullo, Pavone & Salmeri | Plants of the World Online | Kew Science",
+          "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A998872-1",
+          "domain": "powo.science.kew.org",
+          "source_ref": "turn54search0",
+          "retrieved_at": "2026-10-29T05:14:23.557Z",
+          "why_relevant": "Kew taxonomy and a primary species-description paper supply botanical identity context.",
+          "verification_level": "search_result_metadata_only"
+        },
+        {
+          "title": "ALLIUM OPORINANTHUM (ALUACEAE), A NEW SPECIES",
+          "url": "https://dialnet.unirioja.es/descarga/articulo/70495.pdf",
+          "domain": "dialnet.unirioja.es",
+          "source_ref": "turn54search48",
+          "retrieved_at": "2026-10-29T05:14:23.557Z",
+          "why_relevant": "Kew taxonomy and a primary species-description paper supply botanical identity context.",
+          "verification_level": "search_result_metadata_only"
+        }
+      ],
+      "status": "completed_with_selected_results",
+      "unavailable_or_no_result": null
+    },
+    {
+      "entry_id": "gbif-3638097",
+      "sample_index": 147,
+      "query_name": "Ferula karakalensis",
+      "common_name": "Ferula karakalensis",
+      "scope": "botanical",
+      "research_kind": "supplemental_search_service_results",
+      "queries": [
+        {
+          "query": "Ferula karakalensis botanical taxonomy",
+          "tool_kind": "search_service.system2_search_query",
+          "queried_at": "2026-10-29T05:14:23.557Z",
+          "status": "completed",
+          "purpose": "assigned_entry_search"
+        }
+      ],
+      "selected_results": [
+        {
+          "title": "Ferula karakalensis Korovin | Plants of the World Online | Kew Science",
+          "url": "https://powo.science.kew.org/taxon/842319-1",
+          "domain": "powo.science.kew.org",
+          "source_ref": "turn54search1",
+          "retrieved_at": "2026-10-29T05:14:23.557Z",
+          "why_relevant": "Kew and WFO provide exact-name botanical reference records.",
+          "verification_level": "search_result_metadata_only"
+        },
+        {
+          "title": "Ferula karakalensis Korovin",
+          "url": "https://www.worldfloraonline.org/taxon/wfo-0000686614",
+          "domain": "www.worldfloraonline.org",
+          "source_ref": "turn54search10",
+          "retrieved_at": "2026-10-29T05:14:23.557Z",
+          "why_relevant": "Kew and WFO provide exact-name botanical reference records.",
+          "verification_level": "search_result_metadata_only"
+        }
+      ],
+      "status": "completed_with_selected_results",
+      "unavailable_or_no_result": null,
+      "review_note": "WFO result is session-bearing; verify permanent record access before reuse."
+    },
+    {
+      "entry_id": "gbif-5610553",
+      "sample_index": 150,
+      "query_name": "Nepeta exicola",
+      "common_name": "Nepeta exicola",
+      "scope": "botanical",
+      "research_kind": "supplemental_search_service_results",
+      "queries": [
+        {
+          "query": "Nepeta exicola botanical taxonomy",
+          "tool_kind": "search_service.system2_search_query",
+          "queried_at": "2026-10-29T05:14:23.557Z",
+          "status": "completed",
+          "purpose": "assigned_entry_search"
+        },
+        {
+          "query": "\"Nepeta exicola\" botanical",
+          "tool_kind": "search_service.system1_search_query",
+          "queried_at": "2026-10-29T05:14:44.115Z",
+          "status": "completed",
+          "purpose": "coverage_or_identity_followup"
+        }
+      ],
+      "selected_results": [
+        {
+          "title": "Detail",
+          "url": "https://pnss.iflora.cn/Home/Detail?DatasetID=GBIF&taxonID=2927325",
+          "domain": "pnss.iflora.cn",
+          "source_ref": "turn64search5",
+          "retrieved_at": "2026-10-29T05:14:44.115Z",
+          "why_relevant": "A plant-name portal's GBIF-derived genus listing includes the exact string; VicFlora gives genus-level botanical context.",
+          "verification_level": "search_result_metadata_only"
+        },
+        {
+          "title": "VicFlora: Nepeta",
+          "url": "https://vicflora.rbg.vic.gov.au/flora/taxon/cc50ea48-6e0b-4622-8d71-adb6737f88ac",
+          "domain": "vicflora.rbg.vic.gov.au",
+          "source_ref": "turn64search4",
+          "retrieved_at": "2026-10-29T05:14:44.115Z",
+          "why_relevant": "A plant-name portal's GBIF-derived genus listing includes the exact string; VicFlora gives genus-level botanical context.",
+          "verification_level": "search_result_metadata_only"
+        }
+      ],
+      "status": "exact_primary_treatment_unavailable",
+      "unavailable_or_no_result": {
+        "type": "exact_primary_treatment_unavailable",
+        "detail": "No species-specific primary treatment returned for Nepeta exicola. Do not replace it with the similarly spelled Nepeta oxicola without verified evidence."
+      },
+      "review_note": "No species-specific primary treatment returned for Nepeta exicola. Do not replace it with the similarly spelled Nepeta oxicola without verified evidence."
+    },
+    {
+      "entry_id": "gbif-4186695",
+      "sample_index": 153,
+      "query_name": "Piper hillianum",
+      "common_name": "Piper hillianum",
+      "scope": "botanical",
+      "research_kind": "supplemental_search_service_results",
+      "queries": [
+        {
+          "query": "Piper hillianum botanical taxonomy",
+          "tool_kind": "search_service.system2_search_query",
+          "queried_at": "2026-10-29T05:14:23.557Z",
+          "status": "completed",
+          "purpose": "assigned_entry_search"
+        }
+      ],
+      "selected_results": [
+        {
+          "title": "Piper hillianum C.DC. | Plants of the World Online | Kew Science",
+          "url": "https://powo.science.kew.org/taxon/681658-1",
+          "domain": "powo.science.kew.org",
+          "source_ref": "turn54search3",
+          "retrieved_at": "2026-10-29T05:14:23.557Z",
+          "why_relevant": "Kew and IPNI supply exact-name taxonomic/nomenclatural records.",
+          "verification_level": "search_result_metadata_only"
+        },
+        {
+          "title": "Piper hillianum | International Plant Names Index",
+          "url": "https://www.ipni.org/n/681658-1",
+          "domain": "www.ipni.org",
+          "source_ref": "turn54search4",
+          "retrieved_at": "2026-10-29T05:14:23.557Z",
+          "why_relevant": "Kew and IPNI supply exact-name taxonomic/nomenclatural records.",
+          "verification_level": "search_result_metadata_only"
+        }
+      ],
+      "status": "completed_with_selected_results",
+      "unavailable_or_no_result": null
+    },
+    {
+      "entry_id": "gbif-3883114",
+      "sample_index": 156,
+      "query_name": "Hyptis angulosa",
+      "common_name": "Hyptis angulosa",
+      "scope": "botanical",
+      "research_kind": "supplemental_search_service_results",
+      "queries": [
+        {
+          "query": "Hyptis angulosa botanical taxonomy",
+          "tool_kind": "search_service.system2_search_query",
+          "queried_at": "2026-10-29T05:14:30.662Z",
+          "status": "completed",
+          "purpose": "assigned_entry_search"
+        }
+      ],
+      "selected_results": [
+        {
+          "title": "Hyptis angulosa Schott ex Benth. | Plants of the World Online | Kew Science",
+          "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A447940-1/general-information",
+          "domain": "powo.science.kew.org",
+          "source_ref": "turn59search3",
+          "retrieved_at": "2026-10-29T05:14:30.662Z",
+          "why_relevant": "Kew and MNHN provide exact-name botanical and collection-taxonomy references.",
+          "verification_level": "search_result_metadata_only"
+        },
+        {
+          "title": "Hyptis angulosa Schott ex Benth.",
+          "url": "https://science.mnhn.fr/taxon/species/hyptis/angulosa",
+          "domain": "science.mnhn.fr",
+          "source_ref": "turn59search5",
+          "retrieved_at": "2026-10-29T05:14:30.662Z",
+          "why_relevant": "Kew and MNHN provide exact-name botanical and collection-taxonomy references.",
+          "verification_level": "search_result_metadata_only"
+        }
+      ],
+      "status": "completed_with_selected_results",
+      "unavailable_or_no_result": null
+    },
+    {
+      "entry_id": "gbif-3891988",
+      "sample_index": 159,
+      "query_name": "Aegiphila lehmannii",
+      "common_name": "Aegiphila lehmannii",
+      "scope": "botanical",
+      "research_kind": "supplemental_search_service_results",
+      "queries": [
+        {
+          "query": "Aegiphila lehmannii botanical taxonomy",
+          "tool_kind": "search_service.system2_search_query",
+          "queried_at": "2026-10-29T05:14:30.662Z",
+          "status": "completed",
+          "purpose": "assigned_entry_search"
+        }
+      ],
+      "selected_results": [
+        {
+          "title": "Aegiphila lehmannii Moldenke | Plants of the World Online | Kew Science",
+          "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A5748-2",
+          "domain": "powo.science.kew.org",
+          "source_ref": "turn59search0",
+          "retrieved_at": "2026-10-29T05:14:30.662Z",
+          "why_relevant": "Kew supplies an exact-name botanical reference.",
+          "verification_level": "search_result_metadata_only"
+        }
+      ],
+      "status": "completed_with_selected_results",
+      "unavailable_or_no_result": null
+    },
+    {
+      "entry_id": "gbif-3890175",
+      "sample_index": 162,
+      "query_name": "Paraphlomis albotomentosa",
+      "common_name": "Paraphlomis albotomentosa",
+      "scope": "botanical",
+      "research_kind": "supplemental_search_service_results",
+      "queries": [
+        {
+          "query": "Paraphlomis albotomentosa botanical taxonomy",
+          "tool_kind": "search_service.system2_search_query",
+          "queried_at": "2026-10-29T05:14:30.662Z",
+          "status": "completed",
+          "purpose": "assigned_entry_search"
+        }
+      ],
+      "selected_results": [
+        {
+          "title": "Paraphlomis albotomentosa in Flora of China @ efloras.org",
+          "url": "https://www.efloras.org/florataxon.aspx?flora_id=2&taxon_id=210001431",
+          "domain": "www.efloras.org",
+          "source_ref": "turn59search10",
+          "retrieved_at": "2026-10-29T05:14:30.662Z",
+          "why_relevant": "Flora of China and primary phylogenetic research provide species and genus botanical context.",
+          "verification_level": "search_result_metadata_only"
+        },
+        {
+          "title": "A preliminary phylogenetic study of Paraphlomis (Lamiaceae) based on molecular and morphological evidence - ScienceDirect",
+          "url": "https://www.sciencedirect.com/science/article/pii/S2468265921000408",
+          "domain": "www.sciencedirect.com",
+          "source_ref": "turn59search15",
+          "retrieved_at": "2026-10-29T05:14:30.662Z",
+          "why_relevant": "Flora of China and primary phylogenetic research provide species and genus botanical context.",
+          "verification_level": "search_result_metadata_only"
+        }
+      ],
+      "status": "completed_with_selected_results",
+      "unavailable_or_no_result": null
+    },
+    {
+      "entry_id": "gbif-3888796",
+      "sample_index": 165,
+      "query_name": "Salvia rufida",
+      "common_name": "Salvia rufida",
+      "scope": "botanical",
+      "research_kind": "supplemental_search_service_results",
+      "queries": [
+        {
+          "query": "Salvia rufida botanical taxonomy",
+          "tool_kind": "search_service.system2_search_query",
+          "queried_at": "2026-10-29T05:14:30.662Z",
+          "status": "completed",
+          "purpose": "assigned_entry_search"
+        },
+        {
+          "query": "\"Salvia rufida\" botanical",
+          "tool_kind": "search_service.system1_search_query",
+          "queried_at": "2026-10-29T05:14:44.115Z",
+          "status": "completed",
+          "purpose": "coverage_or_identity_followup"
+        }
+      ],
+      "selected_results": [
+        {
+          "title": "VicFlora: Salvia",
+          "url": "https://vicflora.rbg.vic.gov.au/flora/taxon/10eac319-4a2c-4e81-9e56-9c888dff5961",
+          "domain": "vicflora.rbg.vic.gov.au",
+          "source_ref": "turn59search1",
+          "retrieved_at": "2026-10-29T05:14:30.662Z",
+          "why_relevant": "Institutional regional floras provide Salvia genus-level context.",
+          "verification_level": "search_result_metadata_only"
+        },
+        {
+          "title": "PlantNET - FloraOnline",
+          "url": "https://plantnet.rbgsyd.nsw.gov.au/cgi-bin/NSWfl.pl?lvl=gn&name=Salvia&page=nswfl",
+          "domain": "plantnet.rbgsyd.nsw.gov.au",
+          "source_ref": "turn59search40",
+          "retrieved_at": "2026-10-29T05:14:30.662Z",
+          "why_relevant": "Institutional regional floras provide Salvia genus-level context.",
+          "verification_level": "search_result_metadata_only"
+        }
+      ],
+      "status": "exact_identity_unavailable",
+      "unavailable_or_no_result": {
+        "type": "exact_identity_unavailable",
+        "detail": "No exact-name primary introduction returned for Salvia rufida. The similar Salvia rufula results were excluded; identity remains unresolved."
+      },
+      "review_note": "No exact-name primary introduction returned for Salvia rufida. The similar Salvia rufula results were excluded; identity remains unresolved."
+    },
+    {
+      "entry_id": "gbif-4185951",
+      "sample_index": 168,
+      "query_name": "Peperomia maguirei",
+      "common_name": "Peperomia maguirei",
+      "scope": "botanical",
+      "research_kind": "supplemental_search_service_results",
+      "queries": [
+        {
+          "query": "Peperomia maguirei botanical taxonomy",
+          "tool_kind": "search_service.system2_search_query",
+          "queried_at": "2026-10-29T05:14:30.662Z",
+          "status": "completed",
+          "purpose": "assigned_entry_search"
+        }
+      ],
+      "selected_results": [
+        {
+          "title": "Peperomia maguirei Yunck. | Plants of the World Online | Kew Science",
+          "url": "https://powo.science.kew.org/taxon/189089-2",
+          "domain": "powo.science.kew.org",
+          "source_ref": "turn60search5",
+          "retrieved_at": "2026-10-29T05:14:30.662Z",
+          "why_relevant": "Kew/IPNI records and Parc amazonien de Guyane biodiversity data provide exact-name context.",
+          "verification_level": "search_result_metadata_only"
+        },
+        {
+          "title": "Peperomia maguirei | International Plant Names Index",
+          "url": "https://www.ipni.org/n/189089-2",
+          "domain": "www.ipni.org",
+          "source_ref": "turn60search17",
+          "retrieved_at": "2026-10-29T05:14:30.662Z",
+          "why_relevant": "Kew/IPNI records and Parc amazonien de Guyane biodiversity data provide exact-name context.",
+          "verification_level": "search_result_metadata_only"
+        },
+        {
+          "title": "Peperomia maguirei | - Parc amazonien de Guyane",
+          "url": "https://biodiversite.parc-amazonien-guyane.fr/espece/734557",
+          "domain": "biodiversite.parc-amazonien-guyane.fr",
+          "source_ref": "turn60search42",
+          "retrieved_at": "2026-10-29T05:14:30.662Z",
+          "why_relevant": "Kew/IPNI records and Parc amazonien de Guyane biodiversity data provide exact-name context.",
+          "verification_level": "search_result_metadata_only"
+        }
+      ],
+      "status": "completed_with_selected_results",
+      "unavailable_or_no_result": null
+    },
+    {
+      "entry_id": "gbif-3034543",
+      "sample_index": 171,
+      "query_name": "Perideridia gairdneri",
+      "common_name": "Common Yampah",
+      "scope": "botanical",
+      "research_kind": "supplemental_search_service_results",
+      "queries": [
+        {
+          "query": "Perideridia gairdneri Common Yampah botanical taxonomy",
+          "tool_kind": "search_service.system2_search_query",
+          "queried_at": "2026-10-29T05:14:30.662Z",
+          "status": "completed",
+          "purpose": "assigned_entry_search"
+        }
+      ],
+      "selected_results": [
+        {
+          "title": "Perideridia gairdneri (Hook. & Arn.) Mathias | Plants of the World Online | Kew Science",
+          "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A190327-2",
+          "domain": "powo.science.kew.org",
+          "source_ref": "turn60search16",
+          "retrieved_at": "2026-10-29T05:14:30.662Z",
+          "why_relevant": "Kew, U.S. Fish & Wildlife Service, and USDA propagation material provide botanical identity and cultivation context.",
+          "verification_level": "search_result_metadata_only"
+        },
+        {
+          "title": "Common Yampah (Perideridia gairdneri) | U.S. Fish & Wildlife Service",
+          "url": "https://www.fws.gov/species/common-yampah-perideridia-gairdneri",
+          "domain": "www.fws.gov",
+          "source_ref": "turn60search11",
+          "retrieved_at": "2026-10-29T05:14:30.662Z",
+          "why_relevant": "Kew, U.S. Fish & Wildlife Service, and USDA propagation material provide botanical identity and cultivation context.",
+          "verification_level": "search_result_metadata_only"
+        },
+        {
+          "title": "Protocol Information",
+          "url": "https://nrcs.usda.gov/plantmaterials/wapmcmt6499.pdf",
+          "domain": "nrcs.usda.gov",
+          "source_ref": "turn60search50",
+          "retrieved_at": "2026-10-29T05:14:30.662Z",
+          "why_relevant": "Kew, U.S. Fish & Wildlife Service, and USDA propagation material provide botanical identity and cultivation context.",
+          "verification_level": "search_result_metadata_only"
+        }
+      ],
+      "status": "completed_with_selected_results",
+      "unavailable_or_no_result": null
+    },
+    {
+      "entry_id": "gbif-3034866",
+      "sample_index": 174,
+      "query_name": "Sanicula sandwicensis",
+      "common_name": "Hawai'i blacksnakeroot",
+      "scope": "botanical",
+      "research_kind": "supplemental_search_service_results",
+      "queries": [
+        {
+          "query": "Sanicula sandwicensis Hawai'i blacksnakeroot botanical taxonomy",
+          "tool_kind": "search_service.system2_search_query",
+          "queried_at": "2026-10-29T05:14:30.662Z",
+          "status": "completed",
+          "purpose": "assigned_entry_search"
+        }
+      ],
+      "selected_results": [
+        {
+          "title": "Sanicula sandwicensis A.Gray | Plants of the World Online | Kew Science",
+          "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A847877-1",
+          "domain": "powo.science.kew.org",
+          "source_ref": "turn60search9",
+          "retrieved_at": "2026-10-29T05:14:30.662Z",
+          "why_relevant": "Kew, U.S. Fish & Wildlife Service, and University of Hawaii provide botanical identity and native-flora context.",
+          "verification_level": "search_result_metadata_only"
+        },
+        {
+          "title": "Hawai'i Blacksnakeroot (Sanicula sandwicensis) | U.S. Fish & Wildlife Service",
+          "url": "https://www.fws.gov/rivers/apps/carp/species/hawaii-blacksnakeroot-sanicula-sandwicensis",
+          "domain": "www.fws.gov",
+          "source_ref": "turn60search1",
+          "retrieved_at": "2026-10-29T05:14:30.662Z",
+          "why_relevant": "Kew, U.S. Fish & Wildlife Service, and University of Hawaii provide botanical identity and native-flora context.",
+          "verification_level": "search_result_metadata_only"
+        },
+        {
+          "title": "Hawaiian Native Plants, UH Botany",
+          "url": "https://manoa.hawaii.edu/lifesciences/faculty/carr/sanicula.htm",
+          "domain": "manoa.hawaii.edu",
+          "source_ref": "turn60search19",
+          "retrieved_at": "2026-10-29T05:14:30.662Z",
+          "why_relevant": "Kew, U.S. Fish & Wildlife Service, and University of Hawaii provide botanical identity and native-flora context.",
+          "verification_level": "search_result_metadata_only"
+        }
+      ],
+      "status": "completed_with_selected_results",
+      "unavailable_or_no_result": null
+    },
+    {
+      "entry_id": "gbif-3890041",
+      "sample_index": 177,
+      "query_name": "Clerodendrum rusbyi",
+      "common_name": "Clerodendrum rusbyi",
+      "scope": "botanical",
+      "research_kind": "supplemental_search_service_results",
+      "queries": [
+        {
+          "query": "Clerodendrum rusbyi botanical taxonomy",
+          "tool_kind": "search_service.system2_search_query",
+          "queried_at": "2026-10-29T05:14:30.662Z",
+          "status": "completed",
+          "purpose": "assigned_entry_search"
+        }
+      ],
+      "selected_results": [
+        {
+          "title": "Clerodendrum rusbyi Moldenke",
+          "url": "https://www.worldfloraonline.org/taxon/wfo-0000886041",
+          "domain": "www.worldfloraonline.org",
+          "source_ref": "turn60search32",
+          "retrieved_at": "2026-10-29T05:14:30.662Z",
+          "why_relevant": "World Flora Online supplies an exact-name taxonomic record.",
+          "verification_level": "search_result_metadata_only"
+        }
+      ],
+      "status": "completed_with_selected_results",
+      "unavailable_or_no_result": null,
+      "review_note": "Session-bearing URL; verify permanent record access before reuse."
+    },
+    {
+      "entry_id": "gbif-3086479",
+      "sample_index": 180,
+      "query_name": "Peperomia membranacea",
+      "common_name": "woodland peperomia",
+      "scope": "botanical",
+      "research_kind": "supplemental_search_service_results",
+      "queries": [
+        {
+          "query": "Peperomia membranacea woodland peperomia botanical taxonomy",
+          "tool_kind": "search_service.system2_search_query",
+          "queried_at": "2026-10-29T05:14:30.662Z",
+          "status": "completed",
+          "purpose": "assigned_entry_search"
+        }
+      ],
+      "selected_results": [
+        {
+          "title": "Peperomia membranacea Hook. & Arn. | Plants of the World Online | Kew Science",
+          "url": "https://powo.science.kew.org/taxon/679106-1",
+          "domain": "powo.science.kew.org",
+          "source_ref": "turn58search0",
+          "retrieved_at": "2026-10-29T05:14:30.662Z",
+          "why_relevant": "Kew, ITIS, and Smithsonian Hawaiian flora provide exact-name taxonomy and botanical introduction.",
+          "verification_level": "search_result_metadata_only"
+        },
+        {
+          "title": "ITIS - Report: Peperomia membranacea",
+          "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=18268",
+          "domain": "www.itis.gov",
+          "source_ref": "turn58search1",
+          "retrieved_at": "2026-10-29T05:14:30.662Z",
+          "why_relevant": "Kew, ITIS, and Smithsonian Hawaiian flora provide exact-name taxonomy and botanical introduction.",
+          "verification_level": "search_result_metadata_only"
+        },
+        {
+          "title": "Flora of the Hawaiian Islands - Species Page/ Botany, National Museum of Natural History, Smithsonian Institution",
+          "url": "https://naturalhistory2.si.edu/botany/hawaiianflora/speciesdescr.cfm?genus=Peperomia&species=membranacea",
+          "domain": "naturalhistory2.si.edu",
+          "source_ref": "turn58search9",
+          "retrieved_at": "2026-10-29T05:14:30.662Z",
+          "why_relevant": "Kew, ITIS, and Smithsonian Hawaiian flora provide exact-name taxonomy and botanical introduction.",
+          "verification_level": "search_result_metadata_only"
+        }
+      ],
+      "status": "completed_with_selected_results",
+      "unavailable_or_no_result": null
+    },
+    {
+      "entry_id": "gbif-3891508",
+      "sample_index": 183,
+      "query_name": "Otostegia ellenbeckii",
+      "common_name": "Otostegia ellenbeckii",
+      "scope": "botanical",
+      "research_kind": "supplemental_search_service_results",
+      "queries": [
+        {
+          "query": "Otostegia ellenbeckii botanical taxonomy",
+          "tool_kind": "search_service.system2_search_query",
+          "queried_at": "2026-10-29T05:14:30.662Z",
+          "status": "completed",
+          "purpose": "assigned_entry_search"
+        }
+      ],
+      "selected_results": [
+        {
+          "title": "Otostegia ellenbeckii Gürke | Plants of the World Online | Kew Science",
+          "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A453634-1",
+          "domain": "powo.science.kew.org",
+          "source_ref": "turn58search2",
+          "retrieved_at": "2026-10-29T05:14:30.662Z",
+          "why_relevant": "Kew and IPNI provide exact-name taxonomic/nomenclatural reference records.",
+          "verification_level": "search_result_metadata_only"
+        },
+        {
+          "title": "Otostegia ellenbeckii | International Plant Names Index",
+          "url": "https://www.ipni.org/n/453634-1",
+          "domain": "www.ipni.org",
+          "source_ref": "turn58search5",
+          "retrieved_at": "2026-10-29T05:14:30.662Z",
+          "why_relevant": "Kew and IPNI provide exact-name taxonomic/nomenclatural reference records.",
+          "verification_level": "search_result_metadata_only"
+        }
+      ],
+      "status": "completed_with_selected_results",
+      "unavailable_or_no_result": null
+    }
+  ],
+  "url_normalization_note": "Temporary jsessionid suffixes were removed from returned candidate URLs, preserving their taxon paths. This is not proof that the normalized page is accessible."
+}

@@ -1,0 +1,1272 @@
+{
+  "version": "0.7.0",
+  "review_revision": 5,
+  "verified_at": "2026-10-30T03:56:11+00:00",
+  "source_base_commit": "9e02c9fdaaf6a106e05ed37acfa5928b8640f4d8",
+  "delivery": "review candidate; no commit, push, tag or deployment this turn",
+  "backend": {
+    "passed": true,
+    "tests": 215,
+    "seconds": 10.078,
+    "command": "python -m unittest discover -s tests -q"
+  },
+  "ui": {
+    "passed": true,
+    "checks": 127,
+    "suites": [
+      {
+        "passed": true,
+        "checks": [
+          "automatic Commons CORS",
+          "no main manual API controls",
+          "manual Simplified international ranking",
+          "Traditional labels and forms",
+          "local-only typing",
+          "form-specific image query",
+          "packaging filter changes image plan only",
+          "local model configuration",
+          "named versions and reorder controls",
+          "favorites",
+          "persistent connection notice",
+          "deferred global reload preserves safe state",
+          "requested Basil action restored and failed Google removed",
+          "manual notice dismissal",
+          "English label coverage"
+        ],
+        "requests": 135
+      },
+      {
+        "passed": true,
+        "checks": [
+          "operation Back / Forward",
+          "form and image-profile restoration",
+          "new action prunes forward branch",
+          "local random excludes current record",
+          "drawer previews article size independently",
+          "outside click saves only reading settings",
+          "en-GB voice is preferred",
+          "automatic Mandarin pinyin",
+          "health reload preserves navigation journal",
+          "fixed Basil and random startup",
+          "system reduced motion overrides level 3",
+          "native popstate navigation and anchor branching",
+          "responsive frame recalculation at 420 / 900 px",
+          "level 0 cancels running native animation",
+          "same-record Back reuses loaded content",
+          "late article preserves section jump unless user scrolls"
+        ]
+      },
+      {
+        "passed": true,
+        "checks": [
+          "mouse command recorded for R",
+          "R repeats against current offset",
+          "N / P paging and final-page boundary",
+          "repeat resolves new catalogue scope",
+          "input/select/IME/modifier keys are protected",
+          "shortcut reference and Escape",
+          "responsive source uses actual container width",
+          "scaled preview follows browser width",
+          "expanded source fills browser width and restores parent scroll without replacing iframe",
+          "image open and animated exit retain modality until completion",
+          "image focus restored to thumbnail",
+          "image arrow keys and R stay in viewer context",
+          "rapid popup reopening cancels stale exits",
+          "level 0 finishes popup lifecycle immediately",
+          "sortable rows animate changed positions",
+          "native details preserve existing inputs",
+          "floating navigator position stays anchored to reader"
+        ]
+      },
+      {
+        "passed": true,
+        "checks": [
+          "Other sources available in local entry plan",
+          "NDJSON cards retain completion order",
+          "UTF-8 split across chunks and final unterminated line",
+          "source links and internal outline retained",
+          "stop aborts stream and rejects stale entry data",
+          "Wiki reader restored after source switch",
+          "hover expands notification queue",
+          "same orb dismisses first card and advances next",
+          "stale health poll cannot resurrect dismissed notice",
+          "last dismissal hides orb without replacing it",
+          "bounded language and source word effects have distinct frames",
+          "level 0 clears text overlays immediately",
+          "language transition ends without replay state",
+          "browser deadline aborts and rejects late recovery",
+          "terminal bridge excludes entered values"
+        ]
+      },
+      {
+        "passed": true,
+        "checks": [
+          "catalogue management is settings-only",
+          "bracket keys page subcategories with stable path position",
+          "comma/period keys page entries",
+          "local paging does not train remote predictor",
+          "inputs IME and modifiers protect new shortcuts",
+          "cache and shortcut controls retain configured values",
+          "custom keys replace defaults",
+          "pointer-held pager retains controls across layout movement",
+          "pager release animates correction",
+          "retained article skips backend source read",
+          "memory images skip browser live request",
+          "manual refresh still counts its remote packet",
+          "bell opens within expanded circular halo",
+          "expanded hit region includes half-radius padding on every edge",
+          "fast approach click does not dismiss notice",
+          "collapse waits for exit animation",
+          "collapse can reverse without stale callbacks",
+          "pre-pause and paused notices update same card",
+          "resume offers manual retest without settings writes",
+          "fast browser probe posts before slow sibling deadline"
+        ]
+      },
+      {
+        "passed": true,
+        "checks": [
+          "Wikipedia language selector is separate from two-row web sources",
+          "Traditional Chinese has independent wiki variant",
+          "interface language switch clears obsolete explicit Wiki selection",
+          "mapped Chinese reading does not wait for language discovery",
+          "stale language metadata cannot overwrite a later language switch",
+          "late entry response does not reset user scroll",
+          "loading preserves existing readable article height",
+          "source completion preserves reading position",
+          "text units preserve table and hyperlink nodes",
+          "English words Han characters and punctuation are distinct units",
+          "text effect count is bounded and full article is not blurred",
+          "level zero unwraps units without changing text",
+          "theme applies before persistence without full-page snapshots",
+          "home resets temporary filters while preserving preferences",
+          "home preserves favourites and accumulated navigation",
+          "search snippets are labelled and reviewed articles are actionable",
+          "reviewed article detail survives Back and Forward reading states",
+          "permitted search shell renders a sandboxed original frame",
+          "search frame rejects unapproved host credentials and port",
+          "known frame denial is reused without another request"
+        ]
+      },
+      {
+        "passed": true,
+        "checks": [
+          "non-Wiki reading does not wait for Chinese Wiki discovery",
+          "refreshing a web source does not launch unrelated Wiki discovery",
+          "obsolete reviewed-result cache misses cannot read against a new entry",
+          "returning to original text cancels a pending translation cache miss",
+          "a late translation response cannot replace an explicit original-text choice",
+          "a completed no-services state clears the reader loading indicator"
+        ],
+        "failures": []
+      },
+      {
+        "passed": true,
+        "checks": [
+          "two visible nameplates belong to the hero and the old reading sidebar is removed",
+          "Wiki controls share the knowledge heading and the outline precedes the full-width reader",
+          "nameplates default to Chinese botanical and Western book typography",
+          "temporary Latin choice shows the scientific name without changing default settings",
+          "nameplate choices restore through Back and Forward",
+          "nameplate defaults save with the existing settings API",
+          "home respects configured nameplate defaults",
+          "actual image terms are visible after form changes",
+          "frame denial offers source tab and preserves the ordinary external links",
+          "Baidu verification is explained without trying to bypass it",
+          "helper handshake reports actual capability and unsafe search targets are rejected"
+        ]
+      },
+      {
+        "passed": true,
+        "checks": [
+          "split helper rejects unapproved URL credentials protocol and port",
+          "split helper accepts only local Atlas tabs",
+          "native split creation pairs next to the owning Atlas tab",
+          "missing browser API performs no pretend split",
+          "existing user split is not replaced",
+          "helper-owned split is reused and missing split result is reported",
+          "rapid split requests serialize per owning tab"
+        ]
+      }
+    ],
+    "command": "npm run test:ui with SPICE_LINKEDOM_PATH"
+  },
+  "static_checks": {
+    "passed": true,
+    "python_ast": 60,
+    "javascript_syntax": 29,
+    "local_markdown_links": 120,
+    "readme_composition": true,
+    "dependency_lock": true,
+    "dependency_check": "uv sync --frozen --inexact --offline: 24 packages",
+    "extension_manifest_permissions": "storage only; local content-script matches",
+    "git_diff_check": true
+  },
+  "browser": {
+    "environment": "Chrome with explicitly synthetic article and frame responses",
+    "nativeHelperInstalled": false,
+    "nativeApiFixtureTested": true,
+    "responsive": [
+      {
+        "entryViewport": {
+          "bottom": 746.15625,
+          "height": 234.296875,
+          "top": 511.859375,
+          "width": 204
+        },
+        "heading": {
+          "bottom": -2019.015625,
+          "height": 56,
+          "top": -2075.015625,
+          "width": 745
+        },
+        "height": 820,
+        "nameplates": {
+          "bottom": -2616.859375,
+          "height": 87.25,
+          "top": -2704.109375,
+          "width": 387.78125
+        },
+        "overflow": 0,
+        "reader": {
+          "bottom": 1055.984375,
+          "height": 2878.625,
+          "top": -1822.640625,
+          "width": 745
+        },
+        "width": 1100,
+        "wiki": {
+          "bottom": -2019.015625,
+          "height": 35.59375,
+          "top": -2054.609375,
+          "width": 169.125
+        }
+      },
+      {
+        "entryViewport": {
+          "bottom": 553.15625,
+          "height": 130.203125,
+          "top": 422.953125,
+          "width": 204
+        },
+        "heading": {
+          "bottom": -1996.765625,
+          "height": 56,
+          "top": -2052.765625,
+          "width": 653
+        },
+        "height": 620,
+        "nameplates": {
+          "bottom": -2594.609375,
+          "height": 109.5,
+          "top": -2704.109375,
+          "width": 338.578125
+        },
+        "overflow": 0,
+        "reader": {
+          "bottom": 1402.765625,
+          "height": 3161.5625,
+          "top": -1758.796875,
+          "width": 653
+        },
+        "width": 1000,
+        "wiki": {
+          "bottom": -1996.765625,
+          "height": 35.59375,
+          "top": -2032.359375,
+          "width": 169.125
+        }
+      },
+      {
+        "entryViewport": {
+          "bottom": 442,
+          "height": 105.515625,
+          "top": 336.484375,
+          "width": 204
+        },
+        "heading": {
+          "bottom": -1996.765625,
+          "height": 56,
+          "top": -2052.765625,
+          "width": 653
+        },
+        "height": 500,
+        "nameplates": {
+          "bottom": -2594.609375,
+          "height": 109.5,
+          "top": -2704.109375,
+          "width": 338.578125
+        },
+        "overflow": 0,
+        "reader": {
+          "bottom": 1402.765625,
+          "height": 3161.5625,
+          "top": -1758.796875,
+          "width": 653
+        },
+        "width": 1000,
+        "wiki": {
+          "bottom": -1996.765625,
+          "height": 35.59375,
+          "top": -2032.359375,
+          "width": 169.125
+        }
+      },
+      {
+        "entryViewport": {
+          "bottom": 627.734375,
+          "height": 144.578125,
+          "top": 483.15625,
+          "width": 610
+        },
+        "heading": {
+          "bottom": 1517.125,
+          "height": 53,
+          "top": 1464.125,
+          "width": 619
+        },
+        "height": 820,
+        "nameplates": {
+          "bottom": 947.46875,
+          "height": 109.5,
+          "top": 837.96875,
+          "width": 315.328125
+        },
+        "overflow": 0,
+        "reader": {
+          "bottom": 5199.59375,
+          "height": 3444.5,
+          "top": 1755.09375,
+          "width": 619
+        },
+        "width": 665,
+        "wiki": {
+          "bottom": 1517.125,
+          "height": 35.59375,
+          "top": 1481.53125,
+          "width": 169.125
+        }
+      }
+    ],
+    "desktopObservations": {
+      "readerWidth": 986.96875,
+      "wikiAndTitleBottom": 241.3125,
+      "navControlHeight": 34,
+      "navControlTop": 33.9375,
+      "outlineAboveReader": true,
+      "oldReadingSidebarRemoved": true,
+      "anchorTitleBelowFloatingNavigation": true,
+      "queryVisible": "parsley dried flakes",
+      "blockedProviderShowsNewTabAndHelperHelp": true
+    },
+    "nativeWindowsTested": false
+  },
+  "prior_review_browser_observations": {
+    "environment": "managed Chrome, explicitly synthetic text and test notifications",
+    "viewport": {
+      "width": 1363,
+      "height": 936
+    },
+    "global_horizontal_overflow_px": 0,
+    "source_cards": 3,
+    "card_width_px": 385,
+    "card_height_px": 683.265625,
+    "rail_client_width_px": 972,
+    "rail_scroll_width_px": 1195,
+    "notification_hover_expansion": true,
+    "original_orb_position_retained_on_first_dismissal": true,
+    "keyboard_notice_expansion": true,
+    "traditional_chinese_and_level_3_persisted_after_deferred_reload": true,
+    "text_overlays_after_transition": 0,
+    "new_timeout_controls_visible": {
+      "source": 8,
+      "round": 20,
+      "cards": 6
+    },
+    "native_mobile_resize_tested": false,
+    "notes": "Browser zoom key attempts did not change this viewport; no mobile viewport measurement is claimed. Extension-only metadata warnings were observed, separate from app tests."
+  },
+  "live_reading_revision": {
+    "tested_at": "2026-10-29T08:25:32+00:00",
+    "article_bodies_retained": false,
+    "results": [
+      {
+        "kind": "article",
+        "ok": true,
+        "mode": "article",
+        "source": "enwiki",
+        "title": "Parsley",
+        "revision_id": 1380990209,
+        "source_url": "https://en.wikipedia.org/wiki/Parsley",
+        "html_characters": 72551,
+        "headings": 13,
+        "false_probe_override_tested": true
+      },
+      {
+        "kind": "images",
+        "ok": true,
+        "images": 0,
+        "source_urls": [],
+        "licenses": []
+      },
+      {
+        "kind": "images_full_pipeline",
+        "ok": true,
+        "images": 1,
+        "source_urls": [
+          "https://commons.wikimedia.org/wiki/File:Parsley_Dried.JPG"
+        ],
+        "licenses": [
+          "Public domain"
+        ],
+        "retrieval": "Live exact-file metadata first, then keyword candidates; first usable result ends the foreground wait"
+      }
+    ]
+  },
+  "research": {
+    "sample": 184,
+    "baseline": 18379,
+    "providers": 19,
+    "indexed_candidate_links": 257,
+    "supplemental_entry_queries": 221,
+    "named_engine_planned_records": 552,
+    "named_engine_actual_requests": 9,
+    "named_engine_skipped": 543,
+    "named_engine_extractable_results": 0,
+    "live_reader_entries": 3,
+    "live_reader_cards": 7,
+    "article_bodies_bundled": false,
+    "current_registry_provider_groups": 21
+  },
+  "catalogue": {
+    "records": 18379,
+    "archived_cleaning_decisions": 699,
+    "identity_changes_in_this_version": 0
+  },
+  "cache": {
+    "per_version": true,
+    "first_catalogue_page": 30,
+    "favorites_retained": true,
+    "default_promote_hits": 6,
+    "recent_window": 30,
+    "session_transition": 30,
+    "default_weights": {
+      "history": 0.2,
+      "session": 0.3,
+      "recent": 0.5
+    },
+    "depth": 1,
+    "prediction_payloads": "RAM only",
+    "memory_bytes_per_version": 33554432,
+    "memory_bytes_total": 67108864,
+    "max_prediction_ttl_seconds": 1800,
+    "local_operations_trained": false
+  },
+  "portable_archive_validation": "Run scripts/verify_release.py on the final ZIP; its SHA-256 and isolated HTTP smoke results are in the external release report, avoiding a self-referential archive hash.",
+  "limitations": [
+    "Native Windows tray/Tk, DPI and default-browser association require target-device acceptance.",
+    "120 Hz frame delivery, GPU utilization and audible British speech were not measured.",
+    "Personal LM Studio/Google/Azure credentials were not exercised.",
+    "Live Bing text search returned only a dynamic shell and Google text search timed out. Search result parsing and shell frame permissions are tested separately with fixtures.",
+    "Bing China live 301 evidence precedes the new bounded approved-host redirect handling; the latter is verified with deterministic tests, not claimed as a successful live result.",
+    "Other-source cards retain their original language.",
+    "Multiple design-style presets and their separate investigation remain deferred.",
+    "Responsive checks use real nested browser containers, not native mobile hardware.",
+    "Retained online content keeps its original fetch time; explicit Refresh is required for a newer revision.",
+    "Existing custom timeout settings are preserved; old short budgets may still expire on slow sources.",
+    "Google Images yielded zero public image records on the review-5 live request; Baidu verification observed earlier was not retried. Parser fixtures do not establish live provider availability.",
+    "Native split APIs require an optional browser extension and actual browser support; neither installation nor real split execution was performed.",
+    "Upgrade verification uses isolated old installations on Linux; Windows CMD, folder selection, tray and automatic browser restart still need target-device acceptance.",
+    "The current package contains only the real 0.6-to-0.7 migration; future 0.8/0.9 migration files and GitHub download are not implemented."
+  ],
+  "prior_review2_browser_observations": {
+    "responsive": [
+      {
+        "count": 2,
+        "entryViewportBottom": 442,
+        "entryViewportHeight": 101.109375,
+        "height": 500,
+        "horizontalOverflow": 0,
+        "lastEntryBottom": 431.890625,
+        "page": "4–5 / 18,379",
+        "paneBottom": 500,
+        "statsBottom": 493,
+        "width": 1000
+      },
+      {
+        "count": 2,
+        "entryViewportBottom": 538.3125,
+        "entryViewportHeight": 105.953125,
+        "height": 620,
+        "horizontalOverflow": 0,
+        "lastEntryBottom": 531.359375,
+        "page": "4–5 / 18,379",
+        "paneBottom": 620,
+        "statsBottom": 611,
+        "width": 1000
+      },
+      {
+        "count": 2,
+        "entryViewportBottom": 627.734375,
+        "entryViewportHeight": 135.171875,
+        "height": 820,
+        "horizontalOverflow": 0,
+        "lastEntryBottom": 546.5625,
+        "page": "4–5 / 18,379",
+        "paneBottom": 706.578125,
+        "statsBottom": 689.578125,
+        "width": 665
+      },
+      {
+        "count": 3,
+        "entryViewportBottom": 731.3125,
+        "entryViewportHeight": 210.046875,
+        "height": 820,
+        "horizontalOverflow": 0,
+        "lastEntryBottom": 696.265625,
+        "page": "4–6 / 18,379",
+        "paneBottom": 820,
+        "statsBottom": 808,
+        "width": 1100
+      }
+    ],
+    "source": "synthetic QA content in real Chrome containers",
+    "manual_checks": [
+      "subset BracketRight advances 1–3 to 4–6 / 9",
+      "entry Period advances 1–3 to 4–6",
+      "hover-held actual pager height remains 34 px; click advances",
+      "pre-pause notice visible before completed paused state",
+      "resume notice offers manual Retest connections; click reports Connection retest started",
+      "pointer outside panel completes reverse collapse to hidden",
+      "pointer 10 px above orb opens panel before touching the original orb"
+    ]
+  },
+  "live_readers_review3": {
+    "article_bodies_saved": false,
+    "results": [
+      {
+        "source": "gbif",
+        "entry": "parsley",
+        "ok": true,
+        "title": "Petroselinum crispum (Mill.) Fuss",
+        "url": "https://www.gbif.org/species/7828157",
+        "html_characters": 701,
+        "headings": 0,
+        "seconds": 5.14,
+        "api_version": "v2"
+      },
+      {
+        "source": "nparks",
+        "entry": "coriander",
+        "ok": true,
+        "title": "Coriandrum sativum L.",
+        "url": "https://www.nparks.gov.sg/florafaunaweb/flora/5/9/5944",
+        "html_characters": 12867,
+        "headings": 13,
+        "seconds": 5.31,
+        "api_version": null
+      },
+      {
+        "source": "icar",
+        "entry": "cumin",
+        "ok": true,
+        "title": "Cumin",
+        "url": "https://spices.res.in/products/spices/cumin.html",
+        "html_characters": 2665,
+        "headings": 5,
+        "seconds": 21.84,
+        "api_version": null
+      },
+      {
+        "source": "plantnet",
+        "entry": "coriander",
+        "ok": false,
+        "code": "identity_mismatch",
+        "message": "PlantNET returned no matching taxon description",
+        "seconds": 5.27
+      }
+    ],
+    "wiki_languages": {
+      "entry_id": "parsley",
+      "state": "unconfirmed",
+      "methods": {
+        "zh": "catalogue",
+        "en": "catalogue"
+      },
+      "checked_at": "2026-10-29T12:30:34+00:00"
+    },
+    "wiki_languages_count": 2,
+    "rechecks": [
+      {
+        "source": "plantnet",
+        "entry": "coriander",
+        "ok": true,
+        "title": "Coriandrum sativum",
+        "html_characters": 6500,
+        "url": "https://plantnet.rbgsyd.nsw.gov.au/cgi-bin/NSWfl.pl?lvl=sp&name=Coriandrum~sativum&page=nswfl",
+        "note": "After accepting the real italic taxon heading and validating the species query"
+      }
+    ],
+    "wiki_language_recheck": {
+      "entry_id": "parsley",
+      "state": "resolved",
+      "methods": {
+        "en": "english_anchor",
+        "af": "english_langlink",
+        "an": "english_langlink",
+        "ar": "english_langlink",
+        "arz": "english_langlink",
+        "ast": "english_langlink",
+        "az": "english_langlink",
+        "azb": "english_langlink",
+        "ba": "english_langlink",
+        "bar": "english_langlink",
+        "sgs": "english_langlink",
+        "bcl": "english_langlink",
+        "be": "english_langlink",
+        "bg": "english_langlink",
+        "bn": "english_langlink",
+        "br": "english_langlink",
+        "bs": "english_langlink",
+        "ca": "english_langlink",
+        "ceb": "english_langlink",
+        "ckb": "english_langlink",
+        "cs": "english_langlink",
+        "csb": "english_langlink",
+        "cy": "english_langlink",
+        "da": "english_langlink",
+        "de": "english_langlink",
+        "el": "english_langlink",
+        "eml": "english_langlink",
+        "eo": "english_langlink",
+        "es": "english_langlink",
+        "et": "english_langlink",
+        "eu": "english_langlink",
+        "fa": "english_langlink",
+        "fi": "english_langlink",
+        "fr": "english_langlink",
+        "frr": "english_langlink",
+        "ga": "english_langlink",
+        "gl": "english_langlink",
+        "gn": "english_langlink",
+        "he": "english_langlink",
+        "hi": "english_langlink",
+        "hr": "english_langlink",
+        "ht": "english_langlink",
+        "hu": "english_langlink",
+        "hy": "english_langlink",
+        "id": "english_langlink",
+        "ie": "english_langlink",
+        "inh": "english_langlink",
+        "io": "english_langlink",
+        "is": "english_langlink",
+        "it": "english_langlink",
+        "ja": "english_langlink",
+        "jv": "english_langlink",
+        "ka": "english_langlink",
+        "kab": "english_langlink",
+        "kn": "english_langlink",
+        "ko": "english_langlink",
+        "ku": "english_langlink",
+        "ky": "english_langlink",
+        "la": "english_langlink",
+        "lbe": "english_langlink",
+        "lmo": "english_langlink",
+        "lt": "english_langlink",
+        "lv": "english_langlink",
+        "mg": "english_langlink",
+        "mk": "english_langlink",
+        "ms": "english_langlink",
+        "myv": "english_langlink",
+        "mzn": "english_langlink",
+        "nah": "english_langlink",
+        "nap": "english_langlink",
+        "ne": "english_langlink",
+        "nl": "english_langlink",
+        "nn": "english_langlink",
+        "nb": "english_langlink",
+        "oc": "english_langlink",
+        "os": "english_langlink",
+        "pdc": "english_langlink",
+        "pl": "english_langlink",
+        "pt": "english_langlink",
+        "qu": "english_langlink",
+        "ro": "english_langlink",
+        "rsk": "english_langlink",
+        "ru": "english_langlink",
+        "sc": "english_langlink",
+        "scn": "english_langlink",
+        "sco": "english_langlink",
+        "sd": "english_langlink",
+        "sh": "english_langlink",
+        "simple": "english_langlink",
+        "sk": "english_langlink",
+        "sl": "english_langlink",
+        "sq": "english_langlink",
+        "sr": "english_langlink",
+        "sv": "english_langlink",
+        "ta": "english_langlink",
+        "tg": "english_langlink",
+        "th": "english_langlink",
+        "tl": "english_langlink",
+        "tr": "english_langlink",
+        "ug": "english_langlink",
+        "uk": "english_langlink",
+        "ur": "english_langlink",
+        "uz": "english_langlink",
+        "vec": "english_langlink",
+        "vi": "english_langlink",
+        "vls": "english_langlink",
+        "wa": "english_langlink",
+        "war": "english_langlink",
+        "wuu": "english_langlink",
+        "xmf": "english_langlink",
+        "yi": "english_langlink",
+        "zh": "english_langlink",
+        "yue": "english_langlink"
+      },
+      "checked_at": "2026-10-29T12:40:54+00:00",
+      "diagnostics": [],
+      "languages_count": 113,
+      "primary_mappings": {
+        "en": "Parsley",
+        "fr": "Persil",
+        "ja": "パセリ",
+        "zh": "歐芹"
+      },
+      "seconds": 6.91
+    }
+  },
+  "search_readers_review3": {
+    "requests": 3,
+    "article_bodies_saved": false,
+    "results": [
+      {
+        "engine": "bing",
+        "query": "Petroselinum crispum",
+        "search_url": "https://www.bing.com/search?mkt=en-US&setlang=en&count=10&first=1&q=Petroselinum+crispum",
+        "page": 1,
+        "status": "no_extractable_results",
+        "http_status": 200,
+        "seconds": 4.22,
+        "result_count": 0,
+        "sample_results": []
+      },
+      {
+        "engine": "google",
+        "query": "Petroselinum crispum",
+        "search_url": "https://www.google.com/search?hl=en&num=10&q=Petroselinum+crispum",
+        "page": 1,
+        "status": "timeout",
+        "seconds": 10.02,
+        "result_count": 0,
+        "sample_results": []
+      },
+      {
+        "engine": "bing_cn",
+        "query": "欧芹",
+        "search_url": "https://cn.bing.com/search?mkt=zh-CN&setlang=zh-Hans&count=10&first=1&q=%E6%AC%A7%E8%8A%B9",
+        "page": 1,
+        "status": "http_error",
+        "http_status": 301,
+        "seconds": 4.47,
+        "result_count": 0,
+        "sample_results": []
+      }
+    ]
+  },
+  "prior_review2_counts": {
+    "backend": 164,
+    "ui": 83
+  },
+  "prior_review3_browser_observations": {
+    "environment": "Chrome, synthetic preview API; live source readers validated separately",
+    "responsive": [
+      {
+        "entryViewport": {
+          "bottom": 731.3125,
+          "height": 205.0625,
+          "left": 16,
+          "right": 220,
+          "top": 526.25,
+          "width": 204
+        },
+        "height": 820,
+        "horizontalOverflow": 0,
+        "sourceTabs": {
+          "bottom": 597.234375,
+          "height": 85.1875,
+          "left": 296,
+          "right": 1041,
+          "top": 512.046875,
+          "width": 745
+        },
+        "width": 1100,
+        "wikiButton": {
+          "bottom": 487.046875,
+          "height": 35.59375,
+          "left": 296,
+          "right": 373.125,
+          "top": 451.453125,
+          "width": 77.125
+        },
+        "wikiSelector": {
+          "bottom": 486.140625,
+          "height": 33.796875,
+          "left": 383.125,
+          "right": 453.296875,
+          "top": 452.34375,
+          "width": 70.171875
+        }
+      },
+      {
+        "entryViewport": {
+          "bottom": 538.3125,
+          "height": 101.46875,
+          "left": 16,
+          "right": 220,
+          "top": 436.84375,
+          "width": 204
+        },
+        "height": 620,
+        "horizontalOverflow": 0,
+        "sourceTabs": {
+          "bottom": 633.203125,
+          "height": 126.78125,
+          "left": 292,
+          "right": 945,
+          "top": 506.421875,
+          "width": 653
+        },
+        "width": 1000,
+        "wikiButton": {
+          "bottom": 481.421875,
+          "height": 35.59375,
+          "left": 292,
+          "right": 369.125,
+          "top": 445.828125,
+          "width": 77.125
+        },
+        "wikiSelector": {
+          "bottom": 480.515625,
+          "height": 33.796875,
+          "left": 379.125,
+          "right": 449.296875,
+          "top": 446.71875,
+          "width": 70.171875
+        }
+      },
+      {
+        "entryViewport": {
+          "bottom": 442,
+          "height": 105.515625,
+          "left": 16,
+          "right": 220,
+          "top": 336.484375,
+          "width": 204
+        },
+        "height": 500,
+        "horizontalOverflow": 0,
+        "sourceTabs": {
+          "bottom": 633.203125,
+          "height": 126.78125,
+          "left": 292,
+          "right": 945,
+          "top": 506.421875,
+          "width": 653
+        },
+        "width": 1000,
+        "wikiButton": {
+          "bottom": 481.421875,
+          "height": 35.59375,
+          "left": 292,
+          "right": 369.125,
+          "top": 445.828125,
+          "width": 77.125
+        },
+        "wikiSelector": {
+          "bottom": 480.515625,
+          "height": 33.796875,
+          "left": 379.125,
+          "right": 449.296875,
+          "top": 446.71875,
+          "width": 70.171875
+        }
+      },
+      {
+        "entryViewport": {
+          "bottom": 627.734375,
+          "height": 142.78125,
+          "left": 20,
+          "right": 630,
+          "top": 484.953125,
+          "width": 610
+        },
+        "height": 820,
+        "horizontalOverflow": 0,
+        "sourceTabs": {
+          "bottom": 1711.046875,
+          "height": 126.78125,
+          "left": 20,
+          "right": 639,
+          "top": 1584.265625,
+          "width": 619
+        },
+        "width": 665,
+        "wikiButton": {
+          "bottom": 1559.265625,
+          "height": 35.59375,
+          "left": 20,
+          "right": 97.125,
+          "top": 1523.671875,
+          "width": 77.125
+        },
+        "wikiSelector": {
+          "bottom": 1558.359375,
+          "height": 33.796875,
+          "left": 107.125,
+          "right": 177.296875,
+          "top": 1524.5625,
+          "width": 70.171875
+        }
+      }
+    ],
+    "delayedArticleScroll": {
+      "before": {
+        "busy": "true",
+        "top": 1229
+      },
+      "after": {
+        "top": 1229,
+        "busy": null
+      },
+      "observation": "Measured earlier in this browser session after releasing a deliberately delayed response"
+    },
+    "nativeWindowsTested": false,
+    "manual_checks": [
+      "theme applies without palette-transition document snapshots or ink-veil overlays",
+      "switch English interface after Traditional Wiki selection returns to English Wiki",
+      "GBIF table retains real table markup and article body transform/filter are none",
+      "reviewed Bing fixture result opens article body and table",
+      "denied Google image fixture hides frame and explains provider policy",
+      "home returns Basil with default path and query",
+      "base-select computed appearance and picker opacity/transform/display/overlay transitions supported"
+    ],
+    "source": "synthetic QA content in real Chrome; external reader results recorded separately"
+  },
+  "prior_review3_counts": {
+    "backend": 187,
+    "ui": 103
+  },
+  "followup_regressions": {
+    "new_backend_cases": 6,
+    "new_ui_cases": 6,
+    "old_backend_failed_cases": 6,
+    "old_ui_failed_cases": 6,
+    "reproduced_before_fix": true,
+    "scope": "partial connectivity and reading task concurrency"
+  },
+  "external_evidence_scope": "Review 5 made one Google Images request: HTTP 200, no extractable images, SAMEORIGIN. No fresh Baidu probe. Existing live-reader and provider summaries remain dated historical evidence; native browser split is fixture tested, no extension installed.",
+  "prior_review4_validation": {
+    "verified_at": "2026-10-30T02:01:35+00:00",
+    "backend": {
+      "passed": true,
+      "tests": 193,
+      "seconds": 9.08,
+      "command": "python -m unittest discover -s tests -q"
+    },
+    "ui": {
+      "passed": true,
+      "checks": 109,
+      "suites": [
+        {
+          "passed": true,
+          "checks": [
+            "automatic Commons CORS",
+            "no main manual API controls",
+            "manual Simplified international ranking",
+            "Traditional labels and forms",
+            "local-only typing",
+            "form-specific image query",
+            "packaging filter changes image plan only",
+            "local model configuration",
+            "named versions and reorder controls",
+            "favorites",
+            "persistent connection notice",
+            "deferred global reload preserves safe state",
+            "requested Basil action restored and failed Google removed",
+            "manual notice dismissal",
+            "English label coverage"
+          ],
+          "requests": 135
+        },
+        {
+          "passed": true,
+          "checks": [
+            "operation Back / Forward",
+            "form and image-profile restoration",
+            "new action prunes forward branch",
+            "local random excludes current record",
+            "drawer previews article size independently",
+            "outside click saves only reading settings",
+            "en-GB voice is preferred",
+            "automatic Mandarin pinyin",
+            "health reload preserves navigation journal",
+            "fixed Basil and random startup",
+            "system reduced motion overrides level 3",
+            "native popstate navigation and anchor branching",
+            "responsive frame recalculation at 420 / 900 px",
+            "level 0 cancels running native animation",
+            "same-record Back reuses loaded content",
+            "late article preserves section jump unless user scrolls"
+          ]
+        },
+        {
+          "passed": true,
+          "checks": [
+            "mouse command recorded for R",
+            "R repeats against current offset",
+            "N / P paging and final-page boundary",
+            "repeat resolves new catalogue scope",
+            "input/select/IME/modifier keys are protected",
+            "shortcut reference and Escape",
+            "responsive source uses actual container width",
+            "scaled preview follows browser width",
+            "expanded source fills browser width and restores parent scroll without replacing iframe",
+            "image open and animated exit retain modality until completion",
+            "image focus restored to thumbnail",
+            "image arrow keys and R stay in viewer context",
+            "rapid popup reopening cancels stale exits",
+            "level 0 finishes popup lifecycle immediately",
+            "sortable rows animate changed positions",
+            "native details preserve existing inputs",
+            "floating navigator position stays anchored to reader"
+          ]
+        },
+        {
+          "passed": true,
+          "checks": [
+            "Other sources available in local entry plan",
+            "NDJSON cards retain completion order",
+            "UTF-8 split across chunks and final unterminated line",
+            "source links and internal outline retained",
+            "stop aborts stream and rejects stale entry data",
+            "Wiki reader restored after source switch",
+            "hover expands notification queue",
+            "same orb dismisses first card and advances next",
+            "stale health poll cannot resurrect dismissed notice",
+            "last dismissal hides orb without replacing it",
+            "bounded language and source word effects have distinct frames",
+            "level 0 clears text overlays immediately",
+            "language transition ends without replay state",
+            "browser deadline aborts and rejects late recovery",
+            "terminal bridge excludes entered values"
+          ]
+        },
+        {
+          "passed": true,
+          "checks": [
+            "catalogue management is settings-only",
+            "bracket keys page subcategories with stable path position",
+            "comma/period keys page entries",
+            "local paging does not train remote predictor",
+            "inputs IME and modifiers protect new shortcuts",
+            "cache and shortcut controls retain configured values",
+            "custom keys replace defaults",
+            "pointer-held pager retains controls across layout movement",
+            "pager release animates correction",
+            "retained article skips backend source read",
+            "memory images skip browser live request",
+            "manual refresh still counts its remote packet",
+            "bell opens within expanded circular halo",
+            "expanded hit region includes half-radius padding on every edge",
+            "fast approach click does not dismiss notice",
+            "collapse waits for exit animation",
+            "collapse can reverse without stale callbacks",
+            "pre-pause and paused notices update same card",
+            "resume offers manual retest without settings writes",
+            "fast browser probe posts before slow sibling deadline"
+          ]
+        },
+        {
+          "passed": true,
+          "checks": [
+            "Wikipedia language selector is separate from two-row web sources",
+            "Traditional Chinese has independent wiki variant",
+            "interface language switch clears obsolete explicit Wiki selection",
+            "mapped Chinese reading does not wait for language discovery",
+            "stale language metadata cannot overwrite a later language switch",
+            "late entry response does not reset user scroll",
+            "loading preserves existing readable article height",
+            "source completion preserves reading position",
+            "text units preserve table and hyperlink nodes",
+            "English words Han characters and punctuation are distinct units",
+            "text effect count is bounded and full article is not blurred",
+            "level zero unwraps units without changing text",
+            "theme applies before persistence without full-page snapshots",
+            "home resets temporary filters while preserving preferences",
+            "home preserves favourites and accumulated navigation",
+            "search snippets are labelled and reviewed articles are actionable",
+            "reviewed article detail survives Back and Forward reading states",
+            "permitted search shell renders a sandboxed original frame",
+            "search frame rejects unapproved host credentials and port",
+            "known frame denial is reused without another request"
+          ]
+        },
+        {
+          "passed": true,
+          "checks": [
+            "non-Wiki reading does not wait for Chinese Wiki discovery",
+            "refreshing a web source does not launch unrelated Wiki discovery",
+            "obsolete reviewed-result cache misses cannot read against a new entry",
+            "returning to original text cancels a pending translation cache miss",
+            "a late translation response cannot replace an explicit original-text choice",
+            "a completed no-services state clears the reader loading indicator"
+          ],
+          "failures": []
+        }
+      ]
+    },
+    "static_checks": {
+      "passed": true,
+      "python_ast": 54,
+      "javascript_syntax": 23,
+      "local_markdown_links": 94,
+      "readme_composition": true,
+      "dependency_lock": true,
+      "dependency_check": "uv sync --frozen --offline: 24 packages",
+      "git_diff_check": true
+    },
+    "browser": {
+      "environment": "Chrome with explicitly synthetic article API; no new external adapter audit; automatic Commons image references may load through the browser.",
+      "languageChecks": [
+        {
+          "busy": null,
+          "selected": "zh-Hant",
+          "source": "UI fixture · Synthetic reading text"
+        },
+        {
+          "busy": null,
+          "selected": "zh-Hans",
+          "source": "UI fixture · Synthetic reading text"
+        }
+      ],
+      "reading": {
+        "busy": null,
+        "horizontalOverflow": 0,
+        "language": "zh-Hans",
+        "source": "gbif · Synthetic UI fixture",
+        "tableCount": 1
+      },
+      "nativeWindowsTested": false,
+      "selected_source_check": {
+        "wiki_pressed": false,
+        "selected_sources": [
+          "GBIF 植物分类 / GBIF taxonomy"
+        ],
+        "reader_busy": null
+      }
+    },
+    "external_evidence_scope": "Restricted image providers were not re-probed this round. Existing live-reader and provider summaries are retained as review-3 historical observations."
+  },
+  "build": "0.7-review5",
+  "image_metadata_review5": {
+    "checked_at": "2026-10-30T03:35:08+00:00",
+    "provider": "google",
+    "query": "parsley dried flakes",
+    "url": "https://www.google.com/search?tbm=isch&q=parsley%20dried%20flakes",
+    "attempts": 1,
+    "image_count": 0,
+    "mode": "external",
+    "frame_code": "frame_denied",
+    "http_status": 200,
+    "x_frame_options": "SAMEORIGIN",
+    "diagnostic": null,
+    "images": [],
+    "baidu_retested": false,
+    "markup_saved": false,
+    "image_bytes_saved": false
+  },
+  "incremental_upgrade": {
+    "source_base_commit": "9e02c9fdaaf6a106e05ed37acfa5928b8640f4d8",
+    "source_version": "0.6.0",
+    "target_version": "0.7.0",
+    "same_version_candidate_supported": "v0.7 review4",
+    "managed_files_only": true,
+    "requires_directory_rename": false,
+    "ordinary_update_copies_personal_databases": false,
+    "dependencies_changed": false,
+    "full_and_patch_share_manifest": true,
+    "unit_cases": 14,
+    "continuous_chain_and_full_rollback_tested": true,
+    "package_level_report": "External Spice_Atlas_v07_review5_upgrade_verification.json; run against the final full and patch ZIPs",
+    "future_github_fetch_implemented": false,
+    "future_versions_bundled": false,
+    "published_v06_archive_sha256": "8535ed6ef983c5962f8f0f27fbe66e98f85f8040b776721ef9ede53939ae94d6",
+    "published_archive_fingerprints_supported": true,
+    "package_cases": [
+      {
+        "case": "v06-patch",
+        "passed": true,
+        "source_installation": "Spice_Atlas_Local_v0.6.zip",
+        "folder_name_retained": true,
+        "protected_files_unchanged_before_first_start": 14,
+        "dry_run_read_only": true,
+        "steps": [
+          "v0.6.0-to-v0.7.0"
+        ],
+        "backup_present": true,
+        "new_app_started": true,
+        "favorites": 1,
+        "history_visits": 2,
+        "workspaces": 2,
+        "ui_language": "zh-Hant",
+        "reader_size": 23,
+        "cache_packet_retained": true,
+        "media_retained": true
+      },
+      {
+        "case": "v07-candidate-full-folder",
+        "passed": true,
+        "source_installation": "Spice_Atlas_v07_review4_baseline.zip",
+        "folder_name_retained": true,
+        "protected_files_unchanged_before_first_start": 14,
+        "dry_run_read_only": true,
+        "steps": [
+          "v0.6.0-to-v0.7.0"
+        ],
+        "backup_present": true,
+        "new_app_started": true,
+        "favorites": 1,
+        "history_visits": 2,
+        "workspaces": 2,
+        "ui_language": "zh-Hant",
+        "reader_size": 23,
+        "cache_packet_retained": true,
+        "media_retained": true
+      }
+    ],
+    "package_test_environment": "Linux isolated old ZIP installations, external test interpreter; .venv preservation marker, not a native Windows environment"
+  },
+  "future_scope": {
+    "v0.8": "Immersive reading mode recorded only",
+    "v0.9": "Additional interface and Wikipedia languages recorded only",
+    "arabic": "Deferred; RTL",
+    "post_push_reminders": "AGENTS.md and release checklist; not an external push automation"
+  },
+  "publication": {
+    "approved_at": "2026-10-30",
+    "repository": "https://github.com/Bravoll/SpiceAtlas",
+    "visibility": "public",
+    "display_name": "香料图鉴-SpiceAtlas",
+    "source_license": "MIT",
+    "screenshot_license": "CC-BY-SA-4.0",
+    "screenshots": "Two original user-supplied 1920x1080 PNGs; no retouching or default-entry changes",
+    "backend_tests": 215,
+    "ui_checks": 127,
+    "markdown_local_links": 183,
+    "dependency_check": "uv sync --frozen --inexact --offline: 24 packages",
+    "verified_at": "2026-10-30T20:12:22+11:00",
+    "push_evidence": "Verify actual remote main SHA after commit/ref update; this file records pre-push checks, not a claimed successful push."
+  }
+}

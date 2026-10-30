@@ -1,0 +1,17 @@
+{
+  "checked_at": "2026-10-30T03:35:08+00:00",
+  "provider": "google",
+  "query": "parsley dried flakes",
+  "url": "https://www.google.com/search?tbm=isch&q=parsley%20dried%20flakes",
+  "attempts": 1,
+  "image_count": 0,
+  "mode": "external",
+  "frame_code": "frame_denied",
+  "http_status": 200,
+  "x_frame_options": "SAMEORIGIN",
+  "diagnostic": null,
+  "images": [],
+  "baidu_retested": false,
+  "markup_saved": false,
+  "image_bytes_saved": false
+}

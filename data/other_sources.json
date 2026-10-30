@@ -1,0 +1,2152 @@
+{
+  "version": 1,
+  "providers": [
+    {
+      "id": "powo",
+      "name_en": "Kew · Plants of the World Online",
+      "name_zh": "邱园 · 世界植物在线",
+      "hosts": [
+        "powo.science.kew.org",
+        "www.kew.org",
+        "mpns.science.kew.org"
+      ],
+      "sample_url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A453395-1/general-information",
+      "access": "bounded_html_reader",
+      "availability": "must be tested; metadata discovery does not establish availability"
+    },
+    {
+      "id": "wfo",
+      "name_en": "World Flora Online",
+      "name_zh": "世界植物志",
+      "hosts": [
+        "www.worldfloraonline.org",
+        "worldfloraonline.org",
+        "list.worldfloraonline.org"
+      ],
+      "sample_url": "https://www.worldfloraonline.org/taxon/wfo-0001254077",
+      "access": "bounded_html_reader",
+      "availability": "must be tested; metadata discovery does not establish availability"
+    },
+    {
+      "id": "ipni",
+      "name_en": "International Plant Names Index",
+      "name_zh": "国际植物名称索引",
+      "hosts": [
+        "www.ipni.org",
+        "ipni.org"
+      ],
+      "sample_url": "https://www.ipni.org/n/199493-2",
+      "access": "bounded_html_reader",
+      "availability": "must be tested; metadata discovery does not establish availability"
+    },
+    {
+      "id": "nparks",
+      "name_en": "NParks Flora & Fauna Web",
+      "name_zh": "新加坡国家公园植物资料",
+      "hosts": [
+        "www.nparks.gov.sg"
+      ],
+      "sample_url": "https://www.nparks.gov.sg/florafaunaweb/flora/5/2/5262",
+      "access": "bounded_html_reader",
+      "availability": "must be tested; metadata discovery does not establish availability"
+    },
+    {
+      "id": "ncsu",
+      "name_en": "NC State · Plant Toolbox",
+      "name_zh": "北卡州立大学植物工具箱",
+      "hosts": [
+        "plants.ces.ncsu.edu"
+      ],
+      "sample_url": "https://plants.ces.ncsu.edu/plants/origanum-vulgare/",
+      "access": "bounded_html_reader",
+      "availability": "must be tested; metadata discovery does not establish availability"
+    },
+    {
+      "id": "icar",
+      "name_en": "ICAR · Indian Institute of Spices Research",
+      "name_zh": "印度香料研究所",
+      "hosts": [
+        "spices.res.in",
+        "www.spices.res.in"
+      ],
+      "sample_url": "https://spices.res.in/products/spices/clove.html",
+      "access": "bounded_html_reader",
+      "availability": "must be tested; metadata discovery does not establish availability"
+    },
+    {
+      "id": "spices_board",
+      "name_en": "Spices Board India",
+      "name_zh": "印度香料局",
+      "hosts": [
+        "www.indianspices.com"
+      ],
+      "sample_url": "https://www.indianspices.com/spice-catalog/mustard.html",
+      "access": "bounded_html_reader",
+      "availability": "must be tested; metadata discovery does not establish availability"
+    },
+    {
+      "id": "plantnet",
+      "name_en": "PlantNET · NSW Flora",
+      "name_zh": "新南威尔士植物志",
+      "hosts": [
+        "plantnet.rbgsyd.nsw.gov.au"
+      ],
+      "sample_url": "https://plantnet.rbgsyd.nsw.gov.au/cgi-bin/NSWfl.pl?lvl=sp&name=Coriandrum~sativum&page=nswfl",
+      "access": "bounded_html_reader",
+      "availability": "must be tested; metadata discovery does not establish availability"
+    },
+    {
+      "id": "efloras",
+      "name_en": "eFloras · Flora of China / North America",
+      "name_zh": "电子植物志",
+      "hosts": [
+        "www.efloras.org",
+        "efloras.org",
+        "floranorthamerica.org",
+        "www.floranorthamerica.org"
+      ],
+      "sample_url": "https://efloras.org/florataxon.aspx?flora_id=2&taxon_id=200015448",
+      "access": "bounded_html_reader",
+      "availability": "must be tested; metadata discovery does not establish availability"
+    },
+    {
+      "id": "iplant",
+      "name_en": "iPlant · Flora of China",
+      "name_zh": "植物智 · 中国植物志",
+      "hosts": [
+        "www.iplant.cn",
+        "iplant.cn"
+      ],
+      "sample_url": "https://www.iplant.cn/foc/pdf/Apiaceae.pdf",
+      "access": "bounded_html_reader",
+      "availability": "must be tested; metadata discovery does not establish availability"
+    },
+    {
+      "id": "rhs",
+      "name_en": "Royal Horticultural Society",
+      "name_zh": "英国皇家园艺学会",
+      "hosts": [
+        "www.rhs.org.uk"
+      ],
+      "sample_url": "https://www.rhs.org.uk/plants/516615/capsicum-annuum-var-annuum-conoides-group-chao-tian-jiao/details",
+      "access": "bounded_html_reader",
+      "availability": "must be tested; metadata discovery does not establish availability"
+    },
+    {
+      "id": "australia",
+      "name_en": "Australian botanical collections",
+      "name_zh": "澳大利亚植物与标本资料",
+      "hosts": [
+        "bie.ala.org.au",
+        "hortflora.rbg.vic.gov.au",
+        "florabase.dbca.wa.gov.au",
+        "profiles.ala.org.au"
+      ],
+      "sample_url": "https://profiles.ala.org.au/opus/foa/profile/Piper%20excelsum%20subsp.%20psittacorum",
+      "access": "bounded_html_reader",
+      "availability": "must be tested; metadata discovery does not establish availability"
+    },
+    {
+      "id": "mnhn",
+      "name_en": "MNHN · Botanical collections",
+      "name_zh": "法国自然历史博物馆植物馆藏",
+      "hosts": [
+        "science.mnhn.fr"
+      ],
+      "sample_url": "https://science.mnhn.fr/institution/mnhn/collection/p/item/p00743230?listIndex=114",
+      "access": "bounded_html_reader",
+      "availability": "must be tested; metadata discovery does not establish availability"
+    },
+    {
+      "id": "universities",
+      "name_en": "University botanical references",
+      "name_zh": "大学植物与推广资料",
+      "hosts": [
+        "herbaria.plants.ox.ac.uk",
+        "hort.extension.wisc.edu",
+        "ag.purdue.edu",
+        "cpi.nmsu.edu",
+        "bellatlas.umn.edu",
+        "indiaflora-ces.iisc.ac.in",
+        "plants.usda.gov"
+      ],
+      "sample_url": "https://hort.extension.wisc.edu/articles/parsley-petroselinum-crispum/",
+      "access": "bounded_html_reader",
+      "availability": "must be tested; metadata discovery does not establish availability"
+    },
+    {
+      "id": "itis",
+      "name_en": "ITIS / USDA nomenclature",
+      "name_zh": "ITIS / 美国农业部名称资料",
+      "hosts": [
+        "www.itis.gov",
+        "itis.gov",
+        "npgsweb.ars-grin.gov"
+      ],
+      "sample_url": "https://itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=832948",
+      "access": "bounded_html_reader",
+      "availability": "must be tested; metadata discovery does not establish availability"
+    },
+    {
+      "id": "regional_flora",
+      "name_en": "Regional floras and plant institutes",
+      "name_zh": "地区植物志与研究机构",
+      "hosts": [
+        "www.nzpcn.org.nz",
+        "pza.sanbi.org",
+        "www.sanbi.org",
+        "monografiasfloradobrasil.jbrj.gov.br",
+        "prosea.prota4u.org"
+      ],
+      "sample_url": "https://pza.sanbi.org/salvia-chamelaeagnea",
+      "access": "bounded_html_reader",
+      "availability": "must be tested; metadata discovery does not establish availability"
+    },
+    {
+      "id": "gbif",
+      "name_en": "GBIF · Taxonomic reference API",
+      "name_zh": "GBIF 植物分类参考 API",
+      "hosts": [
+        "api.gbif.org",
+        "www.gbif.org"
+      ],
+      "sample_url": "https://www.gbif.org/taxon/69MHR",
+      "access": "public_api",
+      "availability": "must be tested; metadata discovery does not establish availability"
+    },
+    {
+      "id": "wikispecies",
+      "name_en": "Wikispecies",
+      "name_zh": "维基物种",
+      "hosts": [
+        "species.wikimedia.org"
+      ],
+      "sample_url": null,
+      "access": "public_api",
+      "availability": "must be tested; metadata discovery does not establish availability"
+    },
+    {
+      "id": "wikibooks",
+      "name_en": "Wikibooks · Cookbook",
+      "name_zh": "维基教科书 · 烹饪",
+      "hosts": [
+        "en.wikibooks.org"
+      ],
+      "sample_url": null,
+      "access": "public_api",
+      "availability": "must be tested; metadata discovery does not establish availability"
+    },
+    {
+      "id": "baidu_baike",
+      "name_en": "Baidu Baike",
+      "name_zh": "百度百科",
+      "hosts": [
+        "baike.baidu.com"
+      ],
+      "sample_url": null,
+      "access": "bounded_html_reader",
+      "availability": "Public article HTML only; verification and provider restrictions remain authoritative"
+    },
+    {
+      "id": "mccormick",
+      "name_en": "McCormick · Product and ingredient references",
+      "name_zh": "McCormick 商品与配料资料",
+      "hosts": [
+        "www.mccormick.com",
+        "mccormick.com",
+        "www.mccormick.com.au"
+      ],
+      "sample_url": null,
+      "access": "bounded_html_reader",
+      "availability": "A product record is not a general botanical monograph; readable public HTML only"
+    }
+  ],
+  "entry_candidates": {
+    "oregano": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A453395-1/general-information",
+        "title": "Origanum vulgare L. | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "ncsu",
+        "url": "https://plants.ces.ncsu.edu/plants/origanum-vulgare/",
+        "title": "Origanum vulgare (English Marjoram, Oregano, Winter sweet) | North Carolina Extension Gardener Plant Toolbox",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "rosemary": [
+      {
+        "provider": "powo",
+        "url": "https://www.kew.org/plants/rosemary",
+        "title": "Rosemary - Salvia rosmarinus | Plants | Kew",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "ncsu",
+        "url": "https://plants.ces.ncsu.edu/plants/salvia-rosmarinus/",
+        "title": "Salvia rosmarinus (Rosemary) | North Carolina Extension Gardener Plant Toolbox",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "parsley": [
+      {
+        "provider": "universities",
+        "url": "https://hort.extension.wisc.edu/articles/parsley-petroselinum-crispum/",
+        "title": "Parsley, Petroselinum crispum – Wisconsin Horticulture",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "universities",
+        "url": "https://ag.purdue.edu/department/hla/extension/extension-publications-library/ext-pubs/ho-202-w.html",
+        "title": "HO-202: Parsley: A Production Guide",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "wd-Q13241": [
+      {
+        "provider": "powo",
+        "url": "https://www.kew.org/plants/vanilla",
+        "title": "Vanilla - Vanilla planifolia | Plants | Kew",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "wd-Q1541119": [],
+    "wd-Q6933754": [
+      {
+        "provider": "universities",
+        "url": "https://cpi.nmsu.edu/chile-info/nutrition-and-food-science-pages/chile-terminology.html",
+        "title": "Chile Terminology | New Mexico State University | BE BOLD. Shape the Future.",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "universities",
+        "url": "https://cpi.nmsu.edu/_assets/documents/qr/Mulato%20Recipe.pdf",
+        "title": "Mulato",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "wd-Q3301501": [],
+    "wd-Q131748": [
+      {
+        "provider": "spices_board",
+        "url": "https://www.indianspices.com/spice-catalog/mustard.html",
+        "title": "Mustard | Spices Board",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "wd-Q1937700": [
+      {
+        "provider": "spices_board",
+        "url": "https://www.indianspices.com/spice-catalog/mustard.html",
+        "title": "Mustard | Spices Board",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "wd-Q141758765": [],
+    "wd-Q7452135": [],
+    "wd-Q112810682": [],
+    "wd-Q4732667": [
+      {
+        "provider": "powo",
+        "url": "https://mpns.science.kew.org/mpns-portal/drugDetail?drugName=alligator+pepper",
+        "title": "Non scientific name details for alligator pepper - Medicinal Plant Names Services",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-7705625": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A77112528-1/general-information",
+        "title": "Peperomia jalcaensis Pino | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-3881832": [
+      {
+        "provider": "regional_flora",
+        "url": "https://pza.sanbi.org/salvia-chamelaeagnea",
+        "title": "Salvia chamelaeagnea | PlantZAfrica",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-5610621": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A452370-1/general-information",
+        "title": "Nepeta cyrenaica Quézel & Zaffran | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-5608662": [],
+    "gbif-7725899": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A461514-1",
+        "title": "Thymus pavlovii Serg. | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-4185735": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/681256-1",
+        "title": "Piper durilimbum C.DC. | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "universities",
+        "url": "https://bellatlas.umn.edu/checklists/checklist.php?clid=135&dynclid=0&pagenumber=21&pid=10&searchsynonyms=1&showalphataxa=1&showauthors=1&showcommon=1&showsynonyms=1&showvouchers=1",
+        "title": "Minnesota Biodiversity Atlas Checklist: A Dynamic Checklist of the Flora of New Guinea",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-4189202": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/199493-2",
+        "title": "Piper urubambanum Trel. | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "ipni",
+        "url": "https://www.ipni.org/n/199493-2",
+        "title": "Piper urubambanum | International Plant Names Index",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-7305472": [
+      {
+        "provider": "wfo",
+        "url": "https://www.worldfloraonline.org/taxon/wfo-0001254077",
+        "title": "Piper macedoi Yunck.",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-5539029": [
+      {
+        "provider": "regional_flora",
+        "url": "https://www.nzpcn.org.nz/flora/species/aciphylla-pinnatifida/",
+        "title": "Aciphylla pinnatifida • New Zealand Plant Conservation Network",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-5539762": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A846645-1/general-information",
+        "title": "Pimpinella anagodendron Bolle | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-7306001": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A199125-2/general-information",
+        "title": "Piper scabriseptum Trel. | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "ipni",
+        "url": "https://www.ipni.org/n/199125-2",
+        "title": "Piper scabriseptum | International Plant Names Index",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-4183735": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A681809-1",
+        "title": "Piper jericoense Trel. & Yunck. | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-4186561": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/197494-2",
+        "title": "Piper campii Yunck. | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "ipni",
+        "url": "https://www.ipni.org/n/197494-2",
+        "title": "Piper campii | International Plant Names Index",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-6026982": [
+      {
+        "provider": "efloras",
+        "url": "https://efloras.org/florataxon.aspx?flora_id=2&taxon_id=200015448",
+        "title": "Bupleurum petiolulatum in Flora of China @ efloras.org",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "iplant",
+        "url": "https://www.iplant.cn/foc/pdf/Apiaceae.pdf",
+        "title": "Flora of China 14: 1–205. 2005.",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-4183698": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/189505-2",
+        "title": "Peperomia quaerata Trel. | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "ipni",
+        "url": "https://www.ipni.org/n/189505-2",
+        "title": "Peperomia quaerata | International Plant Names Index",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-3885548": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A947676-1/general-information",
+        "title": "Phlomoides hybrida (Zelen.) Kamelin & Makhm. | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-7595068": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A453699-1",
+        "title": "Paraphlomis lancidentata Y.Z.Sun | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "efloras",
+        "url": "https://www.efloras.org/florataxon.aspx?flora_id=2&taxon_id=200019953",
+        "title": "Paraphlomis lancidentata in Flora of China @ efloras.org",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-5608964": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/448589-1",
+        "title": "Isodon leucophyllus (Dunn) Kudô | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "efloras",
+        "url": "https://efloras.org/florataxon.aspx?flora_id=2&taxon_id=210000791",
+        "title": "Isodon leucophyllus in Flora of China @ efloras.org",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-7805620": [
+      {
+        "provider": "wfo",
+        "url": "https://www.worldfloraonline.org/taxon/wfo-1000070121",
+        "title": "Peperomia ciezae Pino",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-5540405": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A845288-1",
+        "title": "Oenanthe globulosa L. | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-3890762": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A5808-2/general-information",
+        "title": "Aegiphila saltensis Legname | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "ipni",
+        "url": "https://www.ipni.org/n/5808-2",
+        "title": "Aegiphila saltensis | International Plant Names Index",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-3892883": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/862118-1",
+        "title": "Clerodendrum haematolasium Hallier f. | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-3633957": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A842747-1",
+        "title": "Geocaryum tuberosum (W.D.J.Koch) Engstrand | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-6027420": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A838799-1/general-information",
+        "title": "Bowlesia tropaeolifolia Gillies & Hook. | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-4186241": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A683097-1/general-information",
+        "title": "Piper ribesioides Wall. | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "regional_flora",
+        "url": "https://prosea.prota4u.org/view.aspx?id=590",
+        "title": "PROSEA - Plant Resources of South East Asia",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-5608403": [],
+    "gbif-4185817": [
+      {
+        "provider": "wfo",
+        "url": "https://www.worldfloraonline.org/taxon/wfo-0001261674",
+        "title": "Piper medinaense Yunck.",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-10321453": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A447134-1",
+        "title": "Galeopsis × sulfurea Druce | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-3897753": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A452942-1/general-information",
+        "title": "Ocimum filamentosum Forssk. | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "universities",
+        "url": "https://indiaflora-ces.iisc.ac.in/FloraPeninsular/herbsheet.php?cat=7&id=4938",
+        "title": "Herbarium JCB",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-2926450": [
+      {
+        "provider": "itis",
+        "url": "https://itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=832948",
+        "title": "ITIS - Report: Phyllostegia yamaguchii",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "itis",
+        "url": "https://itis.gov/servlet/SingleRpt/SingleRpt?print_version=SCR&search_topic=TSN&search_value=504366&source=from_print",
+        "title": "ITIS - Report: Phyllostegia X yamaguchii",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-4187863": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/188673-2",
+        "title": "Peperomia egleri Yunck. | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "regional_flora",
+        "url": "https://monografiasfloradobrasil.jbrj.gov.br/piperaceae.pdf",
+        "title": "Angiospermas Piperaceae Giske",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-4184143": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/188828-2",
+        "title": "Peperomia gracilicaulis Yunck. | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "regional_flora",
+        "url": "https://monografiasfloradobrasil.jbrj.gov.br/piperaceae.pdf",
+        "title": "Angiospermas Piperaceae Giseke",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-3894999": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A456768-1/general-information",
+        "title": "Salvia nazalena Hedge & Mouterde | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-3900742": [],
+    "gbif-3640822": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A841171-1",
+        "title": "Daucus muricatus (L.) L. | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "itis",
+        "url": "https://npgsweb.ars-grin.gov/gringlobal/taxon/taxonomydetail?id=13351",
+        "title": "Daucus muricatus (L.) L. GRIN-Global",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "wd-Q515610": [
+      {
+        "provider": "powo",
+        "url": "https://www.kew.org/plants/common-jasmine",
+        "title": "Common jasmine | Kew",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "universities",
+        "url": "https://herbaria.plants.ox.ac.uk/bol/plants400/Profiles/IJ/Jasminum",
+        "title": "Oxford University Plants 400: Jasminum officinale",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-3632442": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/939205-1",
+        "title": "Seseli alaicum Pimenov | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "ipni",
+        "url": "https://www.ipni.org/n/939205-1",
+        "title": "Seseli alaicum | International Plant Names Index",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-7308359": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A460512-1/general-information",
+        "title": "Teucrium leucocladum Boiss. | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "ipni",
+        "url": "https://www.ipni.org/n/460512-1",
+        "title": "Teucrium leucocladum | International Plant Names Index",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-7805239": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A460065-1/general-information",
+        "title": "Stachys turkestanica (Regel) Popov ex Knorring | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "wfo",
+        "url": "https://www.worldfloraonline.org/taxon/wfo-0001069963",
+        "title": "Stachys turkestanica (Regel) Popov ex Knorring",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "wd-Q66104781": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A77124429-1",
+        "title": "Piper excelsum subsp. psittacorum (Endl.) de Lange | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "regional_flora",
+        "url": "https://www.nzpcn.org.nz/site/assets/files/0/15/025/piper-excelsum-subsp-psittacorum.pdf",
+        "title": "Piper excelsum subsp. psittacorum",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "australia",
+        "url": "https://profiles.ala.org.au/opus/foa/profile/Piper%20excelsum%20subsp.%20psittacorum",
+        "title": "Profile",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-4185531": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A681264-1",
+        "title": "Piper ecuadorense Sodiro | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-5609601": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/328179-2",
+        "title": "Nepeta L. | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "universities",
+        "url": "https://bellatlas.umn.edu/checklists/checklist.php?clid=601&dynclid=0&pagenumber=50&searchsynonyms=1&showauthors=1&showcommon=1&showsynonyms=1&showvouchers=1&thesfilter=1",
+        "title": "Minnesota Biodiversity Atlas Checklist: A Preliminary Checklist of the Flora of Africa",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-3888121": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A447731-1",
+        "title": "Hemiandra rubriflora O.H.Sarg. | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "australia",
+        "url": "https://bie.ala.org.au/species/https%3A/id.biodiversity.org.au/node/apni/2888638",
+        "title": "Hemiandra rubriflora | Atlas of Living Australia",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-8317767": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A461400-1",
+        "title": "Thymus marschallianus Willd. | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "australia",
+        "url": "https://hortflora.rbg.vic.gov.au/taxon/ada1ea3a-5340-11e7-b82b-005056b0018f",
+        "title": "HortFlora",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-4188466": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/197415-2",
+        "title": "Piper boquetense Yunck. | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "ipni",
+        "url": "https://www.ipni.org/n/197415-2",
+        "title": "Piper boquetense | International Plant Names Index",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "wd-Q156865": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/316550-2",
+        "title": "Agrimonia eupatoria L. | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "australia",
+        "url": "https://hortflora.rbg.vic.gov.au/taxon/ad94d9c6-5340-11e7-b82b-005056b0018f",
+        "title": "HortFlora",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-3086345": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A680788-1",
+        "title": "Piper caracasanum Bredem. ex Link | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "itis",
+        "url": "https://itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=895513",
+        "title": "ITIS - Report: Piper obliquum",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-10756299": [],
+    "clove": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A601421-1/general-information",
+        "title": "Syzygium aromaticum (L.) Merr. & L.M.Perry | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "icar",
+        "url": "https://spices.res.in/products/spices/clove.html",
+        "title": "Clove - Syzygium aromaticum | ICAR-IISR",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "universities",
+        "url": "https://herbaria.plants.ox.ac.uk/bol/plants400/Profiles/ST/Syzygium",
+        "title": "Oxford University Plants 400: Syzygium aromaticum",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "coriander": [
+      {
+        "provider": "icar",
+        "url": "https://spices.res.in/products/spices/coriander.html",
+        "title": "Coriander - Coriandrum sativum L. | ICAR-IISR",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "plantnet",
+        "url": "https://plantnet.rbgsyd.nsw.gov.au/cgi-bin/NSWfl.pl?lvl=sp&name=Coriandrum~sativum&page=nswfl",
+        "title": "PlantNET - FloraOnline",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "universities",
+        "url": "https://hort.extension.wisc.edu/articles/cilantro-coriander-coriandrum-sativum/",
+        "title": "Cilantro / Coriander, Coriandrum sativum – Wisconsin Horticulture",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "pepper": [
+      {
+        "provider": "icar",
+        "url": "https://spices.res.in/products/spices/black-pepper.html",
+        "title": "Black Pepper - King of Spices | ICAR-IISR",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "nparks",
+        "url": "https://www.nparks.gov.sg/florafaunaweb/flora/5/2/5262",
+        "title": "NParks | Piper nigrum",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "universities",
+        "url": "https://herbaria.plants.ox.ac.uk/bol/plants400/Profiles/OP/Pipernigrum",
+        "title": "Oxford University Plants 400: Piper nigrum",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "wd-Q2123759": [],
+    "wd-Q465554": [],
+    "wd-Q1517449": [],
+    "wd-Q1432348": [],
+    "wd-Q2771241": [],
+    "wd-Q19571438": [],
+    "wd-Q5428637": [
+      {
+        "provider": "rhs",
+        "url": "https://www.rhs.org.uk/plants/516615/capsicum-annuum-var-annuum-conoides-group-chao-tian-jiao/details",
+        "title": "Capsicum annuum var. annuum (Conoides Group) 'Chao Tian Jiao'",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "ncsu",
+        "url": "https://plants.ces.ncsu.edu/plants/capsicum-annuum-conioides-group/common-name/facing-heaven/",
+        "title": "Facing Heaven Pepper - Capsicum annuum Conioides Group | North Carolina Extension Gardener Plant Toolbox",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "wd-Q124324124": [],
+    "wd-Q913548": [],
+    "wd-Q7093931": [],
+    "gbif-4186215": [
+      {
+        "provider": "wfo",
+        "url": "https://www.worldfloraonline.org/taxon/wfo-0000478751",
+        "title": "Piper capacibracteum Trel.",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-3882915": [
+      {
+        "provider": "wfo",
+        "url": "https://www.worldfloraonline.org/taxon/wfo-0000300533",
+        "title": "Salvia × cadevallii Sennen",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-7306766": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A461561-1",
+        "title": "Thymus pulcherrimus Schur | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-5610326": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A452525-1/general-information",
+        "title": "Nepeta lasiocephala Benth. | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "mnhn",
+        "url": "https://science.mnhn.fr/institution/mnhn/collection/p/item/p00743230?listIndex=114",
+        "title": "Specimen - Nepeta lasiocephala Benth.",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-2926652": [
+      {
+        "provider": "itis",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=32365",
+        "title": "ITIS - Report: Trichostema lanatum",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A461853-1",
+        "title": "Trichostema lanatum Benth. | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-5610343": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A452513-1",
+        "title": "Nepeta ladanolens Lipsky | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "ipni",
+        "url": "https://www.ipni.org/n/452513-1",
+        "title": "Nepeta ladanolens | International Plant Names Index",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-3881500": [
+      {
+        "provider": "ipni",
+        "url": "https://www.ipni.org/n/1011061-1",
+        "title": "Satureja fukarekii | International Plant Names Index",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "wfo",
+        "url": "https://www.worldfloraonline.org/taxon/wfo-0000304168",
+        "title": "Satureja fukarekii Šilic",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-4187568": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/197451-2",
+        "title": "Piper brownsbergense Yunck. | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "wfo",
+        "url": "https://www.worldfloraonline.org/taxon/wfo-0001251790",
+        "title": "Piper brownsbergense Yunck.",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-9440691": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A21118-1",
+        "title": "Phlomoides Moench | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "iplant",
+        "url": "https://www.iplant.cn/foc/pdf/Phlomis.pdf",
+        "title": "30",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-4188439": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/198920-2",
+        "title": "Piper puberulidrupum Yunck. | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "ipni",
+        "url": "https://www.ipni.org/n/198920-2",
+        "title": "Piper puberulidrupum | International Plant Names Index",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-7440693": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A30002942-2",
+        "title": "Thymus L. | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-7305894": [
+      {
+        "provider": "ipni",
+        "url": "https://www.ipni.org/n/77073645-1",
+        "title": "Peperomia cymbifolia | International Plant Names Index",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "mnhn",
+        "url": "https://science.mnhn.fr/taxon/species/peperomia/cymbifolia",
+        "title": "Peperomia cymbifolia Pino",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-3888459": [],
+    "gbif-3897967": [],
+    "gbif-4190302": [],
+    "gbif-4184128": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A678293-1",
+        "title": "Peperomia colorata Kunth | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "wfo",
+        "url": "https://www.worldfloraonline.org/taxon/wfo-0001094139",
+        "title": "Peperomia colorata Kunth",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-3900416": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/77075135-1",
+        "title": "Syncolostemon bolusii (N.E.Br.) D.F.Otieno | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-3882214": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A459642-1",
+        "title": "Stachys iraqensis R.Bhattacharjee | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "wfo",
+        "url": "https://www.worldfloraonline.org/taxon/wfo-0000314136",
+        "title": "Stachys iraqensis R.Bhattacharjee",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-4189107": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/189926-2",
+        "title": "Peperomia verediana Trel. | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "wfo",
+        "url": "https://www.worldfloraonline.org/taxon/wfo-0001092688",
+        "title": "Peperomia verediana Trel.",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-4191138": [
+      {
+        "provider": "wfo",
+        "url": "https://www.worldfloraonline.org/taxon/wfo-0001245722",
+        "title": "Piper cobarianum Trel. & Yunck.",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-3637867": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A844566-1",
+        "title": "Ligusticum peloponnesiacum Pall. | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-3892894": [],
+    "gbif-4189224": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/683859-1",
+        "title": "Piper urostachyum Hemsl. | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "ipni",
+        "url": "https://www.ipni.org/n/683859-1",
+        "title": "Piper urostachyum | International Plant Names Index",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-7307528": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A461088-1/general-information",
+        "title": "Thymus dahuricus Serg. | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "wfo",
+        "url": "https://worldfloraonline.org/taxon/wfo-0000323934",
+        "title": "Thymus dahuricus Serg.",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-3891885": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A110702-2",
+        "title": "Glechon elliptica C.Pereira & Hatschbach | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-4185520": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/188455-2",
+        "title": "Peperomia ceroderma Yunck. | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "ipni",
+        "url": "https://www.ipni.org/n/678224-1",
+        "title": "Peperomia ceroderma | International Plant Names Index",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-3641891": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/987308-1",
+        "title": "Sinocarum longii M.F.Watson | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "ipni",
+        "url": "https://www.ipni.org/n/987308-1",
+        "title": "Sinocarum longii | International Plant Names Index",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-10707929": [
+      {
+        "provider": "wfo",
+        "url": "https://www.worldfloraonline.org/taxon/wfo-1000022613",
+        "title": "Galagania involucrata (Korovin) Kljuykov",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-9891312": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A455129-1",
+        "title": "Prunella × intermedia Link | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-3631524": [
+      {
+        "provider": "wfo",
+        "url": "https://www.worldfloraonline.org/taxon/wfo-0001275042",
+        "title": "Kozlovia longiloba (Kar. & Kir.) K.Spalik & S.R.Downie",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-3903503": [],
+    "gbif-7308978": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A458168-1",
+        "title": "Scutellaria brevibracteata Stapf | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-10729261": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A77198825-1",
+        "title": "Teucrium × delatorrei M.B.Crespo & M.Á.Alonso | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "ipni",
+        "url": "https://ipni.org/n/77198825-1",
+        "title": "Teucrium × delatorrei | International Plant Names Index",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-3886780": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/77075334-1",
+        "title": "Clinopodium kilimandschari (Gürke) Ryding | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "wfo",
+        "url": "https://www.worldfloraonline.org/taxon/wfo-0000808199",
+        "title": "Clinopodium kilimandschari (Gürke) Ryding",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-5538040": [
+      {
+        "provider": "wfo",
+        "url": "https://www.worldfloraonline.org/taxon/wfo-0000434181",
+        "title": "Semenovia dichotoma (Boiss.) Manden.",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-3895426": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A226779-2",
+        "title": "Salvia montecristina Urb. & Ekman | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "ipni",
+        "url": "https://www.ipni.org/n/226779-2",
+        "title": "Salvia montecristina | International Plant Names Index",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-3034364": [
+      {
+        "provider": "itis",
+        "url": "https://npgsweb.ars-grin.gov/gringlobal/taxon/taxonomydetail?id=462674",
+        "title": "Lomatium donnellii (J. M. Coult. & Rose) J. M. Coult. & Rose GRIN-Global",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A143071-2",
+        "title": "Lomatium donnellii (J.M.Coult. & Rose) J.M.Coult. & Rose | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-3886312": [
+      {
+        "provider": "australia",
+        "url": "https://bie.ala.org.au/species/https%3A/id.biodiversity.org.au/node/apni/2895843",
+        "title": "Hemigenia pimeleifolia | Atlas of Living Australia",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-2927230": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A459393-1/general-information",
+        "title": "Stachys byzantina K.Koch | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-8343221": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A77120933-1",
+        "title": "Medusantha martiusii (Benth.) Harley & J.F.B.Pastore | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "wfo",
+        "url": "https://www.worldfloraonline.org/taxon/wfo-0001318956",
+        "title": "Medusantha martiusii (Benth.) Harley & J.F.B.Pastore",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-4184519": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/199054-2",
+        "title": "Piper sagittifer Trel. | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "ipni",
+        "url": "https://www.ipni.org/n/199054-2",
+        "title": "Piper sagittifer | International Plant Names Index",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-3891861": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/110704-2",
+        "title": "Glechon hoehneana Epling | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "wfo",
+        "url": "https://worldfloraonline.org/taxon/wfo-0000973020",
+        "title": "Glechon hoehneana Epling",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-3642499": [
+      {
+        "provider": "gbif",
+        "url": "https://www.gbif.org/taxon/69MHR",
+        "title": "Chaerophyllum azorellaceum",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-7427683": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A449504-1",
+        "title": "Leucas stricta Benth. | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "wfo",
+        "url": "https://www.worldfloraonline.org/taxon/wfo-0000227181",
+        "title": "Leucas stricta Benth.",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-4184213": [
+      {
+        "provider": "wfo",
+        "url": "https://www.worldfloraonline.org/taxon/wfo-0001093703",
+        "title": "Piper pexum Trel.",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-10087139": [],
+    "gbif-3632398": [
+      {
+        "provider": "mnhn",
+        "url": "https://science.mnhn.fr/institution/um/collection/mpu/item/mpu018607?listIndex=1008",
+        "title": "Specimen - type Carum heldreichii Boiss.",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-4184169": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/198212-2",
+        "title": "Piper ivonense Yunck. | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "ipni",
+        "url": "https://www.ipni.org/n/198212-2",
+        "title": "Piper ivonense | International Plant Names Index",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "wfo",
+        "url": "https://www.worldfloraonline.org/taxon/wfo-0001276579",
+        "title": "Piper ivonense Yunck.",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "paprika": [
+      {
+        "provider": "plantnet",
+        "url": "https://plantnet.rbgsyd.nsw.gov.au/cgi-bin/NSWfl.pl?lvl=gn&name=Capsicum&page=nswfl",
+        "title": "PlantNET - FloraOnline",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "powo",
+        "url": "https://www.kew.org/plants/pepper",
+        "title": "Pepper - Capsicum annuum | Kew",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "australia",
+        "url": "https://hortflora.rbg.vic.gov.au/taxon/ad9df7ea-5340-11e7-b82b-005056b0018f",
+        "title": "HortFlora",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "cumin": [
+      {
+        "provider": "icar",
+        "url": "https://spices.res.in/products/spices/cumin.html",
+        "title": "Cumin - Cuminum cyminum L. | ICAR-IISR",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A840882-1",
+        "title": "Cuminum cyminum L. | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "rhs",
+        "url": "https://www.rhs.org.uk/plants/72392/cuminum-cyminum/details",
+        "title": "Cuminum cyminum | cumin",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "celery": [
+      {
+        "provider": "nparks",
+        "url": "https://www.nparks.gov.sg/florafaunaweb/flora/4/6/4691",
+        "title": "NParks | Apium graveolens (Chinese celery)",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "plantnet",
+        "url": "https://plantnet.rbgsyd.nsw.gov.au/cgi-bin/NSWfl.pl?lvl=sp&name=Apium~graveolens&page=nswfl",
+        "title": "PlantNET - FloraOnline",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "spices_board",
+        "url": "https://www.indianspices.com/node/21.html",
+        "title": "Celery | Spices Board",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "thyme": [
+      {
+        "provider": "regional_flora",
+        "url": "https://prosea.prota4u.org/view.aspx?id=599",
+        "title": "PROSEA - Plant Resources of South East Asia",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "rhs",
+        "url": "https://www.rhs.org.uk/herbs/thyme/grow-your-own",
+        "title": "How to grow Thyme | RHS Guide",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "wd-Q207123": [
+      {
+        "provider": "universities",
+        "url": "https://ag.purdue.edu/department/hla/extension/extension-publications-library/ext-pubs/ho-28-w.html",
+        "title": "HO-28: Growing Herbs",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "wd-Q1963621": [
+      {
+        "provider": "icar",
+        "url": "https://spices.res.in/products/spices/allspice.html",
+        "title": "Allspice - Pimenta dioica | ICAR-IISR",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A196799-2/general-information",
+        "title": "Pimenta dioica (L.) Merr. | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "wd-Q2068389": [],
+    "wd-Q2015681": [],
+    "wd-Q2370943": [
+      {
+        "provider": "spices_board",
+        "url": "https://www.indianspices.com/node/11.html",
+        "title": "Bay Leaf | Spices Board",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "rhs",
+        "url": "https://www.rhs.org.uk/herbs/bay/grow-your-own",
+        "title": "How to grow Bay | RHS Guide",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "icar",
+        "url": "https://spices.res.in/products/spices/bay-leaf.html",
+        "title": "Bay Leaf (Tejpat) - Cinnamomum tamala | ICAR-IISR",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "wd-Q654253": [],
+    "wd-Q860808": [
+      {
+        "provider": "universities",
+        "url": "https://cpi.nmsu.edu/_assets/documents/Eating-Well.pdf",
+        "title": "CHILEMAN & The POPE of PEPPERS",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "wd-Q838835": [],
+    "wd-Q1572414": [],
+    "wd-Q2827931": [],
+    "gbif-5609878": [
+      {
+        "provider": "mnhn",
+        "url": "https://science.mnhn.fr/taxon/species/nepeta/prostrata",
+        "title": "Nepeta prostrata Benth.",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "mnhn",
+        "url": "https://science.mnhn.fr/institution/mnhn/collection/p/item/p00743279?listIndex=22",
+        "title": "Specimen - syntype Nepeta prostrata Benth.",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-9619118": [
+      {
+        "provider": "wfo",
+        "url": "https://www.worldfloraonline.org/taxon/wfo-0001330675",
+        "title": "Stachys nelsonii B.R.Keener & L.J.Davenp.",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-7471562": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A77120760-1/general-information",
+        "title": "Cantinoa mutabilis (Rich.) Harley & J.F.B.Pastore | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "ipni",
+        "url": "https://www.ipni.org/n/77120760-1",
+        "title": "Cantinoa mutabilis | International Plant Names Index",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-10945107": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A77190158-1",
+        "title": "Thymbra thymbrifolia (Hedge & Feinbrun) Bräuchler | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "wfo",
+        "url": "https://www.worldfloraonline.org/taxon/wfo-0001428782",
+        "title": "Thymbra thymbrifolia (Hedge & Feinbrun) Bräuchler",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-8173793": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A862555-1",
+        "title": "Clerodendrum nutans Wall. ex D.Don | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A862283-1",
+        "title": "Clerodendrum nutans Wall. ex Jack | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-7361803": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/848531-1",
+        "title": "Seseli elatum L. | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "itis",
+        "url": "https://npgsweb.ars-grin.gov/gringlobal/taxon/taxonomydetail?id=456881",
+        "title": "Seseli elatum L. GRIN-Global",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-7305064": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/199029-2",
+        "title": "Piper rotundibaccum Trel. | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-3888365": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A20971-1",
+        "title": "Lepechinia Willd. | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-3635728": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A943617-1",
+        "title": "Tetrataenium ceylanicum (Gardner ex C.B.Clarke) Manden. | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "universities",
+        "url": "https://indiaflora-ces.iisc.ac.in/herbsheet.php?cat=13&id=5852",
+        "title": "India Flora Online",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-3905422": [
+      {
+        "provider": "regional_flora",
+        "url": "https://www.sanbi.org/wp-content/uploads/2024/05/2008_Strelitzia22.pdf",
+        "title": "Strelitzia 22 (2008)                                                                 271",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-6307904": [
+      {
+        "provider": "iplant",
+        "url": "https://www.iplant.cn/z/frps/30317",
+        "title": "《中国植物志》手机版",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "efloras",
+        "url": "https://www.efloras.org/florataxon.aspx?flora_id=2&taxon_id=242444018",
+        "title": "Heracleum kingdonii in Flora of China @ efloras.org",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-8064486": [
+      {
+        "provider": "wfo",
+        "url": "https://www.worldfloraonline.org/taxon/wfo-0000478280",
+        "title": "Peperomia auberyana Trel.",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-10812951": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/30016176-2",
+        "title": "Mentha L. | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "powo",
+        "url": "https://mpns.science.kew.org/mpns-portal/plantDetail?dbs=wcs&filter=&fuzzy=false&nameType=all&plantId=125574&query=",
+        "title": "Plant name details for Mentha × villosa - Medicinal Plant Names Services",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-7707512": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A846271-1/general-information",
+        "title": "Peucedanum nepalense P.K.Mukh. | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "universities",
+        "url": "https://indiaflora-ces.iisc.ac.in/herbsheet.php?cat=13&id=8989",
+        "title": "India Flora Online",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-4189981": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/188905-2",
+        "title": "Peperomia huacapistanana Trel. | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "ipni",
+        "url": "https://www.ipni.org/n/188905-2",
+        "title": "Peperomia huacapistanana | International Plant Names Index",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "wfo",
+        "url": "https://www.worldfloraonline.org/taxon/wfo-0001092538",
+        "title": "Peperomia huacapistanana Trel.",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-8051206": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A77142845-1",
+        "title": "Oocephalus ganevii Harley | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-8397041": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A30000069-2",
+        "title": "Vitex L. | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-3902086": [
+      {
+        "provider": "mnhn",
+        "url": "https://science.mnhn.fr/taxon/species/hyptis/odorata",
+        "title": "Hyptis odorata Benth.",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "mnhn",
+        "url": "https://science.mnhn.fr/institution/mnhn/collection/p/item/p00737230?listIndex=264",
+        "title": "Specimen - syntype Hyptis odorata Benth.",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-2925557": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A865688-1",
+        "title": "Vitex divaricata Sw. | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "itis",
+        "url": "https://npgsweb.ars-grin.gov/gringlobal/taxon/taxonomydetail?id=466879",
+        "title": "Vitex divaricata Sw. GRIN-Global",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "itis",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=32224",
+        "title": "ITIS - Report: Vitex divaricata",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-3629711": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A848689-1",
+        "title": "Seseli rhodopeum Velen. | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "ipni",
+        "url": "https://www.ipni.org/n/848689-1",
+        "title": "Seseli rhodopeum | International Plant Names Index",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-10854791": [
+      {
+        "provider": "wfo",
+        "url": "https://www.worldfloraonline.org/taxon/wfo-1000033755",
+        "title": "Peperomia aggregata E.F.Guim. & Carv.-Silva",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-3629852": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A841888-1",
+        "title": "Eryngium longifolium Cav. | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-9463119": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A60473303-2/general-information",
+        "title": "Azorella prolifera (Cav.) G.M.Plunkett & A.N.Nicolas | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "wfo",
+        "url": "https://www.worldfloraonline.org/taxon/wfo-0001330633",
+        "title": "Azorella prolifera (Cav.) G.M.Plunkett & A.N.Nicolas",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-3629617": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A330916-2",
+        "title": "Eryngium marocanum Pit. | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "mnhn",
+        "url": "https://science.mnhn.fr/taxon/species/eryngium/marocanum",
+        "title": "Eryngium marocanum Pit.",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "gbif",
+        "url": "https://www.gbif.org/taxon/6GSFG",
+        "title": "Eryngium marocanum",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-3884138": [
+      {
+        "provider": "wfo",
+        "url": "https://www.worldfloraonline.org/taxon/wfo-0000313866",
+        "title": "Stachys collina Brandegee",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "wd-Q21389473": [],
+    "gbif-4190763": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/682348-1",
+        "title": "Piper nervulosum C.DC. | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "wfo",
+        "url": "https://www.worldfloraonline.org/taxon/wfo-0001265377",
+        "title": "Piper nervulosum C.DC.",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-7893524": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A446062-1",
+        "title": "Coleus longipetiolatus Gürke | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "ipni",
+        "url": "https://www.ipni.org/n/446062-1",
+        "title": "Coleus longipetiolatus | International Plant Names Index",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-3902661": [
+      {
+        "provider": "efloras",
+        "url": "https://efloras.org/florataxon.aspx?flora_id=2&taxon_id=200019580",
+        "title": "Dracocephalum isabellae in Flora of China @ efloras.org",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "iplant",
+        "url": "https://www.iplant.cn/info/Dracocephalum%20isabellae?t=focn",
+        "title": "白萼青兰 Dracocephalum isabellae|iPlant 植物智——植物物种信息系统",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "wfo",
+        "url": "https://worldfloraonline.org/taxon/wfo-0000945367",
+        "title": "Dracocephalum isabellae Forrest ex W.W.Sm.",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-4188384": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/197720-2",
+        "title": "Piper curvipilum Trel. | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "ipni",
+        "url": "https://www.ipni.org/n/197720-2",
+        "title": "Piper curvipilum | International Plant Names Index",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-3633746": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/1018551-1",
+        "title": "Hymenidium heterosciadium (H.Wolff) Pimenov & Kljuykov | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "ipni",
+        "url": "https://www.ipni.org/n/1018551-1",
+        "title": "Hymenidium heterosciadium | International Plant Names Index",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "wfo",
+        "url": "https://worldfloraonline.org/taxon/wfo-0001274113",
+        "title": "Hymenidium heterosciadium (H.Wolff) Pimenov & Kljuykov",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-3631723": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A837498-1",
+        "title": "Ammi seubertianum (H.C.Watson) Trel. | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-7305564": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A198337-2",
+        "title": "Piper longispicum C.DC. | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-7307303": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A451684-1",
+        "title": "Microcorys glabra (Bartl.) Benth. | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "australia",
+        "url": "https://bie.ala.org.au/species/https%3A/id.biodiversity.org.au/node/apni/2921121",
+        "title": "Microcorys glabra | Atlas of Living Australia",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "wd-Q15521563": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A998872-1",
+        "title": "Allium oporinanthum Brullo, Pavone & Salmeri | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-3638097": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/842319-1",
+        "title": "Ferula karakalensis Korovin | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "wfo",
+        "url": "https://www.worldfloraonline.org/taxon/wfo-0000686614",
+        "title": "Ferula karakalensis Korovin",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-5610553": [],
+    "gbif-4186695": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/681658-1",
+        "title": "Piper hillianum C.DC. | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "ipni",
+        "url": "https://www.ipni.org/n/681658-1",
+        "title": "Piper hillianum | International Plant Names Index",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-3883114": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A447940-1/general-information",
+        "title": "Hyptis angulosa Schott ex Benth. | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "mnhn",
+        "url": "https://science.mnhn.fr/taxon/species/hyptis/angulosa",
+        "title": "Hyptis angulosa Schott ex Benth.",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-3891988": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A5748-2",
+        "title": "Aegiphila lehmannii Moldenke | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-3890175": [
+      {
+        "provider": "efloras",
+        "url": "https://www.efloras.org/florataxon.aspx?flora_id=2&taxon_id=210001431",
+        "title": "Paraphlomis albotomentosa in Flora of China @ efloras.org",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-3888796": [
+      {
+        "provider": "plantnet",
+        "url": "https://plantnet.rbgsyd.nsw.gov.au/cgi-bin/NSWfl.pl?lvl=gn&name=Salvia&page=nswfl",
+        "title": "PlantNET - FloraOnline",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-4185951": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/189089-2",
+        "title": "Peperomia maguirei Yunck. | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "ipni",
+        "url": "https://www.ipni.org/n/189089-2",
+        "title": "Peperomia maguirei | International Plant Names Index",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-3034543": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A190327-2",
+        "title": "Perideridia gairdneri (Hook. & Arn.) Mathias | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-3034866": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A847877-1",
+        "title": "Sanicula sandwicensis A.Gray | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-3890041": [
+      {
+        "provider": "wfo",
+        "url": "https://www.worldfloraonline.org/taxon/wfo-0000886041",
+        "title": "Clerodendrum rusbyi Moldenke",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-3086479": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/679106-1",
+        "title": "Peperomia membranacea Hook. & Arn. | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "itis",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=18268",
+        "title": "ITIS - Report: Peperomia membranacea",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ],
+    "gbif-3891508": [
+      {
+        "provider": "powo",
+        "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A453634-1",
+        "title": "Otostegia ellenbeckii Gürke | Plants of the World Online | Kew Science",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      },
+      {
+        "provider": "ipni",
+        "url": "https://www.ipni.org/n/453634-1",
+        "title": "Otostegia ellenbeckii | International Plant Names Index",
+        "provenance": "supplemental search-service metadata; live article must pass identity/content checks"
+      }
+    ]
+  },
+  "sample_count": 184,
+  "selected_candidate_links": 257,
+  "notes": [
+    "Sampling strata do not prove rarity or culinary use.",
+    "All bodies are fetched on demand, never bundled.",
+    "Named-engine first-page requests and supplemental results have separate provenance."
+  ],
+  "url_normalization_note": "Temporary jsessionid suffixes were removed from returned candidate URLs, preserving their taxon paths. This is not proof that the normalized page is accessible."
+}

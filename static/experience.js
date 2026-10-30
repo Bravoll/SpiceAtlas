@@ -2,7 +2,7 @@
 /* Reading comfort, compositor motion and tab-local operation navigation. */
 const motionQuery=window.matchMedia?.("(prefers-reduced-motion: reduce)");
 const readerDefaults={reader_font_size:17,reader_line_height:1.85,reader_font:"serif",animation_level:2};
-let readerDraft=null,drawerSaving=false,paletteTransition=null,bloomTimer;
+let readerDraft=null,drawerSaving=false,paletteTransition=null,bloomTimer,paletteRevision=0,paletteSave=Promise.resolve(),bloomRevision=0,bloomEffect=null;
 const arrivals=new WeakMap();
 const ownedAnimations=new Set();
 function trackMotion(animation){ownedAnimations.add(animation);animation.finished?.then(()=>ownedAnimations.delete(animation),()=>ownedAnimations.delete(animation));return animation;}
@@ -14,7 +14,7 @@ function applyReadingPreferences(value=readerDraft||state.prefs){
  root.style.setProperty("--reader-size",Number(value.reader_font_size||17)+"px");
  root.style.setProperty("--reader-leading",String(value.reader_line_height||1.85));
  root.dataset.readerFont=value.reader_font||"serif";root.dataset.motion=String(motionLevel(value));
- if(!motionLevel(value)){for(const effect of ownedAnimations)effect.cancel();ownedAnimations.clear();paletteTransition?.skipTransition?.();$("themeBloom")?.classList.remove("blooming");}
+ if(!motionLevel(value)){for(const effect of ownedAnimations)effect.cancel();ownedAnimations.clear();paletteTransition?.skipTransition?.();$("themeBloom")?.classList.remove("blooming");if(typeof clearInkMotion==='function'){clearInkMotion();inkMotion.kind=null;}}
 }
 function animateArrival(element,kind="content"){
  const level=motionLevel();if(!element||!level||!element.animate||$("readingDrawer").open)return;
@@ -53,22 +53,20 @@ async function closeReaderDrawer(){
 function changeReaderDraft(patch){if(!readerDraft)return;Object.assign(readerDraft,patch);fillReaderDrawer();}
 
 async function togglePalette(event){
- const old=state.prefs.appearance||"light",next=old==="dark"?"light":"dark";
- setPalette(next==="dark",event,true);state.prefs.appearance=next;
- try{state.prefs=await post("/api/settings",{appearance:next});}catch(error){state.prefs.appearance=old;setPalette(old==="dark",null,false);showNotice("globalMessage",errorMessage(error));}
+ const old=state.prefs.appearance||"light",next=old==="dark"?"light":"dark",revision=++paletteRevision;
+ state.prefs.appearance=next;setPalette(next==="dark",event,true);
+ paletteSave=paletteSave.catch(()=>{}).then(()=>post("/api/settings",{appearance:next}));
+ try{const result=await paletteSave;if(revision===paletteRevision)state.prefs={...state.prefs,appearance:result.appearance};}
+ catch(error){if(revision===paletteRevision){state.prefs.appearance=old;setPalette(old==="dark",null,false);showNotice("globalMessage",errorMessage(error));}}
 }
 function setPalette(dark,event,animate=false){
- const root=document.documentElement,level=motionLevel();const change=()=>appearance(dark);
- if(!animate||!level){change();return;}
- const rect=$("appearance").getBoundingClientRect();const x=event?.clientX||rect.left+rect.width/2,y=event?.clientY||rect.top+rect.height/2;
- root.style.setProperty("--bloom-x",x+"px");root.style.setProperty("--bloom-y",y+"px");
- root.style.setProperty("--bloom-turn",(Math.random()*70-35)+"deg");
- paletteTransition?.skipTransition?.();
- if(document.startViewTransition&&level>=2){
-  root.dataset.paletteTransition="bloom";paletteTransition=document.startViewTransition(change);
-  const current=paletteTransition;current.finished.catch(()=>{}).finally(()=>{if(paletteTransition===current){delete root.dataset.paletteTransition;paletteTransition=null;}});
- }else change();
- if(level===3){const bloom=$("themeBloom");bloom.classList.remove("blooming");requestAnimationFrame(()=>{bloom.classList.add("blooming");clearTimeout(bloomTimer);bloomTimer=setTimeout(()=>bloom.classList.remove("blooming"),1400);});}
+ const root=document.documentElement,level=motionLevel(),revision=++bloomRevision;bloomEffect?.cancel();bloomEffect=null;paletteTransition?.skipTransition?.();paletteTransition=null;
+ // Apply in this input task: no full-document snapshot or delayed update callback.
+ appearance(dark);delete root.dataset.paletteTransition;delete root.dataset.paletteDirection;
+ const bloom=$("themeBloom");bloom.getAnimations?.().forEach(effect=>effect.cancel());bloom.classList.remove('blooming');clearTimeout(bloomTimer);
+ if(!animate||!level)return;
+ const rect=$("appearance").getBoundingClientRect();root.style.setProperty("--bloom-x",(event?.clientX||rect.left+rect.width/2)+"px");root.style.setProperty("--bloom-y",(event?.clientY||rect.top+rect.height/2)+"px");
+ if(level===3){bloom.classList.add('blooming');const effect=bloomEffect=motionEffect(bloom,[{opacity:.28,transform:'scale(.72)'},{opacity:0,transform:'scale(1.08)'}],360);const done=()=>{if(revision===bloomRevision)bloom.classList.remove('blooming');};if(effect)effect.finished.then(done,done);else done();}
 }
 
 function resizeSourceFrame(){
@@ -85,7 +83,7 @@ function settleReadingAnchor(){if(state.anchorPinned&&state.anchor)$(state.ancho
 
 /* The navigation journal contains safe UI state only, never model or service settings. */
 const journeyKey=()=>"atlas-journey:"+state.version;
-const viewSignature=view=>JSON.stringify(Object.fromEntries(Object.entries(view).filter(([k])=>!["mainScroll","catalogScroll","windowScroll","navId"].includes(k))));
+const viewSignature=view=>JSON.stringify(Object.fromEntries(Object.entries(view).filter(([k])=>!["mainScroll","catalogScroll","treeScroll","entryScroll","entryLimit","treeLimit","windowScroll","navId"].includes(k))));
 const newNavId=()=>Date.now().toString(36)+Math.random().toString(36).slice(2,9);
 function persistJourney(){try{sessionStorage.setItem(journeyKey(),JSON.stringify({rows:journey.rows,index:journey.index,nativeBoundary:journey.nativeBoundary}));}catch{}}
 function updateJourneyButtons(){$("goBack").disabled=journey.restoring||journey.index<=0;$("goForward").disabled=journey.restoring||journey.index>=journey.rows.length-1;}
@@ -103,7 +101,7 @@ function replaceJourneyURL(push=false){
 }
 function beginJourneyAction(){
  if(journey.restoring||state.restoring||journey.index<0)return ++journey.token;
- const row=journey.rows[journey.index];Object.assign(row,{mainScroll:$("main").scrollTop,catalogScroll:document.querySelector(".catalog").scrollTop,windowScroll:window.scrollY||0});
+ const row=journey.rows[journey.index];Object.assign(row,{mainScroll:$("main").scrollTop,catalogScroll:document.querySelector(".catalog").scrollTop,windowScroll:window.scrollY||0,treeScroll:$('catalogTreeViewport').scrollTop,entryScroll:$('catalogEntryViewport').scrollTop});
  persistJourney();return ++journey.token;
 }
 function finishJourneyAction(token){
@@ -118,34 +116,37 @@ function finishJourneyAction(token){
 }
 function saveJourneyPosition(){
  if(journey.index<0||journey.restoring||state.restoring)return;
- Object.assign(journey.rows[journey.index],{mainScroll:$("main").scrollTop,catalogScroll:document.querySelector(".catalog").scrollTop,windowScroll:window.scrollY||0});scheduleJourneyPersist();
+ Object.assign(journey.rows[journey.index],{mainScroll:$("main").scrollTop,catalogScroll:document.querySelector(".catalog").scrollTop,windowScroll:window.scrollY||0,treeScroll:$('catalogTreeViewport').scrollTop,entryScroll:$('catalogEntryViewport').scrollTop});scheduleJourneyPersist();
 }
 async function restoreReadingView(view){
  const token=++journey.token;journey.restoring=true;state.anchorPinned=false;updateJourneyButtons();state.restoreEpoch=(state.restoreEpoch||0)+1;
- const previous={entry:state.id,form:state.form,source:state.source,provider:state.imageProvider,profile:state.imageProfile};
+ state.wikiLocale=view.wikiLocale||null;state.nameChineseStyle=view.nameChineseStyle||null;state.nameWesternStyle=view.nameWesternStyle||null;
+ const previous={entry:state.id,form:state.form,source:state.source,provider:state.imageProvider,profile:state.imageProfile,sourceReadUrl:state.sourceReadUrl};
  const reuse=!!state.entry&&previous.entry===view.entry;
  try{
-  state.scope=view.scope||"all";state.collection=view.collection||"catalogue";state.node=view.node||null;state.path=view.path||[];state.offset=view.offset||0;state.group=view.group||"all";state.mode=view.readerMode||"focus";state.frameMode=view.frameMode||'responsive';state.anchor=view.anchor||"";
+  state.scope=view.scope||"all";state.collection=view.collection||"catalogue";state.node=view.node||null;state.path=view.path||[];catalogNav.treeOffset=view.treeOffset||0;state.offset=view.offset||0;state.group=view.group||"all";state.mode=view.readerMode||"focus";state.frameMode=view.frameMode||'responsive';state.anchor=view.anchor||"";
   $("search").value=view.query||"";$("catalogScope").value=state.scope;$("collectionMode").value=state.collection;$("typeStyle").value=view.typeStyle||"botanical";updateGroups();
   const local=[loadTree(),loadCatalogue()];
-  if(!reuse)local.push(loadEntry(view.entry||"basil",view.form,{source:view.source,imageProvider:view.imageProvider,imageProfile:view.imageProfile,textMode:view.textMode}));
+  if(!reuse)local.push(loadEntry(view.entry||"basil",view.form,{source:view.source,wikiLocale:view.wikiLocale,imageProvider:view.imageProvider,imageProfile:view.imageProfile,textMode:view.textMode}));
   else{
    state.form=state.entry.forms.some(f=>f.id===view.form)?view.form:state.entry.forms[0].id;
    state.source=view.source==='auto'||state.entry.sources.some(s=>s.key===view.source)?view.source:'auto';
    state.imageProvider=state.entry.image_gateways?.[view.imageProvider]?view.imageProvider:Object.keys(state.entry.image_gateways||{}).find(k=>k!=='query')||'commons';state.imageProfile=view.imageProfile||'auto';
    renderEntry();renderSources();
-   if(state.source!==previous.source||!state.article){state.requestedTextMode=view.textMode||'original';local.push(loadArticle());}
+   if(view.sourceReadUrl){local.push(readWebResult(view.sourceReadUrl));}
+   else if(state.source!==previous.source||previous.sourceReadUrl||!state.article){state.requestedTextMode=view.textMode||'original';local.push(loadArticle());}
    else{state.lang=view.textMode||'original';$('languageMode').value=state.lang;if(state.lang!=='original'&&!state.translation)local.push(setLanguage());else renderArticle();}
    if(state.form!==previous.form||state.imageProvider!==previous.provider||state.imageProfile!==previous.profile)local.push(loadImages());
   }
   await Promise.all(local);
+  if(!reuse&&view.sourceReadUrl)await readWebResult(view.sourceReadUrl);
   if(token!==journey.token)return;
   if(view.frameOpen&&$("frameContainer").hidden&&state.imageProvider!=="commons")await openFrame();
   if(!view.frameOpen)closeFrame();
   if(view.frameOpen&&view.frameExpanded)await toggleSourceWindow(true);else if(!view.frameExpanded&&$('frameContainer').dataset.expanded==='true')await toggleSourceWindow(false);resizeSourceFrame();
   if(token!==journey.token)return;
-  $("main").scrollTop=view.mainScroll||0;document.querySelector(".catalog").scrollTop=view.catalogScroll||0;window.scrollTo?.(0,view.windowScroll||0);
-  requestAnimationFrame(()=>{if(token===journey.token){$("main").scrollTop=view.mainScroll||0;document.querySelector(".catalog").scrollTop=view.catalogScroll||0;}});
+  $("main").scrollTop=view.mainScroll||0;document.querySelector(".catalog").scrollTop=view.catalogScroll||0;$("catalogTreeViewport").scrollTop=view.treeScroll||0;$("catalogEntryViewport").scrollTop=view.entryScroll||0;window.scrollTo?.(0,view.windowScroll||0);
+  requestAnimationFrame(()=>{if(token===journey.token){$("main").scrollTop=view.mainScroll||0;document.querySelector(".catalog").scrollTop=view.catalogScroll||0;$("catalogTreeViewport").scrollTop=view.treeScroll||0;$("catalogEntryViewport").scrollTop=view.entryScroll||0;}});
  }finally{if(token===journey.token){journey.restoring=false;persistJourney();updateJourneyButtons();rememberView();}}
 }
 async function travelJourney(direction){
@@ -172,7 +173,7 @@ function renderPronunciation(){
 async function loadPronunciation(){
  const epoch=++pronunciationEpoch;state.pronunciation=null;stopPronunciation();renderPronunciation();
  if(!state.entry?.spoken_english)return;
- try{const value=await api("/api/pronunciation/"+encodeURIComponent(state.id));if(epoch!==pronunciationEpoch)return;state.pronunciation=value;renderPronunciation();}catch{}
+ try{const value=await cachedResource({kind:'pronunciation',entry:state.id})||await api("/api/pronunciation/"+encodeURIComponent(state.id));if(epoch!==pronunciationEpoch)return;state.pronunciation=value;renderPronunciation();}catch{}
 }
 function browserEnglish(word,token){
  const synth=window.speechSynthesis;if(!synth||!window.SpeechSynthesisUtterance){$("speechStatus").textContent=t("speechUnavailable");return;}

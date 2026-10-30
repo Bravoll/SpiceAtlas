@@ -1,0 +1,243 @@
+{
+  "tested_at": "2026-10-29T06:01:05+00:00",
+  "mode": "Direct reader smoke; indexed candidates and public APIs; search engines disabled after the separately recorded first-page failures. Article bodies are not retained.",
+  "results": [
+    {
+      "entry_id": "parsley",
+      "scientific": "Petroselinum crispum",
+      "elapsed_seconds": 5.53,
+      "events": [
+        {
+          "type": "error",
+          "provider": "gbif",
+          "url": "https://www.gbif.org/species/7828157",
+          "code": "dns",
+          "message": "Source DNS lookup failed"
+        },
+        {
+          "type": "error",
+          "provider": "universities",
+          "url": "https://hort.extension.wisc.edu/articles/parsley-petroselinum-crispum/",
+          "code": "dns",
+          "message": "Source DNS lookup failed"
+        },
+        {
+          "type": "error",
+          "provider": "universities",
+          "url": "https://ag.purdue.edu/department/hla/extension/extension-publications-library/ext-pubs/ho-202-w.html",
+          "code": "dns",
+          "message": "Source DNS lookup failed"
+        },
+        {
+          "type": "error",
+          "provider": "ncsu",
+          "url": "https://plants.ces.ncsu.edu/plants/petroselinum-crispum/",
+          "code": "dns",
+          "message": "Source DNS lookup failed"
+        },
+        {
+          "type": "error",
+          "provider": "plantnet",
+          "url": "https://plantnet.rbgsyd.nsw.gov.au/cgi-bin/NSWfl.pl?lvl=sp&name=Petroselinum~crispum&page=nswfl",
+          "code": "dns",
+          "message": "Source DNS lookup failed"
+        },
+        {
+          "type": "error",
+          "provider": "efloras",
+          "url": "https://floranorthamerica.org/Petroselinum_crispum",
+          "code": "dns",
+          "message": "Source DNS lookup failed"
+        },
+        {
+          "type": "card",
+          "provider": "wikibooks",
+          "title": "Cookbook:Parsley",
+          "source_url": "https://en.wikibooks.org/wiki/Cookbook%3AParsley",
+          "text_html_characters": 2946,
+          "headings": 1,
+          "order": 1
+        },
+        {
+          "type": "card",
+          "provider": "gbif",
+          "title": "Petroselinum crispum (Mill.) Fuss",
+          "source_url": "https://www.gbif.org/species/7828157",
+          "text_html_characters": 708,
+          "headings": 0,
+          "order": 2
+        },
+        {
+          "type": "card",
+          "provider": "wikispecies",
+          "title": "Petroselinum crispum",
+          "source_url": "https://species.wikimedia.org/wiki/Petroselinum_crispum",
+          "text_html_characters": 20755,
+          "headings": 5,
+          "order": 3
+        },
+        {
+          "type": "done",
+          "cards": 3,
+          "attempted": 9,
+          "failed": 6,
+          "pending_cancelled": 0,
+          "reason": "card_limit",
+          "elapsed_ms": 5532
+        }
+      ]
+    },
+    {
+      "entry_id": "oregano",
+      "scientific": "Origanum vulgare",
+      "elapsed_seconds": 5.53,
+      "events": [
+        {
+          "type": "error",
+          "provider": "gbif",
+          "url": "https://www.gbif.org/species/2926612",
+          "code": "dns",
+          "message": "Source DNS lookup failed"
+        },
+        {
+          "type": "error",
+          "provider": "powo",
+          "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A453395-1/general-information",
+          "code": "dns",
+          "message": "Source DNS lookup failed"
+        },
+        {
+          "type": "error",
+          "provider": "ncsu",
+          "url": "https://plants.ces.ncsu.edu/plants/origanum-vulgare/",
+          "code": "dns",
+          "message": "Source DNS lookup failed"
+        },
+        {
+          "type": "error",
+          "provider": "plantnet",
+          "url": "https://plantnet.rbgsyd.nsw.gov.au/cgi-bin/NSWfl.pl?lvl=sp&name=Origanum~vulgare&page=nswfl",
+          "code": "dns",
+          "message": "Source DNS lookup failed"
+        },
+        {
+          "type": "error",
+          "provider": "efloras",
+          "url": "https://floranorthamerica.org/Origanum_vulgare",
+          "code": "dns",
+          "message": "Source DNS lookup failed"
+        },
+        {
+          "type": "card",
+          "provider": "wikibooks",
+          "title": "Cookbook:Oregano",
+          "source_url": "https://en.wikibooks.org/wiki/Cookbook%3AOregano",
+          "text_html_characters": 3619,
+          "headings": 1,
+          "order": 1
+        },
+        {
+          "type": "card",
+          "provider": "gbif",
+          "title": "Origanum vulgare L.",
+          "source_url": "https://www.gbif.org/species/2926612",
+          "text_html_characters": 688,
+          "headings": 0,
+          "order": 2
+        },
+        {
+          "type": "card",
+          "provider": "wikispecies",
+          "title": "Origanum vulgare",
+          "source_url": "https://species.wikimedia.org/wiki/Origanum_vulgare",
+          "text_html_characters": 29685,
+          "headings": 10,
+          "order": 3
+        },
+        {
+          "type": "done",
+          "cards": 3,
+          "attempted": 8,
+          "failed": 5,
+          "pending_cancelled": 0,
+          "reason": "card_limit",
+          "elapsed_ms": 5530
+        }
+      ]
+    },
+    {
+      "entry_id": "gbif-7705625",
+      "scientific": "Peperomia jalcaensis",
+      "elapsed_seconds": 5.32,
+      "events": [
+        {
+          "type": "error",
+          "provider": "gbif",
+          "url": "https://www.gbif.org/species/7705625",
+          "code": "dns",
+          "message": "Source DNS lookup failed"
+        },
+        {
+          "type": "error",
+          "provider": "powo",
+          "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A77112528-1/general-information",
+          "code": "dns",
+          "message": "Source DNS lookup failed"
+        },
+        {
+          "type": "error",
+          "provider": "ncsu",
+          "url": "https://plants.ces.ncsu.edu/plants/peperomia-jalcaensis/",
+          "code": "dns",
+          "message": "Source DNS lookup failed"
+        },
+        {
+          "type": "error",
+          "provider": "plantnet",
+          "url": "https://plantnet.rbgsyd.nsw.gov.au/cgi-bin/NSWfl.pl?lvl=sp&name=Peperomia~jalcaensis&page=nswfl",
+          "code": "dns",
+          "message": "Source DNS lookup failed"
+        },
+        {
+          "type": "error",
+          "provider": "efloras",
+          "url": "https://floranorthamerica.org/Peperomia_jalcaensis",
+          "code": "dns",
+          "message": "Source DNS lookup failed"
+        },
+        {
+          "type": "error",
+          "provider": "wikibooks",
+          "url": "",
+          "code": "missingtitle",
+          "message": "The page you specified doesn't exist."
+        },
+        {
+          "type": "card",
+          "provider": "gbif",
+          "title": "Peperomia jalcaensis Pino",
+          "source_url": "https://www.gbif.org/species/7705625",
+          "text_html_characters": 701,
+          "headings": 0,
+          "order": 1
+        },
+        {
+          "type": "error",
+          "provider": "wikispecies",
+          "url": "",
+          "code": "missingtitle",
+          "message": "The page you specified doesn't exist."
+        },
+        {
+          "type": "done",
+          "cards": 1,
+          "attempted": 8,
+          "failed": 7,
+          "pending_cancelled": 0,
+          "reason": "complete",
+          "elapsed_ms": 5320
+        }
+      ]
+    }
+  ]
+}

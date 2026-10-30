@@ -14,7 +14,7 @@
   "azure_region": "",
   "google_api_key": "",
   "google_cse_id": "",
-  "user_agent": "SpiceAtlas/0.6 (local botanical reference reader)",
+  "user_agent": "SpiceAtlas/0.7 (local botanical reference reader)",
   "proxy_url": "",
   "trust_env": true,
   "timeout_seconds": 25,
@@ -28,5 +28,23 @@
   "reader_font": "serif",
   "animation_level": 2,
   "startup_mode": "resume",
-  "random_scope": "culinary"
+  "random_scope": "culinary",
+  "other_source_timeout": 25,
+  "other_total_timeout": 35,
+  "other_max_cards": 6,
+  "other_search_enabled": true,
+  "shortcuts": {
+    "tree_previous": "[",
+    "tree_next": "]",
+    "entry_previous": ",",
+    "entry_next": "."
+  },
+  "prefetch_enabled": true,
+  "cache_weight_history": 0.2,
+  "cache_weight_session": 0.3,
+  "cache_weight_recent": 0.5,
+  "cache_session_threshold": 30,
+  "cache_promote_hits": 6,
+  "name_chinese_style": "botanical",
+  "name_western_style": "book"
 }

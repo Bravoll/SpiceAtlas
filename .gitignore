@@ -19,6 +19,10 @@ data/version_manager.jsonl
 data/media/
 data/snapshots/
 data/launcher/
+data/updates/
+data/update.lock
+data/install_state.json
+data/update_history.jsonl
 data/cache.sqlite3
 *-wal
 *-shm
